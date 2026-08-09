@@ -26,12 +26,17 @@ agent busywork substitute for real movement.
 **Pre-idea / tooling.** No product built yet beyond this orchestrator scaffold. The first
 real test is dogfooding: use IdeaAgent's own orchestrator to run IdeaAgent itself.
 
+## Founder decisions (locked 2026-08-09)
+
+- **Product surface:** installable Claude Code skill/agent pack — a `.claude/skills` +
+  `.claude/agents` bundle (the `venture-orchestrator` skill already built is the first piece
+  of it). No separate hosted infra or CLI binary.
+- **Ship model:** distributed like this user's own ECC rules/skills repo pattern — others
+  clone/install it into their own Claude Code setup. Not a standalone branded product.
+- **First user:** the founder only, dogfooding. IdeaAgent runs on itself via the daily
+  orchestrator routine until the loop is proven. No outside pilot user yet.
+
 ## Open questions (founder decisions — not agent-decidable)
 
-- [ ] What's the actual product surface? A CLI wrapper, an installable ECC skill pack, a
-      hosted app? (Affects nearly every downstream milestone.)
-- [ ] Ship as a standalone product, or as a skill/agent pack others install into their own
-      Claude Code setup?
-- [ ] Who is the first real user — is it just the founder (dogfooding), or an outside pilot user?
-
-These stay open until a human answers them. The orchestrator should surface them, not guess.
+None currently open. The orchestrator should re-surface new ones here as they come up,
+rather than guessing past them.

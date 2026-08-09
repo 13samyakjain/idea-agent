@@ -11,16 +11,25 @@
 - [ ] Daily orchestrator run completes cleanly for 3 consecutive days
 - [ ] First dogfood cycle produces a status report a human would actually find useful
 
-## Phase 1 — Concept validation (not started)
+## Phase 1 — Concept validation (in progress)
 
-- [ ] Human answers the open questions in VENTURE.md (product surface, ship model, first user)
+- [x] Human answers the open questions in VENTURE.md (product surface, ship model, first user)
 - [ ] Talk to 3–5 people who've felt "I have an idea but no structured way to run it"
 - [ ] Confirm or kill the core hypothesis: founders want an agent-run structuring/execution
       layer, not just a template or a Notion doc
 
 ## Phase 2 — MVP (not started)
 
-- [ ] TBD — defined once Phase 1 confirms the hypothesis and the product surface is chosen
+Scope now known: an installable Claude Code skill/agent pack, dogfooded solo before any
+outside pilot user.
+
+- [ ] Define what "MVP" means concretely for a skill pack (which skills/agents ship in v0,
+      beyond venture-orchestrator?)
+- [ ] Package the venture-orchestrator skill (and any companion agents) so it's installable
+      into a Claude Code setup other than this one — mirrors this user's own ECC rules/skills
+      install pattern
+- [ ] Run the orchestrator daily on IdeaAgent itself for 2+ weeks as the dogfood test before
+      considering a pilot user
 
 ## Phase 3 — Growth (not started)
 
