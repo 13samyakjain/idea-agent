@@ -43,3 +43,34 @@ is either human-only or premature before the dogfood period completes.
 **Open decision for the human:** none blocking right now. Next natural checkpoint: after
 ~2 weeks of daily runs, decide whether the dogfood loop is actually useful before starting
 Phase 1's outside conversations.
+
+## 2026-08-09 — Manual run, discovery guide dispatched
+
+**Human activity:** Checked with the founder directly (ClickUp and Calendar surfaced nothing
+IdeaAgent-related — ClickUp returned an unrelated workspace's travel/event-logistics tasks,
+Calendar returned only a recurring personal reminder). Founder confirmed: nothing new since
+the last entry.
+
+**Agent activity:** TaskList showed no agent work tracked since the last entry — consistent
+with last run's log (nothing was dispatched then). This run I could not independently verify
+the daily cloud routine (`trig_01Kbr4hQgUQ52Jvwr8EvCQog`) has actually fired on its own —
+`CronList` only covers jobs scheduled via `CronCreate` in-session and returned none, which
+doesn't confirm or deny the separate cloud routine's status. All three STATUS_LOG entries so
+far are from the same calendar day (manually triggered), so Phase 0's "3 consecutive days"
+item has not actually started accruing days yet — flagging this rather than counting today's
+manual runs toward it.
+
+**Milestone deltas:** None flipped this run — no completed milestone work landed.
+
+**Dispatched:** Product Manager agent (background) — asked to draft a short, concrete
+discovery-conversation guide (opener, 6-10 questions, confirm/kill signals) grounded in
+VENTURE.md's problem hypothesis, to remove friction for the founder's Phase 1 conversations.
+Landed at `DISCOVERY_GUIDE.md`: opener, 10 sequenced questions (stalled-idea story → failure
+pattern → time-vs-structure test → prior tool attempts → agent-execution trust conditions →
+accountability/counterfactual), and explicit confirm/weak-signal criteria for judging the
+3-5 conversations once run.
+
+**Open decision for the human:** Worth confirming independently (next check-in, not urgent):
+did the 9am/8pm IST cloud routine actually fire today on its own, separate from this manual
+session? If it didn't, the "3 consecutive days" Phase 0 item needs the automation debugged
+before it can ever be satisfied.
