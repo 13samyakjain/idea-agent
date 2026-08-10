@@ -19,7 +19,7 @@
 |---|---|---|
 | Vision stability | 1 revision (open questions → locked decisions) | 2026-08-09 |
 | Validation conversations | 0 | 2026-08-09 |
-| Orchestrator runs completed | 3 (bootstrap, founder decisions, this run) | 2026-08-09 |
+| Orchestrator runs completed | 4 (bootstrap, founder decisions, discovery guide, this run) | 2026-08-10 |
 | Active ventures tracked | 1 (IdeaAgent itself) | 2026-08-09 |
 
 ## Instrumentation TODO
