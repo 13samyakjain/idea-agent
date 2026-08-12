@@ -100,3 +100,33 @@ creation (2026-08-09 18:00) and this manual run. If the routine hasn't been firi
 "3 consecutive days" item has not started accruing at all and the automation needs debugging
 before it can be trusted unattended. Separately: DISCOVERY_GUIDE.md is ready — the 3-5
 discovery conversations (Phase 1) are the next real unblock once you have time for them.
+
+## 2026-08-10 — DISCOVERY_GUIDE.md pressure-tested before use
+
+**Human activity:** Founder asked to use the newly-added `.claude/agents` pack (53
+marketing/sales/support subagents) and specifically named Product Manager and Discovery Coach
+as ones expected to add value now.
+
+**Agent activity:** Rather than dispatch the pack broadly — most of it (growth/acquisition,
+sales pipeline, customer support agents) doesn't apply at this pre-validation stage per
+GROWTH.md — targeted the one legitimate near-term use: pressure-testing DISCOVERY_GUIDE.md
+before the founder burns real conversations on it. Dispatched Product Manager and Discovery
+Coach agents in parallel to review it independently. Both converged on the same core flaw from
+different angles: the guide could not disconfirm its own hypothesis (no question directly
+compared "agent execution" vs. "just better structure") and Q7 primed an enthusiastic answer
+instead of measuring a neutral reaction. Rewrote DISCOVERY_GUIDE.md: added a direct
+template-vs-agent-execution comparison question (the only question that can now disconfirm the
+hypothesis), neutralized the old Q7 into an open reaction question with conditional follow-up,
+added cost-quantification and revealed-preference questions, tightened the weak-signal bar
+(previously near-unfalsifiable), added a confirmation-bias guard given the founder is both
+interviewer and hypothesis-holder, and clarified that hitting the confirm bar justifies more
+validation (prototype + commitment ask) rather than a build decision.
+
+**Milestone deltas:** None flipped — this strengthens Phase 1 prep, doesn't complete it.
+
+**Dispatched:** Product Manager (foreground) and Discovery Coach (foreground) — both reviewed
+DISCOVERY_GUIDE.md independently and did not edit the file directly; changes were synthesized
+and applied by hand after comparing both reports.
+
+**Open decision for the human:** Unchanged from last entry — cloud routine verification and
+running the (now revised) 3-5 discovery conversations are both still human-only next steps.
