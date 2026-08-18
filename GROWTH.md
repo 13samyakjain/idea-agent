@@ -21,7 +21,7 @@
 | Validation conversations | 0 | 2026-08-09 |
 | Orchestrator runs completed | 6 (bootstrap, founder decisions, discovery guide, incident-found run, discovery-guide pressure-test, 6-day-gap run) | 2026-08-18 |
 | Active ventures tracked | 1 (IdeaAgent itself) | 2026-08-09 |
-| Daily cloud routine reliability | Still 0 confirmed clean automated fires. 6-day gap in STATUS_LOG (2026-08-12 → 2026-08-18) with zero entries despite the described twice-daily schedule — either the routine stopped firing or it fired and failed silently before logging, same failure mode as the two earlier tested runs. This run (2026-08-18) is itself an automated fire; whether it lands cleanly depends on this run's own commit succeeding. | 2026-08-18 |
+| Daily cloud routine reliability | Root cause found and fixed: the Claude GitHub App was never installed on the founder's GitHub account, so every cloud-session `git push`/GitHub MCP write 403'd (read-only access only) — commits were made inside the ephemeral container each run but never reached origin, then lost when the container was reclaimed. Founder reinstalled the GitHub App with Contents Read & write on 2026-08-18. Verified live: a manual re-trigger of the daily routine committed and pushed `f9805a7` cleanly. Reliability clock (3 consecutive clean days) starts from the next scheduled fire, not before. | 2026-08-18 |
 | Dogfood status report — activation signal | First real one shipped (Venture Console) and used same-day to act on 3 real decisions (routine-fix approval, ClickUp target list, live-polling tradeoff) | 2026-08-10 |
 
 ## Instrumentation TODO

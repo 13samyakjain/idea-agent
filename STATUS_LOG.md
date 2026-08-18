@@ -171,3 +171,32 @@ been silently failing (or not firing at all) since 08-12, that needs fixing befo
 "3 consecutive clean days" milestone can ever be satisfied. Separately, still unblocked and
 waiting on the founder: the revised DISCOVERY_GUIDE.md is ready for the 3-5 discovery
 conversations (Phase 1).
+
+## 2026-08-18 — Root cause found: GitHub App never installed; cloud push fixed
+
+**Human activity:** Founder investigated the 6-day gap directly (outside the orchestrator loop,
+in a manual Claude Code session) rather than waiting for another automated run to re-flag it.
+Checked GitHub's app-authorization page and found the answer: the Claude GitHub App had never
+actually been installed on the `13samyakjain` account (a prior install had also been deleted
+at some point) — every cloud-session `git push` and GitHub MCP `push_files` call had been
+hitting a 403 (read-only access) since the routine's creation on 08-09. Founder reinstalled the
+app via `github.com/apps/claude` with `Contents: Read & write`.
+
+**Agent activity:** Diagnosed the 403 down to the missing GitHub App install (confirmed via
+`git ls-remote` succeeding but `info/refs?service=git-receive-pack` returning 403 — read
+access present, write access absent). After the founder reinstalled the app, manually
+re-triggered the daily routine (`trig_01Kbr4hQgUQ52Jvwr8EvCQog`) live to verify: it committed
+and pushed `f9805a7` to `origin/main` cleanly, no 403. Also pushed 2 local commits
+(`a99aee4`, `08258a4` — 08-12's work) that had been sitting unpushed on this machine,
+unrelated to the cloud issue.
+
+**Milestone deltas:** None flipped yet. Phase 0's "Daily orchestrator run completes cleanly for
+3 consecutive days" is now actually unblocked for the first time — the reliability clock starts
+from the next scheduled fire (2026-08-18 14:32 UTC), not retroactively.
+
+**Dispatched:** none — this was founder + manual Claude Code session work (GitHub account
+permissions aren't agent-actionable).
+
+**Open decision for the human:** None blocking on the automation side anymore. The one
+remaining open item is unchanged: the revised DISCOVERY_GUIDE.md is ready for the 3-5 discovery
+conversations (Phase 1) — still human-only, still waiting.
