@@ -55,3 +55,29 @@ scoped" to "in progress, scoped" — M1 and M2 already done per ClickUp, not new
 lists going forward for cleaner tracking, or is the Sprint-list-only workflow intentional and
 fine as-is? Not assumed either way. Separately, unchanged: other businesses to onboard, later
 per founder.
+
+## 2026-08-18 — Growth diagnosis + draft BDE lead-assignment process
+
+**Human activity:** Founder expressed frustration that the business isn't growing right now
+and asked for help fixing it — for the team and himself.
+
+**Agent activity:** Pulled `Lead Sourcing Queue`, `BDE Team Ops`, and `Sales Engine Milestones`
+to diagnose, not guess. Findings: the qualification funnel (Apollo export → ICP checklist →
+promote to GHL) is already well-designed in the list description — but has zero tasks ever
+logged, meaning it's never been fed. Separately, and this is the real gap: nothing defines
+what happens after a lead IS promoted to GHL — same gap that let 5 real replies sit unassigned
+for 3-5+ weeks (per the earlier "URGENT: Follow up on 5 stale GHL replies" task). Drafted a
+lead-assignment process (24h assignment SLA, 48h first-touch, day 4/10/14 follow-up cadence,
+stale-lead auto-escalation reusing Stage 1's existing escalation pattern) in
+`ventures/glimpse/SALES_ENGINE_PROCESS.md` and posted a condensed version as a comment on
+ClickUp task 86d3t4bg7 ("Define BDE Work Alignment & Assignment Process") for the team to see
+and react to. Explicitly framed as a draft needing founder review, not rolled out as policy.
+
+**Milestone deltas:** None flipped — this is a proposal, not yet an executed process change.
+
+**Dispatched:** none — this was direct diagnosis and drafting, not agent-delegatable.
+
+**Open decision for the human:** Review and approve/adjust the draft process (especially the
+BDE assignment rule with multiple hires, and who owns the weekly rollup before the full-time
+BDE lands). Separately, unrelated to process: someone needs to actually run the first Apollo
+export — the qualification funnel has never been fed a single lead.
