@@ -4,33 +4,45 @@
 > The orchestrator updates status and appends new milestones as they're identified. It does not
 > delete or reword existing milestones without flagging the change in STATUS_LOG.md.
 
-## Phase 0 — Foundation (current)
+## Phase 0 — Foundation (done)
 
 - [x] Define venture-orchestrator agent and its playbook
 - [x] Stand up venture docs (this file, VENTURE.md, GROWTH.md, STATUS_LOG.md)
-- [ ] Daily orchestrator run completes cleanly for 3 consecutive days
-- [ ] First dogfood cycle produces a status report a human would actually find useful
+- [x] Daily cloud routine's push-permission issue found and fixed (2026-08-18) — reliability
+      clock for "3 consecutive clean days" now actually running, not evidence of the days
+      themselves yet
+- [x] First dogfood cycle produces a status report a human would actually find useful (the
+      Venture Console artifact, shipped 2026-08-10, used same-day to act on 3 real decisions)
 
-## Phase 1 — Concept validation (in progress)
+## Phase 1 — Multi-venture structure (current, revised 2026-08-18)
+
+> Replaces the original "concept validation" phase, which was about testing whether other
+> founders would want to buy IdeaAgent. Retired 2026-08-18 — IdeaAgent is not sold to other
+> founders (see VENTURE.md). `DISCOVERY_GUIDE.md` removed; the 3–5 discovery-conversation task
+> is dropped, not just deferred.
 
 - [x] Human answers the open questions in VENTURE.md (product surface, ship model, first user)
-- [ ] Talk to 3–5 people who've felt "I have an idea but no structured way to run it"
-- [ ] Confirm or kill the core hypothesis: founders want an agent-run structuring/execution
-      layer, not just a template or a Notion doc
+- [x] Pivot decision locked: internal tool, not sold to founders (2026-08-18)
+- [x] Multi-venture repo structure stood up (`ventures/<name>/`); Glimpse onboarded as the
+      first tracked venture
+- [ ] Orchestrator completes a full daily pass against Glimpse specifically (not just
+      IdeaAgent-tool housekeeping) for 3 consecutive days
+- [ ] Founder confirms the orchestrator surfaced something genuinely useful for Glimpse
 
-## Phase 2 — MVP (not started)
+## Phase 2 — Additional ventures (not started, re-scoped 2026-08-18)
 
-Scope now known: an installable Claude Code skill/agent pack, dogfooded solo before any
-outside pilot user.
+> Was "MVP: package IdeaAgent as an installable skill pack for others." Retired along with the
+> sell-to-founders model — flagging rather than deleting per this file's own convention.
 
-- [ ] Define what "MVP" means concretely for a skill pack (which skills/agents ship in v0,
-      beyond venture-orchestrator?)
-- [ ] Package the venture-orchestrator skill (and any companion agents) so it's installable
-      into a Claude Code setup other than this one — mirrors this user's own ECC rules/skills
-      install pattern
-- [ ] Run the orchestrator daily on IdeaAgent itself for 2+ weeks as the dogfood test before
-      considering a pilot user
+- [ ] Onboard any additional existing businesses the founder wants tracked, using the
+      `ventures/glimpse/` structure as the template
+- [ ] Harden the orchestrator's multi-venture loop (SKILL.md) based on what actually breaks
+      running it against a real business instead of a scaffold
 
-## Phase 3 — Growth (not started)
+## Phase 3 — Sales-engine expansion (not started, not scoped)
 
-- [ ] TBD — defined once there's an MVP and real usage to grow from
+> Was generic "Growth." Repurposed 2026-08-18 to track Glimpse's planned expansion — see
+> `ventures/glimpse/MILESTONES.md` Phase 2 for the venture-level version of this; this row
+> tracks it only if it becomes a cross-venture concern.
+
+- [ ] TBD — defined once Glimpse's "sales engine for other businesses" model is scoped

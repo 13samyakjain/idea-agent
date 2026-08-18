@@ -5,38 +5,47 @@
 
 ## What it is
 
-IdeaAgent turns a raw idea into a structured venture: a vision, a milestone-driven roadmap,
-growth targets, and a dispatched team of AI agents (backed by a human founder) executing
-against them — with continuous check-ins on what the humans did and what the agents did.
+IdeaAgent is an internal orchestration tool — a Claude Code skill/agent pack — the founder uses
+to run his own businesses. It reads each business's real state, decides the single
+highest-leverage next action, dispatches specialized agents against it, and logs what happened
+daily, per venture.
+
+**It is not a product sold to other founders.** Each tracked business lives in its own
+`ventures/<name>/` folder (VENTURE.md, MILESTONES.md, GROWTH.md, STATUS_LOG.md); this root-level
+set of docs tracks IdeaAgent-the-tool itself, not any single business.
 
 ## Who it's for
 
-Solo founders / small teams who have an idea but no structured process to execute it, and
-who are willing to use AI agents as most of the "team."
+The founder, across his own portfolio of businesses. First business onboarded: **Glimpse**
+(glimpse.net.in) — see `ventures/glimpse/VENTURE.md`.
 
 ## Why now
 
 Agentic coding tools (Claude Code, subagents with real tool access) can credibly do delegated,
-multi-step work. The gap isn't agent capability — it's orchestration discipline: turning a vague
-idea into milestone-driven execution, keeping a founder's-eye view on progress, and not letting
-agent busywork substitute for real movement.
+multi-step work. The gap isn't agent capability — it's orchestration discipline: turning a real
+business's messy day-to-day into a founder's-eye view of what actually needs to happen next,
+and not letting agent busywork substitute for real movement. That discipline is now pointed at
+running actual businesses instead of validating whether other founders would want to buy it.
 
 ## Stage
 
-**Pre-idea / tooling.** No product built yet beyond this orchestrator scaffold. The first
-real test is dogfooding: use IdeaAgent's own orchestrator to run IdeaAgent itself.
+**Operational, multi-venture.** The orchestrator scaffold and daily cloud automation are built
+and working (see STATUS_LOG.md for the automation-reliability history). First real venture
+(Glimpse) onboarded 2026-08-18; the orchestrator has not yet completed a full pass against it.
 
-## Founder decisions (locked 2026-08-09)
+## Founder decisions (locked 2026-08-09, revised 2026-08-18)
 
-- **Product surface:** installable Claude Code skill/agent pack — a `.claude/skills` +
-  `.claude/agents` bundle (the `venture-orchestrator` skill already built is the first piece
-  of it). No separate hosted infra or CLI binary.
-- **Ship model:** distributed like this user's own ECC rules/skills repo pattern — others
-  clone/install it into their own Claude Code setup. Not a standalone branded product.
-- **First user:** the founder only, dogfooding. IdeaAgent runs on itself via the daily
-  orchestrator routine until the loop is proven. No outside pilot user yet.
+- **2026-08-09:** Product surface = installable Claude Code skill/agent pack. Ship model =
+  distributed like the founder's own ECC rules/skills repo pattern. First user = founder only,
+  dogfooding.
+- **2026-08-18 — pivot:** IdeaAgent is not sold to other founders. It's an internal tool that
+  runs the founder's own businesses, starting with Glimpse. The discovery-conversation
+  validation work (testing whether *other* founders would want this) is retired —
+  `DISCOVERY_GUIDE.md` removed. Repo restructured to `ventures/<name>/` per business, with this
+  root tracking the tool itself.
 
 ## Open questions (founder decisions — not agent-decidable)
 
-None currently open. The orchestrator should re-surface new ones here as they come up,
-rather than guessing past them.
+- Are there other existing businesses beyond Glimpse that should be onboarded as ventures?
+- Does the old Phase 2/3 roadmap below (packaging IdeaAgent as an installable pack for others)
+  still apply to anyone, or is it fully retired now that the sell-to-founders model is gone?

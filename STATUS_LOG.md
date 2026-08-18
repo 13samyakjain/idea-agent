@@ -200,3 +200,38 @@ permissions aren't agent-actionable).
 **Open decision for the human:** None blocking on the automation side anymore. The one
 remaining open item is unchanged: the revised DISCOVERY_GUIDE.md is ready for the 3-5 discovery
 conversations (Phase 1) — still human-only, still waiting.
+
+## 2026-08-18 — Pivot: internal tool, not sold to founders; Glimpse onboarded
+
+**Human activity:** Founder redirected IdeaAgent's whole premise: it is not a product to sell
+to other founders — it's an internal tool the founder uses to run his own businesses. Named
+Glimpse (glimpse.net.in) as the first business: reservations for travelling university reps,
+bulk merchandise ("PE Kits") procurement/supply, and event management based on intake, plus a
+planned-but-unscoped "sales engine for other businesses" expansion. Decided the discovery-guide
+validation work should be dropped entirely, not repurposed — it was testing demand from other
+founders, which no longer applies. Decided on a multi-venture repo structure:
+`ventures/<name>/` per business, this root tracking IdeaAgent-the-tool itself.
+
+**Agent activity:** Removed `DISCOVERY_GUIDE.md`. Created `ventures/glimpse/` (VENTURE.md,
+MILESTONES.md, GROWTH.md, STATUS_LOG.md) as Glimpse's own tracked venture. Rewrote root
+VENTURE.md (what it is / who it's for / stage / founder decisions / open questions) and
+MILESTONES.md (retired the old "concept validation" and "MVP: package for others" phases,
+replaced with multi-venture onboarding) and GROWTH.md (stage table and metrics re-pointed at
+venture count and per-venture orchestrator passes instead of validation conversations) to match.
+Retroactively identified that ClickUp's "Tasks"/"Vendors" spaces, dismissed as "no data,
+unrelated" on every prior run, are actually Glimpse's real operational data (e.g. "PE Kits
+request - August Month," in progress, assigned to Babita) — logged in
+`ventures/glimpse/STATUS_LOG.md`.
+
+**Milestone deltas:** Root Phase 1 replaced (concept validation → multi-venture structure,
+both marked done for the parts completed today). Root Phase 2/3 re-scoped and flagged rather
+than deleted. Glimpse's own Phase 0 "business defined" item marked done.
+
+**Dispatched:** none this run — this was founder-directed restructuring, not agent-dispatchable
+work. `.claude/skills/venture-orchestrator/SKILL.md` and the daily cloud routine's trigger
+prompt still need updating to actually loop across `ventures/*/` — flagged as the next step,
+not yet done as of this entry.
+
+**Open decision for the human:** Two from Glimpse's own log carry up here: which ClickUp
+lists/spaces map to which of the three service lines, and whether there are other existing
+businesses beyond Glimpse to onboard.
