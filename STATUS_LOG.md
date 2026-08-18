@@ -130,3 +130,44 @@ and applied by hand after comparing both reports.
 
 **Open decision for the human:** Unchanged from last entry — cloud routine verification and
 running the (now revised) 3-5 discovery conversations are both still human-only next steps.
+
+## 2026-08-18 — Scheduled run, 6-day gap found and a repo git issue fixed
+
+**Human activity:** ClickUp (`clickup_get_workspace_hierarchy`) shows only "Tasks" and
+"Vendors" spaces — no IdeaAgent-related content, consistent with every prior run. Calendar
+(`search_events` for "IdeaAgent" and `list_events` for the surrounding 48h) surfaced only
+unrelated personal/work events (a recurring `vempower.org` meeting, an unrelated 1:1, two OOO
+notices). This is a scheduled/unattended run (no live founder present), so per the guardrail
+this was logged as "no data" rather than blocking on a founder check-in.
+
+**Agent activity:** `TaskList` showed nothing tracked. Before doing anything else, checked
+whether the prior run's work had actually landed (per the playbook's step 1) and found two
+things:
+1. The repo's local `main` branch ref was stale, pointing at `80bbd0f` (2026-08-10), while
+   `HEAD` was detached 2 commits ahead at `08258a4` (2026-08-12: the discovery-guide
+   pressure-test and the 51-agent marketing/sales/support pack). Fast-forwarded local `main`
+   to `08258a4` and confirmed via `git fetch` that `origin/main` already had both commits — so
+   no work was actually lost, this was a local branch-pointer issue only, now fixed.
+2. A real reliability gap: `git log --all --since=2026-08-12` shows zero commits anywhere in
+   the repo between 2026-08-12 and today, 2026-08-18 — 6 days with no orchestrator activity
+   despite the daily cloud routine's described twice-daily (9am/8pm IST) schedule. Even a
+   "nothing changed" run should still produce a STATUS_LOG entry per this skill's own
+   guardrails, and none exist for that window. This is the same zero-commit failure mode
+   flagged on 2026-08-10 (then attributed to a missing `Skill` tool) — it does not appear to
+   have been resolved, and has now gone unverified for 6 days.
+
+**Milestone deltas:** None flipped. Phase 0's "Daily orchestrator run completes cleanly for 3
+consecutive days" remains not started — worse, this run is evidence it may not be accruing
+days at all.
+
+**Dispatched:** none this run. No new founder input to act on, and the one real problem found
+(cloud routine reliability) isn't agent-fixable from inside this repo — it requires the founder
+to check the routine's execution history on the platform side, which this session has no tool
+access to.
+
+**Open decision for the human:** Same ask as 2026-08-10, now more urgent — please check the
+daily cloud routine's (`trig_01Kbr4hQgUQ52Jvwr8EvCQog`) execution history directly. If it has
+been silently failing (or not firing at all) since 08-12, that needs fixing before Phase 0's
+"3 consecutive clean days" milestone can ever be satisfied. Separately, still unblocked and
+waiting on the founder: the revised DISCOVERY_GUIDE.md is ready for the 3-5 discovery
+conversations (Phase 1).

@@ -19,9 +19,9 @@
 |---|---|---|
 | Vision stability | 1 revision (open questions → locked decisions) | 2026-08-09 |
 | Validation conversations | 0 | 2026-08-09 |
-| Orchestrator runs completed | 4 (bootstrap, founder decisions, discovery guide, incident-found run) | 2026-08-10 |
+| Orchestrator runs completed | 6 (bootstrap, founder decisions, discovery guide, incident-found run, discovery-guide pressure-test, 6-day-gap run) | 2026-08-18 |
 | Active ventures tracked | 1 (IdeaAgent itself) | 2026-08-09 |
-| Daily cloud routine reliability | 0 clean automated fires / 2 tested runs — both zero-commit failures (missing `Skill` tool; root cause still open after that fix) | 2026-08-10 |
+| Daily cloud routine reliability | Still 0 confirmed clean automated fires. 6-day gap in STATUS_LOG (2026-08-12 → 2026-08-18) with zero entries despite the described twice-daily schedule — either the routine stopped firing or it fired and failed silently before logging, same failure mode as the two earlier tested runs. This run (2026-08-18) is itself an automated fire; whether it lands cleanly depends on this run's own commit succeeding. | 2026-08-18 |
 | Dogfood status report — activation signal | First real one shipped (Venture Console) and used same-day to act on 3 real decisions (routine-fix approval, ClickUp target list, live-polling tradeoff) | 2026-08-10 |
 
 ## Instrumentation TODO
