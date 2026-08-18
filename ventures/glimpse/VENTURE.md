@@ -14,9 +14,15 @@ travel across regions for admissions/outreach work. Three current service lines:
    at one place, supplying it to reps at lower cost than they'd get sourcing it themselves.
 3. **Events** — manages events based on intake volume and requirement.
 
-**Planned expansion (not yet scoped):** a model within Glimpse that could be sold as a sales
-engine for other businesses. This is a founder-owned direction, not yet defined concretely —
-see Open questions.
+**Expansion in progress: "Sales Engine."** A model within Glimpse to be sold as a sales
+engine for other businesses. Already scoped and underway per ClickUp's `Sales Engine
+Milestones` list: M1 Learn Sales & Marketing Fundamentals (done), M2 Draft Sales Engine Offer
+Hypothesis (done), M3 Validate Offer With Real Prospects (open), M4 Refine Offer Based on
+Feedback (open), M5 First Pilot/Signed Commitment (open) — plus supporting milestones (set
+pricing, basic business plumbing/contracts/invoicing, delivery capacity plan, an internal
+proof asset from Glimpse's own BDE/KPI results). Backed by `BDE Team Ops` and `Lead Sourcing
+Queue` lists (hiring and running Business Development Executives) — see
+`ventures/glimpse/MILESTONES.md` Phase 2 for the live-synced version of this roadmap.
 
 ## Who it's for
 
@@ -35,17 +41,34 @@ IdeaAgent's own bootstrap.
 
 ## Stage
 
-**Operating.** Has a real team (at least one named team member observed in ClickUp: Babita)
-and active task tracking (e.g. "PE Kits request - August Month", in progress, Sprint 15
-10/8–13/9). Revenue/financial status, team size, and current priorities are not yet known to
-the orchestrator — first real pass should establish this rather than assume it.
+**Operating, established.** Real team of at least 6 (founder Samyak Jain, Babita, Kaustav
+Saha, Sachin Poddar, Syed Afsha Ali, Kanchan Thakur) with continuous task history in ClickUp
+back to at least February 2026 (Sprint 9) across dozens of university partners (RIT, SLU,
+Rockhurst, BGSU, Catalystia, IC3, and more). This is a running operating business, not an
+early-stage one — revenue/financial figures specifically are still not known to the
+orchestrator (no finance connector wired up), but operational activity is now fully visible.
 
-## Known data sources
+## Known data sources — ClickUp mapping (confirmed 2026-08-18)
 
-- **ClickUp** — the "Tasks" and "Vendors" spaces in the workspace the orchestrator already has
-  connector access to. These were checked on every prior IdeaAgent-tool run and dismissed as
-  "no data, unrelated" — that was a misread. This *is* Glimpse's real operational data; it was
-  just never being interpreted as such because no venture was tracking it yet.
+Workspace has two spaces: **Tasks** and **Vendors**. Day-to-day work does not use the
+category-named lists below as working lists — it flows through **Sprint Folder → Sprint N**
+(date-ranged, e.g. "Sprint 15 (10/8–13/9)"), which mixes all three service lines together by
+date rather than by category. Mapping:
+
+| Area | Where it actually lives | Notes |
+|---|---|---|
+| Reservations (flights/hotels/cabs/trains/venues) | Sprint N lists, tagged inconsistently (`flight reservation`, `hotel reservations`, `cab reservations`, `venue booking`) | Dedicated `Flight Reservations` / `Hotel Reservations` / `Venue Bookings` lists exist but aren't the live working lists |
+| Merchandise / PE Kits | Sprint N lists, tagged `merch`, `merch procurement`, `merch delivery`, `admit kit`, `pe` | Dedicated `Merchendise` list exists but isn't the live working list |
+| Events | Sprint N lists, identified by university/program tag (`rit`, `slu`, `ru`, `bgsu`, `catalystia`, `ic3`, `tiger pride`, `yield event`) | No dedicated events list — events are implicit in which university/tag a sprint task carries |
+| Sales Engine expansion | `Sales Engine Milestones` list (dedicated, actively used) + `BDE Team Ops` + `Lead Sourcing Queue` | This is the one area already organized by category, not by sprint |
+| Vendors | `Vendors` space → `Vendor Master List` | Supports merchandise procurement |
+| Misc/personal-admin | `Backlog` folder → `List` | Genuine catch-all — mixes real ops (stock checks, portal updates) with unrelated personal items (loan balances, gift arrangements) |
+| IdeaAgent-tool housekeeping | `Tasks` space → `IdeaAgent` list | Already correctly separate — not Glimpse data |
+
+**Implication for the orchestrator:** don't expect a clean per-category list to filter on.
+Reservations/merchandise/events signal has to be pulled from the live Sprint list by tag/title
+keyword, not by list ID. Sales Engine work is the exception — it already has clean, dedicated
+lists.
 
 ## Founder decisions (locked 2026-08-18)
 
@@ -54,12 +77,15 @@ the orchestrator — first real pass should establish this rather than assume it
 - Glimpse is tracked as its own venture folder (`ventures/glimpse/`) with its own
   VENTURE.md / MILESTONES.md / GROWTH.md / STATUS_LOG.md, separate from IdeaAgent-the-tool's
   root-level docs.
+- ClickUp itself is not being reorganized (moving ~300 historical, mostly-closed tasks between
+  lists for a live 6-person tool has real risk and little payoff) — the orchestrator instead
+  reads the existing sprint-based structure as-is, per the mapping above.
 
 ## Open questions (founder decisions — not agent-decidable)
 
-- What does the "sales engine for other businesses" expansion concretely mean — a service
-  Glimpse offers, a licensable playbook, something else? Not scoped yet.
 - Are there other existing businesses beyond Glimpse that should also be onboarded as
-  ventures under this same repo?
-- Which ClickUp lists/spaces map to which of Glimpse's three service lines (reservations /
-  merchandise / events)? Needed before the orchestrator can track them individually.
+  ventures under this same repo? (Founder: "later.")
+- Should *new* (not historical) tasks going forward be filed into the category lists
+  (Flight Reservations, Hotel Reservations, Merchandise, etc.) instead of only Sprint lists,
+  to make future tracking cleaner? Not decided — flagging as a lightweight process change the
+  founder may or may not want, not something to impose unilaterally.

@@ -16,10 +16,11 @@
 
 | Metric | Value | As of |
 |---|---|---|
-| Reservation volume | not yet measurable | 2026-08-18 |
-| PE Kit procurement cost baseline | not yet measurable | 2026-08-18 |
-| Events managed (period TBD) | not yet measurable | 2026-08-18 |
-| Team size | not yet measurable (at least 1 known: Babita, per ClickUp) | 2026-08-18 |
+| Reservation volume | not yet measurable (data exists, tag-based extraction not built yet) | 2026-08-18 |
+| PE Kit procurement cost baseline | not yet measurable (data exists, tag-based extraction not built yet) | 2026-08-18 |
+| Events managed (period TBD) | not yet measurable (data exists, needs university/tag rollup) | 2026-08-18 |
+| Team size | 6 confirmed via ClickUp assignees: Samyak Jain (founder), Babita, Kaustav Saha, Sachin Poddar, Syed Afsha Ali, Kanchan Thakur | 2026-08-18 |
+| Sales Engine milestones | 2 of 5 core milestones done (M1, M2); M3-M5 open | 2026-08-18 |
 | Orchestrator passes completed against Glimpse | 0 | 2026-08-18 |
 
 ## Instrumentation TODO

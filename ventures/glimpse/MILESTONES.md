@@ -4,24 +4,37 @@
 > The orchestrator updates status and appends new milestones as they're identified. It does not
 > delete or reword existing milestones without flagging the change in STATUS_LOG.md.
 
-## Phase 0 — Onboarding (current)
+## Phase 0 — Onboarding (done)
 
 - [x] Business defined in VENTURE.md (service lines, stage, known data sources)
-- [ ] Map ClickUp lists/spaces to Glimpse's three service lines (reservations, merchandise,
-      events) so the orchestrator can track each individually instead of one undifferentiated
-      pile
+- [x] Map ClickUp lists/spaces to Glimpse's three service lines — done 2026-08-18: no clean
+      per-category lists exist for reservations/merchandise/events (all three flow through
+      date-based Sprint lists, tag-identified); Sales Engine work is the exception with its own
+      dedicated lists. See VENTURE.md's mapping table.
 - [ ] First orchestrator pass against real Glimpse ClickUp data completes and surfaces a
       genuinely useful next action (not just "no data" or IdeaAgent-tool housekeeping)
 - [ ] Founder confirms that surfaced action was actually useful
 
 ## Phase 1 — Operational visibility (not started)
 
-- [ ] Reservations: current state, volume, pain points visible to the orchestrator
+- [ ] Reservations: current state, volume, pain points visible to the orchestrator (pull by
+      tag from Sprint lists — no dedicated list to filter on)
 - [ ] Merchandise/PE Kits: procurement cadence, cost baseline, storage/fulfillment visible
-- [ ] Events: intake-to-event pipeline visible
+      (same — tag-based pull from Sprint lists)
+- [ ] Events: intake-to-event pipeline visible (identify by university/program tag)
 
-## Phase 2 — Sales engine expansion (not started, not scoped)
+## Phase 2 — Sales engine expansion (in progress, scoped 2026-08-18)
 
-- [ ] Founder defines concretely what "a model sellable as a sales engine for other
-      businesses" means
-- [ ] TBD once scoped
+> Already underway per ClickUp's `Sales Engine Milestones`, `BDE Team Ops`, and
+> `Lead Sourcing Queue` lists — not something to newly define, just to sync and track here.
+
+- [x] M1: Learn Sales & Marketing Fundamentals
+- [x] M2: Draft Sales Engine Offer Hypothesis
+- [ ] M3: Validate Offer With Real Prospects
+- [ ] M4: Refine Offer Based on Feedback
+- [ ] M5: First Pilot / Signed Commitment
+- [ ] Supporting: hire 1x full-time BDE + 2-3x BDE interns (in progress in ClickUp)
+- [ ] Supporting: set Sales Engine pricing (deliberately last, per ClickUp task title)
+- [ ] Supporting: set up basic business plumbing (contract + invoicing)
+- [ ] Supporting: finalize delivery capacity plan
+- [ ] Supporting: build proof asset (internal Glimpse BDE/KPI result)
