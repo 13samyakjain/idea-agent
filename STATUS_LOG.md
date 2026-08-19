@@ -235,3 +235,27 @@ not yet done as of this entry.
 **Open decision for the human:** Two from Glimpse's own log carry up here: which ClickUp
 lists/spaces map to which of the three service lines, and whether there are other existing
 businesses beyond Glimpse to onboard.
+
+## 2026-08-19 — ClickUp MCP integration hit a hard rate limit mid-run (cross-venture concern)
+
+**Agent activity:** During today's Glimpse pass, the orchestrator's own ClickUp lookups plus a
+dispatched review agent's reads collectively tripped an account/token-level rate limit on the
+ClickUp MCP integration (`RATE_LIMIT_EXCEEDED: wait 778 minutes` — roughly 13 hours, both reads
+and writes blocked, confirmed via a failed retry and a failed no-op write). Full detail and the
+venture-specific impact are logged in `ventures/glimpse/STATUS_LOG.md`. Flagging here because
+it's a tool-level constraint, not a Glimpse-specific one: any venture whose orchestrator pass
+leans on ClickUp reads/writes can hit the same wall, especially if a run does its own
+exploratory lookups (list/task/comment reads to build context) *and* then dispatches an agent
+that does its own additional reads on the same tasks — that's double-spending the same daily
+quota. Worth considering for the SKILL.md playbook: cache/reuse task data already fetched by
+the orchestrator itself when handing off to a dispatched agent, rather than having the agent
+re-fetch the same tasks from scratch.
+
+**Milestone deltas:** None — this is an operational constraint, not a milestone.
+
+**Dispatched:** none directly from this entry — the retry is already logged as the open item in
+Glimpse's own log.
+
+**Open decision for the human:** None blocking. Worth knowing: if ClickUp lookups feel slow or
+start failing elsewhere today (2026-08-19), this integration's quota is why — it should clear
+on its own by roughly 2026-08-20 03:30 UTC.

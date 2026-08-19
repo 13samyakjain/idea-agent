@@ -135,3 +135,39 @@ higher-leverage backlog, not that he has too little to do.
 model, app review) need either protected time to actually get done, or an explicit call that
 they're no longer priorities — leaving them silently stale for months is itself a decision by
 default. Not something to resolve unilaterally.
+
+## 2026-08-19 — Apollo export finally landed (25 leads); qualification review blocked by ClickUp rate limit
+
+**Human activity:** Founder ran the first Apollo export directly, as he'd said he would in the
+prior entry today — `Lead Sourcing Queue` went from 0 tasks to 25, each pre-populated with
+company data (from Apollo) and the ICP Qualification Checklist template already in the task
+description. No founder reply yet on the draft BDE assignment process (ClickUp task
+86d3t4bg7 — still only the orchestrator's own comment from 2026-08-18). Calendar checked for
+the last/next 24h: nothing Glimpse-decision-relevant (a recurring 1:1, two unrelated OOO
+notices).
+
+**Agent activity:** Dispatched a general-purpose agent to run Stage 1 of the qualification
+process (the ICP Qualification Checklist) against all 25 new leads — this is the existing,
+already-documented process from the list's own description, not something newly invented. The
+agent read 13 of 25 task descriptions (Apollo data now cached in its transcript, not yet
+evaluated) before every further ClickUp call — reads and writes alike — started failing with
+`RATE_LIMIT_EXCEEDED: wait 778 minutes`. Confirmed as an account/token-level block on the
+ClickUp MCP integration, not one bad call: a follow-up plain read and a no-op write both failed
+the same way. **Zero writes were made** to any of the 25 tasks; all 25 remain status "to do",
+completely unreviewed. Likely cause: this run's own ClickUp lookups (several list/task calls
+made directly by the orchestrator before dispatch) plus the agent's 13 reads, stacked on
+whatever quota the founder's own Apollo-export session already used today, exhausted the
+integration's daily quota.
+
+**Milestone deltas:** None flipped. The funnel has real leads in it for the first time — a
+genuine unblock — but none have been qualified, disqualified, or promoted yet, so Phase 2's M3
+("Validate Offer With Real Prospects") stays open until actual review happens.
+
+**Dispatched:** ICP Qualification Checklist review agent — did not complete, blocked by the
+rate limit above after 13/25 reads. No data was lost: each lead's Apollo data and checklist
+template live permanently in its own ClickUp task, so a retry starts clean, it's just delayed.
+
+**Open decision for the human:** Not a decision, a retry: the qualification review needs to be
+re-dispatched once the ClickUp rate limit clears (~778 min from 2026-08-19 14:34 UTC, i.e.
+roughly 2026-08-20 03:30 UTC) — the next scheduled run should be able to complete it. Carrying
+over unchanged: founder review of the draft BDE assignment process on task 86d3t4bg7.

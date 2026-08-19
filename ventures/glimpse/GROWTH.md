@@ -21,6 +21,7 @@
 | Events managed (period TBD) | not yet measurable (data exists, needs university/tag rollup) | 2026-08-18 |
 | Team size | 6 confirmed via ClickUp assignees: Samyak Jain (founder), Babita, Kaustav Saha, Sachin Poddar, Syed Afsha Ali, Kanchan Thakur | 2026-08-18 |
 | Sales Engine milestones | 2 of 5 core milestones done (M1, M2); M3-M5 open | 2026-08-18 |
+| Leads in qualification funnel (`Lead Sourcing Queue`) | 25 (first Apollo export, run by founder 2026-08-19) — 0 reviewed so far; ICP checklist review attempted same day but blocked after 13/25 by a ClickUp API rate limit, retry pending | 2026-08-19 |
 | Orchestrator passes completed against Glimpse | 0 | 2026-08-18 |
 
 ## Instrumentation TODO
