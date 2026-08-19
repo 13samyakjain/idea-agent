@@ -82,6 +82,34 @@ BDE assignment rule with multiple hires, and who owns the weekly rollup before t
 BDE lands). Separately, unrelated to process: someone needs to actually run the first Apollo
 export — the qualification funnel has never been fed a single lead.
 
+## 2026-08-19 — No movement since yesterday; still waiting on founder review and first Apollo export
+
+**Human activity:** Checked ClickUp task 86d3t4bg7 (Define BDE Work Alignment & Assignment
+Process) — still only the orchestrator's own draft comment from 2026-08-18, no founder reply
+yet. `Lead Sourcing Queue` still has 0 tasks — the Apollo export has still not been run.
+`Sales Engine Milestones` unchanged (M1/M2 done, M3-M5 and all four supporting tasks still "to
+do"). `BDE Team Ops` and Sprint 15 both still show BDE hiring ("Hire 1x Full-Time BDE", "Hire
+2-3x BDE Interns", "CHECK WITH PE TEAM FOR BDE HIRING") as open/in-progress, not resolved.
+Checked Google Calendar for the last/next 24h — nothing Glimpse-decision-relevant (only a
+recurring unrelated 1:1 and two out-of-office notices for people outside Glimpse's team).
+
+**Agent activity:** None since the last run (no background tasks in TaskList).
+
+**Milestone deltas:** None — nothing to flip, since neither open item from 2026-08-18 has
+moved.
+
+**Dispatched:** None. Both open items depend on a human: founder review of the draft process
+(a founder decision, not agent-decidable) and someone with Apollo access actually running the
+first export (execution, not something this orchestrator has credentials or standing to do).
+Dispatching agent work against either would be manufacturing busywork, not real movement.
+
+**Open decision for the human:** Same two as yesterday, both still open: (1) review/approve the
+draft BDE assignment process on ClickUp task 86d3t4bg7 or in
+`ventures/glimpse/SALES_ENGINE_PROCESS.md`; (2) get the first Apollo export actually run into
+`Lead Sourcing Queue` — this is now the single longest-standing blocker on the whole Sales
+Engine expansion, since M3 (Validate Offer With Real Prospects) can't start without real
+prospects in the funnel.
+
 ## 2026-08-19 — BDE hiring coordination reassigned; Kaustav utilization reviewed
 
 **Human activity:** Founder confirmed Kaustav won't run the Apollo pull (founder is doing it
