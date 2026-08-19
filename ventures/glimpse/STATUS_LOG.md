@@ -81,3 +81,29 @@ and react to. Explicitly framed as a draft needing founder review, not rolled ou
 BDE assignment rule with multiple hires, and who owns the weekly rollup before the full-time
 BDE lands). Separately, unrelated to process: someone needs to actually run the first Apollo
 export — the qualification funnel has never been fed a single lead.
+
+## 2026-08-19 — BDE hiring coordination reassigned; Kaustav utilization reviewed
+
+**Human activity:** Founder confirmed Kaustav won't run the Apollo pull (founder is doing it
+directly instead) and asked to reassign BDE-hiring coordination to Kanchan Thakur, post a
+team-visible follow-up in ClickUp, and get an honest read on whether Kaustav is underutilized.
+
+**Agent activity:** Unassigned Kaustav from "Daily Follow-up with PE — BDE Full-Time & Intern
+Hiring Status" and "CHECK WITH PE TEAM FOR BDE HIRING," reassigned both to Kanchan Thakur.
+Posted a team-visible comment on the `BDE Team Ops` list announcing the change. Pulled current
+open-task counts per person to answer the utilization question with evidence rather than
+impression: Kaustav's open-task count (~10) is comparable to or higher than Babita's (~9) —
+he is not idle. The real finding is different and more specific: several of his higher-leverage
+tasks (Performance Pay Matrix, KPIs for Sales model, app/tooling review) have sat open and
+overdue for 2+ months, while his reactive event-logistics bookings (which can't be deferred)
+keep getting done on time. Read as: constant reactive ops work is crowding out his
+higher-leverage backlog, not that he has too little to do.
+
+**Milestone deltas:** None — this is a staffing/workload finding, not a milestone.
+
+**Dispatched:** none — direct ClickUp actions and analysis, not agent-delegatable.
+
+**Open decision for the human:** Kaustav's stale high-leverage items (pay matrix, sales KPI
+model, app review) need either protected time to actually get done, or an explicit call that
+they're no longer priorities — leaving them silently stale for months is itself a decision by
+default. Not something to resolve unilaterally.
