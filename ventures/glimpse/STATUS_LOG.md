@@ -171,3 +171,31 @@ template live permanently in its own ClickUp task, so a retry starts clean, it's
 re-dispatched once the ClickUp rate limit clears (~778 min from 2026-08-19 14:34 UTC, i.e.
 roughly 2026-08-20 03:30 UTC) — the next scheduled run should be able to complete it. Carrying
 over unchanged: founder review of the draft BDE assignment process on task 86d3t4bg7.
+
+## 2026-08-20 — Retry attempt: rate limit escalated instead of clearing
+
+**Human activity:** Founder flagged separately that the 25-lead Apollo export "did not add good
+leads," and asked whether Apollo is the wrong sourcing platform or whether current results can
+still be worked with. No new ClickUp activity from the human on this list since 2026-08-19.
+
+**Agent activity:** Scheduled and ran a retry of the ICP Qualification Checklist review, intended
+to also diagnose lead quality (on-ICP vs off-ICP, data completeness) to answer the founder's
+Apollo question with evidence instead of guesswork. A live pre-check at ~04:20 UTC found the
+rate limit still active with 46 minutes remaining, consistent with the 2026-08-19 estimate. The
+scheduled retry fired at ~04:52 UTC but got `Rate limit exceeded. Please wait 1424 minutes` (~23.7
+hours) — worse than the prior estimate, not cleared. This means something continued consuming the
+ClickUp integration's quota after the last check (possibly other workspace activity outside this
+orchestrator). No further ClickUp calls were attempted this run, per instruction not to retry
+endlessly. **Zero reads or writes made** — all 25 leads remain completely unreviewed, and the
+lead-quality diagnosis the founder asked for could not be run.
+
+**Milestone deltas:** None. Same blocker as 2026-08-19, now worse.
+
+**Dispatched:** None — blocked before any ClickUp call could succeed.
+
+**Open decision for the human:** The ClickUp rate limit is now a recurring, worsening blocker
+(46 min → 1424 min between checks), not a one-off. Worth investigating directly with ClickUp
+(support/plan tier) rather than continuing to schedule retries that may hit the same wall —
+this orchestrator has no visibility into what else is consuming the quota. Until it clears, the
+25 leads stay unreviewed and the "is Apollo sourcing good leads" question stays unanswered.
+Carrying over unchanged: founder review of the draft BDE assignment process on task 86d3t4bg7.
