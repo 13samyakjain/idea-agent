@@ -259,3 +259,24 @@ Glimpse's own log.
 **Open decision for the human:** None blocking. Worth knowing: if ClickUp lookups feel slow or
 start failing elsewhere today (2026-08-19), this integration's quota is why — it should clear
 on its own by roughly 2026-08-20 03:30 UTC.
+
+## 2026-08-20 — Parallel agent dispatch, not read volume, is what trips the ClickUp rate limit
+
+**Agent activity:** Yesterday's entry (2026-08-19) hypothesized that stacking the
+orchestrator's own reads on top of a dispatched agent's reads was what exhausted ClickUp's
+quota. Today's Glimpse pass tested a fix for that (orchestrator pre-fetches once, hands data to
+agents so they only need to write) and it wasn't enough: 3 agents dispatched in parallel, each
+doing only ClickUp writes (no redundant reads), still re-tripped the same ~24h rate limit after
+only ~8 successful writes total. Full detail in `ventures/glimpse/STATUS_LOG.md`. Revised
+takeaway: it's concurrency itself, not read-vs-write mix or total call count, that ClickUp's
+integration can't tolerate — 8 calls landed fine when they came from one already-completing
+agent (batch B), while the other two agents' calls in the same window were rejected outright.
+
+**Milestone deltas:** None — operational constraint, not a milestone.
+
+**Dispatched:** none from this entry.
+
+**Open decision for the human:** None blocking. Worth deciding at some point: should the
+venture-orchestrator's own playbook (SKILL.md) be updated to forbid parallel ClickUp-writing
+dispatches against the same workspace, or is today's data (n=1 run) too thin to lock that in as
+a rule yet? Flagging rather than unilaterally editing the skill's run sequence.

@@ -171,3 +171,94 @@ template live permanently in its own ClickUp task, so a retry starts clean, it's
 re-dispatched once the ClickUp rate limit clears (~778 min from 2026-08-19 14:34 UTC, i.e.
 roughly 2026-08-20 03:30 UTC) — the next scheduled run should be able to complete it. Carrying
 over unchanged: founder review of the draft BDE assignment process on task 86d3t4bg7.
+
+## 2026-08-20 — First-ever ICP review pass on all 25 leads; ClickUp rate limit blocked 17 of 25 writes
+
+**Human activity:** No founder reply yet on the draft BDE assignment process (ClickUp task
+86d3t4bg7 — still only the orchestrator's own comment from 2026-08-18). `BDE Team Ops` and
+`Sales Engine Milestones` both unchanged since 2026-08-19 — Kanchan's reassigned hiring-
+coordination task still "to do," M3-M5 and all four supporting tasks still "to do." Calendar
+shows a "meeting" between Samyak and Kanchan on 2026-08-19 20:30-21:30 IST (Kanchan-organized,
+Google Meet) — no agenda/description visible to the orchestrator, so its content and any
+relevance to the BDE reassignment can't be confirmed either way.
+
+**Agent activity:** ClickUp's rate limit (hit 2026-08-19, ETA ~03:30 UTC 2026-08-20) had
+cleared by this run. Pulled all 25 `Lead Sourcing Queue` task descriptions directly (not via a
+dispatched agent) specifically to avoid the read-pileup that caused yesterday's block, per the
+lesson logged in root STATUS_LOG.md. Dispatched 3 parallel general-purpose agents (batches of
+9/8/8) to run the ICP Qualification Checklist against all 25 leads — each was handed the full
+Apollo data already fetched, so none needed to re-read from ClickUp, only research (web) and
+write back.
+
+Result: **the 3 parallel agents' ClickUp writes collectively re-tripped the same rate limit**
+after only ~8 successful writes — confirming this is a low, easily-exhausted quota, and that
+running multiple agents against ClickUp concurrently is itself the failure mode, independent of
+read/write mix. Batch B (8 leads) got its writes in before the block; batches A and C (17
+leads) completed full research but every write attempt failed with
+`RATE_LIMIT_EXCEEDED` (~24h retry-after). Confirmed independently: a plain read against one of
+batch A's tasks also failed with the same block after all three agents reported back.
+
+**Written to ClickUp (8 of 25) — Batch B:**
+- Qualified (status → in progress): Teacher Transition (86d431fj1), ACS Consultancy Services
+  (86d431fhm), Pocketbook Agency (86d431fh1)
+- Borderline (status → in progress, priority → urgent): Forbes Technical Consulting (86d431fhw,
+  existing BD/VP-BD hires confirmed), Compri Consulting (86d431fgu, existing Director of BD
+  confirmed), Prairie Consulting Services (86d431fgq, BD-hire status unconfirmed either way —
+  **comment to Samyak failed to post**, rate-limited, needs retry)
+- Disqualified (status → complete): Talentoma (86d431fhg, too new/low-trust, no founder found),
+  World Brand Design Society (86d431fh9, nonprofit, no commercial revenue or named leader)
+
+**Researched but NOT yet written to ClickUp (17 of 25) — verdicts below, ready for a retry
+pass once the rate limit clears (do not re-research):**
+
+Batch A (task descriptions/statuses in ClickUp are still untouched):
+- Qualified: Hire Resolve LLC (86d431fmm), Egger & Co (86d431fmc), Elios AI (86d431fkf),
+  Remotivate (86d431fjj)
+- Borderline: Ondrick Agency (86d431fn1, itself a sales-agent-recruitment business — criterion
+  2 ambiguous by nature), CornerStone Technology Talent Services (86d431fmr, confirmed VP of
+  Sales role exists), Generative AI works (86d431fkt, likely maps to Steve Nouri's GenAI.Works
+  media business — BD/partnerships function plausible but unconfirmed), Agency of Valor
+  (86d431fk2, same agent-recruitment model as Ondrick)
+- Disqualified: Free Online Courses (86d431fnc, confirmed nonprofit, no commercial revenue,
+  founder only identifiable by first name)
+
+Batch C (task descriptions/statuses in ClickUp are still untouched; WebFetch to company
+sites/LinkedIn was also blocked by this session's network egress policy, so this batch's
+research is WebSearch-only — lower confidence than A/B on unverifiable criteria):
+- Qualified: The Smith Family Agency (86d431ff7)
+- Borderline: RNJobSite.com (86d431ffb, sales-hire status unconfirmed), Engtal (86d431ff2,
+  possible existing BD-type role, also flagged as an adjacent-but-not-direct competitor to
+  Glimpse's own Sales Engine — worth Samyak's eyes)
+- Disqualified: Flash Moving Service (86d431fg0, no independent web footprint), Jayel Cloud
+  (86d431ffp, confirms the founder's own "1 employee, out of ICP range" flag), International
+  Careers Updates (86d431ffk, confirmed Zimbabwe-registered nonprofit trading on UN branding —
+  flagged for Samyak's awareness separately from the qualification math), Education galaxy
+  (86d431fer, **data-quality flag**: task name/LinkedIn slug don't match the linked website,
+  which resolves to an unrelated mechanical-engineering blog called "Mechzone" — likely a
+  corrupted Apollo record), Free Courses Certificates (86d431fej, same data-quality flag: name
+  doesn't match the linked website, an affiliate content blog called "awsomenews.com")
+
+**Milestone deltas:** Glimpse Phase 0 "first orchestrator pass surfaces a genuinely useful
+action" flipped to done — the ICP review is a first for this list (previously 0/25 reviewed
+since the 2026-08-19 Apollo export). Root Phase 1 "3 consecutive days of real Glimpse passes"
+also flipped to done (2026-08-18 through 2026-08-20). Phase 2's M3 stays open — qualifying
+leads isn't the same as validating the offer with real prospects; noted the partial progress
+without checking the box.
+
+**Dispatched:** 3 ICP-review agents (batches A/B/C) — B completed fully, A and C completed
+research but not the ClickUp writes (blocked, see above).
+
+**Open decisions for the human:**
+1. Same carryover: review/approve the draft BDE assignment process (task 86d3t4bg7).
+2. New: 3 of the written-back Borderline leads (Forbes Technical Consulting, Compri Consulting)
+   have visible comments; Prairie Consulting Services' comment failed to post — check that
+   task's description directly for the flagged judgment call in the meantime.
+3. Not a founder decision, an operational fix: **running multiple parallel agents against
+   ClickUp is the actual failure mode**, not read volume — 8 writes across 3 concurrent agents
+   was enough to trip a ~24h block. Future ClickUp-heavy dispatches against this venture should
+   be serialized (one agent, sequential writes with pacing) rather than run in parallel, until
+   the real quota is better understood. Logged in root STATUS_LOG.md as a cross-venture concern
+   too.
+4. Retry needed (not founder-blocked, just time-blocked): write the 17 pending verdicts above
+   to ClickUp once the rate limit clears (~24h from this run, i.e. roughly 2026-08-21 late
+   morning UTC) — the verdicts are final, no re-research needed.

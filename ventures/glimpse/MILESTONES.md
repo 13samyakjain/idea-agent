@@ -11,8 +11,10 @@
       per-category lists exist for reservations/merchandise/events (all three flow through
       date-based Sprint lists, tag-identified); Sales Engine work is the exception with its own
       dedicated lists. See VENTURE.md's mapping table.
-- [ ] First orchestrator pass against real Glimpse ClickUp data completes and surfaces a
-      genuinely useful next action (not just "no data" or IdeaAgent-tool housekeeping)
+- [x] First orchestrator pass against real Glimpse ClickUp data completes and surfaces a
+      genuinely useful next action (not just "no data" or IdeaAgent-tool housekeeping) — done
+      as of 2026-08-20: ran the first-ever ICP qualification review against all 25
+      `Lead Sourcing Queue` leads (previously 0 reviewed since the 2026-08-19 Apollo export)
 - [ ] Founder confirms that surfaced action was actually useful
 
 ## Phase 1 — Operational visibility (not started)
@@ -30,7 +32,11 @@
 
 - [x] M1: Learn Sales & Marketing Fundamentals
 - [x] M2: Draft Sales Engine Offer Hypothesis
-- [ ] M3: Validate Offer With Real Prospects
+- [ ] M3: Validate Offer With Real Prospects — not done yet, but the funnel's first review pass
+      started 2026-08-20 (8/25 leads qualified/disqualified in ClickUp, 17 more researched and
+      pending write — see STATUS_LOG.md). Qualifying leads isn't validating the offer with them
+      yet — that still requires actually promoting Qualified leads to GHL and getting real
+      prospect engagement, both still to come.
 - [ ] M4: Refine Offer Based on Feedback
 - [ ] M5: First Pilot / Signed Commitment
 - [ ] Supporting: hire 1x full-time BDE + 2-3x BDE interns (in progress in ClickUp)
