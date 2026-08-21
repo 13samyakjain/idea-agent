@@ -17,13 +17,21 @@
       `Lead Sourcing Queue` leads (previously 0 reviewed since the 2026-08-19 Apollo export)
 - [ ] Founder confirms that surfaced action was actually useful
 
-## Phase 1 — Operational visibility (not started)
+## Phase 1 — Operational visibility (in progress, first pass 2026-08-21)
 
-- [ ] Reservations: current state, volume, pain points visible to the orchestrator (pull by
-      tag from Sprint lists — no dedicated list to filter on)
-- [ ] Merchandise/PE Kits: procurement cadence, cost baseline, storage/fulfillment visible
-      (same — tag-based pull from Sprint lists)
-- [ ] Events: intake-to-event pipeline visible (identify by university/program tag)
+> First real pull done 2026-08-21 against Sprint 14 + Sprint 15 (52 tasks), but not by tag as
+> originally planned — only 1 of 52 tasks in that window carries any ClickUp tag, so the
+> category counts below are title-keyword matches, a fragile proxy until tag hygiene improves
+> or the method changes. See GROWTH.md Instrumentation TODO and STATUS_LOG.md 2026-08-21.
+
+- [~] Reservations: current state, volume, pain points visible to the orchestrator — first
+      count in GROWTH.md (title-matched, not tag-based); pain points found: a Deborah/Peter visa
+      case unresolved across 2 sprints (6+ weeks)
+- [~] Merchandise/PE Kits: procurement cadence, cost baseline, storage/fulfillment visible —
+      task-count cadence now in GROWTH.md; cost baseline still not measurable (no financial data
+      in ClickUp)
+- [~] Events: intake-to-event pipeline visible — task count now in GROWTH.md (title-matched,
+      keyed to university/program name in the title, not a tag)
 
 ## Phase 2 — Sales engine expansion (in progress, scoped 2026-08-18)
 

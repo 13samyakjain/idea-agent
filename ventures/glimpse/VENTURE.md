@@ -57,9 +57,16 @@ date rather than by category. Mapping:
 
 | Area | Where it actually lives | Notes |
 |---|---|---|
-| Reservations (flights/hotels/cabs/trains/venues) | Sprint N lists, tagged inconsistently (`flight reservation`, `hotel reservations`, `cab reservations`, `venue booking`) | Dedicated `Flight Reservations` / `Hotel Reservations` / `Venue Bookings` lists exist but aren't the live working lists |
-| Merchandise / PE Kits | Sprint N lists, tagged `merch`, `merch procurement`, `merch delivery`, `admit kit`, `pe` | Dedicated `Merchendise` list exists but isn't the live working list |
-| Events | Sprint N lists, identified by university/program tag (`rit`, `slu`, `ru`, `bgsu`, `catalystia`, `ic3`, `tiger pride`, `yield event`) | No dedicated events list — events are implicit in which university/tag a sprint task carries |
+| Reservations (flights/hotels/cabs/trains/venues) | Sprint N lists, described as tagged (`flight reservation`, `hotel reservations`, `cab reservations`, `venue booking`) — **correction 2026-08-21: tagging is barely used in practice**, see note below | Dedicated `Flight Reservations` / `Hotel Reservations` / `Venue Bookings` lists exist but aren't the live working lists |
+| Merchandise / PE Kits | Sprint N lists, described as tagged (`merch`, `merch procurement`, `merch delivery`, `admit kit`, `pe`) — same correction | Dedicated `Merchendise` list exists but isn't the live working list |
+| Events | Sprint N lists, described as identified by university/program tag (`rit`, `slu`, `ru`, `bgsu`, `catalystia`, `ic3`, `tiger pride`, `yield event`) — same correction | No dedicated events list — events are implicit in which university/tag a sprint task carries |
+
+**Correction 2026-08-21:** the table above (written 2026-08-18) assumed tags exist but are used
+*inconsistently*. A direct pull of Sprint 14 + Sprint 15 (52 tasks) found only **1 of 52** tasks
+carries any ClickUp tag at all — tagging isn't inconsistent, it's essentially unused. Category
+counts in `ventures/glimpse/GROWTH.md` are currently built by title-keyword matching instead,
+which is workable but fragile (visa processing, vendor sourcing, and person-named tasks like
+"Kanan Event" don't map cleanly). See MILESTONES.md Phase 1 and STATUS_LOG.md 2026-08-21.
 | Sales Engine expansion | `Sales Engine Milestones` list (dedicated, actively used) + `BDE Team Ops` + `Lead Sourcing Queue` | This is the one area already organized by category, not by sprint |
 | Vendors | `Vendors` space → `Vendor Master List` | Supports merchandise procurement |
 | Misc/personal-admin | `Backlog` folder → `List` | Genuine catch-all — mixes real ops (stock checks, portal updates) with unrelated personal items (loan balances, gift arrangements) |
@@ -89,3 +96,14 @@ lists.
   (Flight Reservations, Hotel Reservations, Merchandise, etc.) instead of only Sprint lists,
   to make future tracking cleaner? Not decided — flagging as a lightweight process change the
   founder may or may not want, not something to impose unilaterally.
+- **New 2026-08-21:** should the team be asked to actually tag Sprint tasks going forward
+  (reservation/merch/events)? Only 1 of 52 tasks in the current + prior sprint carries any tag,
+  which is what forced a title-matching fallback for Phase 1 operational metrics (see GROWTH.md
+  and MILESTONES.md Phase 1). Not imposing a process change unilaterally.
+- **New 2026-08-21, operational not strategic — worth the founder's eyes, not a blocker:** three
+  separate, near-identical "hire BDE" tasks in `BDE Team Ops` (Sprint 15) — "Hire 2-3x BDE
+  Interns," "Hire 1x Full-Time BDE," "Hire BDE(s) — Business Development Executive Recruitment"
+  — all assigned to Samyak, same urgent priority, same due date 2026-07-22 (a month overdue),
+  all still open. Reads as the same need logged three times rather than genuinely distinct work;
+  the orchestrator did not merge/close any of them (no unilateral ClickUp reorganization, per
+  this file's own founder decision above) — flagging for a human call.

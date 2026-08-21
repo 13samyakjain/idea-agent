@@ -329,3 +329,66 @@ needs the Stage 2 process founder sign-off first (task 86d3t4bg7).
    progress for a different candidate (Saurav Mallick), which reads as inconsistent with a
    completed full-time hire from 3+ weeks ago, but the orchestrator has no data source that
    confirms either way.
+
+## 2026-08-21 — Second pass: Sales Engine still founder-gated, redirected to Phase 1 (operational visibility); tag hygiene found broken
+
+**Human activity:** Checked the two things gating Sales Engine progress since this morning's
+entry: task 86d3t4bg7 (Stage 2 assignment process) still shows only the orchestrator's own
+2026-08-18 draft comment — no founder reply. `Daily Follow-up with PE — BDE Full-Time & Intern
+Hiring Status` (86d3ucd9p) still shows only the pre-existing Kaustav Saha comment about Gagan
+Singh's 29 July start — no new comment confirming or denying it happened. Calendar (2026-08-20
+18:30 UTC – 2026-08-21 18:30 UTC) showed nothing new beyond what this morning's entry already
+covered (the recurring `vempower.org` meeting, an Anushika OOO notice, and the Saurav Mallick
+Round 1 BDE interview at 16:30–17:00 IST today). No new human activity to report beyond what's
+already logged this morning.
+
+**Agent activity:** Since Sales Engine (Phase 2) is genuinely blocked on the founder — both
+gating items above are unchanged — redirected this run's dispatch to Phase 1 (operational
+visibility), untouched since 2026-08-18 and not gated on any founder decision. Dispatched one
+general-purpose agent, ClickUp reads only, strictly sequential, against Sprint 15 (current,
+10/8–13/9) and Sprint 14 (prior, 6/7–9/8) — 52 tasks total, categorized by title (not tag —
+see finding below). Results written into `GROWTH.md` and `MILESTONES.md` (Phase 1 flipped from
+`[ ]` to `[~]`, not `[x]` — this is a first, fragile pass, not a durable tracking system).
+
+**Finding: ClickUp tag hygiene is broken, not just inconsistent.** VENTURE.md's data-source
+mapping (written 2026-08-18) assumed tasks are tagged inconsistently. The actual pull found only
+**1 of 52** tasks across both sprints carries any tag at all (double-checked against a raw task
+fetch, not just the list-summary endpoint). The orchestrator fell back to title-keyword matching
+instead — workable but fragile: 5 visa-processing tasks don't cleanly fit "reservations," a
+"Kanan Event" merch task turned out to be a person's name not a university, and a Rockhurst
+merch task wasn't in the known university-tag list at all. Corrected VENTURE.md's mapping table
+in place (flagged, not silently rewritten) and logged this as a new open question: should the
+team be asked to actually tag Sprint tasks going forward.
+
+**Real counts this run (title-matched, two-sprint window — see GROWTH.md for full detail):**
+Reservations: Sprint 14 9 tasks (2 open/7 closed), Sprint 15 2 tasks (0 open/2 closed).
+Merch/PE Kits: Sprint 14 9 tasks (3 open/6 closed), Sprint 15 11 tasks (7 open/4 closed).
+Events: Sprint 14 6 tasks (1 open/5 closed, all SLU/IC3), Sprint 15 4 tasks (4 open/0 closed).
+PE Kit cost baseline: still not measurable — no financial data in ClickUp, task counts are
+volume only.
+
+**Other operational findings (not acted on, flagged for the founder):**
+- Three near-identical "hire BDE" tasks in `BDE Team Ops` (Sprint 15), all assigned to Samyak,
+  same urgent priority, same due date 2026-07-22 (a month overdue) — reads as one need logged
+  three times. Not merged/closed by the orchestrator (no unilateral ClickUp reorganization, per
+  VENTURE.md's own founder decision) — logged as a new open question in VENTURE.md instead.
+- A visa case for "Deborah and Peter" has run across both sprints (6+ weeks) without closing.
+- A cluster of tasks with July due dates (Performance Pay Matrix, sales KPIs, an Africa visa
+  vendor search, an SLU merch confirmation, a university-wide stock check, an app-intro task)
+  are still open in the current (Aug–Sep) sprint — rolling forward unresolved rather than being
+  new-work backlog.
+
+**Milestone deltas:** Root Glimpse MILESTONES.md Phase 1 moved `[ ]` → `[~]` for all three
+sub-items (Reservations, Merchandise, Events) — first real numbers exist, but the method is a
+fragile title-matching proxy, not the tag-based pull originally planned, so not marking done.
+
+**Dispatched:** 1 agent (ClickUp reads, sequential, Sprint 14 + Sprint 15 audit) — completed,
+results incorporated above.
+
+**Open decisions for the human:**
+1. Carryover, still the real Sales Engine bottleneck: task 86d3t4bg7 sign-off — no reply yet.
+2. New: should Sprint tasks be tagged going forward, so Phase 1 metrics stop depending on
+   fragile title-matching? (VENTURE.md open questions.)
+3. New, not urgent: the three duplicate "hire BDE" tasks in `BDE Team Ops` — worth consolidating
+   or confirming they're intentionally separate.
+4. Carryover: confirm whether Gagan Singh's full-time BDE start actually happened.
