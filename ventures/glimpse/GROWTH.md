@@ -21,8 +21,8 @@
 | Events managed (period TBD) | not yet measurable (data exists, needs university/tag rollup) | 2026-08-18 |
 | Team size | 6 confirmed via ClickUp assignees: Samyak Jain (founder), Babita, Kaustav Saha, Sachin Poddar, Syed Afsha Ali, Kanchan Thakur | 2026-08-18 |
 | Sales Engine milestones | 2 of 5 core milestones done (M1, M2); M3-M5 open | 2026-08-18 |
-| Leads in qualification funnel (`Lead Sourcing Queue`) | 25 total. **8 reviewed and written to ClickUp**: 3 Qualified, 3 Borderline, 2 Disqualified. **17 more researched (verdicts ready: 5 Qualified, 6 Borderline, 6 Disqualified) but NOT yet written to ClickUp** — blocked by a hard rate limit (~24h) hit mid-run; ClickUp itself still shows these 17 as unreviewed "to do" until a retry lands them. Full per-company verdicts preserved in STATUS_LOG.md 2026-08-20 entry so the research isn't lost. | 2026-08-20 |
-| Orchestrator passes completed against Glimpse | 5+ (2026-08-18 through 2026-08-20, multiple same-day passes on some dates) | 2026-08-20 |
+| Leads in qualification funnel (`Lead Sourcing Queue`) | **25 of 25 reviewed and written to ClickUp** (complete as of 2026-08-21): **8 Qualified**, **9 Borderline** (each with an escalation comment tagging Samyak for a judgment call), **8 Disqualified**. None yet promoted to GHL — that's the next step, gated on founder sign-off of the Stage 2 assignment process (task 86d3t4bg7, still pending). | 2026-08-21 |
+| Orchestrator passes completed against Glimpse | 6+ (2026-08-18 through 2026-08-21, multiple same-day passes on some dates) | 2026-08-21 |
 
 ## Instrumentation TODO
 
@@ -30,10 +30,12 @@
       numbers for every row above
 - [ ] Ask the founder for a baseline read on current reservation volume, PE Kit costs, and
       event cadence rather than inferring from incomplete ClickUp data
-- [ ] Retry the ClickUp writes for the 17 leads whose verdicts are ready but unwritten (see
-      STATUS_LOG.md 2026-08-20) once the rate limit clears — do not re-research, the verdicts
-      are already final, only the ClickUp write needs to happen
-- [ ] Structural fix needed: parallel agent dispatches against ClickUp exhaust its rate limit
-      fast (8 successful writes before lockout on 2026-08-20, running 3 agents at once) —
-      future ClickUp-heavy dispatches against this venture should be serialized, not
-      parallelized, until the actual per-minute/per-day quota is known
+- [x] Retry the ClickUp writes for the 17 leads whose verdicts were ready but unwritten — done
+      2026-08-21, all 17 plus one missing comment written cleanly in one serialized pass, zero
+      rate-limit errors. See STATUS_LOG.md 2026-08-21 entry.
+- [x] Structural fix validated: a single agent making ClickUp calls strictly sequentially (no
+      parallel dispatches) completed 44 ClickUp tool calls (17 status/description updates + 7
+      comments) with zero `RATE_LIMIT_EXCEEDED` errors, where 3 parallel agents tripped a ~24h
+      block after only 8 writes on 2026-08-20. Confirms concurrency (not call volume) was the
+      actual cause. Serialize future ClickUp-heavy dispatches against this venture as the
+      default going forward.

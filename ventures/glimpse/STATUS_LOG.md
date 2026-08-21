@@ -262,3 +262,70 @@ research but not the ClickUp writes (blocked, see above).
 4. Retry needed (not founder-blocked, just time-blocked): write the 17 pending verdicts above
    to ClickUp once the rate limit clears (~24h from this run, i.e. roughly 2026-08-21 late
    morning UTC) — the verdicts are final, no re-research needed.
+
+## 2026-08-21 — All 25/25 Lead Sourcing Queue leads now qualified in ClickUp; parallel-vs-serial rate-limit fix confirmed
+
+**Human activity:** No founder reply yet on the draft BDE assignment process (task 86d3t4bg7 —
+still only the orchestrator's own comment from 2026-08-18). `BDE Team Ops`: Kanchan's reassigned
+"Daily Follow-up with PE — BDE Full-Time & Intern Hiring Status" task is still "to do," no new
+comment since reassignment. Found one older comment on that same task (pre-dating the
+reassignment) from Kaustav Saha: "Full timer Gagan Singh would join the team from Wednesday
+29th July, 2026." Calendar shows a live signal that hiring is still active regardless of that:
+a "Round 1 (BDE) — SAURAV MALLICK" candidate interview today, 2026-08-21 16:30–17:00 IST,
+organized by talent.discovery@vempower.org with Samyak as an attendee. Can't confirm from
+available data whether Gagan Singh's start actually happened — flagging the gap rather than
+guessing either way. The `BDE Team Ops` list no longer shows a "CHECK WITH PE TEAM FOR BDE
+HIRING" task by that name (only 4 tasks total in the list now) — unclear if it was renamed,
+merged, or removed; not chased further this run.
+
+**Agent activity:** Dispatched one general-purpose agent, strictly sequential (no parallel
+ClickUp calls), to write the 17 already-researched-but-unwritten lead verdicts from
+2026-08-20's entry, plus retry the one escalation comment that had failed to post on Prairie
+Consulting Services. Result: **all 18 items completed in one continuous pass, zero
+`RATE_LIMIT_EXCEEDED` errors** across 44 ClickUp tool calls. Spot-checked 3 of the writes
+directly (Agency of Valor's description/status, Prairie Consulting's comment, Free Courses
+Certificates' description) — all confirmed landed correctly in ClickUp, not just reported by
+the agent.
+
+**Final Lead Sourcing Queue tally (25/25 reviewed):**
+- **Qualified (8, status → in progress):** Teacher Transition, ACS Consultancy Services,
+  Pocketbook Agency, Hire Resolve LLC, Egger & Co, Elios AI, Remotivate, The Smith Family Agency
+- **Borderline (9, status → in progress, priority → urgent, each with an escalation comment
+  tagging Samyak):** Forbes Technical Consulting, Compri Consulting, Prairie Consulting
+  Services (comment retried successfully this run), Ondrick Agency, CornerStone Technology
+  Talent Services, Generative AI works, Agency of Valor, RNJobSite.com, Engtal (flagged
+  separately as a possible adjacent competitor to Glimpse's own Sales Engine offer — worth
+  Samyak's eyes for that reason too)
+- **Disqualified (8, status → complete):** Talentoma, World Brand Design Society, Free Online
+  Courses, Flash Moving Service, Jayel Cloud, International Careers Updates, Education galaxy,
+  Free Courses Certificates (the last two carry a data-quality flag — their Apollo records'
+  linked websites don't match the company name at all, likely corrupted records rather than
+  genuine disqualifications)
+
+This also confirms the operational hypothesis flagged 2026-08-20: **it was concurrency, not
+call volume, that tripped ClickUp's rate limit.** One agent, sequential calls, 44 total —
+clean. Three agents in parallel, 8 total — blocked for ~24h. Logging this as validated in
+GROWTH.md's instrumentation TODO and in root STATUS_LOG.md as a cross-venture pattern.
+
+**Milestone deltas:** Phase 2 M3 ("Validate Offer With Real Prospects") updated but not
+flipped — the qualification pass is now fully complete (25/25), but validating the offer with
+real prospects still requires promoting Qualified leads to GHL and getting engagement, which
+needs the Stage 2 process founder sign-off first (task 86d3t4bg7).
+
+**Dispatched:** 1 agent (ClickUp write-back, sequential) — completed fully, verified.
+
+**Open decisions for the human:**
+1. Carryover, now higher-stakes: task 86d3t4bg7 (Stage 2 assignment/follow-up process) is the
+   actual bottleneck to M3 progress now that all 8 Qualified leads are sitting ready to promote
+   — approving or revising that draft unblocks real prospect outreach.
+2. 9 Borderline leads each have a comment awaiting a judgment call — two pairs share the same
+   underlying question and could be decided together: Ondrick Agency + Agency of Valor (both
+   insurance agent-recruitment businesses — does that business model fit the Sales Engine ICP
+   at all, as a category?), and separately, Prairie/CornerStone/RNJobSite/Compri/Forbes/
+   Generative AI works each turn on company-specific "does this one already have a BD hire"
+   calls.
+3. Not founder-blocked: confirm whether Gagan Singh's full-time BDE start (flagged for 29 July
+   in an old comment) actually happened — today's calendar shows a "Round 1" interview still in
+   progress for a different candidate (Saurav Mallick), which reads as inconsistent with a
+   completed full-time hire from 3+ weeks ago, but the orchestrator has no data source that
+   confirms either way.

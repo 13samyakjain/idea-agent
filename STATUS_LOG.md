@@ -280,3 +280,21 @@ agent (batch B), while the other two agents' calls in the same window were rejec
 venture-orchestrator's own playbook (SKILL.md) be updated to forbid parallel ClickUp-writing
 dispatches against the same workspace, or is today's data (n=1 run) too thin to lock that in as
 a rule yet? Flagging rather than unilaterally editing the skill's run sequence.
+
+## 2026-08-21 — ClickUp concurrency-vs-volume hypothesis confirmed (cross-venture)
+
+**Agent activity:** Following up on the 2026-08-19/2026-08-20 entries about ClickUp's MCP
+integration rate limit, today's Glimpse pass tested the fix directly: one agent, making 44
+ClickUp calls strictly sequentially (no parallel dispatches), completed with zero
+`RATE_LIMIT_EXCEEDED` errors — where 3 parallel agents making only 8 total writes tripped a
+~24h block on 2026-08-20. Confirms it's concurrency against the ClickUp integration, not raw
+call volume, that trips the limit. Full detail in `ventures/glimpse/STATUS_LOG.md`.
+
+**Milestone deltas:** None — operational constraint now resolved to an actionable rule rather
+than an open question.
+
+**Dispatched:** none from this entry.
+
+**Open decision for the human:** None blocking. Recommend the venture-orchestrator SKILL.md be
+updated to state serialized ClickUp dispatches as the default (not parallel) — flagging rather
+than unilaterally editing the skill's run sequence, per this doc's own convention.

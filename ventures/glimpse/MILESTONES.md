@@ -32,11 +32,13 @@
 
 - [x] M1: Learn Sales & Marketing Fundamentals
 - [x] M2: Draft Sales Engine Offer Hypothesis
-- [ ] M3: Validate Offer With Real Prospects — not done yet, but the funnel's first review pass
-      started 2026-08-20 (8/25 leads qualified/disqualified in ClickUp, 17 more researched and
-      pending write — see STATUS_LOG.md). Qualifying leads isn't validating the offer with them
-      yet — that still requires actually promoting Qualified leads to GHL and getting real
-      prospect engagement, both still to come.
+- [ ] M3: Validate Offer With Real Prospects — not done yet. Update 2026-08-21: all 25/25
+      `Lead Sourcing Queue` leads now qualified/disqualified in ClickUp (8 Qualified, 9
+      Borderline pending Samyak's judgment calls, 8 Disqualified) — the qualification pass
+      itself is complete. Qualifying leads still isn't validating the offer with them, though:
+      that requires promoting Qualified leads to GHL and getting real prospect engagement,
+      which is gated on founder sign-off of the Stage 2 assignment process (task 86d3t4bg7 —
+      still no reply since the 2026-08-18 draft comment). See STATUS_LOG.md.
 - [ ] M4: Refine Offer Based on Feedback
 - [ ] M5: First Pilot / Signed Commitment
 - [ ] Supporting: hire 1x full-time BDE + 2-3x BDE interns (in progress in ClickUp)
