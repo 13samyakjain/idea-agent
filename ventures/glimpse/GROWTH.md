@@ -22,7 +22,7 @@
 | Events managed (university/program-named task count, title-matched) | Sprint 14: 6 tasks (1 open, 5 closed — all SLU/IC3). Sprint 15 (current): 4 tasks (4 open, 0 closed). | 2026-08-21 |
 | Team size | 6 confirmed via ClickUp assignees: Samyak Jain (founder), Babita, Kaustav Saha, Sachin Poddar, Syed Afsha Ali, Kanchan Thakur | 2026-08-18 |
 | Sales Engine milestones | 2 of 5 core milestones done (M1, M2); M3-M5 open | 2026-08-18 |
-| Leads in qualification funnel (`Lead Sourcing Queue`) | **25 of 25 reviewed and written to ClickUp** (complete as of 2026-08-21): **8 Qualified**, **9 Borderline** (each with an escalation comment tagging Samyak for a judgment call), **8 Disqualified**. None yet promoted to GHL — that's the next step, gated on founder sign-off of the Stage 2 assignment process (task 86d3t4bg7, still pending). | 2026-08-21 |
+| Leads in qualification funnel (`Lead Sourcing Queue`) | **25 of 25 reviewed and written to ClickUp** (complete as of 2026-08-21): **8 Qualified**, **9 Borderline** (each with an escalation comment tagging Samyak for a judgment call), **8 Disqualified**. Stage 2 assignment process approved by the founder 2026-08-20 (confirmed 2026-08-22) — no longer gated. Promotion of the 8 Qualified leads to GHL is now unblocked but still not done; that's human/BDE work, flagged to the team via ClickUp comment 2026-08-22. | 2026-08-22 |
 | Orchestrator passes completed against Glimpse | 6+ (2026-08-18 through 2026-08-21, multiple same-day passes on some dates) | 2026-08-21 |
 
 ## Instrumentation TODO

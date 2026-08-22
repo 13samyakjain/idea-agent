@@ -43,10 +43,13 @@
 - [ ] M3: Validate Offer With Real Prospects — not done yet. Update 2026-08-21: all 25/25
       `Lead Sourcing Queue` leads now qualified/disqualified in ClickUp (8 Qualified, 9
       Borderline pending Samyak's judgment calls, 8 Disqualified) — the qualification pass
-      itself is complete. Qualifying leads still isn't validating the offer with them, though:
-      that requires promoting Qualified leads to GHL and getting real prospect engagement,
-      which is gated on founder sign-off of the Stage 2 assignment process (task 86d3t4bg7 —
-      still no reply since the 2026-08-18 draft comment). See STATUS_LOG.md.
+      itself is complete. **Update 2026-08-22: the Stage 2 assignment-process gate is now
+      cleared** — Samyak approved it via comment on task 86d3t4bg7 (round-robin assignment,
+      Kanchan Thakur as process owner; see `SALES_ENGINE_PROCESS.md`). What's left for M3 is no
+      longer a founder decision — it's the actual human work of promoting the 8 Qualified leads
+      to GHL and a BDE making first contact. IdeaAgent has no GHL/CRM connector, so the
+      orchestrator can't do the promotion itself; it flagged the unblock to the team (see
+      STATUS_LOG.md 2026-08-22).
 - [ ] M4: Refine Offer Based on Feedback
 - [ ] M5: First Pilot / Signed Commitment
 - [ ] Supporting: hire 1x full-time BDE + 2-3x BDE interns (in progress in ClickUp)

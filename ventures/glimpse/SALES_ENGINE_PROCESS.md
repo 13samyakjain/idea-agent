@@ -1,8 +1,8 @@
 # Glimpse Sales Engine — Lead-to-Close Process
 
-> Draft — proposed by the orchestrator 2026-08-18, needs founder review before it's treated as
-> official process. Posted as a comment on the corresponding ClickUp task; this file is the
-> canonical, fuller version.
+> **Approved by Samyak, 2026-08-20** (confirmed via ClickUp comment on task 86d3t4bg7, updated
+> 2026-08-22). No longer a draft — this is the operating process. Proposed by the orchestrator
+> 2026-08-18; the two open items below were resolved by the founder on approval.
 
 ## Stage 1 — Qualification funnel (already exists, working as designed)
 
@@ -46,10 +46,18 @@ that let 5 real replies sit unassigned for 3-5+ weeks before anyone caught it. P
    leads gone stale this week, and why. This is also what makes GROWTH.md's Sales Engine
    metrics real instead of "not yet measurable."
 
-## Open for founder review
+## Resolved by founder (2026-08-20)
 
-- Assignment rule when there's more than one BDE (round-robin, by vertical, by current load)
-  — proposed as round-robin by default until there's a reason to specialize, but not decided.
-- Who owns "BDE lead" responsibilities (confirming assignments, running the weekly rollup)
-  before/independent of the full-time BDE hire landing — currently nobody explicitly does
-  this, which is itself part of why leads go stale.
+- **Assignment rule:** round-robin by default. Takes effect once there's more than one BDE and
+  a promoted lead to assign.
+- **Process owner** (until the full-time BDE hire lands): Kanchan Thakur — she already owns
+  BDE hiring coordination, so assignment confirmation + the weekly rollup fold into the same
+  role.
+
+## Correction (2026-08-22)
+
+The institutional-partnerships onboarding brief referenced in task 86d3t4bg7's description
+(the "217 researched contacts" / "5 stale replies" framing, drafted 2026-07-22) has been
+superseded: verified live against GHL, then corrected again by Samyak — the entire 217-contact
+backlog, including the 6 that reached opportunities, is not relevant. A new BDE's real
+first-30-days plan starts at the Stage 1 qualification funnel above instead.

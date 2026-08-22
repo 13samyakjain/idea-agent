@@ -100,6 +100,12 @@ lists.
   (reservation/merch/events)? Only 1 of 52 tasks in the current + prior sprint carries any tag,
   which is what forced a title-matching fallback for Phase 1 operational metrics (see GROWTH.md
   and MILESTONES.md Phase 1). Not imposing a process change unilaterally.
+- **New 2026-08-22:** IdeaAgent has no GHL/CRM connector wired up. Now that the Stage 2 process
+  is approved, the remaining M3 work (promoting the 8 Qualified leads to GHL, first contact) is
+  genuine human/BDE work regardless — but even the mechanical "create the GHL record" step
+  can't be automated by the orchestrator without one. Not urgent (this step was always meant to
+  be a BDE's job per the approved process, not the orchestrator's), but worth the founder
+  knowing the ceiling exists if he ever wants more of this loop automated.
 - **New 2026-08-21, operational not strategic — worth the founder's eyes, not a blocker:** three
   separate, near-identical "hire BDE" tasks in `BDE Team Ops` (Sprint 15) — "Hire 2-3x BDE
   Interns," "Hire 1x Full-Time BDE," "Hire BDE(s) — Business Development Executive Recruitment"
