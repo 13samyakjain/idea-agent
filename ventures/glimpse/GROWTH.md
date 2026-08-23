@@ -17,7 +17,7 @@
 | Metric | Value | As of |
 |---|---|---|
 | Reservation volume (task count, title-matched — see method caveat) | Sprint 14 (6/7–9/8): 9 tasks (2 open, 7 closed). Sprint 15 (10/8–13/9, current): 2 tasks (0 open, 2 closed) — re-confirmed 2026-08-23, unchanged. Excludes 5 visa-processing tasks across both sprints, which don't cleanly fit "reservation" per the current tag definitions — see MILESTONES.md Phase 1 note. | 2026-08-23 |
-| PE Kit procurement volume (task count, title-matched — see method caveat) | Sprint 14: 9 tasks (3 open, 6 closed) — not re-pulled 2026-08-23. Sprint 15 (current): **4 tasks (2 open, 2 closed) as of 2026-08-23**, down from 11 tasks (7 open, 4 closed) on 2026-08-21. Drop is unexplained — not independently confirmed as re-tagging, list churn, or a pull artifact; flagged as a data-quality open item below rather than trusted at face value. | 2026-08-23 |
+| PE Kit procurement volume (task count, title-matched — see method caveat) | Sprint 14: 9 tasks (3 open, 6 closed) — not re-pulled 2026-08-23. Sprint 15 (current, re-pulled from raw task list 2026-08-23 second pass): **6 tasks (4 open, 2 closed)** on unambiguous merch/PE-Kit titles only, or up to **9 tasks (5 open, 4 closed)** including ambiguous overlaps ("Bookings and Merch Request..." ×2, "Stock Check For All the Universities"). Earlier same-day figures of 11 and 4 were both keyword-overlap artifacts, not real swings — see Instrumentation TODO below for the root cause and a fix recommendation. | 2026-08-23 |
 | PE Kit procurement cost baseline | still not yet measurable — task counts above are volume only, no cost/financial data available from ClickUp | 2026-08-21 |
 | Events managed (university/program-named task count, title-matched) | Sprint 14: 6 tasks (1 open, 5 closed — all SLU/IC3). Sprint 15 (current): 4 tasks (4 open, 0 closed) — re-confirmed 2026-08-23, unchanged (BGSU, Catalystia, SLU, IC3). | 2026-08-23 |
 | Sprint 15 total volume (all categories, title-matched + unclassified) | 27 tasks total: 21 open, 6 closed (5 complete + 1 cancelled). First time this total has been pulled — no prior-date comparison exists. | 2026-08-23 |
@@ -60,7 +60,24 @@
       fully work around. Blocked a same-run comment check on the Deborah/Peter visa task and a
       direct `BDE Team Ops` list query (see STATUS_LOG.md 2026-08-23); retry window given as
       ~184 minutes from the 2026-08-23 pull.
-- [ ] **New 2026-08-23 — PE Kit/Merch Sprint 15 count dropped from 11 to 4 tasks in 2 days**
-      with no explanation surfaced by a title-keyword pull (see table above). Before trusting
-      either number, this needs one clean re-pull once the rate limit clears, ideally cross-
-      checked against the raw task list rather than re-derived from title matching alone.
+- [x] **2026-08-23 (second pass) — PE Kit/Merch count swing root-caused, not a real business
+      change.** Pulled the raw Sprint 15 task list directly (27 tasks, via `clickup_filter_tasks`
+      on the list ID, not title-keyword search) and hand-checked every title. Finding: the
+      11→4 swing wasn't a real 2-day change, it's **category keyword overlap causing
+      double-counting** that different passes resolve differently. Two "Bookings and Merch
+      Request..." tasks (both complete) match both the reservations keyword ("bookings") and
+      the merch keyword ("merch") — they're the entire reservations=2 count *and* also get
+      pulled into merch counts by some passes but not others. Similarly "Merchandise
+      Procurement Request for IC3 and Upcoming Fairs" and "Change Of Slu Merch Confirmation"
+      match both the merch keyword and an events keyword (IC3, SLU). Depending on inclusion
+      rules, the honest current merch/PE-Kit-titled task count in Sprint 15 ranges from **6
+      tasks (4 open, 2 closed)** — unambiguous "merch"/"merchandise"/"PE Kit" titles only — up
+      to **9 tasks (5 open, 4 closed)** if "Bookings and Merch Request..." (×2) and "Stock
+      Check For All the Universities" are included. Neither the earlier 11 nor the 4 reflects a
+      real business swing; both were artifacts of which keyword set that pass happened to use.
+      **This is the actual limitation of title-matching, not a data problem to re-pull past** —
+      fixing it needs either team tag adoption (flagged in VENTURE.md open questions) or a
+      fixed, documented category-assignment rule that resolves overlaps (e.g. "Bookings and
+      Merch" tasks count toward reservations only, not merch) rather than ad hoc per-pull
+      keyword lists. Recommend the latter as a lightweight fix the orchestrator can make
+      unilaterally next pass, since it's a measurement-method decision, not a founder call.

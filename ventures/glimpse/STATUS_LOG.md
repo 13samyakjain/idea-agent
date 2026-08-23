@@ -539,3 +539,58 @@ guessing past them.
 6. Not founder-blocking, just a heads-up: the Merch/PE-Kit count swing (11→4 in 2 days) needs a
    clean re-pull once ClickUp's rate limit clears (~184 min from this run) before trusting either
    number.
+
+## 2026-08-23 (second pass, 14:33 UTC) — Rate limit cleared; visa case reframed, count-swing root-caused
+
+**Human activity:** Google Calendar was unavailable this run (service error on `list_events`) —
+noted rather than treated as "no events." ClickUp's rate limit from this morning's pull (184-min
+cooldown quoted at ~03:40 UTC) had cleared by this run (~11h later); all reads this pass
+succeeded cleanly with no `RATE_LIMIT_EXCEEDED` errors. Checked both Sales Engine gating tasks
+directly: 86d3t4bg7 (Stage 2 approval) `date_updated` still 2026-08-22 06:42 UTC — unchanged;
+86d3ucd9p (Gagan Singh/PE hiring follow-up) `date_updated` still 2026-08-19 09:31 UTC —
+unchanged. Checked the Deborah/Peter visa task's comments for the first time (blocked by the
+rate limit on the morning pass) — this materially corrects the earlier framing. The task itself
+had no timestamp movement since 2026-08-06, but the comment thread shows real activity: Babita
+reported 2026-07-27 that Deborah's (and her son's) visa application was submitted with an
+appointment scheduled for **2026-08-30**, with Peter's Invitation Letter still pending signature.
+Kanchan Thakur then commented 2026-08-05 asking Babita directly for an update — **that comment
+has now gone unanswered for 18 days**, with a client-facing appointment 7 days away that depends
+on the missing signature. Pulled the full raw Sprint 15 task list (27 tasks, `clickup_filter_tasks`
+by list ID rather than title search) to resolve yesterday's unexplained Merch/PE-Kit count swing
+(11→4): root cause found — keyword overlap between categories ("Bookings and Merch Request..."
+matches both the reservations and merch keywords; "Merchandise Procurement Request for IC3..."
+and "Change Of Slu Merch Confirmation" match both merch and events keywords) causes different
+passes to double-count or undercount depending on which keyword set they apply, not any real
+2-day business change. Honest current count: 6 tasks (4 open, 2 closed) on unambiguous
+merch-only titles, up to 9 (5 open, 4 closed) if the ambiguous overlaps are included. Also
+reconfirmed the three duplicate "hire BDE" tasks (86d3rgze6, 86d3rgze3, 86d3rgzah) all still
+open/in-progress, same due date, now 32 days overdue — no change beyond the day count.
+
+**Agent activity:** None dispatched — all checks this pass were direct orchestrator reads
+(6 ClickUp calls: 3 `get_task`, 1 `get_task_comments`, 1 `filter_tasks`, all sequential; plus 1
+`list_events` call that errored). Everything found was informational/corrective, not requiring
+delegated work: no GHL access exists for the Sales Engine promotion step, and the visa case's
+missing piece (Peter's signature) isn't something ClickUp access can resolve — Kanchan already
+posted the direct ask 18 days ago, so a repeat automated nudge wouldn't add anything a human
+hasn't already tried. Flagging to the founder directly instead of dispatching.
+
+**Milestone deltas:** Phase 1 reservations bullet in MILESTONES.md updated with the corrected
+visa-case detail (appointment date, specific stuck dependency, unanswered nudge). GROWTH.md
+Instrumentation TODO item on the count swing marked resolved (root cause identified — keyword
+overlap, not a business change) with a recommended fix (a fixed, documented category-assignment
+rule instead of ad hoc per-pull keyword lists) for the orchestrator to apply unilaterally next
+pass, since it's a measurement-method decision, not a founder call.
+
+**Dispatched:** None this pass.
+
+**Open decisions for the human:**
+1. **Sharper than yesterday:** the Deborah/Peter visa case — Deborah's appointment is 2026-08-30
+   (7 days out), but Peter's Invitation Letter signature has been stuck since 2026-07-27, and
+   Kanchan's direct 2026-08-05 ask to Babita for an update has gone unanswered 18 days. Worth a
+   direct check before the appointment date, not just a "task is old" flag.
+2. Carryover: confirm whether Gagan Singh's full-time BDE start actually happened (unchanged).
+3. Carryover: should Sprint tasks be tagged going forward? (unchanged.)
+4. Carryover: the three duplicate "hire BDE" tasks — 32 days overdue, still unmerged (unchanged).
+5. Carryover: 9 Borderline leads still pending Samyak's judgment calls (unchanged).
+6. Resolved, no longer open: the Merch/PE-Kit count swing — root-caused to keyword-overlap
+   double-counting, not a real change (see Milestone deltas above).

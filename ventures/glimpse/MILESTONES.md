@@ -26,11 +26,16 @@
 
 - [~] Reservations: current state, volume, pain points visible to the orchestrator — first
       count in GROWTH.md (title-matched, not tag-based); pain points found: a Deborah/Peter visa
-      case unresolved across 2 sprints (6+ weeks). **Update 2026-08-23:** confirmed still open,
-      due date 2026-08-02 (21 days overdue), `date_updated` 2026-08-06 (17 days with no recorded
-      activity) — comments not checked this pull (rate-limited), so recent human activity on the
-      task itself can't be ruled out, but the task's own timestamps show no movement in over two
-      weeks. Worth a direct human check given how much time has passed.
+      case unresolved across 2 sprints (6+ weeks). **Update 2026-08-23 (second pass):** comments
+      finally checked (rate limit had blocked this earlier today). Corrects the "no activity"
+      framing — there was real movement: Babita commented 2026-07-27 that Deborah's (and her
+      son's) visa application was submitted with an appointment scheduled for **2026-08-30**,
+      but Peter's Invitation Letter is still waiting on a signature. Kanchan Thakur nudged
+      Babita directly in a comment on 2026-08-05 ("kindly update on this") — **18 days with no
+      reply**, and the task record itself shows no update since. The real story isn't "stalled
+      task," it's "a direct internal ask has gone unanswered for over two weeks, with a
+      client-facing appointment 7 days out that depends on the missing piece (Peter's signed
+      invite letter)." Worth the founder's direct attention now, more so than before.
 - [~] Merchandise/PE Kits: procurement cadence, cost baseline, storage/fulfillment visible —
       task-count cadence now in GROWTH.md; cost baseline still not measurable (no financial data
       in ClickUp)
