@@ -112,4 +112,7 @@ lists.
   — all assigned to Samyak, same urgent priority, same due date 2026-07-22 (a month overdue),
   all still open. Reads as the same need logged three times rather than genuinely distinct work;
   the orchestrator did not merge/close any of them (no unilateral ClickUp reorganization, per
-  this file's own founder decision above) — flagging for a human call.
+  this file's own founder decision above) — flagging for a human call. **Update 2026-08-23:**
+  confirmed still all open, unmerged, same due date — now 32 days overdue. Also turned up
+  cross-listed in the Sprint 15 pull (not just `BDE Team Ops`), which wasn't independently
+  verified before; noting the discrepancy rather than assuming either list membership is wrong.

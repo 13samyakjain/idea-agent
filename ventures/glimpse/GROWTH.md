@@ -16,10 +16,11 @@
 
 | Metric | Value | As of |
 |---|---|---|
-| Reservation volume (task count, title-matched — see method caveat) | Sprint 14 (6/7–9/8): 9 tasks (2 open, 7 closed). Sprint 15 (10/8–13/9, current): 2 tasks (0 open, 2 closed). Excludes 5 visa-processing tasks across both sprints, which don't cleanly fit "reservation" per the current tag definitions — see MILESTONES.md Phase 1 note. | 2026-08-21 |
-| PE Kit procurement volume (task count, title-matched — see method caveat) | Sprint 14: 9 tasks (3 open, 6 closed). Sprint 15 (current): 11 tasks (7 open, 4 closed). | 2026-08-21 |
+| Reservation volume (task count, title-matched — see method caveat) | Sprint 14 (6/7–9/8): 9 tasks (2 open, 7 closed). Sprint 15 (10/8–13/9, current): 2 tasks (0 open, 2 closed) — re-confirmed 2026-08-23, unchanged. Excludes 5 visa-processing tasks across both sprints, which don't cleanly fit "reservation" per the current tag definitions — see MILESTONES.md Phase 1 note. | 2026-08-23 |
+| PE Kit procurement volume (task count, title-matched — see method caveat) | Sprint 14: 9 tasks (3 open, 6 closed) — not re-pulled 2026-08-23. Sprint 15 (current): **4 tasks (2 open, 2 closed) as of 2026-08-23**, down from 11 tasks (7 open, 4 closed) on 2026-08-21. Drop is unexplained — not independently confirmed as re-tagging, list churn, or a pull artifact; flagged as a data-quality open item below rather than trusted at face value. | 2026-08-23 |
 | PE Kit procurement cost baseline | still not yet measurable — task counts above are volume only, no cost/financial data available from ClickUp | 2026-08-21 |
-| Events managed (university/program-named task count, title-matched) | Sprint 14: 6 tasks (1 open, 5 closed — all SLU/IC3). Sprint 15 (current): 4 tasks (4 open, 0 closed). | 2026-08-21 |
+| Events managed (university/program-named task count, title-matched) | Sprint 14: 6 tasks (1 open, 5 closed — all SLU/IC3). Sprint 15 (current): 4 tasks (4 open, 0 closed) — re-confirmed 2026-08-23, unchanged (BGSU, Catalystia, SLU, IC3). | 2026-08-23 |
+| Sprint 15 total volume (all categories, title-matched + unclassified) | 27 tasks total: 21 open, 6 closed (5 complete + 1 cancelled). First time this total has been pulled — no prior-date comparison exists. | 2026-08-23 |
 | Team size | 6 confirmed via ClickUp assignees: Samyak Jain (founder), Babita, Kaustav Saha, Sachin Poddar, Syed Afsha Ali, Kanchan Thakur | 2026-08-18 |
 | Sales Engine milestones | 2 of 5 core milestones done (M1, M2); M3-M5 open | 2026-08-18 |
 | Leads in qualification funnel (`Lead Sourcing Queue`) | **25 of 25 reviewed and written to ClickUp** (complete as of 2026-08-21): **8 Qualified**, **9 Borderline** (each with an escalation comment tagging Samyak for a judgment call), **8 Disqualified**. Stage 2 assignment process approved by the founder 2026-08-20 (confirmed 2026-08-22) — no longer gated. Promotion of the 8 Qualified leads to GHL is now unblocked but still not done; that's human/BDE work, flagged to the team via ClickUp comment 2026-08-22. | 2026-08-22 |
@@ -51,3 +52,15 @@
       block after only 8 writes on 2026-08-20. Confirms concurrency (not call volume) was the
       actual cause. Serialize future ClickUp-heavy dispatches against this venture as the
       default going forward.
+- [ ] **New 2026-08-23 — even strictly sequential reads now hit the account-level rate limit
+      after only 5 calls** (vs. 44 sequential writes clean on 2026-08-21, and an unrelated
+      4-read cooldown on 2026-08-22). The limit appears to be a rolling account-wide quota, not
+      specific to write volume or this venture's call pattern — worth the founder knowing this
+      is a ClickUp-account-level ceiling, not something the orchestrator's call discipline can
+      fully work around. Blocked a same-run comment check on the Deborah/Peter visa task and a
+      direct `BDE Team Ops` list query (see STATUS_LOG.md 2026-08-23); retry window given as
+      ~184 minutes from the 2026-08-23 pull.
+- [ ] **New 2026-08-23 — PE Kit/Merch Sprint 15 count dropped from 11 to 4 tasks in 2 days**
+      with no explanation surfaced by a title-keyword pull (see table above). Before trusting
+      either number, this needs one clean re-pull once the rate limit clears, ideally cross-
+      checked against the raw task list rather than re-derived from title matching alone.

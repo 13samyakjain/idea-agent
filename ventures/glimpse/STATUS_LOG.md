@@ -472,3 +472,70 @@ completed, results incorporated above and verified/corrected before this log ent
    Agency of Valor, Forbes Technical Consulting, Compri Consulting, Prairie Consulting
    Services, Registered Nurse Jobs/RNJobSite.com, Engtal) — not new information, but now more
    actionable since Stage 2 is live and a BDE could start working them the moment they clear.
+
+## 2026-08-23 — Sales Engine still unchanged; Phase 1 refresh pull surfaces a stuck visa case worth escalating
+
+**Human activity:** Checked both Sales Engine gating items directly. Task 86d3t4bg7 (Stage 2
+approval): `date_updated` still 2026-08-22 06:42 UTC, no new comment — unchanged since
+yesterday's second entry. Task 86d3ucd9p (Gagan Singh / PE hiring follow-up): `date_updated`
+still 2026-08-19, only Kaustav's original comment — no new confirmation. Calendar (2026-08-22
+to 2026-08-23): only the recurring `vempower.org` meeting and the ongoing Anushika OOO (through
+2026-08-29) — nothing new. Lead Sourcing Queue re-checked directly (all 25 tasks, statuses):
+the 8/9/8 Qualified/Borderline/Disqualified split from 2026-08-22 is unchanged — the 8 Qualified
+leads are still "in progress" (not yet promoted to GHL), the 9 Borderline leads are still "in
+progress"/urgent (still pending Samyak's judgment calls), the 8 Disqualified are still
+"complete." No GHL promotion has happened.
+
+**Agent activity:** TaskList showed nothing dispatched since the last entry (fresh session).
+Since Sales Engine (Phase 2) is genuinely unchanged and still founder-gated on the same two
+items, and Phase 1 (operational visibility) was 2 days stale (last real pull 2026-08-21) and not
+gated on anything, dispatched one general-purpose agent for a Phase 1 refresh pull — ClickUp
+reads only, strictly sequential per the venture's known rate-limit lesson.
+
+**Findings:**
+- **Rate limit hit again, this time on reads:** after only 5 sequential read calls, the 6th
+  (`clickup_get_task_comments` on the Deborah/Peter task) returned `RATE_LIMIT_EXCEEDED`, ~184
+  min cooldown. This is tighter than the 44-clean-sequential-writes result from 2026-08-21 and
+  the 4-read cooldown from 2026-08-22 — reads the same way as an account-wide rolling quota, not
+  something call discipline alone fixes. Logged in GROWTH.md Instrumentation TODO. The agent
+  stopped rather than push through it, per the venture's standing rule.
+- **Sprint 15 total volume pulled for the first time:** 27 tasks, 21 open / 6 closed. No prior
+  baseline to compare against.
+- **Reservations and Events counts re-confirmed unchanged** from 2026-08-21 (2 tasks/0 open/2
+  closed; 4 tasks/4 open/0 closed respectively).
+- **Merch/PE Kit count dropped from 11 to 4 tasks in 2 days**, unexplained — flagged as a
+  data-quality open item in GROWTH.md rather than trusted at face value; needs a clean re-pull
+  once the rate limit clears rather than being read as a real 2-day change.
+- **Deborah/Peter visa case (86d3pw08w) — still open, and worse than the "6+ weeks" framing
+  suggested:** due date 2026-08-02 (21 days overdue as of today), `date_updated` 2026-08-06 (17
+  days with zero recorded activity on the task itself). Comments weren't checked this pull
+  (rate-limited before reaching that call), so recent activity elsewhere can't be fully ruled
+  out, but the task's own timestamps show no movement in over two weeks on what reads as a
+  client-facing case. This is the one finding from today worth the founder's direct attention,
+  not just another log line — flagged in MILESTONES.md.
+- **Three duplicate "hire BDE" tasks confirmed still open**, unmerged, same due date — now 32
+  days overdue. Also turned up cross-listed in the Sprint 15 pull itself (not only `BDE Team
+  Ops` as previously assumed) — noted as an unverified discrepancy in VENTURE.md, not resolved.
+- **The July-due overdue cluster is unmoved**, and a new set of August-due tasks (4-13 days
+  overdue: merch-for-clients, DPL August data, portal/gift-arrangement follow-ups, two event-prep
+  tasks) has now joined it — the pattern of due dates rolling forward unresolved is continuing,
+  not a one-off from July.
+
+**Milestone deltas:** None flipped — Phase 1 stays `[~]` (still a fragile title-matched proxy,
+now also showing an unexplained 2-day count swing that needs verification before being trusted).
+
+**Dispatched:** 1 agent (ClickUp reads, sequential, Sprint 15 refresh pull) — completed, hit a
+rate limit partway through, reported findings and its own coverage gaps explicitly rather than
+guessing past them.
+
+**Open decisions for the human:**
+1. **New, most actionable today:** the Deborah/Peter visa case (86d3pw08w) — 21 days overdue,
+   no recorded task activity in 17 days. Worth a direct check with whoever owns it.
+2. Carryover: confirm whether Gagan Singh's full-time BDE start actually happened (unchanged).
+3. Carryover: should Sprint tasks be tagged going forward? (unchanged.)
+4. Carryover: the three duplicate "hire BDE" tasks — now 32 days overdue. (unchanged otherwise.)
+5. Carryover: 9 Borderline leads still pending Samyak's judgment calls (unchanged list from
+   2026-08-22).
+6. Not founder-blocking, just a heads-up: the Merch/PE-Kit count swing (11→4 in 2 days) needs a
+   clean re-pull once ClickUp's rate limit clears (~184 min from this run) before trusting either
+   number.
