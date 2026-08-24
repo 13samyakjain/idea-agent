@@ -116,3 +116,4 @@ lists.
   confirmed still all open, unmerged, same due date — now 32 days overdue. Also turned up
   cross-listed in the Sprint 15 pull (not just `BDE Team Ops`), which wasn't independently
   verified before; noting the discrepancy rather than assuming either list membership is wrong.
+  **Update 2026-08-24:** still open, unchanged, now 33 days overdue.

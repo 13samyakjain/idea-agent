@@ -594,3 +594,61 @@ pass, since it's a measurement-method decision, not a founder call.
 5. Carryover: 9 Borderline leads still pending Samyak's judgment calls (unchanged).
 6. Resolved, no longer open: the Merch/PE-Kit count swing — root-caused to keyword-overlap
    double-counting, not a real change (see Milestone deltas above).
+
+## 2026-08-24 — Visa case now inside a week of the appointment with no response; escalated directly to Samyak
+
+**Human activity:** Google Calendar checked (2026-08-23 to 2026-08-24): only the recurring
+`vempower.org` meeting and the ongoing Anushika OOO (through 2026-08-29) — nothing new, same as
+prior runs. ClickUp checked directly and sequentially (4 calls, no rate-limit errors this run):
+Deborah/Peter visa task (86d3pw08w) comments re-read in full — still only the same 3 comments as
+yesterday (Samyak's original 2026-07-16 ask, Babita's 2026-07-27 update naming the 2026-08-30
+appointment and Peter's pending signature, Kanchan's 2026-08-05 direct nudge to Babita) — **no
+reply from Babita in 19 days**, and the task's own `date_updated` is still 2026-08-06, confirming
+zero record-level movement in 18 days. Both Sales Engine gating tasks re-checked directly:
+86d3t4bg7 (`date_updated` still 2026-08-22 06:42 UTC) and 86d3ucd9p (Gagan Singh/PE hiring,
+`date_updated` still 2026-08-19 09:31 UTC) — both unchanged, consistent with the last three
+runs. Read 86d3t4bg7's full description for the first time (not just its update timestamp): it's
+actually "Define BDE Work Alignment & Assignment Process," and it confirms Glimpse already has a
+**working GHL pipeline** ("Glimpse B2B Sales," 217 researched contacts, partially-run outreach
+from June) — separate context from the Sales Engine `Lead Sourcing Queue` promotion path, but
+worth noting: GHL access exists for the team even though IdeaAgent has no connector to it.
+
+**Agent activity:** None dispatched — TaskList showed nothing pending or run since the last
+entry. Did not re-pull the `Lead Sourcing Queue` counts (8 Qualified/9 Borderline/8 Disqualified)
+this run to conserve ClickUp read quota after last run's rate-limit history; given BDE hiring is
+confirmed still stalled (Gagan Singh task and the duplicate "hire BDE" tasks both unchanged),
+inferring no promotion activity is low-risk but is explicitly an inference, not a re-verified
+read — flagging the gap rather than presenting it as checked.
+
+**Findings:** The Deborah/Peter visa case crossed a threshold worth acting on rather than just
+logging again: the appointment is now 6 days out, Peter's signature has been missing 28 days,
+and the one internal escalation that exists (Kanchan → Babita) has had zero response for 19
+days. The last two runs flagged this to the founder only via STATUS_LOG, reasoning that a repeat
+*ClickUp-internal* nudge (Kanchan re-asking Babita) wouldn't add anything a human hadn't already
+tried — but Samyak himself had not been directly tagged on this specific task since his original
+2026-07-16 comment, before the stall was known. With the appointment now inside a week, posted
+one comment on 86d3pw08w (`notify_all: true`) tagging Samyak directly with the full timeline
+(appointment date, days signature has been pending, days Kanchan's ask has gone unanswered).
+This is a one-time direct escalation, not a recurring nudge — judged as the actual
+highest-leverage action available today, since every other tracked item (Sales Engine gating,
+BDE hiring, Lead Sourcing Queue) is unchanged from yesterday and already flagged.
+
+**Milestone deltas:** None. Phase 1 reservations bullet in MILESTONES.md updated to note today's
+escalation and the 19-day-unanswered detail.
+
+**Dispatched:** None — one direct ClickUp comment posted by the orchestrator itself (not
+delegated to an agent), given the tight ClickUp read/write quota and the low complexity of the
+action (a single, factual status-flag comment).
+
+**Open decisions for the human:**
+1. **Most urgent:** the Deborah/Peter visa case — appointment 2026-08-30 (6 days out), Peter's
+   signature missing 28 days, Kanchan's 2026-08-05 ask to Babita unanswered 19 days. Escalated
+   directly to Samyak via ClickUp comment on 86d3pw08w today; needs a human resolution, not
+   another orchestrator pass.
+2. Carryover: confirm whether Gagan Singh's full-time BDE start actually happened (unchanged
+   since 2026-08-19).
+3. Carryover: should Sprint tasks be tagged going forward? (unchanged.)
+4. Carryover: the three duplicate "hire BDE" tasks — now 33 days overdue, still unmerged
+   (unchanged).
+5. Carryover: 9 Borderline leads still pending Samyak's judgment calls (not re-verified this run
+   — see Agent activity note on conserving read quota).

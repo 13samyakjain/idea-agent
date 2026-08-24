@@ -36,6 +36,10 @@
       task," it's "a direct internal ask has gone unanswered for over two weeks, with a
       client-facing appointment 7 days out that depends on the missing piece (Peter's signed
       invite letter)." Worth the founder's direct attention now, more so than before.
+      **Update 2026-08-24:** still no reply from Babita — Kanchan's nudge is now 19 days
+      unanswered, and the appointment is 6 days out. Escalated with a direct comment to Samyak
+      on the task itself (previously only Kanchan had asked Babita); see STATUS_LOG.md
+      2026-08-24.
 - [~] Merchandise/PE Kits: procurement cadence, cost baseline, storage/fulfillment visible —
       task-count cadence now in GROWTH.md; cost baseline still not measurable (no financial data
       in ClickUp)
