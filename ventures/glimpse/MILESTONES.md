@@ -40,6 +40,13 @@
       unanswered, and the appointment is 6 days out. Escalated with a direct comment to Samyak
       on the task itself (previously only Kanchan had asked Babita); see STATUS_LOG.md
       2026-08-24.
+      **Update 2026-08-25:** re-read all 4 comments on the task directly — still zero reply from
+      Babita or any other movement since yesterday's direct escalation to Samyak. Appointment is
+      now 5 days out (2026-08-30), signature has been pending 29 days, Kanchan's original nudge
+      is 20 days unanswered. Did not post a second escalation comment today (yesterday's direct
+      tag to Samyak already stands unanswered; a repeat this soon would be noise, not new
+      information) — flagged directly to the founder via notification instead. See
+      STATUS_LOG.md 2026-08-25.
 - [~] Merchandise/PE Kits: procurement cadence, cost baseline, storage/fulfillment visible —
       task-count cadence now in GROWTH.md; cost baseline still not measurable (no financial data
       in ClickUp)

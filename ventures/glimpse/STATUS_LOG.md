@@ -652,3 +652,59 @@ action (a single, factual status-flag comment).
    (unchanged).
 5. Carryover: 9 Borderline leads still pending Samyak's judgment calls (not re-verified this run
    — see Agent activity note on conserving read quota).
+
+## 2026-08-25 — Visa case still unanswered with appointment inside a week; note also found on a stale detached commit from 2026-08-24 that had never reached origin
+
+**Housekeeping first:** found the 2026-08-24 check-in commit (`ab39b4f`) had been made on a
+detached HEAD and never fast-forwarded into local `main` or pushed to `origin` — meaning
+yesterday's real update (the direct escalation to Samyak) may not have been visible via `git
+pull` until this run fast-forwarded `main` to it. Re-fetched and confirmed `origin/main` did
+already have the commit by the time this run checked, so no push was actually needed — but
+flagging the detached-HEAD pattern in case it recurs, since it's exactly the kind of silent gap
+this venture's own STATUS_LOG can't self-detect without a human noticing.
+
+**Human activity:** Google Calendar checked (2026-08-24 to 2026-08-26): one new event since
+yesterday — "discussion about apollo.io," a 1hr meeting organized by Kanchan Thakur with Samyak
+on 2026-08-24 evening (20:30-21:30 IST). No content visible beyond the title/attendees; noting
+it as real activity relevant to lead-sourcing tooling, not something the orchestrator can act on
+without more detail. Nothing else new (recurring `vempower.org` event, Anushika OOO through
+2026-08-29, unchanged). ClickUp checked directly and sequentially (3 calls): the Deborah/Peter
+visa task (86d3pw08w) comments re-read in full — still only the same 4 comments as yesterday
+(no reply from Babita to Kanchan's 2026-08-05 nudge or to yesterday's direct escalation to
+Samyak). Both Sales Engine gating tasks re-checked by `date_updated` only: 86d3t4bg7 unchanged
+since 2026-08-22, 86d3ucd9p (BDE hiring) unchanged since 2026-08-19.
+
+**Agent activity:** None dispatched — `TaskList` empty, nothing pending or run since the last
+entry. Did not re-pull the `Lead Sourcing Queue` counts or the three duplicate "hire BDE" tasks
+this run, to conserve ClickUp read quota given the account-level rate-limit history — both are
+human/hiring work with no orchestrator-visible reason to expect movement since yesterday.
+
+**Findings:** The Deborah/Peter visa case has crossed further into genuinely urgent territory:
+the appointment is now 5 days out (2026-08-30), Peter's signature has been missing 29 days, and
+neither Kanchan's original nudge (20 days) nor yesterday's direct ClickUp escalation to Samyak
+has drawn any response. Judged that a second ClickUp comment today would be noise, not new
+information — yesterday's direct tag to Samyak already stands unanswered on the same thread.
+Instead, this is being surfaced directly to the founder outside ClickUp (push notification),
+since the routine's whole purpose is catching exactly this kind of time-boxed risk while
+unattended.
+
+**Milestone deltas:** None. Phase 1 reservations bullet in MILESTONES.md updated with today's
+re-check (5 days out, 29/20-day stalls, no second comment posted).
+
+**Dispatched:** None — every open item (visa case, BDE hiring, Sales Engine gating, Lead
+Sourcing Queue promotion) is human-only work already flagged; no new agent-doable action
+identified today.
+
+**Open decisions for the human:**
+1. **Most urgent, escalating:** the Deborah/Peter visa case — appointment 2026-08-30 (5 days
+   out), Peter's signature missing 29 days, Kanchan's 2026-08-05 ask to Babita unanswered 20
+   days, and now yesterday's direct escalation to Samyak also unanswered for a full day. Needs a
+   human resolution (e.g. a direct call to Babita or Peter) before the appointment, not another
+   ClickUp comment.
+2. Carryover: confirm whether Gagan Singh's full-time BDE start actually happened (unchanged
+   since 2026-08-19).
+3. Carryover: should Sprint tasks be tagged going forward? (unchanged.)
+4. Carryover: the three duplicate "hire BDE" tasks — likely ~34 days overdue by due-date math,
+   not independently re-verified this run (see Agent activity note).
+5. Carryover: 9 Borderline leads still pending Samyak's judgment calls (not re-verified this run
+   for a second day, to conserve ClickUp read quota).

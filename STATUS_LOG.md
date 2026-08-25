@@ -298,3 +298,24 @@ than an open question.
 **Open decision for the human:** None blocking. Recommend the venture-orchestrator SKILL.md be
 updated to state serialized ClickUp dispatches as the default (not parallel) — flagging rather
 than unilaterally editing the skill's run sequence, per this doc's own convention.
+
+## 2026-08-25 — Prior run's commit was left on a detached HEAD, never merged into main
+
+**Agent activity:** This run started in a detached-HEAD checkout one commit ahead of local
+`main` — the 2026-08-24 Glimpse check-in (`ab39b4f`) had been committed but never fast-forwarded
+onto `main`. Fast-forwarded `main` to include it and re-fetched `origin/main` to confirm it was
+actually there; it was (no push was needed by the time this run checked), but the gap itself —
+a real commit sitting outside any branch, one `git branch -a` away from being lost — is worth
+tracking as an automation-reliability data point alongside the push-permission and rate-limit
+issues already logged here. Single occurrence so far (n=1); not changing the run sequence over
+one instance, just flagging it the way the 2026-08-18 push-permission issue was flagged before
+a pattern was confirmed.
+
+**Milestone deltas:** None — operational, not a milestone.
+
+**Dispatched:** none from this entry.
+
+**Open decision for the human:** None blocking. Worth watching whether this recurs on future
+scheduled runs; if it does, the fix is likely ensuring the scheduled session starts each run
+checked out on `main` (or explicitly reconciles a detached HEAD against it) rather than leaving
+that to be caught after the fact.

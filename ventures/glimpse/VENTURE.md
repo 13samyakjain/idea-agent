@@ -117,3 +117,7 @@ lists.
   cross-listed in the Sprint 15 pull (not just `BDE Team Ops`), which wasn't independently
   verified before; noting the discrepancy rather than assuming either list membership is wrong.
   **Update 2026-08-24:** still open, unchanged, now 33 days overdue.
+  **Update 2026-08-25:** not re-verified directly this run (conserving ClickUp read quota); the
+  BDE hiring gate task (86d3ucd9p) was checked directly and is still unchanged since
+  2026-08-19, which is consistent with no hiring movement, but that's an inference for the
+  duplicate tasks specifically, not a fresh read of them.
