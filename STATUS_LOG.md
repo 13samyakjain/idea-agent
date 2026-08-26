@@ -319,3 +319,33 @@ a pattern was confirmed.
 scheduled runs; if it does, the fix is likely ensuring the scheduled session starts each run
 checked out on `main` (or explicitly reconciles a detached HEAD against it) rather than leaving
 that to be caught after the fact.
+
+## 2026-08-26 — Detached-HEAD/unpushed-commit gap recurs (n=2) — now a confirmed pattern, not a one-off
+
+**Agent activity:** This run again started on a detached HEAD, this time two commits ahead of
+local `main` (`ab39b4f` 2026-08-24, `671bf5c` 2026-08-25) — and unlike the 2026-08-25 occurrence
+(where `origin/main` turned out to already have the commit), this time `origin/main` was
+genuinely stuck at 2026-08-23's commit (`04cc208`). The 2026-08-24 and 2026-08-25 Glimpse
+check-ins — including a time-sensitive founder escalation on the visa case — had never actually
+reached `origin`, meaning `git pull` would not have shown the founder that work until this run
+caught it. Fast-forwarded `main` to `671bf5c` and pushed; confirmed via a fresh `git fetch` that
+`origin/main` now matches.
+
+**Root-cause note (still not confirmed, but narrowed):** both occurrences show the same shape —
+a scheduled/cloud session commits real work during its run but the session ends before that work
+is merged onto `main` and pushed, leaving it stranded on whatever detached ref the session
+checked out. This is now n=2 across consecutive scheduled runs (2026-08-25, 2026-08-26), which
+moves it from "worth watching" to "worth fixing" — likely either the scheduled routine's own
+run/commit sequence needs an explicit `git checkout main && git merge --ff-only <HEAD> && git
+push` step before the session ends, or each run needs to start by checking out `main` directly
+instead of whatever ref the container's fresh clone lands on.
+
+**Milestone deltas:** None — operational, not a milestone.
+
+**Dispatched:** None from this entry.
+
+**Open decision for the human:** Recommend treating this as confirmed rather than provisional
+now (n=2, not n=1) — worth deciding whether to harden the scheduled routine's own push step, or
+add an explicit "reconcile detached HEAD against origin/main, merge and push" step at the *start*
+of every run (this run and 2026-08-25 both did this defensively, but only after the fact — a
+structural fix would prevent the gap existing at all between runs).

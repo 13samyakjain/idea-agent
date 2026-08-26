@@ -708,3 +708,60 @@ identified today.
    not independently re-verified this run (see Agent activity note).
 5. Carryover: 9 Borderline leads still pending Samyak's judgment calls (not re-verified this run
    for a second day, to conserve ClickUp read quota).
+
+## 2026-08-26 — Visa case now 4 days from appointment, Samyak's own escalation unanswered 2 days
+
+**Housekeeping first (cross-venture, logged at root too):** this run started on a detached HEAD
+two commits ahead of local `main`, with `origin/main` still sitting on 2026-08-23's commit —
+meaning the 2026-08-24 and 2026-08-25 check-ins (including the direct escalation comment logged
+below) had never actually reached `origin` despite being written up as done. This is the same
+gap flagged as a single occurrence on 2026-08-25 — today confirms it as a recurring pattern, not
+a one-off. Fast-forwarded `main` to the detached commits and pushed; `origin/main` is now current.
+See root STATUS_LOG.md for the tool-level detail.
+
+**Human activity:** Google Calendar checked (2026-08-25 to 2026-08-26): one new event since
+yesterday — a "discussion meeting" between Samyak and Kanchan Thakur, 2026-08-25 20:30-21:30 IST
+(separate from the "apollo.io" meeting noted 2026-08-24). No content visible beyond
+title/attendees/conference link; not independently actionable. Otherwise unchanged (recurring
+`vempower.org` event, Anushika OOO through 2026-08-29). ClickUp checked directly and
+sequentially (4 calls, no rate-limit errors): the Deborah/Peter visa task (86d3pw08w) — full
+record plus all 4 comments re-read — is completely unchanged since the 2026-08-24 03:35 UTC
+direct escalation to Samyak: no reply from Babita, no new comments, `date_updated` frozen at
+that timestamp. Both Sales Engine gating tasks re-checked: 86d3t4bg7 unchanged since 2026-08-22
+06:42 UTC, 86d3ucd9p (BDE hiring) unchanged since 2026-08-19 09:31 UTC — both consistent with
+every prior run.
+
+**Agent activity:** None dispatched — `TaskList` empty. Did not re-pull the `Lead Sourcing Queue`
+counts or the three duplicate "hire BDE" tasks this run (third consecutive day conserving
+ClickUp read quota); no orchestrator-visible reason to expect either has moved.
+
+**Findings:** The Deborah/Peter visa case has now tightened to 4 days before the 2026-08-30
+appointment, with Peter's signature pending 30 days and Kanchan's original nudge unanswered 21
+days. The new and more pointed fact today: Samyak's own direct ClickUp escalation from
+2026-08-24 has itself now gone unanswered for 2 full days, on the exact thread meant to surface
+this to him. Judged that a third ClickUp comment would still be noise, not new information — the
+same reasoning as 2026-08-25. Sent a push notification instead, since the appointment window is
+now short enough that another day of silent logging risks missing the window entirely.
+
+**Milestone deltas:** None. Phase 1 reservations bullet in MILESTONES.md updated with today's
+re-check (4 days out, 30/21/2-day stalls).
+
+**Dispatched:** None — every open item (visa case, BDE hiring, Sales Engine gating, Lead
+Sourcing Queue promotion) remains human-only work already flagged; no new agent-doable action
+identified today.
+
+**Open decisions for the human:**
+1. **Most urgent, now most time-critical yet:** the Deborah/Peter visa case — appointment
+   2026-08-30 (4 days out), Peter's signature missing 30 days, Kanchan's 2026-08-05 ask
+   unanswered 21 days, and Samyak's own 2026-08-24 direct escalation now unanswered 2 days.
+   Needs a human resolution (e.g. a direct call to Babita or Peter) before the appointment.
+2. Carryover: confirm whether Gagan Singh's full-time BDE start actually happened (unchanged
+   since 2026-08-19).
+3. Carryover: should Sprint tasks be tagged going forward? (unchanged.)
+4. Carryover: the three duplicate "hire BDE" tasks — not independently re-verified this run
+   (third consecutive day conserving ClickUp read quota).
+5. Carryover: 9 Borderline leads still pending Samyak's judgment calls (not re-verified this run
+   for a third day).
+6. **New:** the detached-HEAD/unpushed-commit gap flagged once on 2026-08-25 has now recurred —
+   worth root-causing why the scheduled session isn't ending each run merged and pushed to
+   `main`, rather than relying on the next run to catch it (see root STATUS_LOG.md).
