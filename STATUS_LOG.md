@@ -349,3 +349,15 @@ now (n=2, not n=1) — worth deciding whether to harden the scheduled routine's 
 add an explicit "reconcile detached HEAD against origin/main, merge and push" step at the *start*
 of every run (this run and 2026-08-25 both did this defensively, but only after the fact — a
 structural fix would prevent the gap existing at all between runs).
+
+## 2026-08-26 (second pass) — Detached-HEAD/unpushed-commit gap did not recur
+
+This run started detached at `origin/main`'s tip (`b2e5156`, this morning's Glimpse check-in),
+with local `main` 3 commits behind — but `origin/main` itself was already current, meaning this
+morning's run did merge and push cleanly before ending. Checked out `main` and fast-forwarded
+locally (cosmetic only, no push needed) so this session isn't left detached either. Confirms the
+n=2 pattern flagged on 2026-08-25/08-26 was about the push step, not the detached-checkout start
+itself — a fresh detached checkout at the correct tip is normal for how the container starts,
+not a bug. No further action needed unless the push-gap itself recurs.
+
+**Dispatched:** none — tool-level housekeeping only.
