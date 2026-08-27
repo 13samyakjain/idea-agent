@@ -60,6 +60,15 @@
       alongside Samyak, Kaustav, and Babita. Outcome not visible from the calendar event or
       ClickUp — no comment or status update reflecting it yet. Not re-notifying the founder (he
       was an invitee). See STATUS_LOG.md 2026-08-26 second entry.
+      **Update 2026-08-27:** re-checked directly (task record + all 4 comments) — still zero
+      reply from Babita, no new comments, `date_updated` unchanged since the 2026-08-24 03:35 UTC
+      escalation. Yesterday's call (Peter/Babita/Samyak/Kaustav) has still left no trace in
+      ClickUp — nothing confirms whether the signature issue was actually resolved. Appointment
+      is now **3 days out** (2026-08-30), signature pending 31 days, Kanchan's nudge unanswered
+      22 days, Samyak's own escalation unanswered 3 days. Notified the founder again given the
+      combination of shrinking runway and an unconfirmed outcome from a call he already attended
+      — the risk now is assuming the call resolved it when the record doesn't show that. See
+      STATUS_LOG.md 2026-08-27.
 - [~] Merchandise/PE Kits: procurement cadence, cost baseline, storage/fulfillment visible —
       task-count cadence now in GROWTH.md; cost baseline still not measurable (no financial data
       in ClickUp)
