@@ -361,3 +361,40 @@ itself — a fresh detached checkout at the correct tip is normal for how the co
 not a bug. No further action needed unless the push-gap itself recurs.
 
 **Dispatched:** none — tool-level housekeeping only.
+
+## 2026-08-27 (second pass, 14:34 UTC) — Push-gap recurs a third time, now worse: 4 days / 5 commits stranded
+
+**Agent activity:** This run started on a detached HEAD 5 commits ahead of local `main`
+(`ab39b4f` 2026-08-24 through `61042bd` 2026-08-27 this morning), with `origin/main` still
+sitting on `04cc208` — 2026-08-23's commit. Unlike the 2026-08-26 second-pass check (which found
+the morning run's push had held), this run found the *opposite*: this morning's own 2026-08-27
+check-in had itself failed to reach `origin`, on top of 2026-08-24 through 2026-08-26 second pass
+never having been pushed either. This is now the worst occurrence of the pattern first flagged
+2026-08-25 (n=1) and confirmed 2026-08-26 (n=2) — 4 calendar days and 5 commits, versus the prior
+worst of 2 commits/1 day. Fast-forwarded `main` to `61042bd` and pushed; verified via
+`git ls-remote origin main` that `origin/main` now matches local `main`. Practical consequence: a
+founder running `git pull` between 2026-08-23 and just now would have seen the venture-orchestrator
+as stalled for 4 days, despite 5 real Glimpse check-ins (including a time-sensitive visa-case
+escalation) having actually happened — the push notifications sent directly to the founder on
+those days were the only channel that actually reached him; the repo itself was stale.
+
+**Root-cause note:** the 2026-08-26 second-pass entry concluded the fix "held" based on one clean
+observation — that was premature. Whatever causes a scheduled run's session to end without its
+commit reaching `origin/main` is intermittent, not fixed, and has now failed on at least 3 of the
+last ~8 scheduled firings (2026-08-24, 2026-08-25, and this morning 2026-08-27 all failed to push;
+2026-08-26's two passes both succeeded). Each affected run has been doing the fast-forward+push
+recovery defensively at its own start, which is why the pushed content is never actually lost —
+but it means the gap's real duration depends entirely on how long it takes before some later run
+happens to notice and fix it, which is not a property to rely on when a run's content includes a
+live, time-boxed escalation.
+
+**Recommendation (not yet actioned — needs a human or a future run to actually build it):** stop
+treating "fast-forward and push defensively at the start of a run" as sufficient; either (a) add
+an explicit `git push` verification as the very last step of this skill's own run sequence,
+failing loudly (not just logging) if the push doesn't confirm against `origin`, or (b) investigate
+the scheduled routine's own execution harness for why a session's final push sometimes doesn't
+land — this is now a 3-of-8 failure rate, not a rare edge case.
+
+**Milestone deltas:** None — operational, not a milestone.
+
+**Dispatched:** none — tool-level housekeeping only.

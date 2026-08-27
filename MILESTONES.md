@@ -11,6 +11,13 @@
 - [x] Daily cloud routine's push-permission issue found and fixed (2026-08-18) — reliability
       clock for "3 consecutive clean days" now actually running, not evidence of the days
       themselves yet
+      **Correction 2026-08-27:** the "fixed" framing was premature — the push step has since
+      failed intermittently (2026-08-24, 2026-08-25, 2026-08-27 morning), most recently stranding
+      4 days / 5 commits before a later run caught and pushed it. Not reverting this checkbox
+      (the original permission issue is genuinely resolved) but the broader "runs reliably end
+      pushed" property is not yet true — see root STATUS_LOG.md 2026-08-27 for detail and an open
+      recommendation to harden the push step itself rather than keep relying on the next run's
+      defensive recovery.
 - [x] First dogfood cycle produces a status report a human would actually find useful (the
       Venture Console artifact, shipped 2026-08-10, used same-day to act on 3 real decisions)
 
