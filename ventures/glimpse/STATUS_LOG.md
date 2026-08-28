@@ -960,3 +960,53 @@ today.
 3. Carryover, unchanged: Sales Engine gating task 86d3t4bg7 (6 days idle), three duplicate "hire
    BDE" tasks (not re-verified today), 9 Borderline leads pending Samyak's judgment calls (not
    re-verified today), whether Sprint tasks should be tagged going forward.
+
+## 2026-08-28 (second pass, 14:33 UTC) — Peter proactively met Samyak today; ClickUp still shows no outcome
+
+**Housekeeping:** this run started on a detached HEAD matching `origin/main`'s tip (`1afc374`,
+this morning's check-in) — local `main` was 6 commits behind but `origin/main` was already
+current, no push gap. Checked out and fast-forwarded `main` locally for cleanliness; nothing to
+push before this entry.
+
+**Human activity:** ClickUp re-checked directly (3 sequential reads, no rate-limit errors): the
+Deborah/Peter visa task (86d3pw08w) — full record plus all 4 comments — is unchanged since this
+morning: `date_updated` still frozen at the 2026-08-24 03:35 UTC direct escalation to Samyak, no
+reply from Babita, no new comments. Both Sales Engine gating tasks re-checked and unchanged:
+86d3t4bg7 since 2026-08-22 06:42 UTC (6 days idle), 86d3ucd9p since 2026-08-19 09:31 UTC (9 days
+idle against its own daily-cadence commitment). Google Calendar (2026-08-27 through 2026-08-29)
+surfaced one new event not visible this morning: a "Peter/Samyak" 1:1, created 2026-08-28 07:37
+UTC by Peter (organizer) — the same person whose Invitation Letter signature has been the
+blocker since 2026-07-27 — and held 09:30–10:00 UTC, roughly 5 hours before this check. This is
+the second such meeting in three days (after 2026-08-26's group call), and again organized at
+Peter's own initiative rather than in response to Kanchan's or Samyak's ClickUp escalations.
+
+**Agent activity:** `TaskList` empty — nothing dispatched or pending since the last entry.
+
+**Findings:** Real movement happened today outside ClickUp — Peter himself set up and held a
+direct meeting with Samyak, hours before this check. But exactly as with the 2026-08-26 call, the
+outcome has left zero trace on the task record: no comment, no status change, `date_updated`
+unchanged. The pattern of "real-world contact happening but not reflected in the system of
+record" has now recurred twice on this same case. Not sending a push notification: Samyak was
+the meeting's other attendee, so he already has direct knowledge of the outcome that this
+orchestrator cannot obtain from ClickUp or Calendar — a notification would tell him only that he
+attended a meeting he was just in, not add information (same reasoning applied 2026-08-26).
+Recommend, if this pattern holds beyond this case, that any resolution reached in these
+off-ClickUp calls get a one-line comment logged on the task itself — otherwise the record
+becomes structurally unable to reflect real progress on time-sensitive items.
+
+**Milestone deltas:** Phase 1 reservations bullet in MILESTONES.md updated with today's second
+check (new Peter/Samyak meeting noted, outcome still unconfirmed, 2 days out).
+
+**Dispatched:** None — every open item (visa case, BDE hiring, Sales Engine gating, Lead Sourcing
+Queue promotion) remains human-only work already flagged; no new agent-doable action identified.
+
+**Open decisions for the human:**
+1. **Most urgent, 2 days out:** what came out of today's 09:30–10:00 UTC meeting with Peter — if
+   the Invitation Letter signature was resolved, a one-line ClickUp comment on 86d3pw08w would
+   close the information gap for anyone (or any future orchestrator run) checking the record
+   instead of relying on calendar-side inference.
+2. Carryover, unchanged: the BDE daily check-in task (86d3ucd9p) has had zero ClickUp activity in
+   9 days against its own stated daily cadence.
+3. Carryover, unchanged: Sales Engine gating task 86d3t4bg7 (6 days idle), three duplicate "hire
+   BDE" tasks (not re-verified today), 9 Borderline leads pending Samyak's judgment calls (not
+   re-verified today), whether Sprint tasks should be tagged going forward.

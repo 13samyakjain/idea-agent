@@ -79,6 +79,15 @@
       information: fewer than 48 hours remain and there is still no record of whether the
       blocking signature was ever obtained. Notified the founder again. See STATUS_LOG.md
       2026-08-28.
+      **Update 2026-08-28 (second pass, 14:33 UTC):** ClickUp task itself is still unchanged
+      (same 4 comments, `date_updated` still frozen at the 2026-08-24 03:35 UTC escalation) — but
+      Google Calendar now shows a new "Peter/Samyak" 1:1, created same-day at 07:37 UTC by Peter
+      himself (the person whose Invitation Letter signature is the blocker) and held 09:30–10:00
+      UTC, roughly 5 hours before this check. As with the 2026-08-26 call, the outcome has left
+      no trace in ClickUp — nothing on the task confirms whether the signature was resolved.
+      Appointment is now **2 days out** (2026-08-30) with the same information gap as the morning
+      entry, except the founder himself was the meeting's other attendee — not re-notifying (same
+      reasoning as 2026-08-26: he was there). See STATUS_LOG.md 2026-08-28 second pass.
 - [~] Merchandise/PE Kits: procurement cadence, cost baseline, storage/fulfillment visible —
       task-count cadence now in GROWTH.md; cost baseline still not measurable (no financial data
       in ClickUp)
