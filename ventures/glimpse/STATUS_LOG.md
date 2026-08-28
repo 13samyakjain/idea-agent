@@ -907,3 +907,56 @@ state from this morning's entry; no new information to add.
 **Dispatched:** None.
 
 **Open decisions for the human:** Unchanged from this morning's entry — see items 1-3 above.
+
+## 2026-08-28 — Visa appointment 2 days out, still unresolved; no push-gap this run
+
+**Housekeeping:** this run started detached at `origin/main`'s tip (`9ede96e`, yesterday's second
+pass) with local `main` 6 commits behind — no push gap this time (confirmed via `git fetch` +
+comparing local `main` to `origin/main`: they already matched). Fast-forwarded local `main` for
+cleanliness only; no push needed before this entry.
+
+**Human activity:** ClickUp checked directly (3 sequential reads, no rate-limit errors): the
+Deborah/Peter visa task (86d3pw08w) — full record plus all 4 comments re-read — is completely
+unchanged since the 2026-08-24 03:35 UTC direct escalation to Samyak: no reply from Babita, no new
+comments, `date_updated` still frozen at that timestamp. The 2026-08-26 call (Peter/Babita/Samyak/
+Kaustav) remains untraceable in ClickUp four days later — nothing on the task confirms whether the
+Invitation Letter signature was actually obtained. Both Sales Engine gating tasks re-checked:
+86d3t4bg7 (BDE work-alignment process) unchanged since 2026-08-22 06:42 UTC — now 6 days idle;
+86d3ucd9p (the BDE daily 20-minute PE check-in task) unchanged since 2026-08-19 09:31 UTC — now 9
+days idle against its own stated *daily* cadence, the widest this gap has been. Google Calendar
+checked (2026-08-27 through 2026-08-29): only the ongoing `Anushika OOO` block (through 2026-08-29)
+and the recurring personal `@rakesh@vempower.org` item — no new "Call with Glimpse"-style event and
+no other signal on the visa case. Did not re-pull `Lead Sourcing Queue` counts or the three
+duplicate "hire BDE" tasks this run (conserving ClickUp read quota; no reason to expect either has
+moved since 2026-08-24).
+
+**Agent activity:** `TaskList` empty — nothing dispatched or pending since the last entry.
+
+**Findings:** The visa case has reached its most time-critical point with the least information:
+the appointment is now **2 days out** (2026-08-30), the record shows zero resolution, and the only
+real-world event that could plausibly have resolved it (the 2026-08-26 call) has left no trace
+anywhere checkable four days on. This is functionally the same situation as 2026-08-27's "call
+outcome unconfirmed" finding, except the runway has now shrunk to within 48 hours — worth a fresh
+notification rather than treating "no new information" as "nothing to report," since the risk
+profile has materially changed even though the underlying facts haven't. Separately, the BDE daily
+check-in task's gap against its own stated cadence has now stretched to 9 days, the longest yet —
+still a smaller, non-urgent signal next to the visa case, but worth carrying forward.
+
+**Milestone deltas:** Phase 1 reservations bullet in MILESTONES.md updated with today's re-check
+(2 days out, 31/22/3-day stalls, call outcome still unconfirmed four days on).
+
+**Dispatched:** None — every open item (visa case, BDE hiring, Sales Engine gating, Lead Sourcing
+Queue promotion) remains human-only work already flagged; no new agent-doable action identified
+today.
+
+**Open decisions for the human:**
+1. **Most urgent, narrowing fast:** confirm whether the 2026-08-26 call with Peter actually
+   resolved the Invitation Letter signature — if yes, update the ClickUp task/comment to reflect
+   it (nothing currently shows this); if no, the appointment is 2 days out (2026-08-30) with no
+   other path visible and no time left to find one through this channel.
+2. Carryover, worsening: the BDE daily check-in task (86d3ucd9p) has had zero ClickUp activity in
+   9 days against its own stated daily cadence — confirm whether check-ins are happening
+   off-ClickUp or have lapsed.
+3. Carryover, unchanged: Sales Engine gating task 86d3t4bg7 (6 days idle), three duplicate "hire
+   BDE" tasks (not re-verified today), 9 Borderline leads pending Samyak's judgment calls (not
+   re-verified today), whether Sprint tasks should be tagged going forward.
