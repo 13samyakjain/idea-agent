@@ -47,8 +47,9 @@ get the right agents moving on it.
 2. **For each venture, in order of what its own MILESTONES.md flags as current-phase:**
 
    a. **Read state.** That venture's VENTURE.md, MILESTONES.md, GROWTH.md, GOAL.md (if it
-      exists), and the last 2-3 entries of its STATUS_LOG.md. Note anything dispatched last run
-      and whether it actually landed.
+      exists), the `## Tracked items` block at the top of its STATUS_LOG.md, and the last 2-3
+      dated entries of that log. Note anything dispatched last run and whether it actually landed,
+      and note each tracked item's `last-moved` / `last-escalated` dates for the step-2d check.
 
    b. **Check human activity relevant to this specific venture.** Try, in order, and don't
       block on failures — note what's unavailable and move on:
@@ -80,6 +81,13 @@ get the right agents moving on it.
       before. If open questions are still unanswered and gate the next milestone, the action may
       simply be: surface the question, and move to the next venture.
 
+      **Stalled-item escalation is a real action, not a log line.** Before falling back to
+      "surface the question and move on," run the check in the "Stalled-item escalation" section
+      below against this venture's tracked items. If it says an item is due for escalation, that
+      escalation (a single ClickUp comment tagging the named owner) *is* one of this run's
+      actions — do it, don't just re-note "still unchanged." A run that logs the same item as
+      stuck for the third time without ever having escalated it to a person has not done its job.
+
    e. **Dispatch.** For each action that's genuinely agent-doable right now, use the `Agent`
       tool with a self-contained prompt naming this specific venture (the worker has no memory
       of this conversation or which venture is "current" — give it exact file paths and
@@ -97,7 +105,11 @@ get the right agents moving on it.
       something material changed).
 
    g. **Append to that venture's STATUS_LOG.md.** New dated entry: human activity, agent
-      activity, milestone deltas, what was dispatched, open decisions. Append only.
+      activity, milestone deltas, what was dispatched, **what was escalated** (per the
+      Stalled-item escalation section — which tracked items were nudged, which are in the 72h
+      quiet window, which hit escalation-exhausted), and open decisions. The dated entries are
+      append-only; the `## Tracked items` block at the top is edited in place (update
+      `last-moved` / `last-escalated`, add/remove rows).
 
 3. **Tool-level housekeeping (root docs).** Only touch root VENTURE.md/MILESTONES.md/GROWTH.md
    if something about IdeaAgent-the-tool itself materially changed this run (a new venture
@@ -106,9 +118,11 @@ get the right agents moving on it.
    just to have an entry if every venture's own log already captured the run.
 
 4. **Report back concisely.** End with a short summary for the human, organized per venture
-   touched: what moved, what's blocked, what's now running, and the one thing (if any) that
-   needs a founder decision before next run. This is the part a human actually reads — keep it
-   tight, no padding.
+   touched: what moved, what's blocked, what's now running, what was escalated this run, any
+   **escalation-exhausted** items (nudged 3× with no movement — these need a founder decision
+   with a proposed resolution, not another nudge), and the one thing (if any) that most needs a
+   founder decision before next run. This is the part a human actually reads — keep it tight, no
+   padding.
 
 ## ClickUp access rule (added 2026-08-22 after two rate-limit incidents)
 
@@ -162,6 +176,39 @@ each run instead of re-deriving "highest-leverage next action" from first princi
   prominently in the run report per the Guardrails below.
 - See step 2d above for exactly how this feeds the per-run decision, and `ventures/glimpse/GOAL.md`
   for the reference format.
+
+## Stalled-item escalation (added 2026-09-10)
+
+The failure mode this fixes: for weeks, runs logged the same items as stuck ("BDE hiring 50 days
+overdue," "visa case, no outcome recorded," "gating task idle") without anything ever forcing a
+human to act. Observing a stall is not working the stall.
+
+**Each venture keeps a short `## Tracked items` list at the top of its `STATUS_LOG.md`** (above
+the dated entries — this is the one part of that file that is *not* append-only; edit it in
+place). Each row: the item, the specific ClickUp task ID or GHL state that represents it, the
+**named owner**, `last-moved` date, and `last-escalated` date. Keep it to the ~3–7 things that
+actually gate progress — not every open task. Add a row when a new hard blocker appears; remove
+a row when the item is genuinely done (note the removal in that run's entry).
+
+**Every run, for each tracked item:**
+1. Check whether it moved since `last-moved` (task `date_updated`, status change, GHL stage/tag
+   change, a new comment from the owner). If it moved, update `last-moved` and you're done with
+   that row.
+2. If it has **not** moved, is **past its due date** (or has no due date and has been idle 7+
+   days), and `last-escalated` is either empty or **more than 72h ago**: post **one** ClickUp
+   comment on the item's task, `notify_all: true`, tagging the named owner, stating the specific
+   ask and the exact day counts (days idle, days past due, days since the last escalation).
+   Then set `last-escalated` to today. This counts as one of the run's actions.
+3. If `last-escalated` is within 72h, do **not** re-comment — a repeat that soon is noise. Just
+   note in the run entry "escalated <date>, within quiet window, not repeating."
+4. After **three** escalations on the same item with no movement, stop commenting and instead
+   put it in the run report's founder-decision section as "escalation exhausted — needs a
+   decision, not another nudge" with a concrete proposed resolution.
+
+**Never** escalate by editing ClickUp structure (merging, reassigning, closing, deleting tasks)
+— comments only, unless VENTURE.md's Open questions have been answered to allow more. The
+`## Tracked items` block and the per-run "what was escalated" line make the escalation history
+auditable so nobody gets nagged twice for the same thing in the same week.
 
 ## Guardrails
 

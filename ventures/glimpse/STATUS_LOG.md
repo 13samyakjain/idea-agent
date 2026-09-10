@@ -1,6 +1,23 @@
 # Glimpse — Status Log
 
-> Append-only. One entry per orchestrator run, newest at the bottom. Never rewritten.
+> The dated entries below are append-only — one per orchestrator run, newest at the bottom,
+> never rewritten. The `## Tracked items` block directly below is the one exception: it is
+> edited in place each run (see the skill's "Stalled-item escalation" section).
+
+## Tracked items
+
+> The ~3–7 things that actually gate Glimpse progress. Each run checks whether each moved; an
+> item past due / idle 7+ days with no movement gets ONE ClickUp comment tagging its owner
+> (max once per 72h), then goes to "escalation exhausted → founder decision" after 3 nudges.
+
+| Item | Handle | Owner | Last moved | Last escalated | Notes |
+|---|---|---|---|---|---|
+| Batch-1 outreach sent (5 leads) | ClickUp `14ykddrwyqf` / GHL pipeline `volxN7h175GHZDiTKgEk` | Kanchan | 2026-09-10 (task created) | — | due 2026-09-12; "sent" = 5 opps at ≥"Contacted" + `contacted` tags |
+| BDE hiring — assignment process | ClickUp `86d3t4bg7` | Samyak | 2026-08-22 | — | idle 19d as of 2026-09-10; interim owner Kanchan does not close this |
+| BDE hiring — 3 duplicate tasks | ClickUp `BDE Team Ops` (3 near-identical "hire BDE" tasks) | Samyak | before 2026-08-19 | — | ~50d overdue; merging needs founder OK (VENTURE.md open q) |
+| BDE daily check-in cadence | ClickUp `86d3ucd9p` | Kanchan | 2026-08-19 | — | zero activity vs its own daily-cadence commitment |
+| Visa case outcome recorded | ClickUp `86d3pw08w` | Samyak / Kanchan | 2026-08-24 | 2026-08-24 | appointment was 2026-08-30; outcome known offline, never logged |
+| 9 Borderline leads — judgment calls | ClickUp `Lead Sourcing Queue` (9 tasks, priority urgent) | Samyak | 2026-08-21 | — | each has an escalation comment already; not re-verified since 08-24 |
 
 ## 2026-08-18 — Onboarded as a tracked venture
 
@@ -1129,3 +1146,24 @@ by 2026-09-14 — next orchestrator runs check GHL for opportunities + `contacte
 2026-08-27 "verify push or fail loudly" hardening still isn't built; (3) visa case 86d3pw08w
 still needs its 2026-08-30 outcome recorded; (4) BDE hiring (86d3t4bg7 + 3 duplicate tasks)
 still open — Kanchan is interim, not the permanent answer.
+
+## 2026-09-10 (fourth pass) — Seeded the Tracked-items block
+
+**Tool change (see root STATUS_LOG.md 2026-09-10 third pass):** the skill now has a
+"Stalled-item escalation" step — every run checks the `## Tracked items` block at the top of
+this file, and any item past due / idle 7+ days with no movement gets one ClickUp comment
+tagging its owner (max once per 72h), escalating to "founder decision needed" after 3 nudges.
+This exists because for ~3 weeks runs re-logged the same stuck items (BDE hiring, visa case,
+gating task) without anything forcing action.
+
+Seeded the block with 6 items: batch-1 send (`14ykddrwyqf`, Kanchan, due 09-12), the two BDE
+hiring tasks (`86d3t4bg7` + the 3 duplicates, Samyak), the BDE check-in cadence task
+(`86d3ucd9p`, Kanchan), the visa case (`86d3pw08w`), and the 9 borderline leads. Next run works
+this list.
+
+**Milestone deltas:** none. **Dispatched:** none. **Escalated:** none this run (block just
+created; first escalation pass is next run).
+
+**Open decisions for the human:** unchanged from the third pass — plus: merging the 3 duplicate
+"hire BDE" tasks still needs an explicit OK (VENTURE.md open question), otherwise the escalation
+step can only comment on them, not consolidate them.

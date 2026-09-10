@@ -489,3 +489,24 @@ so a run's transient lock never gets committed. Not touched: the routine's own c
 **Milestone deltas:** root MILESTONES.md Phase 0 automation note updated with the resolved root cause.
 
 **Dispatched:** none.
+
+## 2026-09-10 (third pass) — Skill change: stalled-item escalation
+
+**Problem addressed:** the orchestrator has been observe-only in practice — for ~3 weeks it
+re-logged the same stuck Glimpse items (BDE hiring 50+ days overdue, visa case with no recorded
+outcome, gating task `86d3t4bg7` idle) every run without anything converting a flag into action.
+
+**Change to `.claude/skills/venture-orchestrator/SKILL.md`:** added a "Stalled-item escalation"
+section and wired it into steps 2a / 2d / 2g / 4. Each venture now maintains a `## Tracked items`
+table at the top of its STATUS_LOG.md (the one in-place-edited part of an otherwise append-only
+file). Every run, each tracked item that hasn't moved, is past due (or idle 7+ days), and hasn't
+been escalated in 72h gets **one** ClickUp comment tagging its named owner with exact day counts.
+After 3 nudges with no movement, the item stops being nudged and goes to the run report as
+"escalation exhausted — needs a founder decision," with a proposed resolution. Structural ClickUp
+edits (merge/close/reassign) are still off-limits without a founder OK per VENTURE.md — comments
+only.
+
+Seeded Glimpse's block with 6 items (see `ventures/glimpse/STATUS_LOG.md` 2026-09-10 fourth pass).
+The next scheduled run is the first to actually run the escalation pass.
+
+**Milestone deltas:** none. **Dispatched:** none.
