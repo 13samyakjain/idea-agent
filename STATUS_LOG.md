@@ -435,3 +435,57 @@ dispatched a Sales Outreach agent to draft first-touch messages, and flagged the
 
 **Dispatched:** one agent, against the Glimpse venture (logged in that venture's STATUS_LOG) —
 none at the tool level.
+
+## 2026-09-10 (second pass) — Root-caused the 12-day silence: runs hang on a sensitive-file permission prompt
+
+**Follow-up to the entry above.** Checked the cloud routine directly via the remote-trigger API
+(`trig_01Kbr4hQgUQ52Jvwr8EvCQog`, "IdeaAgent Venture Orchestrator - Daily").
+
+**The routine is healthy and firing on schedule.** `enabled: true`, cron `30 3,14 * * *`
+(09:00 + 20:00 IST). It fired this morning 2026-09-10 03:33 UTC; `next_run_at` was set normally.
+So "the routine stopped firing" was wrong — it never stopped.
+
+**Every run hangs ~60 seconds in and never completes.** `list_runs` shows every fire back through
+at least 2026-09-05 (10+ consecutive runs) sitting in `status: active`, `worker_status:
+requires_action`, with the last event about one minute after start. None reach the commit/push
+step.
+
+**Exact blocking point** (from the 2026-09-10 03:33 UTC run's condensed log): the run reads all
+the state files fine, then —
+```
+tool_use Write: {"file_path": ".../.claude/CLICKUP_LOCK.md"}
+permission prompt Write: Claude requested permissions to edit .../.claude/CLICKUP_LOCK.md
+                         which is a sensitive file.
+```
+Anything written under `.claude/` triggers a sensitive-file permission prompt. An unattended
+cloud session has no one to approve it, so the run stalls in `requires_action` indefinitely and
+never commits.
+
+**Why it began 2026-08-29:** commit `22199c6` — *"Restore missing ClickUp lock rule; add
+goal-tracking to venture-orchestrator."* Before that rule was (re)added, the orchestrator didn't
+write `.claude/CLICKUP_LOCK.md` on a run, so it never hit this prompt. Every scheduled run since
+has. The rule had apparently been removed once before — plausibly for this same reason — and
+restoring it reintroduced the hang. The last good commit (`22199c6` itself) is the one that
+carried the regression.
+
+**Fix applied this session (fix #1):** the ClickUp lock file is moved out of `.claude/` to a
+plain repo-root path `CLICKUP_LOCK.md`, which is not permission-gated. Updated
+`.claude/skills/venture-orchestrator/SKILL.md` "ClickUp access rule" (all three references +
+a path note telling future edits not to move it back), and added `.gitignore` with `/CLICKUP_LOCK.md`
+so a run's transient lock never gets committed. Not touched: the routine's own config — no
+`session_context` / auto-mode change was needed once the path moved.
+
+**Still open / for the founder:**
+- The next scheduled run (2026-09-10 14:32 UTC) will only pick up this fix if it clones fresh
+  from `origin/main` after this commit lands — it should, since `persist_session: false`. Worth
+  confirming that run actually commits.
+- ~10+ hung "active" sessions have accumulated (one per fire since ~2026-09-05). Harmless but
+  dead — they will never complete. Clear them from https://claude.ai/code/routines if they clutter.
+- The 2026-08-27 recommendation (end the skill's run sequence with an explicit "commit + verify
+  push against origin, fail loudly otherwise" step) still stands and would have surfaced this on
+  day one instead of day twelve — a hung run and a silently-not-pushing run look identical from
+  the repo side without it.
+
+**Milestone deltas:** root MILESTONES.md Phase 0 automation note updated with the resolved root cause.
+
+**Dispatched:** none.

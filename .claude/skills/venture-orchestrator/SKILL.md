@@ -122,16 +122,23 @@ interactive session both independently retried the same ClickUp writes at nearly
 moment. No damage that time — verified after the fact — but it was luck on timing, not a fix.
 
 **Before any ClickUp-writing work (more than a couple of calls), use a lock file:**
-1. Check `.claude/CLICKUP_LOCK.md`. If it exists with a timestamp less than 2 hours old, another
-   session may be mid-write. Do not start ClickUp-heavy work this run — log "ClickUp lock held,
-   deferring ClickUp work this run" in the relevant STATUS_LOG.md and move to other ventures or
-   end the run.
-2. Otherwise, write `.claude/CLICKUP_LOCK.md` with `holder: venture-orchestrator (scheduled run
-   <UTC timestamp>)` and the start time, before starting ClickUp writes.
-3. When ClickUp work for this run is finished, delete `.claude/CLICKUP_LOCK.md` so the next
-   session isn't blocked.
+1. Check `CLICKUP_LOCK.md` at the repo root. If it exists with a timestamp less than 2 hours
+   old, another session may be mid-write. Do not start ClickUp-heavy work this run — log
+   "ClickUp lock held, deferring ClickUp work this run" in the relevant STATUS_LOG.md and move
+   to other ventures or end the run.
+2. Otherwise, write `CLICKUP_LOCK.md` at the repo root with `holder: venture-orchestrator
+   (scheduled run <UTC timestamp>)` and the start time, before starting ClickUp writes.
+3. When ClickUp work for this run is finished, delete `CLICKUP_LOCK.md` so the next session
+   isn't blocked. It is gitignored — never commit it.
 4. **Within a single run: never dispatch parallel sub-agents that each independently call
    ClickUp.** One sequential path only, always.
+
+> **Path note (2026-09-10):** this lock lived at `.claude/CLICKUP_LOCK.md` until 2026-09-10.
+> Writing anything under `.claude/` triggers a sensitive-file permission prompt, which an
+> unattended cloud run cannot answer — every scheduled run from 2026-08-29 (when this rule was
+> reintroduced) to 2026-09-10 hung at exactly that prompt and never committed. The lock is now
+> a plain repo-root file. Do **not** move it back under `.claude/`. See root STATUS_LOG.md
+> 2026-09-10.
 
 This isn't perfectly race-proof (two sessions could still both pass the check in the same
 instant), but it directly targets the confirmed failure mode instead of just hoping it doesn't

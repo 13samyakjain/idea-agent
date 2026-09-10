@@ -18,13 +18,18 @@
       pushed" property is not yet true — see root STATUS_LOG.md 2026-08-27 for detail and an open
       recommendation to harden the push step itself rather than keep relying on the next run's
       defensive recovery.
-      **Correction 2026-09-10:** worse than "intermittent push failures." There is now a ~12-day
-      stretch (2026-08-29 → 2026-09-10) with **no scheduled check-ins at all** — not stranded
-      commits, just nothing. Git was clean this run (no detached HEAD, `origin/main` current), so
-      the routine either stopped firing or its sessions end without committing. A manual run on
-      2026-09-10 resumed the loop. The "runs reliably end pushed" property is still not true, and
-      "runs reliably fire" is now also in question — see root STATUS_LOG.md 2026-09-10. Founder
-      to verify the cloud trigger (`trig_01Kbr4hQgUQ52Jvwr8EvCQog`) is still scheduled/firing.
+      **Correction 2026-09-10:** ~12-day stretch (2026-08-29 → 2026-09-10) with **no scheduled
+      commits at all.** A manual run resumed the loop, and a direct check of the cloud routine
+      root-caused it (see root STATUS_LOG.md 2026-09-10 second pass): the routine never stopped
+      firing — it fires twice daily on schedule — but **every run since 2026-08-29 hangs on a
+      permission prompt.** The skill's restored ClickUp lock rule writes `.claude/CLICKUP_LOCK.md`
+      early in each run; `.claude/` is permission-gated, and an unattended cloud session can't
+      approve the prompt, so every run stalls in `requires_action` and never commits. The
+      regression rode in on commit `22199c6` ("Restore missing ClickUp lock rule"). **Fixed
+      2026-09-10 (fix #1):** lock file moved to a plain repo-root path (`CLICKUP_LOCK.md`,
+      gitignored); SKILL.md updated. Still open: confirm the next scheduled run actually commits,
+      and build the 2026-08-27 "verify push or fail loudly" end-of-run step so a hung run can't
+      masquerade as a quiet one for 12 days again.
 - [x] First dogfood cycle produces a status report a human would actually find useful (the
       Venture Console artifact, shipped 2026-08-10, used same-day to act on 3 real decisions)
 
