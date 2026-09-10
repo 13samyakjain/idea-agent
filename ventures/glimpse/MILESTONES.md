@@ -88,6 +88,14 @@
       Appointment is now **2 days out** (2026-08-30) with the same information gap as the morning
       entry, except the founder himself was the meeting's other attendee — not re-notifying (same
       reasoning as 2026-08-26: he was there). See STATUS_LOG.md 2026-08-28 second pass.
+      **Update 2026-09-10 (first check-in in 12 days):** ClickUp task 86d3pw08w is *still*
+      unchanged — 4 comments, `date_updated` frozen at 2026-08-24 03:35 UTC, status "in
+      progress." The 2026-08-30 appointment is now **11 days in the past** and no outcome has
+      ever been written to the record: no confirmation of whether Peter's Invitation Letter was
+      signed, whether the appointment happened, or whether Deborah + son got their visas. Samyak
+      has direct knowledge (he met Peter 1:1 on 2026-08-26 and 2026-08-28) — this is now a
+      stale-record cleanup item, not a live escalation. Recommendation stands: a one-line comment
+      on 86d3pw08w recording the actual outcome, then close it or reset its due date.
 - [~] Merchandise/PE Kits: procurement cadence, cost baseline, storage/fulfillment visible —
       task-count cadence now in GROWTH.md; cost baseline still not measurable (no financial data
       in ClickUp)
@@ -111,6 +119,23 @@
       to GHL and a BDE making first contact. IdeaAgent has no GHL/CRM connector, so the
       orchestrator can't do the promotion itself; it flagged the unblock to the team (see
       STATUS_LOG.md 2026-08-22).
+      **Update 2026-09-10:** two corrections from direct GHL reads this run (a GoHighLevel
+      connector *is* now available to the orchestrator — the 2026-08-22 "no connector" note is
+      out of date). (1) Promotion to GHL partially happened: **5 leads** — Hire Resolve LLC,
+      Egger & Co, ACS Consultancy Services, Pocketbook Agency, The Smith Family Agency — were
+      created as GHL contacts on 2026-08-24 (tag `glimpse-sales-engine-batch-1`, source notes
+      cite ClickUp `86d431f*` tasks). Not the full 8 Qualified; this is "batch 1." (2) Nothing
+      has moved since: all 5 are unassigned, none has an opportunity in the "Glimpse B2B Sales"
+      pipeline, and there are zero conversations against them — **no outreach has been sent.**
+      The GOAL.md target (a reply/booked call from one of these 5 by 2026-09-05) is stalled.
+      Dispatched a Sales Outreach agent this run to draft first-touch messages
+      (`ventures/glimpse/outreach/batch-1-first-touch.md`, delivered same run); sending is still
+      human/BDE work and 86d3t4bg7 ("Define BDE Work Alignment & Assignment Process") has been
+      idle since 2026-08-22. ICP note from the drafting pass: batch-1 works as one segment for
+      outreach but splits for the real offer — corporate recruiting sold to company HR (Hire
+      Resolve, Egger & Co) vs. domestic/household staffing sold to private families (Pocketbook,
+      The Smith Family Agency); **ACS Consultancy Services looks like an ICP misfit and should be
+      re-qualified** before M3 conclusions lean on it.
 - [ ] M4: Refine Offer Based on Feedback
 - [ ] M5: First Pilot / Signed Commitment
 - [ ] Supporting: hire 1x full-time BDE + 2-3x BDE interns (in progress in ClickUp)

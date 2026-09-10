@@ -18,6 +18,13 @@
       pushed" property is not yet true — see root STATUS_LOG.md 2026-08-27 for detail and an open
       recommendation to harden the push step itself rather than keep relying on the next run's
       defensive recovery.
+      **Correction 2026-09-10:** worse than "intermittent push failures." There is now a ~12-day
+      stretch (2026-08-29 → 2026-09-10) with **no scheduled check-ins at all** — not stranded
+      commits, just nothing. Git was clean this run (no detached HEAD, `origin/main` current), so
+      the routine either stopped firing or its sessions end without committing. A manual run on
+      2026-09-10 resumed the loop. The "runs reliably end pushed" property is still not true, and
+      "runs reliably fire" is now also in question — see root STATUS_LOG.md 2026-09-10. Founder
+      to verify the cloud trigger (`trig_01Kbr4hQgUQ52Jvwr8EvCQog`) is still scheduled/firing.
 - [x] First dogfood cycle produces a status report a human would actually find useful (the
       Venture Console artifact, shipped 2026-08-10, used same-day to act on 3 real decisions)
 

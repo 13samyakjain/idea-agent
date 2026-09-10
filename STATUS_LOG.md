@@ -398,3 +398,40 @@ land — this is now a 3-of-8 failure rate, not a rare edge case.
 **Milestone deltas:** None — operational, not a milestone.
 
 **Dispatched:** none — tool-level housekeeping only.
+
+## 2026-09-10 — Scheduled routine has produced nothing for ~12 days; manual run resumed the loop
+
+**Trigger:** manual — the founder asked for a fresh orchestrator pass. Not a scheduled firing.
+
+**Tool-level finding:** the last commit on `main` is `22199c6` (2026-08-29, the GOAL.md /
+skill-update change). The last actual venture check-in commit is `9c5d068` (2026-08-28 second
+pass). That is a **~12-day silence** — no scheduled run has committed a Glimpse check-in since
+2026-08-28, across roughly 24 expected firings (09:00 + 20:00 IST daily). This is a different
+failure from the 2026-08-24→27 push-gap: git was clean this run (local `main` == `origin/main`,
+no detached HEAD, nothing stranded), so it is not "runs happened but didn't push" — either the
+routine stopped firing, or its sessions are ending without committing at all. Cannot determine
+which from inside the repo; `CronList` only sees in-session `CronCreate` jobs, not the separate
+cloud routine.
+
+**Consequence:** Glimpse's one active, time-boxed goal (`ventures/glimpse/GOAL.md`, target
+2026-09-05) went stale with zero orchestrator attention during its entire critical window, and a
+client-facing visa case (ClickUp 86d3pw08w) sat with an unrecorded appointment outcome for 17
+days. The daily loop existing but silently not running is strictly worse than it visibly
+failing.
+
+**Recommendation:** founder to check the cloud routine's execution history directly
+(`trig_01Kbr4hQgUQ52Jvwr8EvCQog` per the 2026-08-09 entry) and confirm whether it is still
+scheduled and firing. If it is firing, its session harness is not committing — the skill's run
+sequence should end with an explicit "commit + verify push against origin, fail loudly otherwise"
+step (this was already recommended 2026-08-27 for the push-gap and still is not built). If it is
+not firing, the trigger itself needs recreating.
+
+**This run (manual) did complete a full Glimpse pass** — see `ventures/glimpse/STATUS_LOG.md`
+2026-09-10: reality-checked ClickUp + GHL + Calendar, found the batch-1 leads were promoted to
+GHL as contacts on 2026-08-24 (not previously visible without GHL access) but never worked,
+dispatched a Sales Outreach agent to draft first-touch messages, and flagged the stalled goal.
+
+**Milestone deltas:** root MILESTONES.md Phase 0 automation-reliability note updated.
+
+**Dispatched:** one agent, against the Glimpse venture (logged in that venture's STATUS_LOG) —
+none at the tool level.

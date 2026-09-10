@@ -15,9 +15,19 @@ Egger & Co, ACS Consultancy Services, Pocketbook Agency, The Smith Family Agency
 `glimpse-sales-engine-batch-1`) — responds to real outreach (positive or negative), or a call
 gets booked with one of them.
 
-**Target date:** 2026-09-05
+**Target date:** 2026-09-05 — **PASSED, GOAL NOT MET (as of 2026-09-10 check).**
 
 **Set:** 2026-08-29
+
+**STALLED — 2026-09-10:** target date passed 5 days ago with none of the checklist below done.
+Cause: the only orchestrator activity between 2026-08-29 and 2026-09-10 was a ~12-day gap — the
+scheduled routine produced no check-ins in that window (see root STATUS_LOG.md 2026-09-10), so
+nothing pushed this goal forward. Underlying blocker is also unchanged from August: promotion of
+the 5 leads to GHL *as contacts* did happen (2026-08-24), but assignment → first-touch is
+Stage-2 human/BDE work and no BDE has been hired (task 86d3t4bg7 idle since 2026-08-22). Founder
+is mid-travel (US university trip from 2026-09-08). This run dispatched a Sales Outreach agent to
+produce ready-to-send first-touch drafts so the "nobody has written anything" friction is removed
+the moment a human can send.
 
 **Why this one:** 08-24's check-in found 5 leads sitting in GHL with a named decision-maker and
 a working contact channel, Stage 2 outreach process already approved, and zero outreach sent —
@@ -27,8 +37,12 @@ or clearly stalled, instead of re-deriving priority from scratch each run.
 
 ## Progress checklist
 
-- [ ] Outreach message drafted for all 5 contacts
-- [ ] Outreach sent to all 5
+- [x] Outreach message drafted for all 5 contacts — done 2026-09-10, at
+      `ventures/glimpse/outreach/batch-1-first-touch.md` (5 first-touch emails, discovery-framed,
+      no pricing, 2 subject options each, company references flagged as unverified for the sender
+      to check). GHL confirms all 5 exist as contacts (tag `glimpse-sales-engine-batch-1`,
+      created 2026-08-24), unassigned, no opportunity, no conversation yet.
+- [ ] Outreach sent to all 5 — human/BDE step. Not started (GHL: 0 conversations, 0 "contacted" tags).
 - [ ] First reply received (or a defined non-response window elapses — flag, don't silently wait forever)
 
 ## Orchestrator rules for this file
