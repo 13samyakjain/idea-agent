@@ -15,19 +15,24 @@ Egger & Co, ACS Consultancy Services, Pocketbook Agency, The Smith Family Agency
 `glimpse-sales-engine-batch-1`) — responds to real outreach (positive or negative), or a call
 gets booked with one of them.
 
-**Target date:** 2026-09-05 — **PASSED, GOAL NOT MET (as of 2026-09-10 check).**
+**Target date:** ~~2026-09-05~~ → **revised 2026-09-10 to 2026-09-28** (≈2 weeks after a
+realistic send date). Send milestone: all 5 outreach emails out by **2026-09-14**.
+
+**Owner:** Kanchan Thakur (interim, until the full-time BDE hire lands) — set by Samyak 2026-09-10.
 
 **Set:** 2026-08-29
 
-**STALLED — 2026-09-10:** target date passed 5 days ago with none of the checklist below done.
-Cause: the only orchestrator activity between 2026-08-29 and 2026-09-10 was a ~12-day gap — the
-scheduled routine produced no check-ins in that window (see root STATUS_LOG.md 2026-09-10), so
-nothing pushed this goal forward. Underlying blocker is also unchanged from August: promotion of
-the 5 leads to GHL *as contacts* did happen (2026-08-24), but assignment → first-touch is
-Stage-2 human/BDE work and no BDE has been hired (task 86d3t4bg7 idle since 2026-08-22). Founder
-is mid-travel (US university trip from 2026-09-08). This run dispatched a Sales Outreach agent to
-produce ready-to-send first-touch drafts so the "nobody has written anything" friction is removed
-the moment a human can send.
+**History of the stall:** original target 2026-09-05 was missed because the scheduled routine
+hung silently for ~12 days (2026-08-29 → 2026-09-10; root-caused and fixed 2026-09-10, see root
+STATUS_LOG.md) so nothing pushed this goal forward, and underneath that, first-touch was Stage-2
+human/BDE work with no BDE hired.
+
+**Unblocked 2026-09-10:** Samyak decided not to wait for a BDE — Kanchan owns the send this week.
+Drafts are ready (`ventures/glimpse/outreach/batch-1-first-touch.md`); ClickUp task
+**`14ykddrwyqf`** ("Send Sales Engine batch-1 outreach — 5 leads, this week", `BDE Team Ops`,
+urgent, due 2026-09-12) assigned to Kanchan with the full Stage-2 checklist. Next orchestrator
+runs track: opportunities created in GHL → sends logged (`contacted` tag + "Contacted" stage) →
+first reply.
 
 **Why this one:** 08-24's check-in found 5 leads sitting in GHL with a named decision-maker and
 a working contact channel, Stage 2 outreach process already approved, and zero outreach sent —
@@ -42,8 +47,11 @@ or clearly stalled, instead of re-deriving priority from scratch each run.
       no pricing, 2 subject options each, company references flagged as unverified for the sender
       to check). GHL confirms all 5 exist as contacts (tag `glimpse-sales-engine-batch-1`,
       created 2026-08-24), unassigned, no opportunity, no conversation yet.
-- [ ] Outreach sent to all 5 — human/BDE step. Not started (GHL: 0 conversations, 0 "contacted" tags).
-- [ ] First reply received (or a defined non-response window elapses — flag, don't silently wait forever)
+- [~] Outreach sent to all 5 — owned by Kanchan (ClickUp `14ykddrwyqf`), due by 2026-09-14.
+      Not started as of 2026-09-10 (GHL: 0 opportunities, 0 conversations, 0 "contacted" tags).
+- [ ] First reply received (target 2026-09-28; day-14 non-response → mark stale per Stage 2).
+- [ ] Side task: re-qualify ACS Consultancy Services against the ICP checklist (flagged as a
+      likely misfit); disqualify + drop from the batch if it fails.
 
 ## Orchestrator rules for this file
 

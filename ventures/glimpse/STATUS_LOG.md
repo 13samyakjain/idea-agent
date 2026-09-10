@@ -1095,3 +1095,37 @@ founder-set).
    then close or re-date. The record has been blind 17 days on a client-facing item.
 4. Carryover, not re-verified this run: 86d3ucd9p daily-cadence task, 3 duplicate "hire BDE"
    tasks, 9 Borderline leads pending Samyak's judgment calls, Sprint-task tagging.
+
+## 2026-09-10 (third pass) — Founder decision: Kanchan sends batch-1 this week
+
+**Human decision:** Samyak, asked the open question from this morning's pass ("Kanchan sends now,
+or wait for a BDE?"), chose **Kanchan sends the batch-1 outreach this week.**
+
+**Actions taken this run:**
+- **ClickUp task created — `14ykddrwyqf`** ("Send Sales Engine batch-1 outreach — 5 leads, this
+  week"), in `BDE Team Ops`, priority urgent, due 2026-09-12, **assigned to Kanchan Thakur**
+  (user 106836765). Description carries: the 5 contacts + emails/phones, the drafts path
+  (`ventures/glimpse/outreach/batch-1-first-touch.md`), and the full Stage-2 checklist —
+  create GHL opportunities at "Researched" and self-assign; send 1–2/day from a real mailbox,
+  all 5 out by 2026-09-14; log each send (`contacted` tag + move opp to "Contacted"); day-4 /
+  day-10 re-touch, day-14 stale; escalate replies to Samyak. Also carries the **ACS Consultancy
+  re-qualification flag.**
+- **GHL:** could not create the 5 opportunities or assign contacts from here — this GHL MCP
+  surface has no create-opportunity or users endpoint (only search / update / tags / get). Left
+  as step 1 of Kanchan's task instead.
+- **GOAL.md updated:** owner = Kanchan; target date revised 2026-09-05 → 2026-09-28 with a
+  2026-09-14 send milestone; checklist item 2 → in progress; added the ACS re-qualify side task.
+- ClickUp lock: used the new repo-root `CLICKUP_LOCK.md` path (written before the create, deleted
+  after) — the sensitive-file hang that this path change fixes is documented in root
+  STATUS_LOG.md 2026-09-10 (second pass).
+
+**Milestone deltas:** no status flips. GOAL.md owner/date/checklist updated as above; M3 in
+MILESTONES.md already annotated this morning.
+
+**Dispatched:** none (ClickUp task is human work for Kanchan, not an agent).
+
+**Open decisions for the human:** none new. Watch items: (1) does Kanchan's send actually happen
+by 2026-09-14 — next orchestrator runs check GHL for opportunities + `contacted` tags; (2) the
+2026-08-27 "verify push or fail loudly" hardening still isn't built; (3) visa case 86d3pw08w
+still needs its 2026-08-30 outcome recorded; (4) BDE hiring (86d3t4bg7 + 3 duplicate tasks)
+still open — Kanchan is interim, not the permanent answer.
