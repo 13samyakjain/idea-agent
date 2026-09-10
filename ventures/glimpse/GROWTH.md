@@ -24,8 +24,8 @@
 | Team size | 6 confirmed via ClickUp assignees: Samyak Jain (founder), Babita, Kaustav Saha, Sachin Poddar, Syed Afsha Ali, Kanchan Thakur | 2026-08-18 |
 | Sales Engine milestones | 2 of 5 core milestones done (M1, M2); M3-M5 open | 2026-08-18 |
 | Leads in qualification funnel (`Lead Sourcing Queue`) | **25 of 25 reviewed and written to ClickUp** (complete as of 2026-08-21): **8 Qualified**, **9 Borderline** (each with an escalation comment tagging Samyak for a judgment call), **8 Disqualified**. Stage 2 assignment process approved by the founder 2026-08-20 (confirmed 2026-08-22) — no longer gated. | 2026-08-22 |
-| Sales Engine pipeline — GHL "Glimpse B2B Sales" (`volxN7h175GHZDiTKgEk`), read directly 2026-09-10 | **5 of the 8 Qualified leads promoted to GHL as contacts on 2026-08-24** (tag `glimpse-sales-engine-batch-1`): Hire Resolve LLC, Egger & Co, ACS Consultancy Services, Pocketbook Agency, The Smith Family Agency. All 5: **unassigned, no opportunity created, 0 conversations — no outreach sent.** The pipeline's only *opportunities* are 6 deprecated June contacts, all status "abandoned" since 2026-08-22. So: contacts exist, pipeline movement = 0. | 2026-09-10 |
-| Orchestrator passes completed against Glimpse | ~20 across 2026-08-18 → 2026-08-28 (multiple same-day passes on some dates), then a **12-day gap** with no passes, then this one on 2026-09-10. The gap is a routine-reliability problem, not a deliberate pause — see root STATUS_LOG.md 2026-09-10. | 2026-09-10 |
+| Sales Engine pipeline — GHL "Glimpse B2B Sales" (`volxN7h175GHZDiTKgEk`) | **5 of the 8 Stage-1-Qualified leads were promoted to GHL as contacts on 2026-08-24** (tag `glimpse-sales-engine-batch-1`): Hire Resolve LLC, Egger & Co, ACS Consultancy Services, Pocketbook Agency, The Smith Family Agency. As of the 2026-09-10 morning read, all 5 were unassigned, no opportunity created, 0 conversations. **2026-09-10 (this pass):** ACS re-qualified against actual Sales Engine offer-fit (not just Stage-1 generic checklist) and **disqualified** — procurement/RFP-driven growth, no fit for outbound Sales Engine. **Batch-1 is now 4 active leads**, not 5. GHL itself was not re-checked this pass — the connector was not enabled in this session (see Instrumentation TODO); outreach-sent status is inferred only from ClickUp task 14ykddrwyqf still showing "to do," not confirmed GHL data. | 2026-09-10 |
+| Orchestrator passes completed against Glimpse | ~25 across 2026-08-18 → 2026-09-10 (multiple same-day passes on some dates, including a 12-day gap 2026-08-29 → 2026-09-10 from a routine-reliability bug, now fixed — see root STATUS_LOG.md 2026-09-10). | 2026-09-10 |
 
 ## Instrumentation TODO
 
@@ -82,3 +82,10 @@
       Merch" tasks count toward reservations only, not merch) rather than ad hoc per-pull
       keyword lists. Recommend the latter as a lightweight fix the orchestrator can make
       unilaterally next pass, since it's a measurement-method decision, not a founder call.
+- [ ] **New 2026-09-10 — GHL connector is installed but not enabled in every session.**
+      `ListConnectors` shows GoHighLevel `connected: true` but `enabledInChat: false` in this
+      run, even though an earlier 2026-09-10 pass this same day *did* read it directly (per
+      MILESTONES.md M3). This session could not verify batch-1 GHL state (opportunities,
+      `contacted` tags) and had to fall back to the ClickUp task status as an indirect proxy —
+      flagging so this isn't silently treated as "no GHL data" in a future run. Not a founder
+      decision, just a per-session tool-enablement quirk worth knowing about.

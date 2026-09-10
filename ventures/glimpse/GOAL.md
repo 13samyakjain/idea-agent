@@ -10,8 +10,8 @@
 
 **Goal:** Validate the Sales Engine offer with real prospects (drives MILESTONES.md M3).
 
-**Success criteria:** At least one of the 5 GHL-contactable Qualified leads — Hire Resolve LLC,
-Egger & Co, ACS Consultancy Services, Pocketbook Agency, The Smith Family Agency (tag
+**Success criteria:** At least one of the (now 4, see 2026-09-10 update) GHL-contactable
+Qualified leads — Hire Resolve LLC, Egger & Co, Pocketbook Agency, The Smith Family Agency (tag
 `glimpse-sales-engine-batch-1`) — responds to real outreach (positive or negative), or a call
 gets booked with one of them.
 
@@ -50,8 +50,10 @@ or clearly stalled, instead of re-deriving priority from scratch each run.
 - [~] Outreach sent to all 5 — owned by Kanchan (ClickUp `14ykddrwyqf`), due by 2026-09-14.
       Not started as of 2026-09-10 (GHL: 0 opportunities, 0 conversations, 0 "contacted" tags).
 - [ ] First reply received (target 2026-09-28; day-14 non-response → mark stale per Stage 2).
-- [ ] Side task: re-qualify ACS Consultancy Services against the ICP checklist (flagged as a
-      likely misfit); disqualify + drop from the batch if it fails.
+- [x] Side task: re-qualify ACS Consultancy Services against the ICP checklist — done
+      2026-09-10, **DISQUALIFIED and dropped from batch-1** (procurement/RFP-driven growth
+      motion, not referral-dependent — no lever for outbound Sales Engine). See
+      `ventures/glimpse/outreach/acs-requalification.md`. Batch-1 is now 4 leads.
 
 ## Orchestrator rules for this file
 

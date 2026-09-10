@@ -136,6 +136,20 @@
       Resolve, Egger & Co) vs. domestic/household staffing sold to private families (Pocketbook,
       The Smith Family Agency); **ACS Consultancy Services looks like an ICP misfit and should be
       re-qualified** before M3 conclusions lean on it.
+      **Update 2026-09-10 (second pass):** ACS re-qualified and **DISQUALIFIED** — it wins new
+      business through government RFP/procurement channels and MWBE set-asides (NY OGS, Texas
+      DIR, Oklahoma SW1025, a GSA Schedule), not founder-led/referral selling, so Glimpse's
+      outbound Sales Engine has no lever there. Dropped from batch-1; **batch-1 is now 4 leads**
+      (Hire Resolve, Egger & Co, Pocketbook, Smith Family). See
+      `ventures/glimpse/outreach/acs-requalification.md` and ClickUp comments on 86d431fhm /
+      14ykddrwyqf. Also posted 5 stalled-item escalation comments this run (first pass through
+      the new Tracked-items block): BDE assignment process (86d3t4bg7), BDE hiring parent task
+      (86d3rgzah — corrected: this is 1 parent + 2 subtasks, not 3 duplicate tasks as earlier
+      notes assumed), BDE daily check-in (86d3ucd9p), visa case (86d3pw08w, 2nd escalation), and
+      the 9 Borderline leads (posted once at the `Lead Sourcing Queue` list level, not per-task,
+      to avoid noise). **GHL connector was not enabled in this session** — could not verify
+      whether Kanchan has started sending; relying on ClickUp task 14ykddrwyqf status (still "to
+      do") as an indirect signal, not confirmed GHL data.
 - [ ] M4: Refine Offer Based on Feedback
 - [ ] M5: First Pilot / Signed Commitment
 - [ ] Supporting: hire 1x full-time BDE + 2-3x BDE interns (in progress in ClickUp)

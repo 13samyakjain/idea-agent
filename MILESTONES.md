@@ -27,9 +27,12 @@
       approve the prompt, so every run stalls in `requires_action` and never commits. The
       regression rode in on commit `22199c6` ("Restore missing ClickUp lock rule"). **Fixed
       2026-09-10 (fix #1):** lock file moved to a plain repo-root path (`CLICKUP_LOCK.md`,
-      gitignored); SKILL.md updated. Still open: confirm the next scheduled run actually commits,
-      and build the 2026-08-27 "verify push or fail loudly" end-of-run step so a hung run can't
-      masquerade as a quiet one for 12 days again.
+      gitignored); SKILL.md updated. **Confirmed 2026-09-10 (later same day):** a subsequent
+      scheduled/automated run completed a full Glimpse pass (escalations + an agent dispatch)
+      and committed/pushed cleanly with no permission-prompt hang — the fix held on its first
+      real test. Still open: the 2026-08-27 "verify push or fail loudly" end-of-run step still
+      isn't built, so a future hang still wouldn't be self-evident without a human noticing the
+      gap — this run's cleanliness is one data point, not a guarantee.
 - [x] First dogfood cycle produces a status report a human would actually find useful (the
       Venture Console artifact, shipped 2026-08-10, used same-day to act on 3 real decisions)
 

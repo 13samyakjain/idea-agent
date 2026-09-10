@@ -121,3 +121,13 @@ lists.
   BDE hiring gate task (86d3ucd9p) was checked directly and is still unchanged since
   2026-08-19, which is consistent with no hiring movement, but that's an inference for the
   duplicate tasks specifically, not a fresh read of them.
+  **Correction 2026-09-10:** directly re-verified — this is not 3 flat duplicate tasks. It's one
+  parent task, **86d3rgzah** ("Hire BDE(s) — Business Development Executive Recruitment"), with
+  two subtasks under it: **86d3rgze3** ("Hire 1x Full-Time BDE") and **86d3rgze6** ("Hire 2-3x
+  BDE Interns"). All three are "in progress" but frozen since 2026-08-06 (35 days). No merge
+  decision is actually needed — the earlier "3 duplicates, needs a founder OK to merge" framing
+  was wrong; this open question can be considered resolved. (A separate, genuinely distinct task,
+  **86d3zvquy** "CHECK WITH PE TEAM FOR BDE HIRING," assigned to Kanchan and frozen since
+  2026-08-19, also touches BDE hiring but isn't a duplicate of the above — it's a status-check
+  task, not a hiring task.) Escalation comment posted on 86d3rgzah this run — see
+  `ventures/glimpse/STATUS_LOG.md` 2026-09-10.

@@ -47,10 +47,21 @@ Samyak, Glimpse
 
 ---
 
-## ACS Consultancy Services, Inc
+## ACS Consultancy Services, Inc — DO NOT SEND (disqualified 2026-09-10)
+
+**Re-qualified and dropped from batch-1.** ACS wins business through government contract
+vehicles and RFP/procurement channels (NY OGS, Texas DIR, Oklahoma SW1025, a GSA Schedule) and
+MWBE set-aside spend — not founder-led/referral selling — so Glimpse's outbound-prospecting
+Sales Engine has no real lever here. Also, the original "what I assumed" line below was wrong
+(ACS is an IT/public-sector consultancy, not immigration). Full reasoning:
+`ventures/glimpse/outreach/acs-requalification.md`. Draft below is left unsent for the record
+only — **batch-1 is now 4 leads**, not 5.
+
+<details>
+<summary>Original (unsent) draft</summary>
 
 **To:** Asha Ramrakhiani — acsconsultancyny@gmail.com (phone: +1 518-221-5409)
-**What I assumed:** An immigration / consultancy services firm (Latham, NY; acsincny.com). "Consultancy services" is vague — this draft deliberately keeps the business reference soft ("a service people need"). **Confirm what ACS actually sells and who buys it before sending**; if it's clearly immigration case work, name that in line 1.
+**What I assumed (wrong — see above):** An immigration / consultancy services firm (Latham, NY; acsincny.com).
 
 **Subject (option A):** How new clients find ACS
 **Subject (option B):** Growing ACS beyond referrals
@@ -64,6 +75,8 @@ I run Glimpse, a small operating company. We help firms that already have a serv
 I'm trying to learn whether that's a real pain point for ACS or something you've already handled. Open to a 15–20 min call? Or just reply with how most of your clients find you today — that's genuinely useful either way.
 
 Samyak, Glimpse
+
+</details>
 
 ---
 
@@ -122,4 +135,6 @@ Samyak, Glimpse
 
 **Is recruitment/staffing/placement one ICP for messaging?** For first-touch, yes — close enough. All five share the same underlying shape: they can deliver the service (find and place people) but new-client acquisition is founder-led, referral-dependent, and doesn't scale. That single message angle lands across the batch, which is why the five drafts are structurally similar on purpose.
 
-**But it splits into two for the real offer.** Group A (Hire Resolve, Egger & Co) sells corporate/professional recruiting to HR and hiring managers at companies — longer cycle, larger contracts, a buying committee. Group B (Pocketbook, The Smith Family Agency) sells domestic/household staffing to private individuals and families — shorter cycle, relationship- and reputation-driven, a single decision-maker. Discovery questions, proof points, and eventually the productized offer itself will need two variants. **ACS is an outlier** — "immigration/consultancy services" isn't clearly a placement business at all; it should be re-qualified against the ICP checklist before it's counted in this segment. Net: one ICP for batch-1 outreach, plan for two (plus an ACS re-check) when M3 feedback comes back.
+**But it splits into two for the real offer.** Group A (Hire Resolve, Egger & Co) sells corporate/professional recruiting to HR and hiring managers at companies — longer cycle, larger contracts, a buying committee. Group B (Pocketbook, The Smith Family Agency) sells domestic/household staffing to private individuals and families — shorter cycle, relationship- and reputation-driven, a single decision-maker. Discovery questions, proof points, and eventually the productized offer itself will need two variants. Net: one ICP for batch-1 outreach, plan for two when M3 feedback comes back.
+
+**2026-09-10 update:** ACS Consultancy Services was re-qualified and **disqualified** — it wins business through government RFP/procurement channels and MWBE set-asides, not referral-dependent founder selling, so the Sales Engine offer has no lever there. See `ventures/glimpse/outreach/acs-requalification.md`. **Batch-1 is now 4 leads**, not 5.

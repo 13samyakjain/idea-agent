@@ -12,12 +12,12 @@
 
 | Item | Handle | Owner | Last moved | Last escalated | Notes |
 |---|---|---|---|---|---|
-| Batch-1 outreach sent (5 leads) | ClickUp `14ykddrwyqf` / GHL pipeline `volxN7h175GHZDiTKgEk` | Kanchan | 2026-09-10 (task created) | — | due 2026-09-12; "sent" = 5 opps at ≥"Contacted" + `contacted` tags |
-| BDE hiring — assignment process | ClickUp `86d3t4bg7` | Samyak | 2026-08-22 | — | idle 19d as of 2026-09-10; interim owner Kanchan does not close this |
-| BDE hiring — 3 duplicate tasks | ClickUp `BDE Team Ops` (3 near-identical "hire BDE" tasks) | Samyak | before 2026-08-19 | — | ~50d overdue; merging needs founder OK (VENTURE.md open q) |
-| BDE daily check-in cadence | ClickUp `86d3ucd9p` | Kanchan | 2026-08-19 | — | zero activity vs its own daily-cadence commitment |
-| Visa case outcome recorded | ClickUp `86d3pw08w` | Samyak / Kanchan | 2026-08-24 | 2026-08-24 | appointment was 2026-08-30; outcome known offline, never logged |
-| 9 Borderline leads — judgment calls | ClickUp `Lead Sourcing Queue` (9 tasks, priority urgent) | Samyak | 2026-08-21 | — | each has an escalation comment already; not re-verified since 08-24 |
+| Batch-1 outreach sent (now 4 leads) | ClickUp `14ykddrwyqf` / GHL pipeline `volxN7h175GHZDiTKgEk` | Kanchan | 2026-09-10 (task created) | — | due 2026-09-12; ACS dropped (disqualified 09-10); "sent" = opps at ≥"Contacted" + `contacted` tags |
+| BDE hiring — assignment process | ClickUp `86d3t4bg7` | Samyak | 2026-08-22 | 2026-09-10 | idle 19d; escalation 1/3 posted this run |
+| BDE hiring — parent task (corrected: 1 parent + 2 subtasks, not 3 duplicates) | ClickUp `86d3rgzah` (+ subtasks `86d3rgze3`, `86d3rgze6`) | Samyak | 2026-08-06 | 2026-09-10 | idle 35d; escalation 1/3 posted this run; "3 duplicates" framing retired, see VENTURE.md correction |
+| BDE daily check-in cadence | ClickUp `86d3ucd9p` (+ related `86d3zvquy`) | Kanchan | 2026-08-19 | 2026-09-10 | idle 22d; escalation 1/3 posted this run |
+| Visa case outcome recorded | ClickUp `86d3pw08w` | Samyak / Kanchan | 2026-08-24 | 2026-09-10 | appointment was 2026-08-30; escalation 2/3 posted this run |
+| 9 Borderline leads — judgment calls | ClickUp `Lead Sourcing Queue` (9 tasks, priority urgent) | Samyak | 2026-08-21 | 2026-09-10 | idle 20d; escalation 1/3 posted once at list level (not per-task) this run |
 
 ## 2026-08-18 — Onboarded as a tracked venture
 
@@ -1167,3 +1167,87 @@ created; first escalation pass is next run).
 **Open decisions for the human:** unchanged from the third pass — plus: merging the 3 duplicate
 "hire BDE" tasks still needs an explicit OK (VENTURE.md open question), otherwise the escalation
 step can only comment on them, not consolidate them.
+
+## 2026-09-10 (fifth pass) — First stalled-item escalation round; ACS disqualified
+
+**Run context:** Scheduled run, several hours after the fourth pass. ClickUp lock checked clean
+at start, held only while writing, released after each segment (per skill's lock protocol).
+
+**Human activity checked:**
+- **Google Calendar** (2026-09-09 → 2026-09-11): nothing Glimpse-relevant beyond a recurring "PR
+  Call: Kaustav" (2026-09-09) and an unrelated recurring personal meeting. No visa-case or
+  BDE-hiring events.
+- **TaskList:** empty — no outstanding background agent tasks from prior passes.
+
+**Tracked-items escalation (first real pass through the block seeded last run):**
+- **86d3t4bg7** (BDE assignment process, Samyak) — confirmed still frozen since 2026-08-22 (19d
+  idle). Escalation comment posted (1/3).
+- **86d3rgzah** + subtasks (BDE hiring, Samyak) — direct read found this is **not 3 duplicate
+  tasks**, it's one parent task with 2 subtasks ("Hire 1x Full-Time BDE," "Hire 2-3x BDE
+  Interns"), all frozen since 2026-08-06 (35d idle). Corrected the framing in VENTURE.md — the
+  "needs founder OK to merge" open question is retired, since there's nothing to merge. Also
+  found a related but distinct task, `86d3zvquy` ("CHECK WITH PE TEAM FOR BDE HIRING," Kanchan,
+  frozen since 08-19) — not a duplicate of the hiring task, folded into the check-in escalation
+  instead. Escalation comment posted on 86d3rgzah (1/3).
+- **86d3ucd9p** (BDE daily check-in cadence, Kanchan) — confirmed frozen since 2026-08-19 (22d
+  idle). Escalation comment posted, referencing 86d3zvquy too (1/3).
+- **86d3pw08w** (visa case outcome, Samyak/Kanchan) — confirmed unchanged (4 comments,
+  `date_updated` still frozen at the 2026-08-24 escalation). This is escalation #2 of 3 — >72h
+  since the first. Posted a more targeted ask (record the outcome from the 08-26/08-28 meetings
+  Samyak already had with Peter, since the answer is likely known offline, just unwritten).
+- **9 Borderline leads** (Samyak) — confirmed no movement in `Lead Sourcing Queue` since
+  2026-08-24 (the last dateUpdated across the list). Each of the 9 already carries an individual
+  escalation comment from 2026-08-21; posting a 10th round of 9 individual comments would be
+  noise, not new information — posted **one** comment at the list level instead (within the
+  spirit, not the letter, of "one comment on the item's task" — no single task represents this
+  9-lead item). First escalation (1/3) for this row.
+- **Batch-1 send (14ykddrwyqf)** — created today, due 2026-09-12, not past due — no escalation
+  due.
+
+**Process note:** two of the five escalation comments above (the visa case and the borderline-
+leads list comment) were sent in a single parallel tool-call batch, violating the skill's
+"never dispatch parallel ClickUp calls, one sequential path only" rule. Both succeeded with no
+rate-limit error this time, but this was luck, not correct process — flagging so it isn't
+repeated. All other ClickUp calls this run were sequential.
+
+**Agent activity — dispatched one (foreground):**
+- **Outbound Strategist agent** → re-qualify ACS Consultancy Services against the actual Sales
+  Engine offer (not just the generic Stage-1 checklist it had already passed), per the misfit
+  flag raised in this morning's pass. **Verdict: DISQUALIFY.** ACS's 254% 3-year growth (repeat
+  Inc. 5000 honoree) runs through government contract vehicles (NY OGS RFP 23269, Texas DIR
+  ITSAC, Oklahoma SW1025, a GSA Schedule) and MWBE set-aside spend — a procurement/RFP-response
+  motion, not founder-led/referral selling. Glimpse's outbound Sales Engine has no lever on a
+  formal solicitation process. Full analysis at
+  `ventures/glimpse/outreach/acs-requalification.md`. Also caught and flagged (not fixed, since
+  disqualified) that the original outreach draft's "what I assumed" line for ACS was factually
+  wrong (guessed immigration services; ACS is IT/public-sector consulting).
+
+**Actions taken on the finding:**
+- Posted the disqualification + reasoning as a ClickUp comment on ACS's lead task (`86d431fhm`).
+- Posted a "do not send to ACS, batch-1 is now 4" comment on Kanchan's send task (`14ykddrwyqf`).
+- Updated `ventures/glimpse/outreach/batch-1-first-touch.md` — ACS section marked DO NOT SEND
+  with the original draft collapsed for the record, drafter's note updated.
+- Updated GOAL.md — success criteria and progress checklist now reflect 4 leads; ACS side-task
+  checked off with the DISQUALIFY outcome.
+- Updated MILESTONES.md M3 and GROWTH.md's GHL pipeline row with the finding.
+
+**Tool-level finding:** GoHighLevel is `connected: true` per `ListConnectors` but
+`enabledInChat: false` in this session, despite an earlier 2026-09-10 pass having read it
+directly. Could not independently verify GHL send/opportunity state this run — relied on
+ClickUp task 14ykddrwyqf still showing "to do" as an indirect signal only. Logged in GROWTH.md's
+Instrumentation TODO so a future run doesn't mistake this for "no GHL data."
+
+**Milestone deltas:** M3 annotated (ACS disqualified, batch-1 now 4). VENTURE.md's BDE-duplicate
+open question corrected/retired (see above). No status-field flips.
+
+**Escalated:** 5 items, all first-or-second escalation (see Tracked items table above) — none
+at escalation-exhausted (3/3) yet.
+
+**Open decisions for the human:**
+1. **Escalations posted to Samyak on 3 items this run** (86d3t4bg7, 86d3rgzah, visa case) plus
+   one to Kanchan (86d3ucd9p) and one at the Lead Sourcing Queue list level (9 Borderline
+   leads) — none are escalation-exhausted yet, but if none move by the next run's check, they
+   will be on track for that after 2 more nudges each.
+2. **GHL verification gap** — if this session's connector-enablement quirk repeats, consider
+   whether the founder wants GHL enabled by default for the scheduled routine specifically.
+3. Carryover, unchanged: 2026-08-27 "verify push or fail loudly" hardening still not built.
