@@ -1314,3 +1314,52 @@ task itself isn't overdue until tonight).
    on track to be if nothing moves by the next run or two.
 3. Carryover, unchanged: GHL connector-enablement quirk recurring across sessions; 2026-08-27
    "verify push or fail loudly" hardening still not built.
+
+## 2026-09-11 (second pass) — Deadline hours away; an unlogged Kanchan/Samyak call surfaced
+
+**Run context:** Scheduled run, same day as the first pass above. ClickUp lock checked clean at
+start, held for the duration of this run's sequential ClickUp reads.
+
+**Human activity checked:**
+- **Google Calendar** (2026-09-10 → 2026-09-11): one new event not seen in the first pass —
+  created today at 14:33 UTC by **Kanchan Thakur** (`kt525659@gmail.com`), a Google Meet call
+  with Samyak, scheduled 09:30–10:30 UTC (15:00–16:00 IST) same day, no title. Same pattern as
+  the visa-case Peter/Samyak calls in late August: a real conversation between exactly the two
+  people who matter for the stalled item (Kanchan owns the batch-1 send; Samyak set the
+  deadline), with zero trace of its content or outcome in ClickUp. Cannot tell from the
+  calendar alone whether this call was about the outreach send, the BDE hiring items, or
+  something unrelated.
+- **TaskList:** empty — no background agent activity since the first pass.
+
+**Tracked-items re-check (all within 72h quiet window from 2026-09-10's escalations — no
+re-escalation due on any item):**
+- **14ykddrwyqf** (batch-1 send, Kanchan) — re-read directly: status still "to do",
+  `date_updated` still 2026-09-10 14:38 UTC (unchanged since the ACS-disqualification comment),
+  only comment on the task remains the orchestrator's own from yesterday. **Due today,
+  2026-09-11 22:30 UTC** — now hours away, still zero ClickUp-visible progress (no GHL
+  opportunities logged; GHL connector again `connected: true` / `enabledInChat: false` this
+  session, third session in a row with the same quirk — see GROWTH.md Instrumentation TODO).
+- **86d3t4bg7**, **86d3rgzah** (+subtasks), **86d3ucd9p** — each re-read directly:
+  `date_updated` on all three matches yesterday's escalation-comment timestamp exactly (2026-09-10
+  ~14:37 UTC) — confirmed genuinely unchanged, not just inferred.
+- **86d3pw08w** (visa case) — re-read directly: `date_updated` also unchanged since yesterday's
+  escalation. Appointment now 12 days past, outcome still unrecorded.
+- **9 Borderline leads** — not re-pulled this pass (escalation 1/3, within 72h window regardless
+  of any movement check).
+
+**Agent activity:** None dispatched. No new agent-doable gap — sending the outreach remains
+human/BDE execution work, already fully specified on `14ykddrwyqf`.
+
+**Milestone deltas:** None. **Dispatched:** none. **Escalated:** none (all items within quiet
+window; batch-1 task itself not overdue until tonight).
+
+**Open decisions / flags for the human:**
+1. **Time-critical, unresolved:** batch-1 outreach send is due in hours
+   (2026-09-11 22:30 UTC) with no ClickUp-visible progress. A same-day, untitled Kanchan↔Samyak
+   call happened this afternoon that could plausibly be about this — but nothing confirms that,
+   and if it wasn't, the deadline may be missed with no one aware until it's already passed.
+   Worth the founder's direct confirmation of what that call covered.
+2. Unchanged: BDE assignment/hiring/check-in items and the visa case remain at escalation 1/3 or
+   2/3, no movement since yesterday.
+3. Carryover, unchanged: GHL connector-enablement quirk (3rd consecutive session); "verify push
+   or fail loudly" hardening still not built.
