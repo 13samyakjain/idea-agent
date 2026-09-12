@@ -47,8 +47,10 @@ or clearly stalled, instead of re-deriving priority from scratch each run.
       no pricing, 2 subject options each, company references flagged as unverified for the sender
       to check). GHL confirms all 5 exist as contacts (tag `glimpse-sales-engine-batch-1`,
       created 2026-08-24), unassigned, no opportunity, no conversation yet.
-- [~] Outreach sent to all 5 — owned by Kanchan (ClickUp `14ykddrwyqf`), due by 2026-09-14.
-      Not started as of 2026-09-10 (GHL: 0 opportunities, 0 conversations, 0 "contacted" tags).
+- [~] Outreach sent to all 4 (ACS dropped) — owned by Kanchan (ClickUp `14ykddrwyqf`). The
+      task's own due date (2026-09-11 22:30 UTC) has now passed with zero movement (still "to
+      do", 0 opportunities/conversations/"contacted" tags as of 2026-09-12) — escalated 1/3.
+      Send milestone (2026-09-14) not yet passed but at risk given no start.
 - [ ] First reply received (target 2026-09-28; day-14 non-response → mark stale per Stage 2).
 - [x] Side task: re-qualify ACS Consultancy Services against the ICP checklist — done
       2026-09-10, **DISQUALIFIED and dropped from batch-1** (procurement/RFP-driven growth

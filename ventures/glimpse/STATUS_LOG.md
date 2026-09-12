@@ -12,7 +12,7 @@
 
 | Item | Handle | Owner | Last moved | Last escalated | Notes |
 |---|---|---|---|---|---|
-| Batch-1 outreach sent (now 4 leads) | ClickUp `14ykddrwyqf` / GHL pipeline `volxN7h175GHZDiTKgEk` | Kanchan | 2026-09-10 (task created) | — | **due today, 2026-09-11 22:30 UTC (~2026-09-12 04:00 IST)** — re-checked 2026-09-11: still "to do", zero comments from Kanchan, no GHL visibility this session (connector not enabled); ACS dropped (disqualified 09-10) |
+| Batch-1 outreach sent (now 4 leads) | ClickUp `14ykddrwyqf` / GHL pipeline `volxN7h175GHZDiTKgEk` | Kanchan | 2026-09-10 (task created) | 2026-09-12 | **overdue** (was due 2026-09-11 22:30 UTC, now ~5h past) — still "to do", zero comments from Kanchan, no GHL visibility this session; escalation 1/3 posted 2026-09-12 |
 | BDE hiring — assignment process | ClickUp `86d3t4bg7` | Samyak | 2026-08-22 | 2026-09-10 | idle 20d; confirmed unchanged 2026-09-11; within 72h quiet window, not re-escalating |
 | BDE hiring — parent task (corrected: 1 parent + 2 subtasks, not 3 duplicates) | ClickUp `86d3rgzah` (+ subtasks `86d3rgze3`, `86d3rgze6`) | Samyak | 2026-08-06 | 2026-09-10 | idle 36d; confirmed unchanged 2026-09-11; within 72h quiet window, not re-escalating |
 | BDE daily check-in cadence | ClickUp `86d3ucd9p` (+ related `86d3zvquy`) | Kanchan | 2026-08-19 | 2026-09-10 | idle 23d; confirmed unchanged 2026-09-11; within 72h quiet window, not re-escalating |
@@ -1363,3 +1363,47 @@ window; batch-1 task itself not overdue until tonight).
    2/3, no movement since yesterday.
 3. Carryover, unchanged: GHL connector-enablement quirk (3rd consecutive session); "verify push
    or fail loudly" hardening still not built.
+
+## 2026-09-12 — Batch-1 send deadline missed; first escalation posted
+
+**Run context:** Scheduled run. ClickUp lock checked clean at start, written before ClickUp
+reads/writes, released immediately after (sequential calls only — 6 reads + 1 write, no
+rate-limit errors).
+
+**Human activity checked:**
+- **Google Calendar** (2026-09-11 → 2026-09-13): only the Kanchan↔Samyak call already logged in
+  yesterday's second pass (created 2026-09-11 14:35 UTC, held 15:00–15:30 UTC) — no new event
+  since. No trace of its content in ClickUp either way.
+- **TaskList:** empty — no agent activity since the last run.
+
+**Tracked-items check:**
+- **14ykddrwyqf** (batch-1 send, Kanchan) — **deadline passed**: due 2026-09-11 22:30 UTC, now
+  ~5h past with zero movement (`date_updated` still 2026-09-10 14:38 UTC, status still "to do",
+  no new comments, no GHL opportunities/`contacted` tags per the indirect ClickUp signal). This
+  is now overdue with `last-escalated` empty, so per the skill's rule this qualified for its
+  first escalation. **Posted escalation comment (1/3)** tagging Kanchan, stating the exact
+  overdue window and that this is the sole blocker on the active GOAL.md target.
+- **86d3t4bg7**, **86d3rgzah** (+subtasks), **86d3ucd9p**, **86d3pw08w** — each re-read directly:
+  all four `date_updated` unchanged since the 2026-09-10 ~14:36 UTC escalation round (confirmed,
+  not inferred). All within the 72h quiet window (escalated ~37h ago) — not re-escalating.
+- **9 Borderline leads** — not re-pulled this run (conserving ClickUp reads; escalation 1/3,
+  within 72h window regardless of movement).
+
+**Agent activity:** None dispatched. Sending the batch-1 outreach remains human/BDE execution
+work (real mailbox, judgment on pacing) — no new agent-doable gap surfaced. The one action this
+run's goal-check called for (escalate the now-overdue send task) is a ClickUp comment, not
+agent-dispatchable work.
+
+**Milestone deltas:** None. **Dispatched:** none. **Escalated:** 1 (batch-1 send, 1/3 — first
+escalation on this item since it only became overdue today).
+
+**Open decisions / flags for the human:**
+1. **The batch-1 send deadline has now been missed** — GOAL.md's entire active goal (a reply/
+   booked call from one of the 4 leads by 2026-09-28) is stalled at its first step until Kanchan
+   actually sends. Worth a direct check with Kanchan given ClickUp shows no activity and the
+   task's own deadline has passed.
+2. Unchanged: BDE assignment process, BDE hiring, BDE daily check-in, and the visa case outcome
+   remain at escalation 1/3 or 2/3 with no movement since 2026-09-10 — none exhausted yet (next
+   unmoved check-in past the 72h window would be escalation 2/3 or 3/3 respectively).
+3. Carryover, unchanged: GHL connector-enablement quirk recurring across sessions; the
+   2026-08-27 "verify push or fail loudly" hardening still not built.
