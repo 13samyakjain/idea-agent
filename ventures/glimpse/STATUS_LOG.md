@@ -1407,3 +1407,50 @@ escalation on this item since it only became overdue today).
    unmoved check-in past the 72h window would be escalation 2/3 or 3/3 respectively).
 3. Carryover, unchanged: GHL connector-enablement quirk recurring across sessions; the
    2026-08-27 "verify push or fail loudly" hardening still not built.
+
+## 2026-09-12 (second pass) — Confirmed no movement since this morning's escalation
+
+**Run context:** Scheduled run, ~11h after this morning's pass. ClickUp lock checked clean at
+start, written before ClickUp reads, released immediately after (6 sequential reads, no writes,
+no rate-limit errors).
+
+**Human activity checked:**
+- **Google Calendar** (2026-09-11 → 2026-09-13T12:00 UTC): no new event beyond what's already
+  logged — only the recurring unrelated `@rakesh@vempower.org` 1:1 and the Kanchan↔Samyak call
+  from 2026-09-11 (already noted, outcome still unconfirmed). Nothing Glimpse-relevant since.
+- **TaskList:** empty — no background agent activity since the last run.
+
+**Tracked-items check (all within their 72h quiet windows — no re-escalation due on any item):**
+- **14ykddrwyqf** (batch-1 send, Kanchan) — re-read directly: status still "to do", `date_updated`
+  unchanged at 2026-09-12T03:35:27Z (this morning's escalation), only 2 comments total (the
+  ACS-disqualification note and this morning's escalation) — zero reply from Kanchan. Escalated
+  ~11h ago, well within the 72h quiet window — not repeating.
+- **86d3t4bg7**, **86d3rgzah** (+subtasks), **86d3ucd9p**, **86d3pw08w** — each re-read directly:
+  all four `date_updated` unchanged at 2026-09-10T14:35–14:36Z (the 2026-09-10 escalation round),
+  confirmed genuinely frozen, not inferred. ~48h since escalation, still within the 72h window.
+- **9 Borderline leads** — not re-pulled this pass (conserving ClickUp reads; escalation 1/3,
+  within 72h window regardless of movement).
+
+**GHL connector:** `ListConnectors` again shows GoHighLevel `connected: true`,
+`enabledInChat: false` — 4th consecutive session with the same quirk. Still cannot independently
+verify batch-1 GHL state (opportunities, `contacted` tags); relying on the ClickUp task status
+(zero comments from Kanchan) as the only signal.
+
+**Agent activity:** None dispatched. No new agent-doable gap — sending the outreach remains
+human/BDE execution work, already fully specified on `14ykddrwyqf`. Nothing else changed that
+would warrant a fresh dispatch.
+
+**Milestone deltas:** None. **Dispatched:** none. **Escalated:** none this run (every tracked
+item is within its post-escalation quiet window).
+
+**Open decisions / flags for the human:**
+1. **Unchanged and worth repeating:** the batch-1 send is now the sole blocker on GOAL.md's
+   active goal, its deadline has passed, and this morning's direct escalation to Kanchan has had
+   zero response for ~11 hours. If a founder nudge outside ClickUp hasn't happened yet, this is
+   the moment for one.
+2. Unchanged: BDE assignment process, BDE hiring, BDE daily check-in, and the visa case outcome
+   remain at escalation 1/3 or 2/3 with no movement since 2026-09-10 — approaching their 72h
+   windows closing (next run past ~2026-09-13T14:36 UTC would trigger escalation 2/3 or 3/3 if
+   still frozen).
+3. Carryover, unchanged: GHL connector-enablement quirk (4th consecutive session); the
+   2026-08-27 "verify push or fail loudly" hardening still not built.
