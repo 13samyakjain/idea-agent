@@ -12,12 +12,12 @@
 
 | Item | Handle | Owner | Last moved | Last escalated | Notes |
 |---|---|---|---|---|---|
-| Batch-1 outreach sent (now 4 leads) | ClickUp `14ykddrwyqf` / GHL pipeline `volxN7h175GHZDiTKgEk` | Kanchan | 2026-09-10 (task created) | 2026-09-12 | **overdue** (due 2026-09-11 22:30 UTC, now ~29h past) — confirmed unchanged 2026-09-13: still "to do", zero comments from Kanchan since the 2026-09-12 escalation, no GHL visibility this session; escalation 1/3, within 72h quiet window (opens 2026-09-15 ~03:35 UTC), not re-escalating |
-| BDE hiring — assignment process | ClickUp `86d3t4bg7` | Samyak | 2026-08-22 | 2026-09-10 | idle 22d; confirmed unchanged 2026-09-13 (`date_updated` still 2026-09-10T14:35:58Z); within 72h quiet window (closes ~2026-09-13T14:36 UTC), not re-escalating |
-| BDE hiring — parent task (corrected: 1 parent + 2 subtasks, not 3 duplicates) | ClickUp `86d3rgzah` (+ subtasks `86d3rgze3`, `86d3rgze6`) | Samyak | 2026-08-06 | 2026-09-10 | idle 38d; confirmed unchanged 2026-09-13 (`date_updated` still 2026-09-10T14:36:03Z); within 72h quiet window, not re-escalating |
-| BDE daily check-in cadence | ClickUp `86d3ucd9p` (+ related `86d3zvquy`) | Kanchan | 2026-08-19 | 2026-09-10 | idle 25d; confirmed unchanged 2026-09-13 (`date_updated` still 2026-09-10T14:36:08Z); within 72h quiet window, not re-escalating |
-| Visa case outcome recorded | ClickUp `86d3pw08w` | Samyak / Kanchan | 2026-08-24 | 2026-09-10 | appointment was 2026-08-30 (14d past, still unrecorded); confirmed unchanged 2026-09-13 (`date_updated` still 2026-09-10T14:36:13Z); within 72h quiet window (escalation 2/3), not re-escalating |
-| 9 Borderline leads — judgment calls | ClickUp `Lead Sourcing Queue` (9 tasks, priority urgent) | Samyak | 2026-08-21 | 2026-09-10 | idle 23d; not re-pulled per-task this run (conserving ClickUp reads — escalation 1/3 is within 72h quiet window regardless); not re-escalating |
+| Batch-1 outreach sent (now 4 leads) | ClickUp `14ykddrwyqf` / GHL pipeline `volxN7h175GHZDiTKgEk` | Kanchan | 2026-09-10 (task created) | 2026-09-12 | **overdue** (due 2026-09-11 22:30 UTC, now ~40h past) — confirmed unchanged 2026-09-13 (second pass): still "to do", zero comments from Kanchan since the 2026-09-12 escalation, no GHL visibility this session; escalation 1/3, within 72h quiet window (opens 2026-09-15 ~03:35 UTC), not re-escalating |
+| BDE hiring — assignment process | ClickUp `86d3t4bg7` | Samyak | 2026-08-22 | 2026-09-13 | idle 25d; confirmed unchanged since 2026-09-10, 72h quiet window had just closed — **escalated 2/3** |
+| BDE hiring — parent task (corrected: 1 parent + 2 subtasks, not 3 duplicates) | ClickUp `86d3rgzah` (+ subtasks `86d3rgze3`, `86d3rgze6`) | Samyak | 2026-08-06 | 2026-09-13 | idle 38d; confirmed unchanged since 2026-09-10, 72h quiet window had just closed — **escalated 2/3** |
+| BDE daily check-in cadence | ClickUp `86d3ucd9p` (+ related `86d3zvquy`) | Kanchan | 2026-08-19 | 2026-09-13 | idle 25d; confirmed unchanged since 2026-09-10, 72h quiet window had just closed — **escalated 2/3** |
+| Visa case outcome recorded | ClickUp `86d3pw08w` | Samyak / Kanchan | 2026-08-24 | 2026-09-13 | appointment was 2026-08-30 (14d past, still unrecorded); confirmed unchanged since 2026-09-10, 72h quiet window had just closed — **escalated 3/3 (final — next check with no movement is escalation-exhausted)** |
+| 9 Borderline leads — judgment calls | ClickUp `Lead Sourcing Queue` (9 tasks, priority urgent) | Samyak | 2026-08-21 | 2026-09-13 | idle 26d; re-pulled the list directly this run — all 9 still "in progress", no qualify/disqualify decision; 72h quiet window had just closed — **escalated 2/3 (list-level comment)** |
 
 ## 2026-08-18 — Onboarded as a tracked venture
 
@@ -1504,4 +1504,74 @@ still unresolved, not because anything new happened):**
    close within hours of this run, so the next check-in that finds them still unmoved will
    escalate again (2/3 or 3/3 depending on the item).
 3. Carryover, unchanged: GHL connector-enablement quirk (5th consecutive session); the
+   2026-08-27 "verify push or fail loudly" hardening still not built.
+
+## 2026-09-13 (second pass) — Five 72h quiet windows closed at once; escalation round 2 (round 3 for visa case)
+
+**Run context:** Scheduled run, same day as this morning's confirmation pass. ClickUp lock
+checked clean at start, written before ClickUp reads/writes, released immediately after
+(sequential calls only — 8 reads + 5 comment writes, no rate-limit errors).
+
+**Human activity checked:**
+- **Google Calendar** (2026-09-13): only the recurring unrelated `@rakesh@vempower.org` 1:1. No
+  new Glimpse-relevant event.
+- **TaskList:** empty — no background agent activity since the last run.
+
+**Tracked-items check — this run landed almost exactly on the 72h boundary from the
+2026-09-10 ~14:35–14:41 UTC escalation round, so every BDE/visa/leads item came due for a
+fresh check this pass (the batch-1 send did not — its own quiet window, from the 2026-09-12
+escalation, doesn't reopen until 2026-09-15):**
+- **14ykddrwyqf** (batch-1 send, Kanchan) — re-read task + comments: status still "to do",
+  `date_updated` unchanged at 2026-09-12T03:35:27Z, still only 2 comments, zero reply from
+  Kanchan. ~40h past its 2026-09-11 22:30 UTC due date. Escalated ~35h ago (1/3), within the
+  72h quiet window — not re-escalating.
+- **86d3t4bg7** (BDE assignment process, Samyak) — re-read directly: `date_updated` unchanged
+  at 2026-09-10T14:35:58Z since the first escalation on this item. 25 days idle since
+  2026-08-22, quiet window closed. **Escalated 2/3.**
+- **86d3rgzah** + subtasks (BDE hiring, Samyak) — re-read directly: `date_updated` unchanged at
+  2026-09-10T14:36:03Z. 38 days idle since 2026-08-06, quiet window closed. **Escalated 2/3.**
+- **86d3ucd9p** (BDE daily check-in, Kanchan) — re-read directly: `date_updated` unchanged at
+  2026-09-10T14:36:08Z. 25 days idle since 2026-08-19, quiet window closed. **Escalated 2/3.**
+- **86d3pw08w** (visa case, Samyak/Kanchan) — re-read directly: `date_updated` unchanged at
+  2026-09-10T14:36:13Z. Appointment now 14 days past with the outcome still unrecorded; this
+  item's prior escalation (2026-09-10) was already its 2nd. Quiet window closed. **Escalated
+  3/3 (final)** — per the skill's rule, if this item is still unmoved at the next check it goes
+  to escalation-exhausted rather than a 4th comment.
+- **9 Borderline leads** (`Lead Sourcing Queue`, Samyak) — re-pulled the list directly this run
+  (not skipped, since its quiet window was also closing): all 9 urgent-priority tasks (Forbes
+  Technical Consulting, Compri Consulting, Ondrick Agency, CornerStone Technology Talent
+  Services, Generative AI works, Agency of Valor, Registered Nurse Jobs/RNJobSite.com, Engtal,
+  Prairie Consulting Services) still "in progress", no qualify/disqualify decision visible. 26
+  days idle since 2026-08-21, quiet window closed. **Escalated 2/3** (one comment at the list
+  level, same pattern as the first escalation).
+
+**GHL connector:** `ListConnectors` again shows GoHighLevel `connected: true`,
+`enabledInChat: false` — 6th consecutive session with the quirk. Batch-1 GHL state still not
+independently verifiable this session.
+
+**Agent activity:** None dispatched. All five tracked items needed a human decision or human
+execution (send an email, record a hiring update, record a visa outcome, make an ICP judgment
+call) — none are agent-doable gaps. The escalation comments themselves were this run's action,
+per the skill's "stalled-item escalation is a real action, not a log line" rule.
+
+**Milestone deltas:** None. **Dispatched:** none. **Escalated:** 5 (86d3t4bg7 2/3, 86d3rgzah
+2/3, 86d3ucd9p 2/3, 86d3pw08w 3/3 final, Lead Sourcing Queue 2/3).
+
+**Doc updates this run:** Tracked items table above updated in place (last-escalated → 2026-09-13
+for all five escalated items). `ventures/glimpse/GROWTH.md` orchestrator-pass count refreshed
+(~30 → ~31).
+
+**Open decisions / flags for the human:**
+1. **Visa case (86d3pw08w) is now at its final automated escalation (3/3).** If Deborah/Peter's
+   outcome still isn't recorded by the next check, the orchestrator will stop nudging and this
+   needs a direct founder decision instead — simplest fix is a one-line comment on the task
+   confirming approved/denied/unknown so it can close.
+2. **Batch-1 outreach send remains the sole blocker on GOAL.md's active goal** — still zero
+   ClickUp-visible progress, ~40h past due, escalation 1/3 (its own quiet window doesn't reopen
+   until 2026-09-15).
+3. BDE assignment process, BDE hiring, BDE daily check-in, and the 9 borderline leads are all
+   now at escalation 2/3 with zero movement in 25–38 days — one more unanswered cycle each puts
+   them at escalation-exhausted too, which would put four separate founder-decision items in
+   front of the founder at once if nothing moves.
+4. Carryover, unchanged: GHL connector-enablement quirk (6th consecutive session); the
    2026-08-27 "verify push or fail loudly" hardening still not built.
