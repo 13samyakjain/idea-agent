@@ -96,6 +96,16 @@
       has direct knowledge (he met Peter 1:1 on 2026-08-26 and 2026-08-28) — this is now a
       stale-record cleanup item, not a live escalation. Recommendation stands: a one-line comment
       on 86d3pw08w recording the actual outcome, then close it or reset its due date.
+      **Update 2026-09-14:** record finally moved — Babita replied 2026-09-13T15:46 UTC, the day
+      after the 3rd/final automated escalation. New info: Deborah has a **new appointment on
+      2026-09-24** (details shared with her); Peter's appointment will be scheduled once he's
+      "back on ground" (no date given); Babita now flags her **child's visa option still needs
+      checking** — a new open thread, not previously mentioned. The original 2026-08-30
+      appointment's outcome (approved/denied) is still never stated outright, but the case is
+      visibly active again rather than frozen. No longer escalation-exhausted; no further
+      automated nudge needed while it keeps moving. Next check: confirm the 2026-09-24
+      appointment happens and its outcome gets recorded, and watch for Peter's date and the
+      child's status.
 - [~] Merchandise/PE Kits: procurement cadence, cost baseline, storage/fulfillment visible —
       task-count cadence now in GROWTH.md; cost baseline still not measurable (no financial data
       in ClickUp)

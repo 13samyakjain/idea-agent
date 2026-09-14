@@ -49,8 +49,12 @@ or clearly stalled, instead of re-deriving priority from scratch each run.
       created 2026-08-24), unassigned, no opportunity, no conversation yet.
 - [~] Outreach sent to all 4 (ACS dropped) — owned by Kanchan (ClickUp `14ykddrwyqf`). The
       task's own due date (2026-09-11 22:30 UTC) has now passed with zero movement (still "to
-      do", 0 opportunities/conversations/"contacted" tags as of 2026-09-12) — escalated 1/3.
-      Send milestone (2026-09-14) not yet passed but at risk given no start.
+      do", 0 opportunities/conversations/"contacted" tags as of 2026-09-12) — escalated 1/3,
+      within its 72h quiet window (reopens 2026-09-15 ~03:35 UTC). **Update 2026-09-14:** the
+      send milestone itself (all 5/4 emails out by 2026-09-14) lands today with zero visible
+      start — status still "to do", no reply from Kanchan on the escalation comment. This is now
+      the sole open blocker on the whole active goal; everything else this venture is tracking is
+      either moving (visa case) or within its own quiet window.
 - [ ] First reply received (target 2026-09-28; day-14 non-response → mark stale per Stage 2).
 - [x] Side task: re-qualify ACS Consultancy Services against the ICP checklist — done
       2026-09-10, **DISQUALIFIED and dropped from batch-1** (procurement/RFP-driven growth

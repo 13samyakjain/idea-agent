@@ -16,7 +16,7 @@
 | BDE hiring — assignment process | ClickUp `86d3t4bg7` | Samyak | 2026-08-22 | 2026-09-13 | idle 25d; confirmed unchanged since 2026-09-10, 72h quiet window had just closed — **escalated 2/3** |
 | BDE hiring — parent task (corrected: 1 parent + 2 subtasks, not 3 duplicates) | ClickUp `86d3rgzah` (+ subtasks `86d3rgze3`, `86d3rgze6`) | Samyak | 2026-08-06 | 2026-09-13 | idle 38d; confirmed unchanged since 2026-09-10, 72h quiet window had just closed — **escalated 2/3** |
 | BDE daily check-in cadence | ClickUp `86d3ucd9p` (+ related `86d3zvquy`) | Kanchan | 2026-08-19 | 2026-09-13 | idle 25d; confirmed unchanged since 2026-09-10, 72h quiet window had just closed — **escalated 2/3** |
-| Visa case outcome recorded | ClickUp `86d3pw08w` | Samyak / Kanchan | 2026-08-24 | 2026-09-13 | appointment was 2026-08-30 (14d past, still unrecorded); confirmed unchanged since 2026-09-10, 72h quiet window had just closed — **escalated 3/3 (final — next check with no movement is escalation-exhausted)** |
+| Visa case outcome recorded | ClickUp `86d3pw08w` | Samyak / Kanchan | 2026-09-13 | 2026-09-13 | **moved** — Babita replied 2026-09-13T15:46 UTC (day after the 3/3 final escalation): Deborah's new appointment is 2026-09-24 (details shared with her); Peter's appointment will be scheduled once he's back "on ground"; child's visa option still needs checking. Original 2026-08-30 appointment's outcome still not stated. No longer stalled/escalation-exhausted — new live case, not yet resolved, no re-escalation needed while it's moving |
 | 9 Borderline leads — judgment calls | ClickUp `Lead Sourcing Queue` (9 tasks, priority urgent) | Samyak | 2026-08-21 | 2026-09-13 | idle 26d; re-pulled the list directly this run — all 9 still "in progress", no qualify/disqualify decision; 72h quiet window had just closed — **escalated 2/3 (list-level comment)** |
 
 ## 2026-08-18 — Onboarded as a tracked venture
@@ -1575,3 +1575,72 @@ for all five escalated items). `ventures/glimpse/GROWTH.md` orchestrator-pass co
    front of the founder at once if nothing moves.
 4. Carryover, unchanged: GHL connector-enablement quirk (6th consecutive session); the
    2026-08-27 "verify push or fail loudly" hardening still not built.
+
+## 2026-09-14 — Visa case finally moved; batch-1 send milestone lands today unmet
+
+**Run context:** Scheduled daily run. ClickUp lock checked clean at start, written before
+ClickUp reads, released immediately after (6 sequential task/comment reads, no writes — nothing
+was due for re-escalation this run, so no comments posted).
+
+**Human activity checked:**
+- **Google Calendar** (2026-09-13 → 2026-09-14T12:00 UTC): only the recurring unrelated
+  `@rakesh@vempower.org` 1:1. No new Glimpse-relevant event.
+- **TaskList:** empty — no background agent activity since the last run.
+
+**Tracked-items re-check (all five items from the 2026-09-13 escalation round were still within
+their 72h quiet windows — none due for re-escalation — but each was re-read directly to check
+for movement anyway):**
+- **86d3pw08w (visa case, Samyak/Kanchan) — MOVED.** Babita finally replied 2026-09-13T15:46 UTC,
+  the day after the 3rd/final automated escalation: Deborah has a **new appointment on
+  2026-09-24** (details shared with her); Peter's appointment will be scheduled once he's "back
+  on ground" (no date given yet); Babita flagged her **child's visa option still needs
+  checking** — a new thread not previously surfaced. The original 2026-08-30 appointment's
+  outcome (approved/denied) is still never stated outright, so this isn't resolved, but it's
+  visibly active again rather than frozen for 3+ weeks. Updated Tracked-items row: last-moved →
+  2026-09-13, no longer escalation-exhausted, no further nudge needed while it keeps moving.
+  Also updated MILESTONES.md Phase 1 with this development.
+- **14ykddrwyqf** (batch-1 send, Kanchan) — re-read task + comments: status still "to do",
+  `date_updated` unchanged at 2026-09-12T03:35:27Z (the 1/3 escalation), still only 2 comments,
+  zero reply from Kanchan. **The send milestone itself (all 4 emails out by 2026-09-14) lands
+  today with zero visible start.** Escalation window doesn't reopen until 2026-09-15 ~03:35
+  UTC — not re-escalating yet, but this is now the sole blocker on the whole active goal, and
+  the next run should escalate again the moment the window reopens if still unmoved.
+- **86d3t4bg7, 86d3rgzah** (+subtasks), **86d3ucd9p** — each re-read directly: all three
+  `date_updated` unchanged at 2026-09-13T14:36:42Z–14:36:51Z (the 2026-09-13 second-pass
+  escalation), confirmed genuinely frozen. Quiet window doesn't close until ~2026-09-16T14:36
+  UTC — not due.
+- **9 Borderline leads** — not re-pulled this pass (escalation 2/3, quiet window not closing
+  until ~2026-09-16, conserving ClickUp reads consistent with prior runs' practice when a window
+  isn't near expiry).
+
+**GHL connector:** not checked this run (no ClickUp/GHL write work needed, and the batch-1 send
+status is already fully explained by the ClickUp task's own silence).
+
+**Agent activity:** None dispatched. No new agent-doable gap surfaced — the batch-1 send stays
+human/BDE execution work already fully specified on `14ykddrwyqf`; the visa case's next step
+(confirming the 2026-09-24 appointment and recording its outcome) is also human/BDE work, not
+agent-doable.
+
+**Milestone deltas:** MILESTONES.md Phase 1 visa-case entry updated with today's development
+(see above). **Dispatched:** none. **Escalated:** none this run — every tracked item is either
+moving on its own (visa case) or still within its post-escalation quiet window.
+
+**Doc updates this run:** Tracked items table (visa case row: last-moved → 2026-09-13, note
+added). MILESTONES.md Phase 1 (visa case). GOAL.md progress checklist (batch-1 send-milestone
+note updated to reflect today's date passing unmet). `ventures/glimpse/GROWTH.md`
+orchestrator-pass count refreshed (~31 → ~32).
+
+**Open decisions / flags for the human:**
+1. **Batch-1 outreach send milestone (2026-09-14) lands today with zero visible start** — this
+   is now the single clearest blocker left in the venture; the underlying task is ~40h past its
+   own due date and Kanchan hasn't replied to the 2026-09-12 escalation. Escalation 2/3 becomes
+   available 2026-09-15 ~03:35 UTC if still unmoved.
+2. **Visa case (86d3pw08w) is unstalled but not resolved** — Deborah's new appointment is
+   2026-09-24; worth the founder's awareness that a fresh, unconfirmed date now exists, plus a
+   newly-surfaced open thread (the child's visa option) that hasn't been scoped at all yet.
+3. BDE assignment process, BDE hiring (parent + subtasks), and BDE daily check-in are all frozen
+   since 2026-09-10/13 at escalation 2/3 — one more unanswered cycle each puts them at
+   escalation-exhausted, which would land three founder-decision items at once if nothing moves
+   by ~2026-09-16.
+4. Carryover, unchanged: GHL connector-enablement quirk (not re-checked this run — no ClickUp/GHL
+   write work needed it); the 2026-08-27 "verify push or fail loudly" hardening still not built.
