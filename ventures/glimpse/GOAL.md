@@ -55,6 +55,10 @@ or clearly stalled, instead of re-deriving priority from scratch each run.
       start — status still "to do", no reply from Kanchan on the escalation comment. This is now
       the sole open blocker on the whole active goal; everything else this venture is tracking is
       either moving (visa case) or within its own quiet window.
+      **Update 2026-09-15:** still zero movement — task ~79h past due, send-milestone missed by
+      a day now. Quiet window closed; **escalated 2/3**. One more unanswered cycle (~2026-09-18)
+      puts this at escalation-exhausted, which would need a founder decision on how to get the
+      send done (reassign, or Samyak sends directly).
 - [ ] First reply received (target 2026-09-28; day-14 non-response → mark stale per Stage 2).
 - [x] Side task: re-qualify ACS Consultancy Services against the ICP checklist — done
       2026-09-10, **DISQUALIFIED and dropped from batch-1** (procurement/RFP-driven growth
