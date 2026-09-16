@@ -162,7 +162,11 @@
       do") as an indirect signal, not confirmed GHL data.
 - [ ] M4: Refine Offer Based on Feedback
 - [ ] M5: First Pilot / Signed Commitment
-- [ ] Supporting: hire 1x full-time BDE + 2-3x BDE interns (in progress in ClickUp)
+- [ ] Supporting: hire 1x full-time BDE + 2-3x BDE interns (in progress in ClickUp). **Update
+      2026-09-16:** first concrete pipeline movement since the task opened (2026-08-06) — the PE
+      (People Empowerment) team scheduled a Round 1 interview for a BDE Intern candidate (Harsh),
+      found via Google Calendar (interview set for 2026-09-17), not yet reflected on the ClickUp
+      task itself. See `ventures/glimpse/STATUS_LOG.md` 2026-09-16 (2nd pass).
 - [ ] Supporting: set Sales Engine pricing (deliberately last, per ClickUp task title)
 - [ ] Supporting: set up basic business plumbing (contract + invoicing)
 - [ ] Supporting: finalize delivery capacity plan
