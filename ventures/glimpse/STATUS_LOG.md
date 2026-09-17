@@ -12,12 +12,12 @@
 
 | Item | Handle | Owner | Last moved | Last escalated | Notes |
 |---|---|---|---|---|---|
-| Batch-1 outreach sent (now 4 leads) | ClickUp `14ykddrwyqf` / GHL pipeline `volxN7h175GHZDiTKgEk` | Kanchan | 2026-09-10 (task created) | 2026-09-15 | re-read directly this run: still "to do", `date_updated` unchanged at 2026-09-15T03:35:30Z (the 2/3 escalation) — **overdue** (due 2026-09-11 22:30 UTC, now ~129h past). Quiet window reopens ~2026-09-18 03:35 UTC (~24h from this run) — not re-escalating yet |
-| BDE hiring — assignment process | ClickUp `86d3t4bg7` | Samyak | 2026-08-22 | 2026-09-16 (3/3, final) | re-read directly this run: still "to do", `date_updated` unchanged since the 2026-09-16 14:37 UTC escalation itself — zero reply, zero movement since. **Escalation exhausted** — no further automated nudges; this is now a founder-decision item (see report) |
-| BDE hiring — parent task (corrected: 1 parent + 2 subtasks, not 3 duplicates) | ClickUp `86d3rgzah` (+ subtasks `86d3rgze3`, `86d3rgze6`) | Samyak | 2026-09-16 (calendar signal, not ClickUp) | 2026-09-13 | not re-checked this pass — the "Round 1 (BDE Intern)- Harsh" interview (Google Calendar, confirmed still scheduled) is at 2026-09-17 11:30 IST / 06:00 UTC, ~2.5h after this run started, so no outcome exists to check yet. Next run should look for the outcome on this task or `86d3ucd9p` |
-| BDE daily check-in cadence | ClickUp `86d3ucd9p` (+ related `86d3zvquy`) | Kanchan | 2026-09-16 (calendar signal, not ClickUp) | 2026-09-13 | same as above — interview hasn't happened yet as of this run; not re-checked |
+| Batch-1 outreach sent (now 4 leads) | ClickUp `14ykddrwyqf` / GHL pipeline `volxN7h175GHZDiTKgEk` | Kanchan | 2026-09-10 (task created) | 2026-09-15 | re-read directly this run: still "to do", `date_updated` unchanged at 2026-09-15T03:35:30Z (the 2/3 escalation) — **overdue** (due 2026-09-11 22:30 UTC, now ~136h past). Quiet window reopens ~2026-09-18 03:35 UTC (~13h from this run) — not re-escalating yet |
+| BDE hiring — assignment process | ClickUp `86d3t4bg7` | Samyak | 2026-08-22 | 2026-09-16 (3/3, final) | not re-checked this pass (no signal of movement) — carried forward as **escalation exhausted**, founder-decision item (see report) |
+| BDE hiring — parent task (corrected: 1 parent + 2 subtasks, not 3 duplicates) | ClickUp `86d3rgzah` (+ subtasks `86d3rgze3`, `86d3rgze6`) | Samyak | 2026-09-16 (calendar signal, not ClickUp) | 2026-09-13 | re-checked `86d3rgze6` directly this run: `date_updated` still frozen at 2026-08-06, zero comments. The "Round 1 (BDE Intern)- Harsh" interview (Google Calendar) happened today as scheduled, 2026-09-17 11:30–12:00 IST / 06:00–06:30 UTC (~8h before this run) — but its outcome still has not been logged anywhere (ClickUp or calendar). Not escalating (real movement known, quiet window not the issue) — next run should look again for a logged outcome |
+| BDE daily check-in cadence | ClickUp `86d3ucd9p` (+ related `86d3zvquy`) | Kanchan | 2026-09-16 (calendar signal, not ClickUp) | 2026-09-13 | same as above — interview happened today but outcome not yet logged; not re-checked directly this pass (tied to the same event) |
 | Visa case outcome recorded | ClickUp `86d3pw08w` | Samyak / Kanchan | 2026-09-13 | 2026-09-13 | not re-pulled this run (next real checkpoint is Deborah's 2026-09-24 appointment, still 7 days out) |
-| 9 Borderline leads — judgment calls | ClickUp `Lead Sourcing Queue` (9 tasks, priority urgent) | Samyak | 2026-08-21 | 2026-09-16 (3/3, final) | not re-pulled this pass (no signal suggests movement; conserving ClickUp reads) — carried forward as **escalation exhausted** per yesterday's direct check (all 9 still "in progress", zero decisions, 26+ days idle). Founder-decision item (see report) |
+| 9 Borderline leads — judgment calls | ClickUp `Lead Sourcing Queue` (9 tasks, priority urgent) | Samyak | 2026-08-21 | 2026-09-16 (3/3, final) | not re-pulled this pass (no signal suggests movement; conserving ClickUp reads) — carried forward as **escalation exhausted**, founder-decision item (see report) |
 
 ## 2026-08-18 — Onboarded as a tracked venture
 
@@ -1953,3 +1953,63 @@ refreshed. `ventures/glimpse/GOAL.md` progress checklist note added.
    quirk; the 2026-08-27 "verify push or fail loudly" hardening still not built. No new founder
    decision surfaced beyond items 1–2 above, both of which were already flagged yesterday and are
    now formally exhausted rather than newly discovered.
+
+## 2026-09-17 (2nd pass) — Interview happened, outcome still unlogged; batch-1 send now ~136h overdue
+
+**Run context:** Scheduled daily run, second firing today (~14:33 UTC). ClickUp lock checked
+clean at start, written before 3 sequential reads, released immediately after (no writes — nothing
+newly due for escalation this pass).
+
+**Human activity checked:**
+- **Google Calendar (2026-09-17 00:00–24:00 UTC):** confirms the "Round 1 (BDE Intern)- Harsh"
+  interview happened as scheduled, 11:30–12:00 IST / 06:00–06:30 UTC (~8h before this run) —
+  PE team (`people.empowerment@vempower.org`) organizer, Samyak invited. Also "Glimpse Team Meet"
+  (Kaustav/Samyak/Babita) 11:00 IST, already past by this run, and a recurring personal event
+  tonight. Nothing new touching the batch-1 send or the visa case.
+- **TaskList:** empty — no background agent activity since the last run.
+
+**Tracked-items re-check (3 direct reads):**
+- **86d3rgze6** ("Hire 2-3x BDE Interns", the subtask most likely to carry the interview outcome)
+  — re-read directly: `date_updated` still frozen at 2026-08-06 (unchanged), zero comments. The
+  interview happened today per the calendar, but nobody has logged its outcome on the ClickUp
+  record yet, ~8h after it concluded.
+- **14ykddrwyqf** (batch-1 send, Kanchan) — re-read directly: still "to do", `date_updated`
+  unchanged at 2026-09-15T03:35:30Z (the 2/3 escalation), due date 2026-09-11 22:30 UTC now
+  ~136h past. Quiet window reopens ~2026-09-18 03:35 UTC (~13h from this run) — not
+  re-escalating yet; the next run is the one that lands past that boundary.
+- **86d3t4bg7** (BDE assignment process) and **9 Borderline leads** — not re-checked this pass;
+  both already escalation-exhausted as of yesterday, carried forward, no new automated action due.
+- **86d3pw08w** (visa case) — not re-pulled; next real checkpoint is Deborah's 2026-09-24
+  appointment, still 7 days out.
+- **GHL connector:** searched for GHL/GoHighLevel tools this run — not available/enabled in this
+  session (same connector-enablement quirk flagged 2026-09-10 and carried since). Could not verify
+  whether opportunities exist or sends are tagged in GHL directly; relying on the ClickUp task's
+  "to do" status as the only available signal.
+
+**Agent activity:** None dispatched. Every open item remains human execution work already fully
+specified on its own tracked task (send outreach, resolve the BDE assignment process, log the
+interview outcome) — nothing agent-doable surfaced this run.
+
+**Milestone deltas:** none. **Dispatched:** none. **Escalated:** none — no tracked item's quiet
+window closed this pass (batch-1 reopens tomorrow; the BDE items and borderline leads are already
+past their 3rd nudge and correctly not re-commented).
+
+**Doc updates this run:** Tracked items table (batch-1 row: overdue count refreshed to ~136h; BDE
+parent-task row: interview-happened-but-outcome-unlogged noted; BDE assignment process and
+borderline-lead rows carried forward unchanged). `ventures/glimpse/GROWTH.md` orchestrator-pass
+count refreshed.
+
+**Open decisions / flags for the human:**
+1. **The BDE Intern interview (Harsh) happened today but its outcome is still unlogged anywhere**
+   (ClickUp or calendar) ~8h after it concluded — worth someone (PE team or Samyak) adding a
+   one-line comment to `86d3rgze6` or `86d3ucd9p` with the result so the tracked record reflects
+   reality.
+2. **BDE assignment process (`86d3t4bg7`) and the 9 Borderline leads remain escalation-exhausted**
+   (unchanged from yesterday) — still need a founder decision, not another automated nudge. See
+   yesterday's entry for the proposed resolutions.
+3. Batch-1 outreach send remains the single clearest blocker on the active Sales Engine goal —
+   unchanged, ~136h past due; its quiet window reopens 2026-09-18 03:35 UTC, so tomorrow's run is
+   the one that either finds it moved or posts the 3rd/final escalation.
+4. Carryover, unchanged: visa case quiet-not-stalled until 2026-09-24; GHL connector not enabled
+   this session (same recurring quirk); the 2026-08-27 "verify push or fail loudly" hardening
+   still not built. No new founder decision surfaced this pass beyond items 1–2 above.
