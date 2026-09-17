@@ -59,6 +59,9 @@ or clearly stalled, instead of re-deriving priority from scratch each run.
       a day now. Quiet window closed; **escalated 2/3**. One more unanswered cycle (~2026-09-18)
       puts this at escalation-exhausted, which would need a founder decision on how to get the
       send done (reassign, or Samyak sends directly).
+      **Update 2026-09-17:** re-confirmed directly — still zero movement, ~129h past due. Quiet
+      window from the 2/3 escalation reopens ~2026-09-18 03:35 UTC; the next run past that point
+      is the one that either finds it moved or posts the 3rd/final escalation.
 - [ ] First reply received (target 2026-09-28; day-14 non-response → mark stale per Stage 2).
 - [x] Side task: re-qualify ACS Consultancy Services against the ICP checklist — done
       2026-09-10, **DISQUALIFIED and dropped from batch-1** (procurement/RFP-driven growth
