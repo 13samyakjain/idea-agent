@@ -62,6 +62,11 @@ or clearly stalled, instead of re-deriving priority from scratch each run.
       **Update 2026-09-17:** re-confirmed directly — still zero movement, ~129h past due. Quiet
       window from the 2/3 escalation reopens ~2026-09-18 03:35 UTC; the next run past that point
       is the one that either finds it moved or posts the 3rd/final escalation.
+      **Update 2026-09-18:** still zero movement — task ~6 days past due, send-milestone ~4 days
+      past. Quiet window reopened this run; posted the **3rd/final escalation**. This item is now
+      **escalation-exhausted** — no further automated nudges. It is the sole blocker on this
+      goal; needs a founder decision (reassign the send, Samyak sends himself, or push the
+      target date again) rather than another comment.
 - [ ] First reply received (target 2026-09-28; day-14 non-response → mark stale per Stage 2).
 - [x] Side task: re-qualify ACS Consultancy Services against the ICP checklist — done
       2026-09-10, **DISQUALIFIED and dropped from batch-1** (procurement/RFP-driven growth
