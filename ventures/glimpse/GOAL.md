@@ -67,6 +67,10 @@ or clearly stalled, instead of re-deriving priority from scratch each run.
       **escalation-exhausted** — no further automated nudges. It is the sole blocker on this
       goal; needs a founder decision (reassign the send, Samyak sends himself, or push the
       target date again) rather than another comment.
+      **Update 2026-09-19:** re-confirmed directly — still zero movement, ~8 days past due, no
+      new comment (already exhausted). Samyak departs on international travel 2026-09-20, which
+      will likely narrow the "sends it himself" option starting tomorrow — worth the founder's
+      decision landing before then if that's the preferred path.
 - [ ] First reply received (target 2026-09-28; day-14 non-response → mark stale per Stage 2).
 - [x] Side task: re-qualify ACS Consultancy Services against the ICP checklist — done
       2026-09-10, **DISQUALIFIED and dropped from batch-1** (procurement/RFP-driven growth
