@@ -12,11 +12,11 @@
 
 | Item | Handle | Owner | Last moved | Last escalated | Notes |
 |---|---|---|---|---|---|
-| Batch-1 outreach sent (now 4 leads) | ClickUp `14ykddrwyqf` / GHL pipeline `volxN7h175GHZDiTKgEk` | Kanchan | 2026-09-10 (task created) | 2026-09-18 (3/3, final) | re-read directly this run: still "to do", `date_updated` unchanged since the 3rd/final escalation (2026-09-18 03:34 UTC). Due date now ~8 days past, send-milestone ~5 days past. Already escalation-exhausted — no new comment posted (would be noise); remains a **founder-decision item** (see report). Samyak has international travel starting 2026-09-20, narrowing his own bandwidth to send it himself |
-| BDE hiring — assignment process | ClickUp `86d3t4bg7` | Samyak | 2026-08-22 | 2026-09-16 (3/3, final) | re-read directly this run: still "to do", `date_updated` unchanged since the 3rd/final escalation (2026-09-16). No reply from Samyak, its own assignee. Carried forward as **escalation exhausted**, founder-decision item (see report) |
-| BDE hiring — parent task (corrected: 1 parent + 2 subtasks, not 3 duplicates) | ClickUp `86d3rgzah` (+ subtasks `86d3rgze3`, `86d3rgze6`) | Samyak | 2026-09-18 (calendar signal, not ClickUp) | 2026-09-13 | re-checked `86d3rgze6` directly this run: `date_updated` still frozen at 2026-08-06, zero comments — all 3 interview outcomes now unlogged (Harsh 9/17, Apurva + Kajal 9/18). No new interviews on the calendar today (2026-09-19). Treating as active-but-stale-record, not stalled — not escalating |
-| BDE daily check-in cadence | ClickUp `86d3ucd9p` (+ related `86d3zvquy`) | Kanchan | 2026-09-18 (calendar signal, not ClickUp) | 2026-09-13 | same as above — not re-checked directly this pass (tied to the same signal, no new calendar activity today) |
-| Visa case outcome recorded | ClickUp `86d3pw08w` | Samyak / Kanchan | 2026-09-13 | 2026-09-13 | not re-pulled this run (next real checkpoint is Deborah's 2026-09-24 appointment, still 5 days out) |
+| Batch-1 outreach sent (now 4 leads) | ClickUp `14ykddrwyqf` / GHL pipeline `volxN7h175GHZDiTKgEk` | Kanchan | 2026-09-10 (task created) | 2026-09-18 (3/3, final) | re-read directly this run: still "to do", `date_updated` unchanged since the 3rd/final escalation (2026-09-18 03:34 UTC). Due date now ~9 days past, send-milestone ~6 days past. Already escalation-exhausted — no new comment posted. Samyak's Washington→Brussels→Accra flights depart today (confirmed via calendar); "Samyak sends it himself" is now effectively off the table for the trip's duration |
+| BDE hiring — assignment process | ClickUp `86d3t4bg7` | Samyak | 2026-08-22 | 2026-09-16 (3/3, final) | re-read directly this run: still "to do", `date_updated` unchanged since the 3rd/final escalation (2026-09-16). No reply from Samyak, its own assignee — now travelling as of today, unlikely to action this soon. Carried forward as **escalation exhausted**, founder-decision item (see report) |
+| BDE hiring — parent task (corrected: 1 parent + 2 subtasks, not 3 duplicates) | ClickUp `86d3rgzah` (+ subtasks `86d3rgze3`, `86d3rgze6`) | Samyak | 2026-09-18 (calendar signal, not ClickUp) | 2026-09-13 | re-checked `86d3rgze6` directly this run: `date_updated` still frozen at 2026-08-06, zero comments — Harsh/Apurva/Kajal interview outcomes still unlogged. No new interviews on the calendar today (2026-09-20). Treating as active-but-stale-record, not stalled — not escalating |
+| BDE daily check-in cadence | ClickUp `86d3ucd9p` (+ related `86d3zvquy`) | Kanchan | 2026-09-18 (calendar signal, not ClickUp) | 2026-09-13 | not re-checked directly this pass (tied to the same signal, no new calendar activity today) |
+| Visa case outcome recorded | ClickUp `86d3pw08w` | Samyak / Kanchan | 2026-09-13 | 2026-09-13 | re-read directly this run: `date_updated` still frozen at 2026-09-13 15:46 UTC (Babita's reply), no new comments. Next real checkpoint is Deborah's 2026-09-24 appointment, still 4 days out — quiet, not stalled |
 | 9 Borderline leads — judgment calls | ClickUp `Lead Sourcing Queue` (9 tasks, priority urgent) | Samyak | 2026-08-21 | 2026-09-16 (3/3, final) | not re-pulled this pass (no signal suggests movement; conserving ClickUp reads) — carried forward as **escalation exhausted**, founder-decision item (see report) |
 
 ## 2026-08-18 — Onboarded as a tracked venture
@@ -2147,4 +2147,68 @@ progress checklist note added.
    comments to `86d3rgze6` so the hiring record reflects what's actually happening.
 5. Carryover, unchanged: visa case quiet-not-stalled until 2026-09-24; GHL connector not enabled
    this session (recurring quirk); the 2026-08-27 "verify push or fail loudly" hardening still
+   not built.
+
+## 2026-09-20 — Samyak departs on international travel; three founder-decisions still unresolved
+
+**Run context:** Scheduled daily run. ClickUp lock checked clean at start, written before 4
+sequential reads, released immediately after (no writes — nothing newly due for escalation this
+pass; all three exhausted items correctly not re-commented).
+
+**Human activity checked:**
+- **Google Calendar (2026-09-19–20):** confirms yesterday's flagged travel is happening today —
+  Samyak has a multi-leg international trip departing today: Washington→Brussels (UA 9902,
+  03:05 IST) then same-day Brussels→Accra (UA 9972, 15:20 IST). No new BDE interviews scheduled
+  today (last were Apurva Nangare and Kajal on 2026-09-18). The `vempower.org` "No Meetings
+  (Sundar OOO)" block continues through 2026-10-12, unchanged.
+- **TaskList:** empty — no background agent activity since the last run.
+
+**Tracked-items re-check (4 direct reads):**
+- **14ykddrwyqf** (batch-1 send, Kanchan) — re-read directly: still "to do", `date_updated`
+  unchanged since the 2026-09-18 03:34 UTC 3rd/final escalation. Due date now ~9 days past,
+  send-milestone ~6 days past. Already escalation-exhausted — no new comment posted.
+- **86d3t4bg7** (BDE assignment process, Samyak) — re-read directly: still "to do", `date_updated`
+  unchanged since the 2026-09-16 3rd/final escalation. No reply from Samyak. Already
+  escalation-exhausted — no new comment posted.
+- **86d3rgze6** (BDE intern hiring subtask) — re-read directly: `date_updated` still frozen at
+  2026-08-06, zero comments. No new interviews today, so no change to `last-moved`.
+- **86d3pw08w** (visa case) — re-read directly (last checked 2026-09-14): `date_updated` still
+  frozen at 2026-09-13 15:46 UTC (Babita's reply), no new comments. Deborah's 2026-09-24
+  appointment is now 4 days out — still quiet, not stalled.
+- **9 Borderline leads** — not re-pulled this pass (no signal suggests movement; conserving
+  ClickUp reads).
+- **GHL connector:** searched for GHL/GoHighLevel tools this session — not available/enabled
+  (same recurring quirk flagged every run since 2026-09-10). ClickUp's "to do" status remains the
+  only available signal on batch-1, and it already shows zero movement regardless.
+
+**Agent activity:** None dispatched. All three founder-decision items are exhausted-escalation,
+human-only next steps; the BDE hiring pipeline is real human interview work in progress with no
+new activity today. Nothing agent-doable surfaced this run.
+
+**Milestone deltas:** none. **Dispatched:** none. **Escalated:** none — all three
+escalation-exhausted items correctly held at "no further automated nudge"; no other tracked
+item's quiet window closed this pass.
+
+**Doc updates this run:** Tracked items table (all rows re-confirmed with today's direct reads;
+batch-1 and BDE-assignment-process rows note Samyak's travel starting today). `GROWTH.md`
+orchestrator-pass count refreshed. `GOAL.md` progress checklist note added flagging today as the
+travel-departure day called out in yesterday's entry.
+
+**Open decisions / flags for the human:**
+1. **Today is the day flagged yesterday: Samyak's international travel (Washington→Brussels→Accra)
+   departs 2026-09-20.** Two of the three escalation-exhausted items are his to resolve —
+   batch-1 send (`14ykddrwyqf`, directly as "send it himself," now his least practical option) and
+   the BDE assignment process (`86d3t4bg7`, his own assignee task). Neither moved before he left.
+   Nothing here is agent-actionable; flagging so the founder knows the clock kept running through
+   the departure, not that anything changed today.
+2. **Batch-1 outreach send remains the sole blocker on the active Sales Engine goal** (target
+   2026-09-28, now ~9 days past its own due date with zero visible start) — still needs someone to
+   reassign it to a different sender, or Samyak to explicitly push the target date, once he's
+   reachable.
+3. **BDE assignment process and the 9 Borderline leads remain escalation-exhausted**, unchanged
+   from 2026-09-16 — same proposed resolutions as prior entries (confirm/redirect the process, or
+   batch-decide/delegate the Borderline leads).
+4. Carryover, unchanged: BDE interview outcomes (Harsh, Apurva, Kajal) still unlogged on
+   `86d3rgze6`; visa case quiet-not-stalled until 2026-09-24; GHL connector not enabled this
+   session; the 2026-08-27 "verify push or fail loudly" hardening still not built.
    not built.

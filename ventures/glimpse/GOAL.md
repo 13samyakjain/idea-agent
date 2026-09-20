@@ -71,6 +71,11 @@ or clearly stalled, instead of re-deriving priority from scratch each run.
       new comment (already exhausted). Samyak departs on international travel 2026-09-20, which
       will likely narrow the "sends it himself" option starting tomorrow — worth the founder's
       decision landing before then if that's the preferred path.
+      **Update 2026-09-20:** still zero movement, ~9 days past due, no new comment (already
+      exhausted). Samyak's departure flagged yesterday is confirmed happening today
+      (Washington→Brussels→Accra) — the decision did not land before he left. "Samyak sends it
+      himself" is now the least practical of the proposed resolutions for the trip's duration;
+      reassigning the send or explicitly pushing the target date are the remaining options.
 - [ ] First reply received (target 2026-09-28; day-14 non-response → mark stale per Stage 2).
 - [x] Side task: re-qualify ACS Consultancy Services against the ICP checklist — done
       2026-09-10, **DISQUALIFIED and dropped from batch-1** (procurement/RFP-driven growth
