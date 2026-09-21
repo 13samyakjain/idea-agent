@@ -167,6 +167,11 @@
       (People Empowerment) team scheduled a Round 1 interview for a BDE Intern candidate (Harsh),
       found via Google Calendar (interview set for 2026-09-17), not yet reflected on the ClickUp
       task itself. See `ventures/glimpse/STATUS_LOG.md` 2026-09-16 (2nd pass).
+      **Update 2026-09-21:** a 4th candidate, Priyanshi Patel, had a Round 1 interview today
+      (found via calendar; resume attached, PE team-organized) — on top of Harsh, Apurva, and
+      Kajal from the prior week. None of the four interview outcomes have been written back to
+      the ClickUp task (`86d3rgze6` still frozen at 2026-08-06) — pipeline is visibly active but
+      its record isn't. See `ventures/glimpse/STATUS_LOG.md` 2026-09-21.
 - [ ] Supporting: set Sales Engine pricing (deliberately last, per ClickUp task title)
 - [ ] Supporting: set up basic business plumbing (contract + invoicing)
 - [ ] Supporting: finalize delivery capacity plan
