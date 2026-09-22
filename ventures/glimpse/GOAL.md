@@ -76,6 +76,10 @@ or clearly stalled, instead of re-deriving priority from scratch each run.
       (Washington→Brussels→Accra) — the decision did not land before he left. "Samyak sends it
       himself" is now the least practical of the proposed resolutions for the trip's duration;
       reassigning the send or explicitly pushing the target date are the remaining options.
+      **Update 2026-09-22:** still zero movement, ~11 days past due. This goal's own target date
+      (2026-09-28) is now only 6 days away — with the send task escalation-exhausted and no
+      founder decision landed yet, the goal is on track to miss its target unless someone
+      reassigns the send or the target date is explicitly pushed in the next few days.
 - [ ] First reply received (target 2026-09-28; day-14 non-response → mark stale per Stage 2).
 - [x] Side task: re-qualify ACS Consultancy Services against the ICP checklist — done
       2026-09-10, **DISQUALIFIED and dropped from batch-1** (procurement/RFP-driven growth
