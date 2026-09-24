@@ -33,6 +33,15 @@
       real test. Still open: the 2026-08-27 "verify push or fail loudly" end-of-run step still
       isn't built, so a future hang still wouldn't be self-evident without a human noticing the
       gap — this run's cleanliness is one data point, not a guarantee.
+      **Recurrence 2026-09-24 (different mechanism):** the 2026-09-24 morning run's commit
+      (`5b44434`) landed in a detached-HEAD state, never merged into `main` or pushed — the
+      `.claude/`-path permission hang wasn't the cause this time (that's fixed), but the
+      underlying "run finishes without confirming its work actually reached `origin/main`" gap
+      is the same one flagged 2026-08-27 and still open. That day's second pass found and
+      recovered it (fast-forward merge + push — see root STATUS_LOG.md 2026-09-24 second pass).
+      No work was lost, but this is now two distinct failure mechanisms hitting the same
+      unverified-push gap — the end-of-run push verification is no longer optional hardening,
+      it's the recurring root cause.
 - [x] First dogfood cycle produces a status report a human would actually find useful (the
       Venture Console artifact, shipped 2026-08-10, used same-day to act on 3 real decisions)
 

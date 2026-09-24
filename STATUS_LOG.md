@@ -510,3 +510,33 @@ Seeded Glimpse's block with 6 items (see `ventures/glimpse/STATUS_LOG.md` 2026-0
 The next scheduled run is the first to actually run the escalation pass.
 
 **Milestone deltas:** none. **Dispatched:** none.
+
+## 2026-09-24 (second pass) — Push-reliability regression recurred, recovered manually
+
+**What happened:** at the start of this run (~14:42 UTC), `git status` showed HEAD detached
+from `main`, one commit ahead of it. The morning run's commit (`5b44434`, "Glimpse: confirmation
+pass, batch-1 goal now 4 days from target," made 2026-09-24 03:45:27 UTC) had been created
+successfully but never merged into local `main` nor pushed to `origin/main` — `main` and
+`origin/main` were still sitting at the prior day's evening commit (`5104afd`). This is the same
+failure family documented in MILESTONES.md Phase 0 (2026-08-24/25/27, and the 12-day silent hang
+2026-08-29→09-10): the run's own work completes and commits, but the commit doesn't reliably
+land on `main`/get pushed.
+
+**Fix applied this run:** `git checkout main && git merge --ff-only 5b44434 && git push -u
+origin main`. Fast-forward succeeded cleanly (no conflicts — the orphaned commit was a clean
+descendant of `main`). Verified via fresh `git fetch` that `origin/main` now matches. No data
+was lost; this was a stranded-commit recovery, not a conflict resolution.
+
+**Still open:** the 2026-08-27 recommendation to "verify push or fail loudly" at the end of each
+run — rather than relying on the *next* run's defensive check to catch a stranded commit — still
+isn't built. This is now the second distinct recurrence of the same class of failure since the
+2026-09-10 root-cause fix (which fixed the `.claude/`-path permission-prompt hang specifically,
+a different mechanism than today's detached-HEAD/unpushed-commit issue). Recommend building an
+explicit end-of-run check (e.g. `git rev-parse HEAD` vs `git rev-parse origin/main` before
+exiting, fail loudly if they don't match after a push attempt) rather than continuing to rely on
+the next day's run noticing.
+
+**Milestone deltas:** MILESTONES.md Phase 0 push-reliability item gets a new correction entry
+documenting this recurrence.
+
+**Dispatched:** none — this was a direct fix, not agent-doable work.

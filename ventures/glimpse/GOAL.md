@@ -88,6 +88,9 @@ or clearly stalled, instead of re-deriving priority from scratch each run.
       founder decision landed — fifth consecutive confirmation-only check. At this pace the
       goal is on track to miss its target unless someone reassigns the send or the date is
       explicitly pushed in the next few days.
+      **Update 2026-09-24 (second pass, ~11h later):** re-confirmed directly — still "to do",
+      `date_updated` unchanged. Target date now **4 days away**, sixth consecutive
+      confirmation-only check on the identical blocker. No new information since this morning.
 - [ ] First reply received (target 2026-09-28; day-14 non-response → mark stale per Stage 2).
 - [x] Side task: re-qualify ACS Consultancy Services against the ICP checklist — done
       2026-09-10, **DISQUALIFIED and dropped from batch-1** (procurement/RFP-driven growth
