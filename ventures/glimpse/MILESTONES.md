@@ -106,6 +106,11 @@
       automated nudge needed while it keeps moving. Next check: confirm the 2026-09-24
       appointment happens and its outcome gets recorded, and watch for Peter's date and the
       child's status.
+      **Update 2026-09-25:** 12 days quiet, then a fresh check-in comment posted this morning;
+      **Update 2026-09-25 (second pass):** Babita replied within ~1.5h — Deborah's appointment
+      was rescheduled to today (2026-09-25). No outcome, no Peter date, no update on the
+      child's option yet, but the case is moving again. Next check: does today's rescheduled
+      appointment produce a recorded outcome.
 - [~] Merchandise/PE Kits: procurement cadence, cost baseline, storage/fulfillment visible —
       task-count cadence now in GROWTH.md; cost baseline still not measurable (no financial data
       in ClickUp)
