@@ -91,6 +91,10 @@ or clearly stalled, instead of re-deriving priority from scratch each run.
       **Update 2026-09-24 (second pass, ~11h later):** re-confirmed directly — still "to do",
       `date_updated` unchanged. Target date now **4 days away**, sixth consecutive
       confirmation-only check on the identical blocker. No new information since this morning.
+      **Update 2026-09-25:** still zero movement, ~14 days past due, `date_updated` frozen at
+      the 2026-09-18 3rd/final escalation. Target date now **3 days away**, seventh consecutive
+      confirmation-only check — the goal is very likely to miss its target at this point unless
+      someone reassigns the send or the date is explicitly pushed in the next 1-2 days.
 - [ ] First reply received (target 2026-09-28; day-14 non-response → mark stale per Stage 2).
 - [x] Side task: re-qualify ACS Consultancy Services against the ICP checklist — done
       2026-09-10, **DISQUALIFIED and dropped from batch-1** (procurement/RFP-driven growth
