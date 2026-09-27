@@ -12,11 +12,11 @@
 
 | Item | Handle | Owner | Last moved | Last escalated | Notes |
 |---|---|---|---|---|---|
-| Batch-1 outreach sent (now 4 leads) | ClickUp `14ykddrwyqf` / GHL pipeline `volxN7h175GHZDiTKgEk` | Kanchan | 2026-09-10 (task created) | 2026-09-18 (3/3, final) | re-read directly this pass: still "to do", `date_updated` unchanged since the 3rd/final escalation (2026-09-18 03:34 UTC). Due date now ~15 days past, send-milestone ~14 days past. Already escalation-exhausted — no new comment posted. GOAL.md target (2026-09-28) is now **tomorrow** with zero send activity — see report |
-| BDE hiring — assignment process | ClickUp `86d3t4bg7` | Samyak | 2026-08-22 | 2026-09-16 (3/3, final) | not re-pulled this pass (already confirmed escalation-exhausted; no signal suggests movement; conserving ClickUp reads) — carried forward as **escalation exhausted**, founder-decision item (see report) |
-| BDE hiring — parent task (corrected: 1 parent + 2 subtasks, not 3 duplicates) | ClickUp `86d3rgzah` (+ subtasks `86d3rgze3`, `86d3rgze6`) | Samyak | 2026-09-21 (calendar signal, confirmed directly this pass) | 2026-09-13 | re-read parent task directly this pass: still "in progress", `date_updated` unchanged since 2026-09-21 06:58 UTC. Calendar re-checked for 2026-09-26–27 and searched for "interview BDE" — no new signal. Now **6 days idle**, still short of the 7-day threshold — not yet due for escalation, but will be if still unchanged tomorrow |
+| Batch-1 outreach sent (now 4 leads) | ClickUp `14ykddrwyqf` / GHL pipeline `volxN7h175GHZDiTKgEk` | Kanchan | 2026-09-10 (task created) | 2026-09-18 (3/3, final) | re-read directly this pass (2nd read today): still "to do", `date_updated` unchanged since the 3rd/final escalation (2026-09-18 03:34 UTC). Already escalation-exhausted — no new comment posted. GOAL.md target (2026-09-28) is now **tomorrow**, zero send activity across the task's 17-day life — see report |
+| BDE hiring — assignment process | ClickUp `86d3t4bg7` | Samyak | 2026-08-22 | 2026-09-16 (3/3, final) | not re-pulled this pass (already confirmed escalation-exhausted this morning; conserving ClickUp reads) — carried forward as **escalation exhausted**, founder-decision item (see report) |
+| BDE hiring — parent task (corrected: 1 parent + 2 subtasks, not 3 duplicates) | ClickUp `86d3rgzah` (+ subtasks `86d3rgze3`, `86d3rgze6`) | Samyak | 2026-09-21 (calendar signal, confirmed this morning) | 2026-09-13 | not re-pulled this pass (already confirmed this morning at 6 days idle, one day short of the 7-day threshold; same calendar day, no new signal expected) — will be due for its first escalation tomorrow if still unchanged |
 | BDE daily check-in cadence | ClickUp `86d3ucd9p` (+ related `86d3zvquy`) | Kanchan | 2026-09-16 (calendar signal, not ClickUp) | 2026-09-21 (3/3, final) | not re-pulled this pass (already confirmed escalation-exhausted 2026-09-25; no signal suggests further movement) — carried forward as founder-decision item alongside the assignment process and Borderline leads (see report) |
-| Visa case outcome recorded | ClickUp `86d3pw08w` | Babita | 2026-09-25 (Babita replied) | 2026-09-25 | re-read task + all comments directly this pass: `date_updated` still unchanged since Babita's 2026-09-25 05:11 UTC reply — no new comment, no outcome recorded for either the 09-24 or the rescheduled 09-25 appointment, Peter's date and the child's visa option both still open. Now ~46.5h since her reply — within the 72h quiet window, not yet due for a fresh nudge |
+| Visa case outcome recorded | ClickUp `86d3pw08w` | Babita | 2026-09-25 (Babita replied) | 2026-09-25 | re-read task directly this pass (2nd read today): `date_updated` still unchanged since Babita's 2026-09-25 05:11 UTC reply — no new comment, no outcome recorded yet. Now ~56h since her reply — still within the 72h quiet window, not yet due for a fresh nudge |
 | 9 Borderline leads — judgment calls | ClickUp `Lead Sourcing Queue` (9 tasks, priority urgent) | Samyak | 2026-08-21 | 2026-09-16 (3/3, final) | not re-pulled this pass (no signal suggests movement; conserving ClickUp reads) — carried forward as **escalation exhausted**, founder-decision item (see report) |
 
 ## 2026-08-18 — Onboarded as a tracked venture
@@ -2855,3 +2855,58 @@ BDE-hiring row now reflects a direct ClickUp read rather than only the calendar-
    the "verify push landed before ending the run" hardening flagged twice before is now overdue —
    this is the second time real work has needed manual recovery, not zero times as the fix would
    imply if it existed.
+
+## 2026-09-27 (second pass) — Confirmed unchanged; goal target is tomorrow with zero send activity
+
+**Run context:** Scheduled evening check-in. Local `main` was detached at start, matching
+`origin/main` exactly at `bcdaf96` (this morning's commit had already reached `origin/main`
+cleanly — no stranding this time) — checked out `main` and fast-forwarded before starting
+venture work. ClickUp lock checked clean at start, written before 2 sequential reads, released
+immediately after (no writes this pass).
+
+**Human activity checked:**
+- **Google Calendar (2026-09-27–28):** no new signal on any tracked item — no BDE interview,
+  no sign of Samyak's return from travel. One unrelated event surfaced: a "Samyak Jain <>
+  Modern Inbound (Cold Email #Discovery)" call is booked for 2026-09-28 15:30 IST — an external
+  cold-email/outbound vendor discovery call. Noting it only as a calendar fact; not assuming any
+  connection to Glimpse's own stalled batch-1 send without the founder saying so.
+- **TaskList:** empty — no background agent activity since the morning pass.
+
+**Tracked-items re-check (2 direct ClickUp reads):**
+- **14ykddrwyqf** (batch-1 send) — re-read directly: still "to do", `date_updated` frozen at the
+  2026-09-18 3rd/final escalation (03:34 UTC), unchanged from this morning. Already
+  escalation-exhausted — no new comment. GOAL.md target (2026-09-28) is now **tomorrow** with
+  zero send activity across the task's 17-day life.
+- **86d3pw08w** (visa case) — re-read directly: `date_updated` still frozen at Babita's
+  2026-09-25 05:11 UTC reply. No new comment, no outcome recorded. ~56h since her reply — still
+  within the 72h quiet window, not yet due for a fresh nudge.
+- BDE hiring parent task (`86d3rgzah`), BDE assignment process (`86d3t4bg7`), BDE daily
+  check-in (`86d3ucd9p`), and the 9 Borderline leads were not re-pulled this pass (all already
+  confirmed this morning; no signal from calendar or agent activity suggests movement;
+  conserving ClickUp reads on a same-day second pass).
+
+**Agent activity:** None dispatched — nothing agent-doable surfaced; every open item is either
+already escalation-exhausted (human-only next step) or within its quiet window (visa case) or
+one day short of its first escalation threshold (BDE hiring parent task).
+
+**Milestone deltas:** none. **Dispatched:** none. **Escalated:** none — no item crossed a new
+threshold since this morning.
+
+**Doc updates this run:** GOAL.md progress checklist (batch-1 item: 12th consecutive
+confirmation-only update). Tracked-items table (batch-1 and visa-case rows re-confirmed).
+
+**Open decisions / flags for the human — unchanged from this morning, now more urgent:**
+1. **Batch-1 outreach send is still the sole blocker on the active GOAL.md goal**
+   (escalation-exhausted since 2026-09-18). The goal's target date (2026-09-28) is now
+   **tomorrow**, with zero send activity in the 17 days since the task was created. This is the
+   last check-in before the target — absent a founder decision landing before tomorrow's run
+   (reassign the send, have Samyak send it remotely, or explicitly push the target date),
+   tomorrow's run should report this goal as **stalled/missed**, not log a thirteenth
+   confirmation-only check.
+2. **BDE assignment process** (`86d3t4bg7`) and the **9 Borderline leads** — both
+   escalation-exhausted, both assigned to Samyak, who remains mid-international-travel. No
+   proposed resolution has landed for either.
+3. **BDE hiring parent task** (`86d3rgzah`) — one day short of its first escalation threshold as
+   of this morning; due for its first nudge tomorrow if still unchanged.
+4. **Visa case** (`86d3pw08w`) — not a founder-decision item yet, ~56h quiet since Babita's
+   reply, still within the watch window.

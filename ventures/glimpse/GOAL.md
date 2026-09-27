@@ -114,6 +114,12 @@ or clearly stalled, instead of re-deriving priority from scratch each run.
       activity across the task's entire 16-day life — eleventh consecutive confirmation-only
       check. Absent a founder decision landing today, tomorrow's run should report this goal as
       missed rather than log a twelfth confirmation.
+      **Update 2026-09-27 (second pass, ~evening):** re-confirmed directly — still "to do",
+      `date_updated` unchanged. Target date (2026-09-28) now **tomorrow**, twelfth consecutive
+      confirmation-only check on the identical blocker. No new information since this morning.
+      This is the last scheduled check-in before the target date — absent a founder decision
+      before tomorrow's run, it should report this goal as stalled/missed rather than log a
+      thirteenth confirmation.
 - [ ] First reply received (target 2026-09-28; day-14 non-response → mark stale per Stage 2).
 - [x] Side task: re-qualify ACS Consultancy Services against the ICP checklist — done
       2026-09-10, **DISQUALIFIED and dropped from batch-1** (procurement/RFP-driven growth
