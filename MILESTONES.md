@@ -42,6 +42,15 @@
       No work was lost, but this is now two distinct failure mechanisms hitting the same
       unverified-push gap — the end-of-run push verification is no longer optional hardening,
       it's the recurring root cause.
+      **Recurrence 2026-09-27 (worst instance yet):** the 2026-09-27 morning run found local
+      `main` detached **3 commits** ahead of `origin/main` — the 2026-09-25 evening, 2026-09-26
+      morning, and 2026-09-26 evening runs had all completed and committed, but none of the
+      three ever reached `origin/main`. Confirmed a clean fast-forward (no divergence) and
+      recovered by resetting `main` to the detached HEAD and pushing; no work was lost. This is
+      the third confirmed occurrence of "run finishes without confirming its work reached
+      `origin/main`" (2026-08-27, 2026-09-24, now 2026-09-27), and the longest stranding yet
+      (3 runs' worth vs. 1 previously). The "verify push or fail loudly" fix recommended on both
+      prior occurrences is still not built — this is no longer a recommendation, it's overdue.
 - [x] First dogfood cycle produces a status report a human would actually find useful (the
       Venture Console artifact, shipped 2026-08-10, used same-day to act on 3 real decisions)
 

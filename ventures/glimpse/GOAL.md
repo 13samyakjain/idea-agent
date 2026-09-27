@@ -108,6 +108,12 @@ or clearly stalled, instead of re-deriving priority from scratch each run.
       **Update 2026-09-26 (second pass, ~11h later):** re-confirmed directly — still "to do",
       `date_updated` unchanged. Target date now **2 days away**, tenth consecutive
       confirmation-only check on the identical blocker. No new information since this morning.
+      **Update 2026-09-27:** still zero movement — `date_updated` frozen at the 2026-09-18
+      3rd/final escalation (03:34 UTC), now 9 days ago. Task ~15 days past its own due date,
+      send-milestone ~14 days past. Target date (2026-09-28) is now **tomorrow** with zero send
+      activity across the task's entire 16-day life — eleventh consecutive confirmation-only
+      check. Absent a founder decision landing today, tomorrow's run should report this goal as
+      missed rather than log a twelfth confirmation.
 - [ ] First reply received (target 2026-09-28; day-14 non-response → mark stale per Stage 2).
 - [x] Side task: re-qualify ACS Consultancy Services against the ICP checklist — done
       2026-09-10, **DISQUALIFIED and dropped from batch-1** (procurement/RFP-driven growth

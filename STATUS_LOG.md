@@ -540,3 +540,30 @@ the next day's run noticing.
 documenting this recurrence.
 
 **Dispatched:** none — this was a direct fix, not agent-doable work.
+
+## 2026-09-27 — Third recurrence of the unpushed-`main` bug, worst instance yet (3 runs stranded)
+
+**What happened:** at the start of this run, local `main` was detached from `origin/main`,
+**3 commits ahead** (`fdbfd13` vs. `5104afd`) — the 2026-09-25 evening, 2026-09-26 morning, and
+2026-09-26 evening Glimpse runs had each committed successfully but none reached
+`origin/main`. Same failure family as 2026-08-27 and 2026-09-24 (see Phase 0 above), but this is
+the longest stranding observed so far: three consecutive runs' work sitting unpushed instead of
+one.
+
+**Fix applied this run:** verified `origin/main` was a strict ancestor of the detached HEAD
+(`git merge-base --is-ancestor origin/main fdbfd13` → clean fast-forward, no divergence), reset
+local `main` to the detached commit, and pushed. Verified via fresh `git fetch` that
+`origin/main` now matches. No work was lost.
+
+**Still open:** this is the third confirmed occurrence of the same root cause (run completes and
+commits locally but the push/merge-to-main step doesn't reliably happen or isn't verified before
+the run ends). The "verify push or fail loudly before exiting" fix recommended after both prior
+occurrences (2026-08-27, 2026-09-24) still isn't built. Recommend treating this as the next
+concrete build item for the automation itself, not another deferral — a simple end-of-run check
+(`git rev-parse HEAD` vs `git rev-parse origin/main`, retry the push or surface a loud failure on
+mismatch) would have caught all three prior incidents before they required manual recovery.
+
+**Milestone deltas:** MILESTONES.md Phase 0 push-reliability item gets a new correction entry
+documenting this third recurrence.
+
+**Dispatched:** none — this was a direct fix, not agent-doable work.
