@@ -12,11 +12,11 @@
 
 | Item | Handle | Owner | Last moved | Last escalated | Notes |
 |---|---|---|---|---|---|
-| Batch-1 outreach sent (now 4 leads) | ClickUp `14ykddrwyqf` / GHL pipeline `volxN7h175GHZDiTKgEk` | Kanchan | 2026-09-10 (task created) | 2026-09-18 (3/3, final) | re-read directly this pass (2nd read today): still "to do", `date_updated` unchanged since the 3rd/final escalation (2026-09-18 03:34 UTC). Already escalation-exhausted — no new comment posted. GOAL.md target (2026-09-28) is now **tomorrow**, zero send activity across the task's 17-day life — see report |
-| BDE hiring — assignment process | ClickUp `86d3t4bg7` | Samyak | 2026-08-22 | 2026-09-16 (3/3, final) | not re-pulled this pass (already confirmed escalation-exhausted this morning; conserving ClickUp reads) — carried forward as **escalation exhausted**, founder-decision item (see report) |
-| BDE hiring — parent task (corrected: 1 parent + 2 subtasks, not 3 duplicates) | ClickUp `86d3rgzah` (+ subtasks `86d3rgze3`, `86d3rgze6`) | Samyak | 2026-09-21 (calendar signal, confirmed this morning) | 2026-09-13 | not re-pulled this pass (already confirmed this morning at 6 days idle, one day short of the 7-day threshold; same calendar day, no new signal expected) — will be due for its first escalation tomorrow if still unchanged |
-| BDE daily check-in cadence | ClickUp `86d3ucd9p` (+ related `86d3zvquy`) | Kanchan | 2026-09-16 (calendar signal, not ClickUp) | 2026-09-21 (3/3, final) | not re-pulled this pass (already confirmed escalation-exhausted 2026-09-25; no signal suggests further movement) — carried forward as founder-decision item alongside the assignment process and Borderline leads (see report) |
-| Visa case outcome recorded | ClickUp `86d3pw08w` | Babita | 2026-09-25 (Babita replied) | 2026-09-25 | re-read task directly this pass (2nd read today): `date_updated` still unchanged since Babita's 2026-09-25 05:11 UTC reply — no new comment, no outcome recorded yet. Now ~56h since her reply — still within the 72h quiet window, not yet due for a fresh nudge |
+| Batch-1 outreach sent (now 4 leads) | ClickUp `14ykddrwyqf` / GHL pipeline `volxN7h175GHZDiTKgEk` | Kanchan | 2026-09-10 (task created) | 2026-09-18 (3/3, final) | re-read directly this pass: still "to do", `date_updated` unchanged since the 3rd/final escalation (2026-09-18 03:34 UTC) — 18 days idle. **GOAL.md target date (2026-09-28) is TODAY** — success criteria unmet, escalation-exhausted, no founder decision landed. Goal is now stalled/missed, not just at-risk — see report |
+| BDE hiring — assignment process | ClickUp `86d3t4bg7` | Samyak | 2026-08-22 | 2026-09-16 (3/3, final) | not re-pulled this pass (already confirmed escalation-exhausted; conserving ClickUp reads) — carried forward as **escalation exhausted**, founder-decision item (see report) |
+| BDE hiring — parent task (corrected: 1 parent + 2 subtasks, not 3 duplicates) | ClickUp `86d3rgzah` (+ subtasks `86d3rgze3`, `86d3rgze6`) | Samyak | 2026-09-21 (calendar signal) | **2026-09-21 (3/3, final)** — correction: prior table entry ("last escalated 2026-09-13") was stale/wrong; a direct read of the task's comments this pass found the 3rd/final escalation was actually posted 2026-09-21 (comment text confirms "3/3, final — prior on 2026-09-10 and 2026-09-13"), not still owed a first escalation as the last entry assumed | re-read directly this pass: `date_updated` still 2026-09-21 06:58 UTC, no new comment since the 3rd/final escalation, 7 days idle now. Already **escalation-exhausted** — no new comment posted this run (would have been a wrong 4th nudge had the stale table entry been trusted). Founder-decision item (see report) |
+| BDE daily check-in cadence | ClickUp `86d3ucd9p` (+ related `86d3zvquy`) | Kanchan | 2026-09-16 (calendar signal, not ClickUp) | 2026-09-21 (3/3, final) | not re-pulled this pass (already confirmed escalation-exhausted; no signal suggests further movement) — carried forward as founder-decision item (see report) |
+| Visa case outcome recorded | ClickUp `86d3pw08w` | Babita | 2026-09-25 (Babita replied) | 2026-09-25 | re-read task directly this pass: `date_updated` still unchanged since Babita's 2026-09-25 05:11 UTC reply — no new comment, no outcome recorded yet. ~70h since her reply — 72h quiet window reopens ~05:11 UTC today, just after this run; not yet due for a fresh nudge |
 | 9 Borderline leads — judgment calls | ClickUp `Lead Sourcing Queue` (9 tasks, priority urgent) | Samyak | 2026-08-21 | 2026-09-16 (3/3, final) | not re-pulled this pass (no signal suggests movement; conserving ClickUp reads) — carried forward as **escalation exhausted**, founder-decision item (see report) |
 
 ## 2026-08-18 — Onboarded as a tracked venture
@@ -2910,3 +2910,62 @@ confirmation-only update). Tracked-items table (batch-1 and visa-case rows re-co
    of this morning; due for its first nudge tomorrow if still unchanged.
 4. **Visa case** (`86d3pw08w`) — not a founder-decision item yet, ~56h quiet since Babita's
    reply, still within the watch window.
+
+## 2026-09-28 — GOAL.md target date reached: Sales Engine batch-1 outreach goal is stalled/missed
+
+**Repo housekeeping first:** local `main` was found in detached-HEAD state at run start (same
+symptom class as the 2026-08-27/09-24/09-27 unpushed-`main` recurrences in root MILESTONES.md),
+but this time `origin/main` was already up to date with it (`git fetch` showed a clean
+fast-forward to the detached commit already sitting on the remote) — the prior run's push had
+actually succeeded; only the local branch pointer was stale. Reset local `main` to track
+`origin/main` directly (`git checkout -B main origin/main`); no unpushed work, no recovery push
+needed. Not logging this to root STATUS_LOG.md as a new incident since nothing was actually lost
+or required a push-side fix this time — noting here for the record in case the detached-HEAD
+pattern itself (as opposed to the unpushed-commit consequence) recurs.
+
+**Human activity:** ClickUp — task `14ykddrwyqf` (batch-1 send) re-read directly: still "to do,"
+zero opportunities/tags/sends, `date_updated` frozen at the 2026-09-18 03:34 UTC 3rd/final
+escalation (10 days quiet on that thread, 18 days since the task was created). Task `86d3pw08w`
+(visa case) re-read directly: unchanged since Babita's 2026-09-25 05:11 UTC reply — still within
+its 72h quiet window (reopens ~05:11 UTC today, essentially concurrent with this run). Task
+`86d3rgzah` (BDE hiring parent) re-read directly: unchanged since 2026-09-21 — 7 days idle.
+Calendar: nothing Glimpse-specific in the last 24h beyond the known recurring items; Samyak has
+an unrelated external call today ("Modern Inbound — Cold Email Discovery," a vendor discovery
+call about outbound email systems) — noted only as a mild irony given today's finding, not acted
+on.
+
+**Correction found this run:** the `86d3rgzah` row in this file's own Tracked-items table said
+"last escalated 2026-09-13," implying a first escalation was still owed. A direct read of the
+task's comments shows the 3rd/final escalation was actually posted 2026-09-21 (its text reads
+"3/3, final — prior on 2026-09-10 and 2026-09-13"). The table was stale/wrong by one entry. Fixed
+in place this run — this avoided posting an incorrect 4th escalation comment on an
+already-exhausted item. No other tracked-item dates were found to be wrong.
+
+**Agent activity:** none new since the last pass — the only outstanding action on the active
+goal is a human send, which is not agent-doable (drafts have existed since 2026-09-10).
+
+**Milestone deltas:** GOAL.md's active goal (validate Sales Engine offer via batch-1 outreach)
+has reached its target date (2026-09-28) with success criteria unmet — marked stalled/missed in
+GOAL.md rather than logging a 14th "still zero movement" confirmation, per this file's own
+guardrail. MILESTONES.md M3 and the BDE-hiring sub-item both got a short pointer to this entry.
+Not retiring the goal (it isn't met, just overdue) — leaving it active pending a founder call.
+
+**Dispatched:** none — this run's finding is a pure human-execution gap (nobody has sent 4
+ready-to-go emails in 18 days), not something an agent can substitute for. Re-dispatching a
+drafting agent would be busywork; the blocker has never been "no draft."
+
+**Escalated:** none this run — all three items due for escalation checks (`14ykddrwyqf`,
+`86d3t4bg7`, `86d3rgzah`, `86d3ucd9p`, the 9 Borderline leads) are already escalation-exhausted
+(3/3) with no new movement, so a fresh comment would be noise per the skill's own rule. The visa
+case remains inside its quiet window.
+
+**Founder decision needed (the one thing this run most needs from the founder):** the Sales
+Engine goal's entire remaining blocker, for 18 days, has been "nobody sent 4 emails." Three
+ClickUp escalations to Kanchan produced no movement and no reply. Concrete options, none
+executed unilaterally: (a) Samyak sends the 4 ready drafts himself — fastest, ~15 minutes; (b)
+explicitly reassign the send away from Kanchan; (c) push the target date again with a different
+accountability mechanism, since ClickUp comments alone haven't worked. Alongside this, three
+other items remain escalation-exhausted with no founder resolution yet: BDE hiring assignment
+process (`86d3t4bg7`), BDE hiring parent task (`86d3rgzah`), BDE daily check-in cadence
+(`86d3ucd9p`), and the 9 Borderline leads awaiting Samyak's judgment calls — none of these are
+new, all are carried forward from prior runs with no change.

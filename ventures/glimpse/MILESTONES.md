@@ -177,6 +177,10 @@
       Kajal from the prior week. None of the four interview outcomes have been written back to
       the ClickUp task (`86d3rgze6` still frozen at 2026-08-06) — pipeline is visibly active but
       its record isn't. See `ventures/glimpse/STATUS_LOG.md` 2026-09-21.
+      **Update 2026-09-28:** parent task `86d3rgzah` confirmed still unchanged since 2026-09-21
+      (7 days idle), already at its 3rd/final escalation (posted 2026-09-21 — a stale STATUS_LOG
+      table entry had this wrong as "last escalated 2026-09-13," corrected this pass). No new
+      comment posted; carried to the founder-decision list. See STATUS_LOG.md 2026-09-28.
 - [ ] Supporting: set Sales Engine pricing (deliberately last, per ClickUp task title)
 - [ ] Supporting: set up basic business plumbing (contract + invoicing)
 - [ ] Supporting: finalize delivery capacity plan
