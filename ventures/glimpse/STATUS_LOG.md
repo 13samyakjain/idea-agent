@@ -3185,3 +3185,44 @@ though its hiring pipeline is visibly still running underneath the frozen record
 candidate interviewed today — BDE daily check-in cadence (`86d3ucd9p`), and the 9 Borderline
 leads awaiting Samyak's judgment calls. Visa case remains active/moving as of 2026-09-25, not yet
 due for a fresh nudge.
+
+## 2026-09-30 (second pass, ~evening) — confirmed unchanged, no new signal
+
+**Run context:** Scheduled check-in. Local `main` was again found detached from `origin/main`
+at run start — `git fetch origin main` confirmed `origin/main` (`c011a0b`, this morning's push)
+matched the detached HEAD exactly, so nothing was lost. Recovered with `git checkout main &&
+git merge --ff-only origin/main` (local `main` was stale, 13 commits behind — not itself
+detached-with-unpushed-work this time, just an out-of-date branch pointer). ClickUp lock
+checked clean, written before 2 sequential direct task reads, released after.
+
+**Human activity checked:** TaskList empty (no background agent activity since this morning).
+Google Calendar for today re-pulled — the Eshu BDE-intern interview already logged this morning
+is the only Glimpse-relevant event; nothing new since. No signal on the batch-1 send or the
+visa case.
+
+**Tracked-items re-check (2 direct ClickUp reads, the two live/near-threshold items):**
+- **14ykddrwyqf** (batch-1 send) — `date_updated` confirmed unchanged at 2026-09-18 03:34:26
+  UTC (the 3rd/final escalation), still "to do." Identical to this morning's read — no new
+  information.
+- **86d3pw08w** (visa case) — `date_updated` confirmed unchanged at 2026-09-25 05:11:46 UTC
+  (Babita's reply), no new comment. Still below the 7-day idle threshold for a fresh nudge.
+- BDE assignment process (`86d3t4bg7`), BDE hiring parent (`86d3rgzah`), BDE daily check-in
+  (`86d3ucd9p`), and the 9 Borderline leads were not re-pulled — already confirmed
+  escalation-exhausted this morning with no signal suggesting fresh movement; re-reading them
+  again hours later would spend ClickUp quota for no new information.
+
+**Agent activity:** none dispatched — same reasoning as this morning: every open item is either
+escalation-exhausted (needs a founder decision, not agent work) or within its idle/quiet window.
+
+**Milestone deltas:** none. GOAL.md's active goal remains stalled/missed, unchanged from this
+morning (still 2 days past its 2026-09-28 target).
+
+**Dispatched:** none. **Escalated:** none — no item crossed a new threshold since this morning.
+
+**Doc updates this run:** none beyond this log entry — this morning's pass already captured
+today's state accurately in GOAL.md and the Tracked-items table; nothing here supersedes it.
+
+**Open decisions for the human:** unchanged from this morning — see that entry. Batch-1 send
+is still the sole blocker on the active goal, escalation-exhausted since 2026-09-18, awaiting
+one of: Samyak sends the 4 drafts himself, reassign the send, or push the target date with a
+different accountability mechanism.
