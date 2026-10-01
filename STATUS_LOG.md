@@ -567,3 +567,30 @@ mismatch) would have caught all three prior incidents before they required manua
 documenting this third recurrence.
 
 **Dispatched:** none — this was a direct fix, not agent-doable work.
+
+## 2026-10-01 (second pass) — Fourth recurrence of the unpushed-`main` bug
+
+**What happened:** at the start of this run, local `main` was detached from `origin/main`
+again, one commit ahead (`604f30d`, this morning's Glimpse check-in commit, vs. `cff3949` on
+both local `main` and `origin/main`). Same failure family as 2026-08-27, 2026-09-24, and
+2026-09-27 above — the morning run committed successfully but the commit never reached
+`main`/`origin/main`.
+
+**Fix applied this run:** verified `main` was a strict ancestor of the detached HEAD (clean
+fast-forward, no divergence), `git checkout main && git merge --ff-only 604f30d && git push
+origin main`. Verified via fresh `git fetch` that `origin/main` now matches. No work was lost —
+this was a one-run stranding, not a multi-run one like 2026-09-27's.
+
+**Still open:** this is the fourth confirmed occurrence of the same root cause. The "verify push
+or fail loudly before exiting" fix recommended after all three prior occurrences
+(2026-08-27, 2026-09-24, 2026-09-27) still isn't built, and the failure keeps recurring at
+roughly the same rate regardless. Not attempting to build it unilaterally this run (it's a
+change to the automation/scheduling layer, not Glimpse venture work, and deserves a deliberate
+pass rather than a rushed fix bolted onto a check-in run) — flagging again as the actual next
+tool-level build item, now with four independent data points showing manual recovery alone
+isn't closing the gap.
+
+**Milestone deltas:** MILESTONES.md Phase 0 push-reliability item gets a new correction entry
+documenting this fourth recurrence.
+
+**Dispatched:** none — this was a direct fix, not agent-doable work.
