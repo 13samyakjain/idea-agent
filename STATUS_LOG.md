@@ -625,3 +625,12 @@ founder or a build pass looking at the trigger infrastructure directly.
 **Milestone deltas:** MILESTONES.md Phase 0 push-reliability item marked fixed 2026-10-02.
 
 **Dispatched:** none — this was a direct skill edit, not agent-doable work.
+
+**Addendum, same run — the new check caught its first real case immediately:** committing this
+very fix (and the Glimpse check-in alongside it) landed in detached HEAD, with local `main`
+also 2 commits stale behind `origin/main` — the identical failure pattern just documented
+above. Ran the new step 5 exactly as written: confirmed `origin/main` was a clean ancestor,
+fast-forwarded `main` to the new commit, pushed, re-fetched, and confirmed `HEAD` ==
+`origin/main`. No work was lost and no silent exit happened. One clean catch isn't proof the
+underlying intermittent cause is fixed, but it is the first time this failure was caught and
+corrected *within the same run* rather than by a later one.
