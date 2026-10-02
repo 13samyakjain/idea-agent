@@ -56,6 +56,13 @@
       `604f30d`, never reached `main`/`origin/main`). Clean fast-forward, recovered and pushed;
       no work lost — see root STATUS_LOG.md 2026-10-01 (second pass). Fourth independent data
       point for the same unbuilt "verify push or fail loudly" fix; still not built.
+      **Fixed 2026-10-02:** the "verify push or fail loudly" step is now built into
+      `venture-orchestrator`'s SKILL.md as an explicit step 5 — every run must compare local
+      `HEAD` to `origin/main` after pushing, attempt one fast-forward recovery on a clean
+      ancestor mismatch, and surface a loud failure in the human-facing report (not just a log
+      line) if it still doesn't match. This doesn't retroactively prove future runs won't hit a
+      new failure mode, but it closes the specific "run exits without checking" gap all four
+      recurrences shared — see root STATUS_LOG.md 2026-10-02.
 - [x] First dogfood cycle produces a status report a human would actually find useful (the
       Venture Console artifact, shipped 2026-08-10, used same-day to act on 3 real decisions)
 

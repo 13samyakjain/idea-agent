@@ -594,3 +594,34 @@ isn't closing the gap.
 documenting this fourth recurrence.
 
 **Dispatched:** none — this was a direct fix, not agent-doable work.
+
+## 2026-10-02 — Built the "verify push or fail loudly" fix into the skill itself
+
+**What happened:** four consecutive recurrences (2026-08-27, 2026-09-24, 2026-09-27, 2026-10-01)
+of the same gap — a run commits successfully but ends without confirming the commit actually
+reached `origin/main` — each one deferred as "deserves a deliberate pass, not a rushed fix."
+This run found `main`/`origin/main` already in sync at start (no recovery needed), which made
+room to do that deliberate pass instead of another manual recovery.
+
+**Fix applied:** added an explicit step 5 to `.claude/skills/venture-orchestrator/SKILL.md`'s
+run sequence: after committing, push, fetch, and compare local `HEAD` to `origin/main`; on a
+clean-ancestor mismatch, fast-forward and retry once; on real divergence or a mismatch that
+survives the retry, the run must say so explicitly in its human-facing report, not bury it in a
+STATUS_LOG line. Applies whether or not a venture's docs changed this run, so a future scheduled
+run can't silently exit mid-stranding the way all four prior recurrences did.
+
+**Why now, not another deferral:** this is documentation/process, not a change to the
+scheduling/trigger layer itself — within reach of a normal run rather than requiring a separate
+infra pass. It directly targets the one mechanic all four recurrences shared (no end-of-run
+verification), rather than attempting to diagnose why the push step itself fails intermittently,
+which remains unknown.
+
+**Still open:** this doesn't explain *why* the push/merge sometimes doesn't happen — only
+ensures it's caught and surfaced loudly when it doesn't, every time, starting now. If it keeps
+recurring even with this check in place, that's a stronger signal the root cause is in the
+scheduling/execution layer rather than this skill's own git steps, and would justify the
+founder or a build pass looking at the trigger infrastructure directly.
+
+**Milestone deltas:** MILESTONES.md Phase 0 push-reliability item marked fixed 2026-10-02.
+
+**Dispatched:** none — this was a direct skill edit, not agent-doable work.

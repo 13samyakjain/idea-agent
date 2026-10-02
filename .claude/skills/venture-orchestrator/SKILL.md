@@ -124,6 +124,26 @@ get the right agents moving on it.
    founder decision before next run. This is the part a human actually reads — keep it tight, no
    padding.
 
+5. **Verify the push before ending the run — do not just commit.** This is the single most
+   recurring failure in this automation's history (root STATUS_LOG.md: 2026-08-27, 2026-09-24,
+   2026-09-27, 2026-10-01 — four confirmed occurrences of a run's commit never reaching
+   `origin/main`, caught only by a *later* run's defensive check, sometimes stranding multiple
+   runs' work). Whoever runs this skill (scheduled or manual) must, as the actual last step:
+   - After committing, run `git push -u origin main` (or the current branch), then
+     `git fetch origin main` and compare `git rev-parse HEAD` to `git rev-parse origin/main`.
+   - If they match, done — no further action.
+   - If they don't match (detached HEAD, local `main` not updated, or push silently failed):
+     confirm `origin/main` is a strict ancestor of the commit to push
+     (`git merge-base --is-ancestor origin/main <commit>`) — if yes, fast-forward `main` to it
+     and push again, then re-verify. If the fast-forward isn't clean (real divergence), stop and
+     surface it in the report rather than force-pushing.
+   - **Never end the run silently on a mismatch.** If after one retry `HEAD` still doesn't match
+     `origin/main`, say so explicitly in the human-facing report (not just a STATUS_LOG line) —
+     this is the "fail loudly" half of the fix the prior four recurrences kept deferring.
+   - This step applies whether or not any venture doc changed — a run with "nothing to commit"
+     still passes trivially; a run that *did* commit must not exit before this check confirms
+     the push landed.
+
 ## ClickUp access rule (added 2026-08-22 after two rate-limit incidents)
 
 ClickUp's rate limit trips on **concurrent access, not call volume** — confirmed twice
