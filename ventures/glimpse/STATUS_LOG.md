@@ -16,7 +16,7 @@
 | BDE hiring — assignment process | ClickUp `86d3t4bg7` | Samyak | 2026-08-22 | 2026-09-16 (3/3, final) | not re-pulled this pass (already confirmed escalation-exhausted; conserving ClickUp reads) — carried forward as **escalation exhausted**, founder-decision item (see report) |
 | BDE hiring — parent task (corrected: 1 parent + 2 subtasks, not 3 duplicates) | ClickUp `86d3rgzah` (+ subtasks `86d3rgze3`, `86d3rgze6`) | Samyak | 2026-09-30 (calendar signal — 5th candidate interview) | 2026-09-21 (3/3, final) | not re-pulled this pass (already confirmed escalation-exhausted; no signal this run suggests fresh movement) — carried forward as founder-decision item (see report) |
 | BDE daily check-in cadence | ClickUp `86d3ucd9p` (+ related `86d3zvquy`) | Kanchan | 2026-09-16 (calendar signal, not ClickUp) | 2026-09-21 (3/3, final) | not re-pulled this pass (already confirmed escalation-exhausted; no signal suggests further movement) — carried forward as founder-decision item (see report) |
-| Visa case outcome recorded | ClickUp `86d3pw08w` | Babita | 2026-09-25 (Babita replied) | 2026-10-02 (nudge 1/3 of fresh cycle) | re-read directly this pass (second check today): `date_updated` still 2026-10-02 03:44:08 UTC, matching the nudge — no reply from Babita yet. Within the 72h quiet window (reopens ~2026-10-05 03:44 UTC); not re-escalating |
+| Visa case outcome recorded | ClickUp `86d3pw08w` | Babita | 2026-09-25 (Babita replied) | 2026-10-05 (nudge 2/3 of fresh cycle) | re-read directly this pass: `date_updated` still frozen at the 2026-10-02 03:44:08 UTC nudge — no reply from Babita in the 10 days since her 2026-09-25 update. 72h quiet window had just reopened; posted nudge 2/3 (same three asks: Deborah's 2026-09-25 appointment outcome, Peter's appointment date, child's visa option) |
 | 9 Borderline leads — judgment calls | ClickUp `Lead Sourcing Queue` (9 tasks, priority urgent) | Samyak | 2026-08-21 | 2026-09-16 (3/3, final) | not re-pulled this pass (no signal suggests movement; conserving ClickUp reads) — carried forward as **escalation exhausted**, founder-decision item (see report) |
 
 ## 2026-08-18 — Onboarded as a tracked venture
@@ -3578,3 +3578,54 @@ send, or push the target date with a different accountability mechanism). BDE hi
 process, BDE hiring parent task, BDE daily check-in cadence, and the 9 Borderline leads remain
 escalation-exhausted founder-decision items. No push notification sent this pass — nothing
 changed from what the morning run already surfaced.
+
+## 2026-10-05 — Daily check-in: visa case re-escalated (2/3), goal now 7 days past target
+
+**Human activity:** none new in the last 24h relevant to any tracked item — ClickUp mapping
+unchanged; Google Calendar (last/next 24h, full-text and time-range checks) shows no
+Glimpse-relevant event beyond routine recurring items already known (book audits, a personal
+weekly block). No reply from Babita on the visa case since her 2026-09-25 update.
+
+**Agent activity:** none dispatched this run — nothing new surfaced that's agent-doable; every
+open item is a pure human-execution blocker already in the founder-decision queue.
+
+**Tracked-items re-check (sequential ClickUp reads, lock held for the duration):**
+- **86d3pw08w** (visa case) — re-read task + all 10 comments directly: `date_updated` still
+  frozen at the 2026-10-02 03:44:08 UTC nudge, no reply from Babita in the 10 days since her
+  last real update (2026-09-25, "Appointment rescheduled for today for Deborah"). The 72h quiet
+  window from that nudge had just reopened (~2026-10-05 03:44 UTC) — posted **escalation 2/3**
+  of this fresh cycle, same three asks (Deborah's appointment outcome, Peter's appointment date,
+  the child's visa option). One more unanswered cycle (~2026-10-08) would put this at
+  escalation-exhausted again.
+- **14ykddrwyqf** (batch-1 send) — re-read directly: still "to do", `date_updated` unchanged
+  since the 2026-09-18 03:34:26 UTC 3rd/final escalation (17 days quiet now). Already
+  escalation-exhausted; no new comment posted — confirmation only.
+- BDE assignment process (`86d3t4bg7`), BDE hiring parent (`86d3rgzah`), BDE daily check-in
+  (`86d3ucd9p`), and the 9 Borderline leads were not re-pulled this run (already confirmed
+  escalation-exhausted with no signal suggesting fresh movement; conserving ClickUp reads).
+
+**Milestone deltas:** none. GOAL.md's active goal (Validate Sales Engine offer / M3) is now
+**7 days past its 2026-09-28 target date** with success criteria (a reply or booked call from
+one of the 4 batch-1 leads) still unmet. The sole blocker — nobody has sent the 4 outreach
+emails — is unchanged since 2026-09-10; drafts have been ready the whole time.
+
+**Dispatched:** none. **Escalated:** the visa case (`86d3pw08w`), nudge 2/3 — see above. No
+other tracked item crossed a new threshold this run.
+
+**Doc updates this run:** Tracked-items table (visa case row: `last-escalated` → 2026-10-05,
+notes reworded). GOAL.md progress checklist (new dated confirmation line, day-count updated to
+7 days past target).
+
+**Open decisions for the human — unchanged in substance from prior runs, now compounding:**
+1. **Batch-1 outreach send** (escalation-exhausted since 2026-09-18, goal 7 days past target) —
+   Samyak sends the 4 ready drafts himself, reassign the send to someone other than Kanchan, or
+   explicitly push the target date with a different accountability mechanism (a calendar block,
+   not another ClickUp comment).
+2. **BDE hiring** (assignment process `86d3t4bg7` + parent task `86d3rgzah`, both
+   escalation-exhausted) — needs a concrete unblock, not another nudge.
+3. **BDE daily check-in cadence** (`86d3ucd9p`, escalation-exhausted).
+4. **9 Borderline leads** (`Lead Sourcing Queue`, escalation-exhausted) — need Samyak's
+   qualify/disqualify judgment calls.
+No push notification sent this run for these specific items — they're the same open
+founder-decision queue flagged on every run since 2026-09-18/21; nothing qualitatively new
+happened today beyond the visa case's second nudge.
