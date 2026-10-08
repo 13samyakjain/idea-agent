@@ -181,6 +181,13 @@
       (7 days idle), already at its 3rd/final escalation (posted 2026-09-21 — a stale STATUS_LOG
       table entry had this wrong as "last escalated 2026-09-13," corrected this pass). No new
       comment posted; carried to the founder-decision list. See STATUS_LOG.md 2026-09-28.
+      **Update 2026-10-08:** a 6th candidate, Chanchal Kamble, has a Round 1 interview today
+      (found via calendar; resume attached, PE-team-organized) — on top of Harsh, Apurva, Kajal,
+      Priyanshi, and Eshu from prior weeks. Still none of the six interview outcomes written back
+      to the ClickUp task (`86d3rgze6`/`86d3rgzah` not re-pulled this pass, conserving reads) —
+      pipeline keeps visibly running on calendar signal alone while its ClickUp record stays
+      frozen and escalation-exhausted. Not re-escalating; carried to founder-decision list. See
+      STATUS_LOG.md 2026-10-08.
 - [ ] Supporting: set Sales Engine pricing (deliberately last, per ClickUp task title)
 - [ ] Supporting: set up basic business plumbing (contract + invoicing)
 - [ ] Supporting: finalize delivery capacity plan
