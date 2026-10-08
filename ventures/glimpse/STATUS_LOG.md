@@ -16,7 +16,7 @@
 | BDE hiring — assignment process | ClickUp `86d3t4bg7` | Samyak | 2026-08-22 | 2026-09-16 (3/3, final) | not re-pulled this pass (already confirmed escalation-exhausted; conserving ClickUp reads) — carried forward as **escalation exhausted**, founder-decision item (see report) |
 | BDE hiring — parent task (corrected: 1 parent + 2 subtasks, not 3 duplicates) | ClickUp `86d3rgzah` (+ subtasks `86d3rgze3`, `86d3rgze6`) | Samyak | 2026-10-08 (calendar signal — 6th candidate interview, Chanchal) | 2026-09-21 (3/3, final) | not re-pulled this pass (already confirmed escalation-exhausted; only a calendar signal this run, no ClickUp record change implied) — carried forward as founder-decision item (see report) |
 | BDE daily check-in cadence | ClickUp `86d3ucd9p` (+ related `86d3zvquy`) | Kanchan | 2026-09-16 (calendar signal, not ClickUp) | 2026-09-21 (3/3, final) | not re-pulled this pass (already confirmed escalation-exhausted; no signal suggests further movement) — carried forward as founder-decision item (see report) |
-| Visa case outcome recorded | ClickUp `86d3pw08w` | Babita | 2026-09-25 (Babita replied) | 2026-10-05 (nudge 2/3 of fresh cycle) | re-confirmed 2026-10-08: task + all 11 comments re-read directly — `date_updated` unchanged since the 2026-10-05 03:44:17 UTC nudge, no reply from Babita. 72h quiet window technically reopens 2026-10-08 03:44:17 UTC, ~19 seconds after this run's check — treated as still within the window this pass, not re-escalating; due for the 3rd/final escalation next check if still unmoved |
+| Visa case outcome recorded | ClickUp `86d3pw08w` | Babita | 2026-09-25 (Babita replied) | 2026-10-08 (3/3, final) | re-confirmed 2026-10-08 evening: `date_updated` still frozen at the 2026-10-05 03:44:17 UTC nudge, no reply from Babita (13 days since her last comment). 72h quiet window had reopened ~11h before this check — posted the **3rd/final escalation** this pass. Escalation-exhausted; next unmoved check goes to founder-decision list |
 | 9 Borderline leads — judgment calls | ClickUp `Lead Sourcing Queue` (9 tasks, priority urgent) | Samyak | 2026-08-21 | 2026-09-16 (3/3, final) | not re-pulled this pass (no signal suggests movement; conserving ClickUp reads) — carried forward as **escalation exhausted**, founder-decision item (see report) |
 
 ## 2026-08-18 — Onboarded as a tracked venture
@@ -3920,3 +3920,56 @@ visa case (`86d3pw08w`) is one check-in away from its own 3rd/final escalation i
 hasn't replied by the next run. No push notification sent this pass — this is the same stalled
 state reported on every run since 2026-09-28, not new information requiring the founder's
 immediate attention.
+
+## 2026-10-08 (second pass, ~evening) — visa case hits its 3rd/final escalation; goal still 10 days past target
+
+**Run context:** Scheduled evening check-in. `CLICKUP_LOCK.md` checked clean, written before 2
+sequential direct ClickUp reads, released immediately after.
+
+**Human activity checked:**
+- **Google Calendar (2026-10-07–10-09):** nothing new beyond what the morning pass already
+  logged — the recurring Sundar OOO block, a recurring personal placeholder, and Chanchal
+  Kamble's "Round 1 (BDE)" interview this afternoon (already captured this morning). No other
+  signal.
+- **TaskList:** empty — no background agent activity since the morning pass.
+
+**Tracked-items re-check (2 direct ClickUp reads, strictly serial):**
+- **`86d3pw08w`** (visa case) — re-read directly: `date_updated` still frozen at the 2026-10-05
+  03:44:17 UTC 2/3 nudge, no reply from Babita since her 2026-09-25 comment (13 days now). This
+  morning's run found the 72h quiet window reopening ~19 seconds *after* its check and held off;
+  by this check (~11h later) the window had been open for hours with still no reply. Posted the
+  **3rd and final automated escalation**, tagging Babita directly and asking for the Deborah
+  appointment outcome, Peter's new date, and the child's visa-option status. This item is now
+  **escalation-exhausted**.
+- **`14ykddrwyqf`** (batch-1 outreach send) — re-read directly: still "to do", zero
+  opportunities/tags/sends, `date_updated` unchanged since the 2026-09-18 03:34:26 UTC 3rd/final
+  escalation. No new information; already escalation-exhausted, not re-escalating.
+- BDE assignment process (`86d3t4bg7`), BDE hiring parent (`86d3rgzah`), BDE daily check-in
+  (`86d3ucd9p`), and the 9 Borderline leads were not re-pulled this pass — already confirmed
+  escalation-exhausted, no signal suggests fresh movement, reads kept minimal per this venture's
+  rate-limit history.
+
+**Milestone deltas:** none. GOAL.md's active goal remains stalled, still 10 days past its
+2026-09-28 target — unchanged from the morning entry.
+
+**Dispatched:** none — nothing agent-doable surfaced; every re-checked item is a pure
+human-execution blocker.
+
+**Escalated:** the visa case (`86d3pw08w`) — 3rd/final automated comment posted this pass (see
+above). No other tracked item crossed a new threshold.
+
+**Doc updates this run:** Tracked-items table (visa-case row: `last-escalated` updated to
+2026-10-08, now 3/3 final; notes reworded). GOAL.md progress checklist (one-line confirmation
+sub-entry for the batch-1 blocker; no new day-count, same day as the morning pass).
+
+**Open decisions for the human — now one item larger:** the batch-1 send remains the sole
+blocker on the active goal, escalation-exhausted since 2026-09-18, now **10 days past** its
+2026-09-28 target. Same three proposed resolutions stand (Samyak sends the 4 ready drafts
+himself, reassign the send, or push the target date with a different accountability mechanism).
+BDE hiring assignment process, BDE hiring parent task, BDE daily check-in cadence, and the 9
+Borderline leads remain escalation-exhausted founder-decision items. **New this pass:** the visa
+case (`86d3pw08w`) just hit its own 3rd/final escalation with zero reply from Babita since
+2026-09-25 across both automated nudges (2026-10-05 2/3, now 2026-10-08 3/3) — it joins the
+founder-decision queue. Proposed resolution: a direct ask to Babita outside ClickUp (she hasn't
+responded to any in-app comment since 2026-09-25), or reassigning the follow-up to someone who
+can get her attention, given a real client (Deborah/Peter) is waiting on a recorded outcome.

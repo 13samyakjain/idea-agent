@@ -111,6 +111,12 @@
       was rescheduled to today (2026-09-25). No outcome, no Peter date, no update on the
       child's option yet, but the case is moving again. Next check: does today's rescheduled
       appointment produce a recorded outcome.
+      **Update 2026-10-08 (second pass, ~evening):** gone quiet again since the 2026-09-25 reply
+      — no outcome of today's rescheduled appointment, no Peter date, no child's-visa update was
+      ever recorded. A follow-up nudge (2026-10-05) and a second (2026-10-08, this pass) both
+      went unanswered; this is now the case's **3rd/final automated escalation**, escalation-
+      exhausted. Needs a non-ClickUp nudge to Babita or reassignment — see STATUS_LOG.md
+      2026-10-08 (second pass).
 - [~] Merchandise/PE Kits: procurement cadence, cost baseline, storage/fulfillment visible —
       task-count cadence now in GROWTH.md; cost baseline still not measurable (no financial data
       in ClickUp)
