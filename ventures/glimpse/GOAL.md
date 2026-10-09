@@ -272,6 +272,12 @@ or clearly stalled, instead of re-deriving priority from scratch each run.
       every other tracked item in this venture (BDE assignment process, BDE hiring parent, BDE
       daily check-in, 9 Borderline leads, and now the visa case as of last night) sits at
       escalation-exhausted simultaneously — see STATUS_LOG.md 2026-10-09 for the full picture.
+      **Update 2026-10-09 (second pass, ~evening):** re-confirmed directly — task
+      `14ykddrwyqf` `date_updated` unchanged (still the 2026-09-18 3rd/final escalation), and
+      the visa case comment thread (re-read in full, 12 comments) also unchanged since this
+      morning's confirmation. No new calendar signal, no agent activity. Goal remains stalled,
+      still 11 days past its 2026-09-28 target with no founder decision landed — carrying the
+      morning's status forward unchanged.
 - [ ] First reply received (target 2026-09-28; day-14 non-response → mark stale per Stage 2).
 - [x] Side task: re-qualify ACS Consultancy Services against the ICP checklist — done
       2026-09-10, **DISQUALIFIED and dropped from batch-1** (procurement/RFP-driven growth
