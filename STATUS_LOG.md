@@ -662,4 +662,28 @@ whoever owns that layer if this keeps recurring at this rate.
 **Milestone deltas:** MILESTONES.md Phase 0 push-reliability item gets a new correction entry
 documenting this fifth recurrence.
 
+## 2026-10-14 (second pass, ~evening) — Sixth recurrence, same day as the fifth
+
+**What happened:** at the start of this scheduled evening run, local `main` was 2 commits
+behind `origin/main` (still at `dcb9d15`, "Glimpse daily check-in 2026-10-13") while `origin/main`
+and the session's detached `HEAD` both correctly sat at `f9c87e6` (this morning's check-in,
+which the fifth-recurrence fix had already pushed cleanly). So `origin/main` itself was fine —
+only the local `main` ref hadn't been updated to match. A different variant of the same family:
+this time the remote was never at risk, but the run's own git state still didn't start clean.
+
+**Fix applied this run:** per SKILL.md step 5, committed this run's Glimpse doc updates on top
+of `HEAD` (now at `52b9b15`), confirmed `origin/main` was a strict ancestor via
+`git merge-base --is-ancestor`, fast-forwarded local `main` onto it, pushed, then re-fetched and
+confirmed `git rev-parse HEAD` == `git rev-parse origin/main`. Verified clean. No work was lost.
+
+**Still open:** sixth confirmed instance of the same root-cause family, and the first time it's
+recurred twice in one calendar day. Reinforces the 2026-10-14 (first pass) recommendation: the
+step-5 catch is holding every time, but the intermittent cause — something about how each
+scheduled run's starting git state (detached HEAD vs. local `main`'s position) gets initialized
+— is still unexplained and outside what this skill can diagnose from inside a run. Flagging for
+the founder again, now with added urgency given the same-day repeat.
+
+**Milestone deltas:** MILESTONES.md Phase 0 push-reliability item gets a new correction entry
+documenting this sixth recurrence.
+
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.

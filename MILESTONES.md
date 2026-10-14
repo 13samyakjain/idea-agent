@@ -73,6 +73,15 @@
       of the push/merge sometimes not landing is fixed — it still isn't understood, and the
       recommendation from 2026-10-01/10-02 to look at the scheduling/trigger layer directly
       remains open. See root STATUS_LOG.md 2026-10-14.
+      **Recurrence 2026-10-14 (sixth occurrence, same day as the fifth):** the 2026-10-14 evening
+      run started with local `main` detached 2 commits behind `origin/main` (the same-day morning
+      check-in commit had reached `origin/main` fine, but local `main` itself hadn't advanced) —
+      a third distinct variant of the same underlying gap, now recurring twice in one day. Clean
+      fast-forward, recovered and pushed via the same step-5 procedure; no work lost. Six
+      confirmed occurrences in total; the step-5 catch continues to hold every time, but same-day
+      double recurrence is a stronger signal that the root cause sits in how each run's starting
+      git state is initialized, not something the venture-orchestrator skill can fix from inside
+      a run. See root STATUS_LOG.md 2026-10-14 (second pass).
 - [x] First dogfood cycle produces a status report a human would actually find useful (the
       Venture Console artifact, shipped 2026-08-10, used same-day to act on 3 real decisions)
 
