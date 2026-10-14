@@ -63,6 +63,16 @@
       line) if it still doesn't match. This doesn't retroactively prove future runs won't hit a
       new failure mode, but it closes the specific "run exits without checking" gap all four
       recurrences shared — see root STATUS_LOG.md 2026-10-02.
+      **Recurrence 2026-10-14 (fifth occurrence, caught cleanly by the fix):** this run started
+      in a detached HEAD one commit (`0a46a01`, 2026-10-13 evening's Glimpse check-in) ahead of
+      local `main`/`origin/main` (`dcb9d15`) — the same unpushed-commit pattern as all four prior
+      recurrences. Confirmed a clean fast-forward (no divergence), merged `main` onto `0a46a01`,
+      pushed, and verified `HEAD` == `origin/main` before doing any venture work — exactly the
+      step-5 recovery the 2026-10-02 fix describes. No work was lost. This confirms the fix
+      *works* (the gap is caught every time now) but not that the underlying intermittent cause
+      of the push/merge sometimes not landing is fixed — it still isn't understood, and the
+      recommendation from 2026-10-01/10-02 to look at the scheduling/trigger layer directly
+      remains open. See root STATUS_LOG.md 2026-10-14.
 - [x] First dogfood cycle produces a status report a human would actually find useful (the
       Venture Console artifact, shipped 2026-08-10, used same-day to act on 3 real decisions)
 

@@ -634,3 +634,32 @@ fast-forwarded `main` to the new commit, pushed, re-fetched, and confirmed `HEAD
 `origin/main`. No work was lost and no silent exit happened. One clean catch isn't proof the
 underlying intermittent cause is fixed, but it is the first time this failure was caught and
 corrected *within the same run* rather than by a later one.
+
+## 2026-10-14 — Fifth recurrence of the unpushed-`main` bug, caught cleanly by the 2026-10-02 fix
+
+**What happened:** at the start of this scheduled run, local `main` and `origin/main` were both
+at `dcb9d15` ("Glimpse daily check-in (2026-10-13)"), while the session's `HEAD` was detached one
+commit ahead at `0a46a01` ("Glimpse evening check-in (2026-10-13)") — the prior (evening) run had
+committed successfully but that commit never reached `main` or `origin/main`. Same failure
+family as 2026-08-27, 2026-09-24, 2026-09-27, 2026-10-01, and the 2026-10-02 same-day addendum.
+
+**Fix applied this run:** per SKILL.md step 5, confirmed `origin/main` was a strict ancestor of
+the detached `HEAD` (clean fast-forward, no divergence) via `git merge-base --is-ancestor`,
+`git checkout main && git merge --ff-only 0a46a01`, pushed, then re-fetched and confirmed
+`git rev-parse HEAD` == `git rev-parse origin/main`. No work was lost. Did this before starting
+any venture-level work this run, so the new commits from today's pass stack cleanly on top of
+the recovered history rather than compounding the gap.
+
+**Still open:** this is the fifth confirmed instance of the same root cause (a scheduled run's
+commit sometimes doesn't make it onto `main`/`origin/main` by the time the run ends). The
+2026-10-02 step-5 fix is doing exactly its job — every recurrence since has been caught and
+recovered, by either the same run (10-02) or the next one (today) — but it treats the symptom,
+not the cause. Nothing in this run's visibility explains *why* the push/merge intermittently
+fails; that would need direct access to the scheduling/trigger/execution layer, which is outside
+what this skill or a normal venture-orchestrator run can diagnose. Recommend the founder loop in
+whoever owns that layer if this keeps recurring at this rate.
+
+**Milestone deltas:** MILESTONES.md Phase 0 push-reliability item gets a new correction entry
+documenting this fifth recurrence.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.
