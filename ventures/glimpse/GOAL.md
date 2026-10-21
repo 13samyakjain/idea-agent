@@ -463,6 +463,18 @@ or clearly stalled, instead of re-deriving priority from scratch each run.
       information on the blocker itself. Not notifying the founder this pass — the 2026-10-19
       morning run already pushed a direct notification on this exact stall, and nothing material
       has changed since then.
+      **Update 2026-10-21 (second pass, ~evening):** re-confirmed directly — task `14ykddrwyqf`
+      `date_updated` unchanged at `1789702466465` (3rd/final escalation). Visa case (`86d3pw08w`)
+      also re-read directly, including all 12 comments: `date_updated` unchanged at
+      `1791470639424`, no new comment since the 2026-10-08 3rd/final escalation (Babita's last
+      reply remains 2026-09-25, now 26 days). One new calendar signal: Babita herself created and
+      held a "Discussion Call" with Samyak today (12:30–13:00 IST) — same no-ClickUp-trace
+      pattern as the 2026-08-26/08-28 Peter calls, so not counted as confirmed movement on the
+      visa case, but worth the founder knowing it happened in case the outcome was discussed
+      verbally and just never written down. Goal remains stalled, still **23 days past** its
+      2026-09-28 target with no founder decision landed — carrying the morning's status forward
+      unchanged. Not re-notifying the founder this pass (no material change since the 2026-10-19
+      notification).
 - [ ] First reply received (target 2026-09-28; day-14 non-response → mark stale per Stage 2).
 - [x] Side task: re-qualify ACS Consultancy Services against the ICP checklist — done
       2026-09-10, **DISQUALIFIED and dropped from batch-1** (procurement/RFP-driven growth

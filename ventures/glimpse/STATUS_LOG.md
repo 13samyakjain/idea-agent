@@ -16,7 +16,7 @@
 | BDE hiring — assignment process | ClickUp `86d3t4bg7` | Samyak | 2026-08-22 | 2026-09-16 (3/3, final) | not re-pulled this pass (already confirmed escalation-exhausted; conserving ClickUp reads) — carried forward as **escalation exhausted**, founder-decision item (see report) |
 | BDE hiring — parent task (corrected: 1 parent + 2 subtasks, not 3 duplicates) | ClickUp `86d3rgzah` (+ subtasks `86d3rgze3`, `86d3rgze6`) | Samyak | 2026-10-08 (calendar signal — 6th candidate interview, Chanchal) | 2026-09-21 (3/3, final) | not re-pulled this pass; new calendar signal today (interview for "Business Operations Associate" role, Ishika Banerjee Barman, 2026-10-15, PE-team organized) — role title doesn't clearly match "BDE" so not counted as confirmed movement on this item, flagged for visibility only — carried forward as founder-decision item (see report) |
 | BDE daily check-in cadence | ClickUp `86d3ucd9p` (+ related `86d3zvquy`) | Kanchan | 2026-09-16 (calendar signal, not ClickUp) | 2026-09-21 (3/3, final) | not re-pulled this pass (already confirmed escalation-exhausted; no signal suggests further movement) — carried forward as founder-decision item (see report) |
-| Visa case outcome recorded | ClickUp `86d3pw08w` | Babita | 2026-09-25 (Babita replied) | 2026-10-08 (3/3, final) | re-confirmed 2026-10-21 (direct read): `date_updated` still frozen at the 2026-10-08 14:43:59 UTC 3rd/final escalation (now 13 days quiet on that thread), no reply from Babita since 2026-09-25 (now 26 days). Escalation-exhausted; carried forward as founder-decision item (see report) |
+| Visa case outcome recorded | ClickUp `86d3pw08w` | Babita | 2026-09-25 (Babita replied) | 2026-10-08 (3/3, final) | re-confirmed 2026-10-21 evening (direct read, all 12 comments): `date_updated` still frozen at the 2026-10-08 14:43:59 UTC 3rd/final escalation, no new comment. A same-day "Discussion Call" (Babita → Samyak, 12:30-13:00 IST) occurred but left no ClickUp trace — not counted as movement. Escalation-exhausted; carried forward as founder-decision item (see report) |
 | 9 Borderline leads — judgment calls | ClickUp `Lead Sourcing Queue` (9 tasks, priority urgent) | Samyak | 2026-08-21 | 2026-09-16 (3/3, final) | not re-pulled this pass (no signal suggests movement; conserving ClickUp reads) — carried forward as **escalation exhausted**, founder-decision item (see report) |
 
 ## 2026-08-18 — Onboarded as a tracked venture
@@ -5133,3 +5133,59 @@ same blockers, same day-count progression, no founder decision landed. Will noti
 a real change: movement on either load-bearing item, a founder decision landing, or the goal
 crossing a new threshold worth flagging on its own (e.g. one calendar month past target, ~5 days
 away).
+
+## 2026-10-21 (second pass, ~evening) — both re-checked tracked items unchanged, one new no-trace signal, goal 23 days stalled
+
+**Run context:** Scheduled evening check-in. `git status` at start showed HEAD detached but
+exactly at `origin/main`'s tip (`395a12c`, this morning's check-in commit) — no recovery needed.
+`CLICKUP_LOCK.md` checked clean (no stale lock), written before 3 sequential direct ClickUp
+calls (1 task read + 1 comment-thread read for the visa case, 1 task read for the outreach
+task), released immediately after.
+
+**Human activity checked:**
+- **Google Calendar (2026-10-21, Asia/Kolkata):** the recurring nightly `@rakesh@vempower.org`
+  placeholder, Samyak's already-logged flight to Abu Dhabi tonight (23:10 IST), and one new
+  event — a "Discussion Call" (Google Meet) organized by **Babita** (the visa case's owner) with
+  Samyak as the sole other attendee, held 12:30–13:00 IST today. No agenda/description beyond
+  the Meet link; cannot confirm what was discussed.
+- **TaskList:** empty — no background agent activity since the morning pass.
+
+**Tracked-items re-check (3 direct ClickUp reads, strictly serial):**
+- **`14ykddrwyqf`** (batch-1 outreach send) — re-read directly: still "to do", `date_updated`
+  unchanged at `1789702466465` (2026-09-18 03:34:26 UTC 3rd/final escalation). No new
+  information.
+- **`86d3pw08w`** (visa case) — re-read directly (task + all 12 comments): still "in progress",
+  `date_updated` unchanged at `1791470639424` (2026-10-08 14:43:59 UTC 3rd/final escalation), no
+  new comment since Babita's 2026-09-25 reply (26 days). Today's "Discussion Call" (above) left
+  no written trace here — same pattern as the unrecorded 2026-08-26/08-28 Peter calls — so not
+  counted as confirmed movement, but flagged below since it's the first new human-activity signal
+  on this specific item in 13 days.
+- BDE assignment process (`86d3t4bg7`), BDE hiring parent (`86d3rgzah`), BDE daily check-in
+  (`86d3ucd9p`), and the 9 Borderline leads were not re-pulled this pass — already confirmed
+  escalation-exhausted, and neither calendar nor TaskList turned up any fresh signal tied to any
+  of them.
+
+**Agent activity:** none dispatched — every tracked item remains a pure human-execution or
+founder-decision blocker; nothing agent-doable surfaced this pass.
+
+**Milestone deltas:** none. GOAL.md's active goal remains stalled, still **23 days past** its
+2026-09-28 target date with success criteria unmet — unchanged from this morning's figure since
+it's the same calendar date.
+
+**Dispatched:** none. **Escalated:** none — no tracked item crossed a new threshold; both
+load-bearing items remain at escalation-exhausted (3/3) with no movement to react to.
+
+**Doc updates this run:** GOAL.md progress checklist (new second-pass entry noting today's
+Discussion Call signal), Tracked-items table (visa case row's notes refreshed with the same
+signal). No MILESTONES.md change.
+
+**Open decisions for the human:** unchanged from this morning — same six items, still needing a
+founder decision rather than another automated nudge. Worth adding: if today's Babita/Samyak
+call touched the visa case verbally, a one-line ClickUp comment recording the outcome would
+close this item without waiting on Babita to write first.
+
+**Push notification:** not sent this pass. Today's Discussion Call is a signal worth logging,
+not a confirmed change to either load-bearing blocker — the pattern from prior unrecorded calls
+is that the outcome, if any, surfaces later or not at all. Will notify on a real change: a
+written outcome on the visa case, movement on the outreach send, a founder decision landing, or
+the goal crossing a new threshold.
