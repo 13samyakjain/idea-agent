@@ -687,3 +687,32 @@ the founder again, now with added urgency given the same-day repeat.
 documenting this sixth recurrence.
 
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
+## 2026-10-25 — Seventh recurrence of the git-sync gap, a new variant
+
+**What happened:** at the start of this scheduled run, detached `HEAD` was already correctly at
+`origin/main`'s tip (`dd6b106`, last night's second Glimpse check-in). Running `git checkout
+main` to get off detached HEAD moved the working tree *backward* to `000afa2` — the local `main`
+branch ref itself was stale, 3 commits behind `origin/main`, even though nothing was unpushed.
+This is a different mechanism from all six prior recurrences (2026-08-27, 09-24, 09-27, 10-01,
+10-14 ×2), which were all "a commit exists locally but never reached `origin/main`." Here the
+remote was fine; the local branch pointer just hadn't been kept in sync with it.
+
+**Fix applied this run:** confirmed `HEAD` (`000afa2`) was a strict ancestor of `origin/main`
+(`dd6b106`) via `git merge-base --is-ancestor`, then `git merge --ff-only origin/main` to bring
+local `main` back up to the tip, and verified `git rev-parse HEAD` == `git rev-parse
+origin/main` before touching any venture doc. No work was lost — this was caught before any new
+commit was made on the stale base.
+
+**Still open:** seventh confirmed instance of the same underlying "a scheduled run's starting
+git state doesn't reliably match the remote" family, now with a second distinct mechanism (stale
+branch ref vs. unpushed commit). The step-5 catch keeps holding, but whatever initializes each
+run's working directory isn't syncing the local `main` ref to `origin/main` even when there's no
+pending push — this sits one level earlier than the push-verification step itself and is still
+outside what this skill can diagnose or fix from inside a run. Recommend the founder loop in
+whoever owns the scheduling/trigger/execution layer if this keeps recurring.
+
+**Milestone deltas:** MILESTONES.md Phase 0 push-reliability item gets a new correction entry
+documenting this seventh recurrence (new variant).
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.

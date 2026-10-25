@@ -82,6 +82,17 @@
       double recurrence is a stronger signal that the root cause sits in how each run's starting
       git state is initialized, not something the venture-orchestrator skill can fix from inside
       a run. See root STATUS_LOG.md 2026-10-14 (second pass).
+      **Recurrence 2026-10-25 (seventh occurrence, new variant):** this run's detached `HEAD`
+      was already correctly at `origin/main`'s tip (`dd6b106`), but running `git checkout main`
+      moved HEAD *backward* to `000afa2` — the local `main` ref itself was stale, 3 commits
+      behind `origin/main` (unlike the prior six recurrences, where the gap was an unpushed
+      commit on `HEAD`/detached state, this time the branch pointer itself had never been
+      advanced to match prior runs' pushes). Caught by the same step-5 check: confirmed
+      `HEAD` was a strict ancestor of `origin/main`, fast-forwarded `main` onto it, and verified
+      the match before doing any venture work. No work was lost. Reinforces the open
+      recommendation: whatever initializes each run's git state doesn't reliably sync the local
+      `main` ref to the remote tip even when no new commit is pending — a problem one level
+      earlier than the push step itself. See root STATUS_LOG.md 2026-10-25.
 - [x] First dogfood cycle produces a status report a human would actually find useful (the
       Venture Console artifact, shipped 2026-08-10, used same-day to act on 3 real decisions)
 
