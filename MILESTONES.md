@@ -93,6 +93,15 @@
       recommendation: whatever initializes each run's git state doesn't reliably sync the local
       `main` ref to the remote tip even when no new commit is pending — a problem one level
       earlier than the push step itself. See root STATUS_LOG.md 2026-10-25.
+      **Recurrence 2026-10-26 (eighth occurrence, same variant as the seventh):** this run's
+      detached `HEAD` was again already correctly at `origin/main`'s tip (`4504731`, this
+      morning's check-in), while local `main` was stale, 3 commits behind at `000afa2`. Same
+      mechanism as 2026-10-25 (stale branch pointer, not an unpushed commit) — this is now the
+      second occurrence of that specific variant, back-to-back calendar days. Fast-forwarded
+      `main` onto `origin/main` and verified the match before any venture work; no work was
+      lost. The stale-local-`main`-ref variant now looks at least as persistent as the original
+      unpushed-commit variant it followed — still outside what this skill can diagnose from
+      inside a run. See root STATUS_LOG.md 2026-10-26.
 - [x] First dogfood cycle produces a status report a human would actually find useful (the
       Venture Console artifact, shipped 2026-08-10, used same-day to act on 3 real decisions)
 

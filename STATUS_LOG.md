@@ -716,3 +716,24 @@ whoever owns the scheduling/trigger/execution layer if this keeps recurring.
 documenting this seventh recurrence (new variant).
 
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
+## 2026-10-26 — Eighth recurrence of the git-sync gap, same variant as the seventh
+
+**What happened:** at the start of this scheduled evening run, detached `HEAD` was already
+correctly at `origin/main`'s tip (`4504731`, this morning's Glimpse check-in), but local `main`
+itself was stale — 3 commits behind at `000afa2`. Identical mechanism to 2026-10-25 (stale
+branch pointer, remote already fine), now recurring on back-to-back calendar days.
+
+**Fix applied this run:** confirmed `main` (`000afa2`) was a strict ancestor of `origin/main`
+(`4504731`) via `git merge-base --is-ancestor`, then `git checkout main && git merge --ff-only
+origin/main`, and verified `git rev-parse HEAD` == `git rev-parse origin/main` before touching
+any venture doc. No work was lost — caught before any new commit was made on the stale base.
+
+**Still open:** eighth confirmed instance of the "scheduled run's starting git state doesn't
+reliably match the remote" family, and the second instance of the specific stale-local-`main`
+variant first seen 2026-10-25 — it recurred the very next day, which suggests it isn't a one-off
+glitch but as persistent as the original unpushed-commit variant. The step-5 catch keeps
+holding every time; the underlying cause (how each run's working directory/branch state gets
+initialized) is still outside what this skill can diagnose or fix from inside a run.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.
