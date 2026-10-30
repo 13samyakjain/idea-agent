@@ -112,6 +112,13 @@
       recommendation to have whoever owns the scheduling/trigger/execution layer look at how each
       run's starting git state is initialized is now overdue, not just open. See root
       STATUS_LOG.md 2026-10-30.
+      **Recurrence 2026-10-30 (eleventh occurrence, same day as the tenth, stale-ref variant):**
+      this evening's run found local `main` stale 5 commits behind `origin/main` (whose tip,
+      `c652bd2`, was already correctly at detached `HEAD` — the same mechanism as the seventh
+      through ninth occurrences, not the unpushed-commits mechanism this morning's run just
+      fixed). First time both failure shapes have hit within the same calendar day. Clean
+      fast-forward, recovered before any venture work; no work lost. Eleven occurrences in ~7
+      weeks. See root STATUS_LOG.md 2026-10-30 (second pass).
 - [x] First dogfood cycle produces a status report a human would actually find useful (the
       Venture Console artifact, shipped 2026-08-10, used same-day to act on 3 real decisions)
 

@@ -788,3 +788,30 @@ scheduling/trigger/execution layer that starts each run's container, since ten o
 ~7 weeks (six in the last week alone) suggests a systemic issue there, not noise.
 
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
+## 2026-10-30 (second pass, ~evening) — Eleventh recurrence, stale-ref variant, same day as the tenth
+
+**What happened:** at the start of this scheduled evening run, detached `HEAD` (`c652bd2`, this
+morning's Glimpse check-in, itself pushed cleanly by the tenth-occurrence recovery a few hours
+earlier) was already correctly at `origin/main`'s tip — but local `main` itself was stale, 5
+commits behind at `04cb510`. This is the "stale local-`main`-ref" variant (first seen
+2026-10-25, recurring 10-26 and 10-29), not the "unpushed commits" variant this morning's run
+just fixed — the same two-week window has now produced both failure shapes twice in one
+calendar day (this morning: unpushed commits; this evening: stale ref).
+
+**Fix applied this run:** confirmed `main` (`04cb510`) was a strict ancestor of `origin/main`
+(`c652bd2`) via `git merge-base --is-ancestor`, then `git checkout main && git merge --ff-only
+origin/main`, and verified `git rev-parse HEAD` == `git rev-parse origin/main` before touching
+any venture doc. No work was lost — caught before any new commit was made on the stale base.
+
+**Still open:** eleventh confirmed instance of the git-sync gap, and the first time the two
+distinct failure shapes (unpushed-commits and stale-local-ref) have both hit within the same
+calendar day rather than on separate days. This further weakens any theory that the two shapes
+have different root causes — they look like two visible symptoms of the same underlying
+initialization problem in whatever starts each run's container/working directory, occurring at
+a rate (11 times in ~7 weeks, now twice in a single day) that the standing recommendation
+undersells. Repeating it again: the founder should loop in whoever owns the
+scheduling/trigger/execution layer directly, since this is no longer explainable as occasional
+noise at this frequency.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.
