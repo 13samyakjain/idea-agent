@@ -102,6 +102,16 @@
       lost. The stale-local-`main`-ref variant now looks at least as persistent as the original
       unpushed-commit variant it followed — still outside what this skill can diagnose from
       inside a run. See root STATUS_LOG.md 2026-10-26.
+      **Recurrence 2026-10-30 (tenth occurrence, back to the first variant):** this run's
+      detached `HEAD` (`c41e81d`) was 4 commits *ahead* of local `main`/`origin/main` (both
+      `04cb510`) — the 2026-10-27 through 2026-10-29 check-ins had committed but never reached
+      `origin/main`. This is the original unpushed-commits mechanism (occurrences 1–6), not the
+      stale-ref variant that had been recurring the prior three days — the underlying cause is
+      producing both failure shapes, not one. Clean fast-forward, recovered and pushed; no work
+      lost. Ten occurrences in ~7 weeks, six of them in the last week — the standing
+      recommendation to have whoever owns the scheduling/trigger/execution layer look at how each
+      run's starting git state is initialized is now overdue, not just open. See root
+      STATUS_LOG.md 2026-10-30.
 - [x] First dogfood cycle produces a status report a human would actually find useful (the
       Venture Console artifact, shipped 2026-08-10, used same-day to act on 3 real decisions)
 

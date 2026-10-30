@@ -759,3 +759,32 @@ forward the recommendation that the founder loop in whoever owns the scheduling/
 execution layer if this keeps recurring at this frequency.
 
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
+## 2026-10-30 — Tenth recurrence of the git-sync gap, back to the unpushed-commits variant
+
+**What happened:** at the start of this scheduled run, detached `HEAD` (`c41e81d`, 2026-10-29
+evening's Glimpse check-in) was 4 commits *ahead* of local `main`/`origin/main` (both at
+`04cb510`) — the 2026-10-27 through 2026-10-29 Glimpse check-ins had all committed but none had
+reached `origin/main`. This is the original "unpushed commits stranded on detached HEAD"
+mechanism (seen in occurrences 1–6), not the "stale local-`main`-ref" variant that had been
+recurring for the prior three days (2026-10-25, 10-26, 10-29) — the underlying gap is producing
+both failure shapes, not just one.
+
+**Fix applied this run:** confirmed `origin/main` was a strict ancestor of `c41e81d` via `git
+merge-base --is-ancestor`, then `git checkout main && git merge --ff-only c41e81d && git push -u
+origin main`, and verified `git rev-parse HEAD` == `git rev-parse origin/main` (`c41e81d`)
+before touching any venture doc. No work was lost — all 4 stranded commits reached `origin/main`
+cleanly.
+
+**Still open:** tenth confirmed instance of the "scheduled run's starting git state doesn't
+reliably match the remote" family, and proof the gap isn't converging on a single mechanism —
+it has now produced unpushed-commit strandings (1–6, and again today) and stale-branch-pointer
+strandings (7–9) within the same two-week window. The step-5 catch keeps holding every time with
+no work lost across all ten occurrences; the underlying cause (how each run's working
+directory/branch state gets initialized before this skill starts) remains outside what this
+skill can diagnose or fix from inside a run. Repeating the standing recommendation, now with
+more urgency given the frequency: the founder should loop in whoever owns the
+scheduling/trigger/execution layer that starts each run's container, since ten occurrences in
+~7 weeks (six in the last week alone) suggests a systemic issue there, not noise.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.
