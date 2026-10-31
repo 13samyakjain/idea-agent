@@ -815,3 +815,26 @@ scheduling/trigger/execution layer directly, since this is no longer explainable
 noise at this frequency.
 
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
+## 2026-10-31 (second pass, ~evening) — Twelfth recurrence, unpushed-commits variant
+
+**What happened:** at the start of this scheduled evening run, detached `HEAD` was 1 commit
+ahead of local `main`/`origin/main` — this morning's Glimpse check-in commit (`036deb6`) had
+been made but never reached `origin/main`. Same "unpushed commits stranded on detached HEAD"
+shape as most prior occurrences.
+
+**Fix applied this run:** confirmed `origin/main` was a strict ancestor of `036deb6` via
+`git merge-base --is-ancestor`, then `git checkout main && git merge --ff-only 036deb6 &&
+git push -u origin main`; verified `git rev-parse HEAD` == `git rev-parse origin/main` before
+any venture doc work. No work was lost.
+
+**Still open:** twelfth confirmed instance of the git-sync gap in roughly 10 weeks (including a
+day with both failure shapes on 2026-10-30). Every occurrence so far has been caught and
+recovered by the *next* run's defensive check, and continues to be caught cleanly — but the
+underlying cause (something about how each scheduled run's container/working directory is
+initialized relative to `origin/main`) remains unfixed at the infrastructure layer. Repeating
+the standing recommendation: the founder should loop in whoever owns the
+scheduling/trigger/execution layer directly, since recovery-every-time is not the same as
+not-broken.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.
