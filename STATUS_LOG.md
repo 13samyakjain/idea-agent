@@ -869,3 +869,25 @@ run (and its container) ends — since the Twelfth-recurrence entry's own claime
 clearest evidence yet that a push can be logged as done without actually landing.
 
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
+## 2026-11-02 (second pass, ~evening) — Fourteenth recurrence, stale-ref variant
+
+**What happened:** at the start of this scheduled evening run, detached `HEAD` was already
+correctly at `origin/main`'s tip (`4c4a57b`, this morning's Glimpse check-in, itself pushed
+cleanly by the morning's own recovery) — but local `main` itself was stale, 5 commits behind at
+`a861202` (2026-10-30 evening). Same mechanism as the seventh, eighth, ninth, and eleventh
+occurrences (stale local-`main`-ref, remote already fine), not the unpushed-commits variant this
+morning's run just fixed.
+
+**Fix applied this run:** confirmed `main` (`a861202`) was a strict ancestor of `origin/main`
+(`4c4a57b`) via `git merge-base --is-ancestor`, then `git checkout main && git merge --ff-only
+origin/main`, and verified `git rev-parse HEAD` == `git rev-parse origin/main` before touching
+any venture doc. No work was lost — caught before any new commit was made on the stale base.
+
+**Still open:** this is at least the fourteenth confirmed instance of the git-sync gap in ~11
+weeks, and the second distinct failure shape to hit on the same calendar day (morning:
+unpushed-commits; evening: stale-ref) — the same pattern already observed on 2026-10-30. The
+standing recommendation is unchanged: the founder should loop in whoever owns the
+scheduling/trigger/execution layer that initializes each run's container/working directory.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.
