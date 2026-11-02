@@ -838,3 +838,34 @@ scheduling/trigger/execution layer directly, since recovery-every-time is not th
 not-broken.
 
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
+## 2026-11-02 — Thirteenth+ recurrence, unpushed-commits variant, longest stranding yet (4 commits / 2 calendar days)
+
+**What happened:** at the start of this scheduled run, detached `HEAD` (`793d22c`, 2026-11-01
+evening's Glimpse check-in) was 4 commits ahead of local `main`/`origin/main` (both `a861202`,
+2026-10-30 evening's check-in). The 4 stranded commits spanned 2026-10-31 morning through
+2026-11-01 evening — both days' morning and evening check-ins never reached `origin/main`.
+
+Notably, this includes `036deb6` (2026-10-31 morning) — the exact commit the prior
+("Twelfth recurrence") entry below claimed to have recovered and pushed that same evening. Since
+`origin/main` was still sitting at its *parent* (`a861202`) when this run started, that prior
+fix's push did not actually land, or landed only locally before the run's own container/session
+ended — either way, the fix step that exists specifically to catch this gap was itself caught by
+the same gap. This is a new and useful data point: the step-5 recovery is not immune to the
+underlying problem, so a future run finding `HEAD` already matching `origin/main` right after a
+"recovered and pushed" log entry should not assume that entry's push is reliably durable.
+
+**Fix applied this run:** confirmed `origin/main` (`a861202`) was a strict ancestor of `HEAD`
+(`793d22c`) via `git merge-base --is-ancestor`, then `git checkout main && git merge --ff-only
+793d22c && git push -u origin main`; re-fetched and verified `git rev-parse HEAD` ==
+`git rev-parse origin/main` (`793d22c`) before any venture-doc work began. No work was lost.
+
+**Still open:** this is at least the thirteenth confirmed instance of the git-sync gap in
+~11 weeks, and the longest stranding by commit count/calendar span since the 2026-09-27 incident
+(3 commits). The standing recommendation is unchanged and now has an added wrinkle: whoever owns
+the scheduling/trigger/execution layer should look not only at how each run's starting git state
+is initialized, but also at whether a run's own `git push` is confirmed to complete before the
+run (and its container) ends — since the Twelfth-recurrence entry's own claimed push is the
+clearest evidence yet that a push can be logged as done without actually landing.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.
