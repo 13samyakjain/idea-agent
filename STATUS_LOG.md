@@ -913,3 +913,25 @@ correct) keeps recurring and growing in commit-count span, suggesting whatever r
 local branch ref between runs is not running reliably, not just occasionally.
 
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
+## 2026-11-04 (second pass, ~evening) — Sixteenth recurrence, stale-ref variant
+
+**What happened:** at the start of this scheduled run, detached `HEAD` was already correctly at
+`origin/main`'s tip (`a163b38`, this morning's Glimpse check-in) — but local `main` itself was
+stale, 9 commits behind at `a861202` (2026-10-30 evening). Same mechanism as the morning's
+fifteenth occurrence a few hours earlier, this time with a slightly larger gap (9 vs. 8
+commits) — the second same-day stale-ref recurrence after this morning's own fix, confirming
+the gap isn't resolved by one run's recovery landing.
+
+**Fix applied this run:** confirmed `main` (`a861202`) was a strict ancestor of `origin/main`
+(`a163b38`) via `git merge-base --is-ancestor`, then `git checkout main && git merge --ff-only
+origin/main`, and verified `git rev-parse HEAD` == `git rev-parse origin/main` before touching
+any venture doc. No work was lost.
+
+**Still open:** sixteenth confirmed instance in ~11.5 weeks, second one today. Recommendation
+unchanged and now stronger: the stale-local-`main` variant is recurring within the same
+calendar day even right after a prior run's clean recovery, which rules out "it was just one
+bad container" — whatever initializes each run's git state doesn't reliably sync the local
+branch ref, full stop. Needs the scheduling/trigger/execution layer looked at directly.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.
