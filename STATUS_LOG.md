@@ -891,3 +891,25 @@ standing recommendation is unchanged: the founder should loop in whoever owns th
 scheduling/trigger/execution layer that initializes each run's container/working directory.
 
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
+## 2026-11-04 — Fifteenth recurrence, stale-ref variant
+
+**What happened:** at the start of this scheduled run, detached `HEAD` was already correctly at
+`origin/main`'s tip (`f742a48`, 2026-11-03 evening's Glimpse check-in) — but local `main` itself
+was stale, 8 commits behind at `a861202` (2026-10-30 evening). Same mechanism as the seventh,
+eighth, ninth, eleventh, and fourteenth occurrences (stale local-`main`-ref, remote already
+fine), and the largest commit gap yet for this specific variant (8 commits vs. 5 previously).
+
+**Fix applied this run:** confirmed `main` (`a861202`) was a strict ancestor of `origin/main`
+(`f742a48`) via `git merge-base --is-ancestor`, then `git checkout main && git merge --ff-only
+origin/main`, and verified `git rev-parse HEAD` == `git rev-parse origin/main` before touching
+any venture doc. No work was lost — caught before any new commit was made on the stale base.
+
+**Still open:** this is at least the fifteenth confirmed instance of the git-sync gap in ~11.5
+weeks. The standing recommendation is unchanged: the founder should loop in whoever owns the
+scheduling/trigger/execution layer that initializes each run's container/working directory —
+the stale-ref variant specifically (local `main` not advancing to match a remote that's already
+correct) keeps recurring and growing in commit-count span, suggesting whatever re-syncs the
+local branch ref between runs is not running reliably, not just occasionally.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.
