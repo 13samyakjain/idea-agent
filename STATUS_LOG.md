@@ -956,3 +956,24 @@ check) is what caught it, which is exactly why that step exists and should stay 
 than being treated as a formality.
 
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
+## 2026-11-06 (second pass, ~evening) — Eighteenth recurrence, stale-ref variant
+
+**What happened:** this run's git state at start looked clean (detached `HEAD` already matched
+`origin/main`'s tip, `c2538eb`), so no pre-work recovery was triggered. After committing
+Glimpse's evening check-in, the local `main` branch pointer turned out stale (13 commits behind,
+still at `a861202` from 2026-10-30 evening) — same stale-ref mechanism as the prior seventeen
+occurrences, caught by the end-of-run push-verification step rather than at run start, same as
+yesterday's seventeenth occurrence.
+
+**Fix applied this run:** confirmed both `main` and `origin/main` were strict ancestors of the
+new commit via `git merge-base --is-ancestor`, fast-forwarded `main` to it, pushed, then
+re-fetched `origin/main` and confirmed `HEAD` == `origin/main`. No work was lost; push landed
+cleanly.
+
+**Still open:** eighteenth confirmed instance in ~11.5+ weeks. Same standing recommendation,
+now recurring on consecutive scheduled runs — whatever syncs the local `main` ref between runs
+isn't doing so reliably, and the mandatory push-verification step continues to be what actually
+catches it each time.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.
