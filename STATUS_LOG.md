@@ -935,3 +935,24 @@ bad container" — whatever initializes each run's git state doesn't reliably sy
 branch ref, full stop. Needs the scheduling/trigger/execution layer looked at directly.
 
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
+## 2026-11-06 — Seventeenth recurrence, stale-ref variant (caught by push-verification step, not at run start)
+
+**What happened:** this run's git state at start looked clean — detached `HEAD` already matched
+`origin/main`'s tip (`af85bf4`), so no pre-work recovery was triggered. After committing
+Glimpse's daily check-in on top of that commit, the local `main` *branch pointer* itself turned
+out to be stale (12 commits behind, still at `a861202` from 2026-10-30 evening) — the same
+stale-ref mechanism as the prior sixteen occurrences, just not visible until `git checkout main`
+was attempted as part of this run's mandatory push-verification step.
+
+**Fix applied this run:** confirmed `main` was a strict ancestor of the new commit via `git
+merge-base --is-ancestor`, fast-forwarded `main` to it, pushed, then re-fetched `origin/main`
+and confirmed `HEAD` == `origin/main`. No work was lost; push landed cleanly.
+
+**Still open:** seventeenth confirmed instance in ~11.5+ weeks. Same standing recommendation —
+whatever syncs the local `main` ref between scheduled runs isn't doing so reliably. Worth noting
+this occurrence specifically: the run's own end-of-run push-verification step (not a start-of-run
+check) is what caught it, which is exactly why that step exists and should stay mandatory rather
+than being treated as a formality.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.
