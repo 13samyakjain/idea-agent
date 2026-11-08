@@ -997,3 +997,21 @@ still isn't doing so reliably. The mandatory recovery step (now checked both at 
 again before ending the run) continues to be the only thing actually catching this.
 
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
+## 2026-11-08 — Twentieth recurrence, stale-ref variant (caught at run start)
+
+**What happened:** this run started in a detached `HEAD` that already matched `origin/main`'s
+tip (`d311231`, last night's check-in), but the local `main` branch pointer itself was stale —
+1 commit behind. Same stale-ref mechanism as the prior nineteen occurrences, caught at run start
+via `git checkout main` rather than at the end-of-run verification step.
+
+**Fix applied this run:** confirmed `main` was a strict ancestor of `origin/main` via `git
+merge --ff-only origin/main`, and verified `git rev-parse HEAD` == `git rev-parse origin/main`
+before touching any venture doc. No work was lost.
+
+**Still open:** twentieth confirmed instance in ~12 weeks. Same standing recommendation,
+unchanged — whatever is supposed to keep the local `main` ref synced between scheduled runs
+still isn't doing so reliably. The mandatory recovery step (checked both at run start and again
+before ending the run) continues to be the only thing actually catching this.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.
