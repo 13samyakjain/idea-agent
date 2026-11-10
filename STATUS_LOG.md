@@ -1055,4 +1055,25 @@ container whose initial checkout doesn't reliably carry the remote's current tip
 `main` ref, rather than any single run's git state persisting badly across invocations. Same
 standing recommendation, unchanged.
 
+## 2026-11-10 — Twenty-third recurrence, stale-ref variant (caught at run start)
+
+**What happened:** this run started with detached `HEAD` at `51d85c2` (2026-11-09 evening's
+check-in) already matching `origin/main`'s tip, but the local `main` branch pointer itself was
+stale — 2 commits behind, still at `0c1a2f8`. Same stale-ref mechanism as the prior twenty-two
+occurrences, caught at run start via `git status` + `git rev-parse` comparison before any
+venture work, same as always.
+
+**Fix applied this run:** confirmed `main` was a strict ancestor of `origin/main` via `git
+merge-base --is-ancestor`, fast-forwarded `main` onto it (`git branch -f main origin/main &&
+git checkout main`), and verified `git rev-parse HEAD` == `git rev-parse main` == `git rev-parse
+origin/main` before touching any venture doc. No work was lost.
+
+**Still open:** twenty-third confirmed instance in ~12.5 weeks. Same standing recommendation,
+unchanged — whatever initializes each scheduled run's git state still doesn't reliably sync the
+local `main` ref to the remote tip even when no new commit is pending. The mandatory recovery
+step (checked at run start and again before ending the run) continues to be the only thing
+actually catching this.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
