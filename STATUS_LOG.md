@@ -1096,3 +1096,21 @@ container whose initial checkout doesn't reliably carry the remote's current tip
 standing recommendation, unchanged.
 
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
+## 2026-11-11 — Twenty-fifth recurrence, stale-ref variant (caught at run start)
+
+**What happened:** this run started with detached `HEAD` already at `origin/main`'s tip
+(`2cdb9fe`), but local `main` itself was stale, behind it. Same stale-ref mechanism as the prior
+twenty-four occurrences.
+
+**Fix applied this run:** confirmed `main` was a strict ancestor of `origin/main` via `git
+merge-base --is-ancestor`, fast-forwarded `main` onto it (`git branch -f main origin/main &&
+git checkout main`), and verified `git rev-parse HEAD` == `git rev-parse main` == `git rev-parse
+origin/main` before touching any venture doc. No work was lost.
+
+**Still open:** twenty-fifth confirmed instance in ~13 weeks. Same standing recommendation,
+unchanged — the founder should loop in whoever owns the scheduling/trigger/execution layer that
+initializes each scheduled run's container, since the stale-local-`main` variant has now
+recurred this many times with the fix holding every time but the root cause still unaddressed.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.
