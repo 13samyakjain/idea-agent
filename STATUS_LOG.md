@@ -1114,3 +1114,20 @@ initializes each scheduled run's container, since the stale-local-`main` variant
 recurred this many times with the fix holding every time but the root cause still unaddressed.
 
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
+## 2026-11-12 — Twenty-sixth recurrence, stale-ref variant (caught at run start)
+
+**What happened:** this run started with detached `HEAD` already at `origin/main`'s tip
+(`b2a829a`), but local `main` itself was stale — 9 commits behind. Same stale-ref mechanism as
+the prior twenty-five occurrences.
+
+**Fix applied this run:** fast-forwarded `main` onto `origin/main` (`git branch -f main
+origin/main && git checkout main`) and verified `git rev-parse HEAD` == `origin/main`'s tip
+before touching any venture doc. No work was lost.
+
+**Still open:** twenty-sixth confirmed instance in ~13 weeks. Same standing recommendation,
+unchanged — the founder should loop in whoever owns the scheduling/trigger/execution layer that
+initializes each scheduled run's container, since the stale-local-`main` variant has now
+recurred this many times with the fix holding every time but the root cause still unaddressed.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.
