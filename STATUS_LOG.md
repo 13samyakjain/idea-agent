@@ -1149,3 +1149,31 @@ initializes each scheduled run's container, since the stale-local-`main` variant
 recurring with the fix holding every time but the root cause still unaddressed.
 
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
+## 2026-11-13 (second pass, ~evening) — Twenty-eighth recurrence, new variant: commit stranded on detached HEAD, never pushed
+
+**What happened:** this run started in a detached-`HEAD` state one commit ahead of both local
+`main` and `origin/main` (`2afe022`, "Glimpse: daily check-in (2026-11-13)..." — the morning
+pass's own commit). Unlike the prior 27 occurrences (local `main` ref stale behind an
+already-pushed `origin/main`), this time the morning run's commit itself had never been
+fast-forwarded onto `main` or pushed to `origin/main` at all — it existed only on the detached
+ref. Exactly the failure mode the skill's step 5 guardrail describes (root STATUS_LOG.md:
+2026-08-27, 2026-09-24, 2026-09-27, 2026-10-01), now a fifth confirmed occurrence of that
+specific sub-variant, caught this time by this same-day evening run rather than a later day's
+run.
+
+**Fix applied this run:** confirmed `origin/main` was a strict ancestor of the stranded commit
+(`git merge-base --is-ancestor origin/main 2afe022`), checked out `main`, fast-forward-merged
+`2afe022` onto it, pushed to `origin/main`, then fetched and verified `git rev-parse HEAD` ==
+`git rev-parse origin/main` before touching any venture doc. No work was lost — the morning
+Glimpse check-in content is intact and now live on `origin/main`.
+
+**Still open:** this is now the twenty-eighth total recurrence of the broader git-sync-gap
+pattern (27 stale-`main`-ref instances plus this stranded-detached-HEAD instance), and the
+fifth specifically matching the original "commit never reached origin/main" failure mode the
+step-5 guardrail was written for. Same standing recommendation as the prior 27: the founder
+should loop in whoever owns the scheduling/trigger/execution layer for scheduled runs, since
+fast-forward-and-verify keeps working as a catch but the root cause (each run's container not
+reliably landing in a clean, pushed state before the next run starts) is still unaddressed.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.

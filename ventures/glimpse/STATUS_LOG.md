@@ -12,11 +12,11 @@
 
 | Item | Handle | Owner | Last moved | Last escalated | Notes |
 |---|---|---|---|---|---|
-| Batch-1 outreach sent (now 4 leads) | ClickUp `14ykddrwyqf` / GHL pipeline `volxN7h175GHZDiTKgEk` | Kanchan | 2026-09-10 (task created) | 2026-09-18 (3/3, final) | re-confirmed 2026-11-13 (direct read): still "to do", `date_updated` unchanged since the 3rd/final escalation (2026-09-18 03:34:26 UTC), 56 days quiet. Already escalation-exhausted, no founder decision landed — 46 days past the goal's target date |
+| Batch-1 outreach sent (now 4 leads) | ClickUp `14ykddrwyqf` / GHL pipeline `volxN7h175GHZDiTKgEk` | Kanchan | 2026-09-10 (task created) | 2026-09-18 (3/3, final) | re-confirmed 2026-11-13 evening (direct read): still "to do", `date_updated` unchanged since the 3rd/final escalation (2026-09-18 03:34:26 UTC), 56 days quiet. Already escalation-exhausted, no founder decision landed — 46 days past the goal's target date |
 | BDE hiring — assignment process | ClickUp `86d3t4bg7` | Samyak | 2026-08-22 | 2026-09-16 (3/3, final) | not re-pulled this pass (already confirmed escalation-exhausted; conserving ClickUp reads) — carried forward as **escalation exhausted**, founder-decision item (see report) |
 | BDE hiring — parent task (corrected: 1 parent + 2 subtasks, not 3 duplicates) | ClickUp `86d3rgzah` (+ subtasks `86d3rgze3`, `86d3rgze6`) | Samyak | 2026-10-08 (calendar signal — 6th candidate interview, Chanchal) | 2026-09-21 (3/3, final) | not re-pulled this pass; no new calendar signal this run tied to this item — carried forward as founder-decision item (see report) |
 | BDE daily check-in cadence | ClickUp `86d3ucd9p` (+ related `86d3zvquy`) | Kanchan | 2026-09-16 (calendar signal, not ClickUp) | 2026-09-21 (3/3, final) | not re-pulled this pass (already confirmed escalation-exhausted; no signal suggests further movement) — carried forward as founder-decision item (see report) |
-| Visa case outcome recorded | ClickUp `86d3pw08w` | Babita | 2026-09-25 (Babita replied) | 2026-10-08 (3/3, final) | re-confirmed 2026-11-13 (direct read): `date_updated` still frozen at the 2026-10-08 14:43:59 UTC 3rd/final escalation (36 days quiet), no reply from Babita since 2026-09-25 (49 days). Escalation-exhausted; carried forward as founder-decision item (see report) |
+| Visa case outcome recorded | ClickUp `86d3pw08w` | Babita | 2026-09-25 (Babita replied) | 2026-10-08 (3/3, final) | re-confirmed 2026-11-13 evening (direct read): `date_updated` still frozen at the 2026-10-08 14:43:59 UTC 3rd/final escalation (36 days quiet), no reply from Babita since 2026-09-25 (49 days). Escalation-exhausted; carried forward as founder-decision item (see report) |
 | 9 Borderline leads — judgment calls | ClickUp `Lead Sourcing Queue` (9 tasks, priority urgent) | Samyak | 2026-08-21 | 2026-09-16 (3/3, final) | not re-pulled this pass (no signal suggests movement; conserving ClickUp reads) — carried forward as **escalation exhausted**, founder-decision item (see report) |
 
 ## 2026-08-18 — Onboarded as a tracked venture
@@ -7187,4 +7187,45 @@ target), 15 days away.
 blocked on founder decisions, not agent or BDE execution: (1) the Sales Engine batch-1 outreach
 send (46 days overdue — send it yourself, reassign it, or formally push the target date); (2)
 the visa case's actual outcome, never written to the record since 2026-09-25; (3) the BDE
+hiring/assignment-process tasks, frozen since 2026-08-22/2026-10-08 respectively.
+
+## 2026-11-13 (second pass, ~evening) — Confirmation-only pass; goal still 46 days past target, no new signal
+
+**Human activity:** Calendar (11/12–11/13, Asia/Kolkata) checked — only the recurring nightly
+`@rakesh@vempower.org` placeholder, no new signal tied to either load-bearing blocker.
+
+**Agent activity:** `TaskList` empty, no agent activity since the morning pass. Directly
+re-read the two most time-sensitive tracked items: outreach-send task `14ykddrwyqf` (still "to
+do", zero opportunities/tags/sends, `date_updated` unchanged at `1789702466465` — the
+2026-09-18 3rd/final escalation, 56 days quiet) and the visa case `86d3pw08w` (still "in
+progress", `date_updated` unchanged at `1791470639424` — the 2026-10-08 3rd/final escalation,
+36 days quiet, no reply from Babita since 2026-09-25 — 49 days). Did not re-pull the other
+three tracked items this pass — already confirmed escalation-exhausted with no signal
+suggesting movement; conserving ClickUp reads.
+
+**Milestone deltas:** None — goal remains **46 days past** its 2026-09-28 target with success
+criteria still unmet; no founder decision has landed on any of the three proposed resolutions
+from 2026-09-28.
+
+**Dispatched:** none — every open item for this venture is either escalation-exhausted (all 5
+tracked items) or gated on a founder decision. Nothing agent-doable surfaced this pass.
+
+**Escalated this run:** none — all 5 tracked items remain at 3/3 (escalation-exhausted);
+re-commenting would be noise, not new information.
+
+**Git-sync gap (found and fixed this run):** at the start of this run, the repo was in a
+detached-HEAD state one commit ahead of local `main` and `origin/main` — the morning pass's own
+commit (`2afe022`, "Glimpse: daily check-in (2026-11-13)...") had been created but never
+fast-forwarded onto `main` or pushed, so it never reached `origin/main`. Confirmed
+`origin/main` was a strict ancestor of that commit, fast-forwarded `main` to it, pushed, and
+verified `HEAD` == `origin/main` before starting this pass's own doc work. This is the
+twenty-seventh occurrence of this recurring failure mode (see root STATUS_LOG.md 2026-11-13).
+
+**Push notification:** not sent this run — no material change since the 2026-10-28
+one-month-past-target ping; next threshold remains 2026-11-28 (two calendar months past
+target), 15 days away.
+
+**Open decision for the human:** Unchanged — (1) the Sales Engine batch-1 outreach send (46
+days overdue — send it yourself, reassign it, or formally push the target date); (2) the visa
+case's actual outcome, never written to the record since 2026-09-25; (3) the BDE
 hiring/assignment-process tasks, frozen since 2026-08-22/2026-10-08 respectively.
