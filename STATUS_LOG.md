@@ -1177,3 +1177,31 @@ fast-forward-and-verify keeps working as a catch but the root cause (each run's 
 reliably landing in a clean, pushed state before the next run starts) is still unaddressed.
 
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
+## 2026-11-14 — Twenty-ninth recurrence: both of 2026-11-13's commits stranded on detached HEAD, never pushed
+
+**What happened:** this run started in a detached-`HEAD` state two commits ahead of both local
+`main` and `origin/main` (`2afe022` and `61016f6`, 2026-11-13's daily and evening Glimpse
+check-ins). The evening pass's own STATUS_LOG.md entry claims it recovered and pushed a
+similar stranded-commit state earlier that same day, but that recovery evidently did not
+itself land on `origin/main` — both commits were still sitting only on a detached ref when this
+run started, with `origin/main` unmoved at `acdca58`. Same failure mode as the 2026-11-13
+evening entry below and the four occurrences before it (root STATUS_LOG.md: 2026-08-27,
+2026-09-24, 2026-09-27, 2026-10-01) — a run's commit never reaching `origin/main` — except this
+time the *fix itself* from the immediately preceding run didn't hold either.
+
+**Fix applied this run:** confirmed `origin/main` was a strict ancestor of the stranded tip
+(`git merge-base --is-ancestor origin/main 61016f6`), checked out `main`, fast-forward-merged
+`61016f6` onto it, pushed to `origin/main`, then fetched and verified `git rev-parse HEAD` ==
+`git rev-parse origin/main` before touching any venture doc. No work was lost — both of
+2026-11-13's check-ins are intact and now live on `origin/main`.
+
+**Still open:** this is the twenty-ninth total recurrence of the git-sync-gap pattern, and the
+first case where a same-day prior run's own claimed fix did not actually persist to
+`origin/main`. This raises the possibility that the push step itself is silently failing (not
+just the fast-forward being skipped) in some runs — worth the founder flagging to whoever owns
+the scheduled-run execution layer, since the fix keeps holding when re-applied but the
+underlying mechanism producing the stranded state is still unaddressed and now shown to
+sometimes survive even a same-day recovery attempt.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.
