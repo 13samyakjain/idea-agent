@@ -1205,3 +1205,21 @@ underlying mechanism producing the stranded state is still unaddressed and now s
 sometimes survive even a same-day recovery attempt.
 
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
+## 2026-11-15 — Thirtieth recurrence: stale local `main` ref (origin already current)
+
+**What happened:** this run started in a detached `HEAD` already correctly at `origin/main`'s
+tip (`c32b6a9`, 2026-11-14's evening Glimpse check-in), but the local `main` branch ref itself
+was stale — 2 commits behind, still at `acdca58`. Same stale-ref variant as the seventh through
+ninth, and twenty-sixth occurrences (not the stranded-commit variant that hit twice on
+2026-11-13/14); no work was at risk since `origin/main` already had everything.
+
+**Fix applied this run:** force-moved local `main` to match the detached `HEAD`
+(`git branch -f main HEAD && git checkout main`), confirmed `git status` showed `main` up to
+date with `origin/main` before touching any venture doc. No recovery push was needed since
+`origin/main` was already current.
+
+**Still open:** thirtieth total recurrence of the git-sync-gap pattern. Same standing
+recommendation as the prior occurrences — unaddressed.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.
