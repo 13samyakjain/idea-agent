@@ -1223,3 +1223,21 @@ date with `origin/main` before touching any venture doc. No recovery push was ne
 recommendation as the prior occurrences — unaddressed.
 
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
+## 2026-11-16 — Thirty-first recurrence: stale local `main` ref (origin already current)
+
+**What happened:** this run started in a detached `HEAD` already correctly at `origin/main`'s
+tip (`c29cec3`, 2026-11-15's evening Glimpse check-in), but the local `main` branch ref itself
+was stale — 1 commit behind. Same stale-ref variant as the seventh through ninth, twenty-sixth,
+and thirtieth occurrences; no work was at risk since `origin/main` already had everything.
+
+**Fix applied this run:** force-moved local `main` to match the detached `HEAD`
+(`git branch -f main HEAD && git checkout main`), confirmed `git status` showed `main` up to
+date with `origin/main` before touching any venture doc. No recovery push was needed.
+
+**Still open:** thirty-first total recurrence of the git-sync-gap pattern, ~14 weeks running.
+Same standing recommendation as the prior occurrences — the founder should loop in whoever owns
+the scheduling/trigger/execution layer that initializes each scheduled run's container, since
+the fix keeps holding every time but the root cause remains unaddressed.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.
