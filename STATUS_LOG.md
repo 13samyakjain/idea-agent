@@ -1241,3 +1241,20 @@ the scheduling/trigger/execution layer that initializes each scheduled run's con
 the fix keeps holding every time but the root cause remains unaddressed.
 
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
+## 2026-11-17 — Thirty-second recurrence: stale local `main` ref (origin already current)
+
+**What happened:** this run started in a detached `HEAD` already correctly at `origin/main`'s
+tip (`dc94164`, 2026-11-16's evening Glimpse check-in), but the local `main` branch ref itself
+was stale — 8 commits behind, still at `acdca58`. Same stale-ref variant as the seventh
+through ninth, twenty-sixth, thirtieth, and thirty-first occurrences; no work was at risk since
+`origin/main` already had everything.
+
+**Fix applied this run:** confirmed `origin/main` was a strict ancestor target (`git checkout
+main` then `git merge --ff-only origin/main`), verified `git rev-parse HEAD` matched
+`origin/main` before touching any venture doc. No recovery push was needed.
+
+**Still open:** thirty-second total recurrence of the git-sync-gap pattern, over 14 weeks
+running. Same standing recommendation as the prior occurrences — unaddressed.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.
