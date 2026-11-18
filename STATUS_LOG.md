@@ -1259,6 +1259,29 @@ running. Same standing recommendation as the prior occurrences — unaddressed.
 
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
 
+## 2026-11-18 (second pass, ~evening) — Thirty-fourth recurrence: commit landed on detached HEAD, push rejected
+
+**What happened:** this evening's run started in detached `HEAD` already correctly at
+`origin/main`'s tip (`c9a1cd1`, this morning's own Glimpse check-in). The venture-doc commit
+was made directly on that detached `HEAD` (producing `e35667c`) without first checking out
+`main`, so local branch `main` was never moved forward — `git push -u origin main` was then
+rejected as non-fast-forward, since the push target was `main`, still pointing at `c9a1cd1`,
+not the detached commit actually ahead of it.
+
+**Fix applied this run:** verified `origin/main` (`c9a1cd1`) was a strict ancestor of the
+detached commit (`e35667c`) via `git merge-base --is-ancestor`, then force-moved `main` to that
+commit (`git branch -f main e35667c`), checked out `main`, and pushed — verified `HEAD` matched
+`origin/main` afterward.
+
+**Still open:** thirty-fourth total recurrence of the git-sync-gap pattern, now including a new
+variant (committing while detached before ever checking out `main`, rather than just starting
+detached and syncing before doc work). Same standing recommendation as every prior occurrence:
+whoever owns the scheduling/trigger/execution layer should look at why each run's working copy
+starts detached at all, and this orchestrator should checkout/sync `main` as its very first git
+action, before any commit, not just before venture-doc edits.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
 ## 2026-11-17 (second pass, evening) — Thirty-third recurrence: same-day repeat of the stale-ref gap
 
 **What happened:** this evening's run again started in a detached `HEAD` already correctly at
