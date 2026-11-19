@@ -1320,3 +1320,24 @@ doc. No recovery push was needed.
 running. Same standing recommendation as every prior occurrence — unaddressed.
 
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
+## 2026-11-19 (second pass, ~evening) — Thirty-sixth recurrence: same-day repeat of the stale-ref gap
+
+**What happened:** this evening's run again started in a detached `HEAD` already correctly at
+`origin/main`'s tip (`90cf198`, this morning's own Glimpse check-in, which itself fixed the
+thirty-fifth occurrence a few hours earlier), but local branch `main` was stale again, still at
+`9e0eb64`. Same stale-ref variant recurring within the same calendar day the prior occurrence
+was just fixed — echoing the 2026-10-14, 2026-10-30, and 2026-11-17 same-day double-recurrence
+pattern, now a fourth instance of that sub-pattern.
+
+**Fix applied this run:** `git checkout main` then `git merge --ff-only origin/main`, verified
+`git rev-parse HEAD` matched `origin/main` before any venture-doc work. No recovery push was
+needed.
+
+**Still open:** thirty-sixth total recurrence overall, and the fourth same-day double
+recurrence specifically. Same standing recommendation as every prior occurrence: whoever owns
+the scheduling/trigger/execution layer should look at why each run's working copy starts
+detached with a stale local `main` at all — the fix keeps holding per-run, but nothing has
+addressed the root cause across 14+ weeks of occurrences.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.
