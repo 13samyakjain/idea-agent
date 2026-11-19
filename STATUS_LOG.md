@@ -1302,3 +1302,21 @@ fix keeps holding on every single run but nothing has addressed why the ref goes
 runs in the first place.
 
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
+## 2026-11-19 — Thirty-fifth recurrence: stale local `main` ref (origin already current)
+
+**What happened:** this run started in a detached `HEAD` already correctly at `origin/main`'s
+tip (`9d33ecb`, 2026-11-18 evening's Glimpse check-in), but local branch `main` itself was
+stale — 3 commits behind, still at `9e0eb64`. Same stale-ref variant as the seventh through
+ninth, twenty-sixth, thirtieth through thirty-second occurrences; no work was at risk since
+`origin/main` already had everything.
+
+**Fix applied this run:** confirmed `origin/main` was a strict ancestor of `HEAD` via
+`git merge-base --is-ancestor`, then `git checkout main` followed by `git merge --ff-only
+origin/main`; verified `git rev-parse HEAD` matched `origin/main` before touching any venture
+doc. No recovery push was needed.
+
+**Still open:** thirty-fifth total recurrence of the git-sync-gap pattern, over 14+ weeks
+running. Same standing recommendation as every prior occurrence — unaddressed.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.
