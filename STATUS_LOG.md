@@ -1341,3 +1341,21 @@ detached with a stale local `main` at all — the fix keeps holding per-run, but
 addressed the root cause across 14+ weeks of occurrences.
 
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
+## 2026-11-20 — Thirty-seventh recurrence: same stale-ref gap, no new mechanism
+
+**What happened:** this run's detached `HEAD` was already correctly at `origin/main`'s tip
+(`8282b4b`, 2026-11-19 evening's Glimpse check-in), but local branch `main` was stale — 3
+commits behind. Same stale-ref variant as the prior several occurrences; no work was at risk
+since `origin/main` already had everything.
+
+**Fix applied this run:** confirmed `origin/main` was a strict ancestor of `HEAD` via
+`git merge-base --is-ancestor`, then `git checkout main` followed by `git merge --ff-only
+origin/main`; verified `git rev-parse HEAD` matched `origin/main` before touching any venture
+doc.
+
+**Still open:** thirty-seventh total recurrence, 15+ weeks running. Same standing
+recommendation as every prior occurrence — unaddressed. Not adding further detail this pass;
+the pattern and recommendation are unchanged from the thirty-sixth occurrence.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.
