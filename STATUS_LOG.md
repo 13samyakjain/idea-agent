@@ -1359,3 +1359,24 @@ recommendation as every prior occurrence — unaddressed. Not adding further det
 the pattern and recommendation are unchanged from the thirty-sixth occurrence.
 
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
+## 2026-11-21 — Thirty-eighth recurrence: stale local `main` ref, larger gap than usual
+
+**What happened:** this run's detached `HEAD` was already correctly at `origin/main`'s tip
+(`6d32070`, 2026-11-20's Glimpse check-in), but local branch `main` was stale — 6 commits
+behind, still at `9e0eb64`. Same stale-ref variant as the prior several occurrences, but a
+wider gap (6 commits vs. the usual 3) than any single-day occurrence has shown before; no work
+was at risk since `origin/main` already had everything.
+
+**Fix applied this run:** confirmed `origin/main` was a strict ancestor of `HEAD` via
+`git merge-base --is-ancestor`, then `git checkout main` followed by `git merge --ff-only
+origin/main`; verified `git rev-parse HEAD` matched `origin/main` before touching any venture
+doc.
+
+**Still open:** thirty-eighth total recurrence, 15+ weeks running. Same standing
+recommendation as every prior occurrence — unaddressed. The growing gap size (6 commits this
+time) is a mild signal that whatever initializes each run's git state is falling further
+behind between syncs, not just occasionally stale by a fixed amount — still outside what this
+skill can diagnose or fix from inside a run.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.
