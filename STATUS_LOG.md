@@ -1396,3 +1396,30 @@ as every prior occurrence — unaddressed.
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
 
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
+## 2026-11-22 (second entry) — Fortieth recurrence: largest gap observed yet, 9 commits stranded
+
+**What happened:** this run started in a detached `HEAD` sitting 9 commits ahead of
+`origin/main`, spanning 2026-11-18 through this morning's 2026-11-22 Glimpse daily check-in
+(`e7f9699`). The morning run's own fix (`git branch -f main HEAD` + `git checkout main`,
+logged above) advanced the local `main` ref but — unlike every prior occurrence — the push
+itself did not land: `origin/main` still pointed at `9e0eb64` (2026-11-17 evening) when this
+run started. This is the first confirmed case where the push-verification step described in
+the orchestrator skill's guardrails appears to have been skipped or silently failed, not just
+the local ref going stale. Five days of Glimpse status-log entries (2026-11-18 through
+2026-11-22 morning) were at risk of being stranded indefinitely had this run not caught it.
+
+**Fix applied this run:** confirmed `origin/main` was a strict ancestor of detached `HEAD` via
+`git merge-base --is-ancestor`, then `git checkout main` + `git merge --ff-only` to the
+detached tip, then `git push -u origin main`. Verified `git rev-parse HEAD` matched
+`git rev-parse origin/main` after the push — this time the push itself was confirmed, not just
+assumed.
+
+**Still open:** fortieth total recurrence, 16+ weeks running. Same standing recommendation as
+every prior occurrence (the scheduling/trigger/execution layer should look at why each run's
+working copy starts detached with a stale ref at all) — unaddressed, and this occurrence
+shows the fix-without-verify failure mode can now also hit the *push* step, not just the local
+ref. Worth the founder's attention given the size of this gap (9 commits vs. the usual 3-6) and
+that it was the push, not just the local ref, that silently failed.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.
