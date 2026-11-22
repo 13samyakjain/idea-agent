@@ -1379,4 +1379,20 @@ time) is a mild signal that whatever initializes each run's git state is falling
 behind between syncs, not just occasionally stale by a fixed amount — still outside what this
 skill can diagnose or fix from inside a run.
 
+## 2026-11-22 — Thirty-ninth recurrence: stale local `main` ref, same mechanism
+
+**What happened:** this run's detached `HEAD` was already correctly at `origin/main`'s tip
+(`e3cff1e`, 2026-11-21 evening's Glimpse check-in), but local branch `main` was stale — 4
+commits behind. Same stale-ref variant as the prior several occurrences; no work was at risk
+since `origin/main` already had everything.
+
+**Fix applied this run:** confirmed `main` was a strict ancestor of `HEAD` via
+`git merge-base --is-ancestor`, then `git branch -f main HEAD` followed by `git checkout main`;
+verified `git rev-parse HEAD` matched `origin/main` before touching any venture doc.
+
+**Still open:** thirty-ninth total recurrence, 15+ weeks running. Same standing recommendation
+as every prior occurrence — unaddressed.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
