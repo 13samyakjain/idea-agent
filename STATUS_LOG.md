@@ -1423,3 +1423,21 @@ ref. Worth the founder's attention given the size of this gap (9 commits vs. the
 that it was the push, not just the local ref, that silently failed.
 
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
+## 2026-11-23 — Forty-first recurrence: stale local `main` ref, same mechanism
+
+**What happened:** this run's detached `HEAD` was already correctly at `origin/main`'s tip
+(`08afddf`, 2026-11-23's Glimpse daily check-in), but local branch `main` was stale — 11
+commits behind, still at `9e0eb64`. Same stale-ref variant as the prior several occurrences;
+no work was at risk since `origin/main` already had everything.
+
+**Fix applied this run:** confirmed `origin/main` was a strict ancestor of detached `HEAD`
+(clean `git merge --ff-only` succeeded, confirming ancestry), then `git checkout main`
+followed by `git merge --ff-only origin/main`; verified `git rev-parse HEAD` matched
+`origin/main` before touching any venture doc.
+
+**Still open:** forty-first total recurrence, 16+ weeks running. Same standing recommendation
+as every prior occurrence (the scheduling/trigger/execution layer should look at why each
+run's working copy starts detached with a stale local `main` ref at all) — unaddressed.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.

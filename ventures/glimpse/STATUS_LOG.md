@@ -12,11 +12,11 @@
 
 | Item | Handle | Owner | Last moved | Last escalated | Notes |
 |---|---|---|---|---|---|
-| Batch-1 outreach sent (now 4 leads) | ClickUp `14ykddrwyqf` / GHL pipeline `volxN7h175GHZDiTKgEk` | Kanchan | 2026-09-10 (task created) | 2026-09-18 (3/3, final) | re-confirmed 2026-11-23 (direct read): still "to do", `date_updated` unchanged since the 3rd/final escalation (2026-09-18 03:34:26 UTC). Already escalation-exhausted, no founder decision landed — 56 days past the goal's target date |
+| Batch-1 outreach sent (now 4 leads) | ClickUp `14ykddrwyqf` / GHL pipeline `volxN7h175GHZDiTKgEk` | Kanchan | 2026-09-10 (task created) | 2026-09-18 (3/3, final) | re-confirmed 2026-11-23 evening (direct read, 2nd time today): still "to do", `date_updated` unchanged since the 3rd/final escalation (2026-09-18 03:34:26 UTC). Already escalation-exhausted, no founder decision landed — 56 days past the goal's target date |
 | BDE hiring — assignment process | ClickUp `86d3t4bg7` | Samyak | 2026-08-22 | 2026-09-16 (3/3, final) | not re-pulled this pass (already confirmed escalation-exhausted; conserving ClickUp reads) — carried forward as **escalation exhausted**, founder-decision item (see report) |
 | BDE hiring — parent task (corrected: 1 parent + 2 subtasks, not 3 duplicates) | ClickUp `86d3rgzah` (+ subtasks `86d3rgze3`, `86d3rgze6`) | Samyak | 2026-10-08 (calendar signal — 6th candidate interview, Chanchal) | 2026-09-21 (3/3, final) | not re-pulled this pass; no new calendar signal this run tied to this item — carried forward as founder-decision item (see report) |
 | BDE daily check-in cadence | ClickUp `86d3ucd9p` (+ related `86d3zvquy`) | Kanchan | 2026-09-16 (calendar signal, not ClickUp) | 2026-09-21 (3/3, final) | not re-pulled this pass (already confirmed escalation-exhausted; no signal suggests further movement) — carried forward as founder-decision item (see report) |
-| Visa case outcome recorded | ClickUp `86d3pw08w` | Babita | 2026-09-25 (Babita replied) | 2026-10-08 (3/3, final) | re-confirmed 2026-11-23 (direct read): `date_updated` still frozen at the 2026-10-08 14:43:59 UTC 3rd/final escalation, no reply from Babita since 2026-09-25 (59 days). Escalation-exhausted; carried forward as founder-decision item (see report) |
+| Visa case outcome recorded | ClickUp `86d3pw08w` | Babita | 2026-09-25 (Babita replied) | 2026-10-08 (3/3, final) | re-confirmed 2026-11-23 evening (direct read, 2nd time today): `date_updated` still frozen at the 2026-10-08 14:43:59 UTC 3rd/final escalation, no reply from Babita since 2026-09-25 (59 days). Escalation-exhausted; carried forward as founder-decision item (see report) |
 | 9 Borderline leads — judgment calls | ClickUp `Lead Sourcing Queue` (9 tasks, priority urgent) | Samyak | 2026-08-21 | 2026-09-16 (3/3, final) | not re-pulled this pass (no signal suggests movement; conserving ClickUp reads) — carried forward as **escalation exhausted**, founder-decision item (see report) |
 
 ## 2026-08-18 — Onboarded as a tracked venture
@@ -7860,3 +7860,33 @@ Also unresolved: BDE hiring/assignment process, and the visa case outcome (Babit
 2026-09-25). Not notifying the founder this run — no material change since the 2026-10-28
 one-month-past-target notification; next threshold is 2026-11-28 (two calendar months past
 target), 5 days away.
+
+## 2026-11-23 (second entry) — Evening check-in: same-day reconfirmation, zero delta
+
+**Human activity:** None. Direct re-reads of `14ykddrwyqf` (`date_updated` still
+`1789702466465`) and `86d3pw08w` (`date_updated` still `1791470639424`) returned identical
+values to this morning's pass. Calendar searched directly ("Glimpse", 2026-11-22–24): only the
+recurring nightly placeholder in both days' windows — nothing new.
+
+**Agent activity:** None dispatched — same reasoning as the morning pass: every open blocker
+is either escalation-exhausted (needs a founder decision, not another nudge) or genuine
+human-execution work (Kanchan sending 4 emails, Babita/Peter's signature, a founder call on BDE
+hiring). `TaskList` empty, no background-agent activity since the morning pass.
+
+**Milestone deltas:** None. Goal remains stalled **56 days past** its 2026-09-28 target; all 5
+tracked items unchanged from the morning entry.
+
+**Dispatched:** none — identical reasoning to the morning pass.
+
+**Git state:** this run started in a detached `HEAD` already at `origin/main`'s tip
+(`08afddf`, this morning's daily check-in), but local branch `main` was stale — 11 commits
+behind, still at `9e0eb64`. Same recurring stale-local-ref variant (forty-first total
+recurrence), a wider gap than yesterday's. No work was at risk since `origin/main` already had
+everything. Recovered via `git checkout main` + `git merge --ff-only origin/main`; verified
+`git rev-parse HEAD` matched `origin/main` before any venture-doc work. See root
+STATUS_LOG.md 2026-11-23.
+
+**Open decision for the human:** Unchanged from the morning entry — same three proposed
+resolutions on the outreach send, plus the visa case outcome and BDE hiring/assignment. Not
+notifying the founder this pass — no material change since the 2026-10-28 notification; next
+threshold remains 2026-11-28 (two calendar months past target), 5 days away.
