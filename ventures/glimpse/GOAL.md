@@ -1320,6 +1320,19 @@ or clearly stalled, instead of re-deriving priority from scratch each run.
       (already exhausted 3/3 on both items) — pure confirmation. Not notifying the founder this
       pass — no material change since the 2026-10-28 notification; next threshold remains
       2026-11-28 (two calendar months past target), 5 days away.
+      **Update 2026-11-24:** re-confirmed directly — task `14ykddrwyqf` still "to do", zero
+      opportunities/tags/sends, `date_updated` unchanged at `1789702466465` (2026-09-18
+      3rd/final escalation, now 67 days quiet on that thread). Visa case (`86d3pw08w`) also
+      re-read directly: status still "in progress", `date_updated` unchanged at `1791470639424`
+      (2026-10-08 3rd/final escalation, 47 days quiet), no reply from Babita since 2026-09-25
+      (60 days). Goal is now **57 days past** its 2026-09-28 target with success criteria still
+      unmet; no founder decision landed on any of the three 2026-09-28 proposed resolutions. Not
+      re-escalating (already exhausted 3/3 on both items) — pure confirmation. Calendar searched
+      directly ("Glimpse"): no event in the last 24h beyond the already-logged set (most recent
+      relevant signal remains the 2026-11-20 Babita "Discussion Call"). `TaskList` empty, no
+      agent activity. Not notifying the founder this run — no material change since the
+      2026-10-28 notification; next threshold remains 2026-11-28 (two calendar months past
+      target), 4 days away.
 - [ ] First reply received (target 2026-09-28; day-14 non-response → mark stale per Stage 2).
 - [x] Side task: re-qualify ACS Consultancy Services against the ICP checklist — done
       2026-09-10, **DISQUALIFIED and dropped from batch-1** (procurement/RFP-driven growth
