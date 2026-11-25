@@ -12,11 +12,11 @@
 
 | Item | Handle | Owner | Last moved | Last escalated | Notes |
 |---|---|---|---|---|---|
-| Batch-1 outreach sent (now 4 leads) | ClickUp `14ykddrwyqf` / GHL pipeline `volxN7h175GHZDiTKgEk` | Kanchan | 2026-09-10 (task created) | 2026-09-18 (3/3, final) | re-confirmed 2026-11-24 (direct read): still "to do", `date_updated` unchanged since the 3rd/final escalation (2026-09-18 03:34:26 UTC). Already escalation-exhausted, no founder decision landed — 57 days past the goal's target date |
+| Batch-1 outreach sent (now 4 leads) | ClickUp `14ykddrwyqf` / GHL pipeline `volxN7h175GHZDiTKgEk` | Kanchan | 2026-09-10 (task created) | 2026-09-18 (3/3, final) | re-confirmed 2026-11-25 (direct read): still "to do", `date_updated` unchanged since the 3rd/final escalation (2026-09-18 03:34:26 UTC). Already escalation-exhausted, no founder decision landed — 58 days past the goal's target date |
 | BDE hiring — assignment process | ClickUp `86d3t4bg7` | Samyak | 2026-08-22 | 2026-09-16 (3/3, final) | not re-pulled this pass (already confirmed escalation-exhausted; conserving ClickUp reads) — carried forward as **escalation exhausted**, founder-decision item (see report) |
 | BDE hiring — parent task (corrected: 1 parent + 2 subtasks, not 3 duplicates) | ClickUp `86d3rgzah` (+ subtasks `86d3rgze3`, `86d3rgze6`) | Samyak | 2026-10-08 (calendar signal — 6th candidate interview, Chanchal) | 2026-09-21 (3/3, final) | not re-pulled this pass; no new calendar signal this run tied to this item — carried forward as founder-decision item (see report) |
 | BDE daily check-in cadence | ClickUp `86d3ucd9p` (+ related `86d3zvquy`) | Kanchan | 2026-09-16 (calendar signal, not ClickUp) | 2026-09-21 (3/3, final) | not re-pulled this pass (already confirmed escalation-exhausted; no signal suggests further movement) — carried forward as founder-decision item (see report) |
-| Visa case outcome recorded | ClickUp `86d3pw08w` | Babita | 2026-09-25 (Babita replied) | 2026-10-08 (3/3, final) | re-confirmed 2026-11-24 (direct read): `date_updated` still frozen at the 2026-10-08 14:43:59 UTC 3rd/final escalation, no reply from Babita since 2026-09-25 (60 days). Escalation-exhausted; carried forward as founder-decision item (see report) |
+| Visa case outcome recorded | ClickUp `86d3pw08w` | Babita | 2026-09-25 (Babita replied) | 2026-10-08 (3/3, final) | re-confirmed 2026-11-25 (direct read): `date_updated` still frozen at the 2026-10-08 14:43:59 UTC 3rd/final escalation, no reply from Babita since 2026-09-25 (61 days). Escalation-exhausted; carried forward as founder-decision item (see report) |
 | 9 Borderline leads — judgment calls | ClickUp `Lead Sourcing Queue` (9 tasks, priority urgent) | Samyak | 2026-08-21 | 2026-09-16 (3/3, final) | not re-pulled this pass (no signal suggests movement; conserving ClickUp reads) — carried forward as **escalation exhausted**, founder-decision item (see report) |
 
 ## 2026-08-18 — Onboarded as a tracked venture
@@ -7955,3 +7955,50 @@ at risk since `origin/main` already had everything.
 resolutions on the outreach send, plus the visa case outcome and BDE hiring/assignment. Not
 notifying the founder this pass — no material change since the 2026-10-28 notification; next
 threshold remains 2026-11-28 (two calendar months past target), 4 days away.
+
+## 2026-11-25 — Goal stalled 58 days past target; pure confirmation, no new signal
+
+**Human activity:** None found specific to the two load-bearing blockers. Calendar checked
+directly ("Glimpse", 11/24–11/25, Asia/Kolkata): only the recurring nightly
+`@rakesh@vempower.org` placeholder, no new event.
+
+**Agent activity:** None — `TaskList` empty, no background-agent history since the last entry.
+
+**ClickUp direct reads (sequential, 2 calls):** `14ykddrwyqf` (batch-1 send) still "to do",
+`date_updated` unchanged at `1789702466465` (2026-09-18 3rd/final escalation, 68 days quiet).
+`86d3pw08w` (visa case) still "in progress", `date_updated` unchanged at `1791470639424`
+(2026-10-08 3rd/final escalation, 48 days quiet), no reply from Babita since 2026-09-25 (61
+days). Other tracked items (BDE assignment process, BDE hiring parent, BDE daily check-in, 9
+Borderline leads) not re-pulled this pass — already confirmed escalation-exhausted with no
+signal suggesting movement; conserving ClickUp reads per the account-level rate-limit note in
+GROWTH.md.
+
+**Milestone deltas:** None. MILESTONES.md Phase 2 M3 remains blocked on the same human-execution
+gap it's been blocked on since 2026-09-10.
+
+**Goal status:** Active goal (validate Sales Engine offer with 4 batch-1 leads) is **58 days
+past** its 2026-09-28 target date, success criteria still unmet. Both load-bearing tracked items
+(batch-1 send, visa case) are escalation-exhausted (3/3) with no founder decision landed on any
+of the proposed resolutions from 2026-09-28. See GOAL.md 2026-11-25 entry for full detail.
+
+**Escalated:** none — both items already at escalation-exhausted; a fourth comment on either
+would be noise, not new information, per this file's own guardrail.
+
+**Dispatched:** none — the sole blocker (nobody has sent the outreach / recorded the visa
+outcome) is pure human execution, not agent-doable, and has been since 2026-09-10.
+
+**Notified founder:** no — no material change since the 2026-10-28 one-month-past-target
+notification. Next threshold (two calendar months past target) is 2026-11-28, 3 days away.
+
+**Open decision for the human (carried forward, unchanged):** the batch-1 outreach send and the
+visa-case outcome record are both escalation-exhausted. Proposed resolutions remain as stated
+2026-09-28: (a) Samyak sends the 4 emails himself from the ready drafts
+(`ventures/glimpse/outreach/batch-1-first-touch.md`); (b) reassign the send explicitly; (c) push
+the goal's target date with a non-ClickUp accountability mechanism. Same three options apply in
+spirit to the visa case (direct outreach to Babita outside ClickUp, reassignment, or accepting
+the record will stay incomplete).
+
+**Git state:** this run started detached with local `main` stale 2 commits behind `origin/main`
+(whose tip already matched detached `HEAD`) — the recurring stale-ref variant, forty-third
+occurrence overall — recovered via clean fast-forward before any venture-doc work; see root
+STATUS_LOG.md 2026-11-25.

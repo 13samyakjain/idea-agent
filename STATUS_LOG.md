@@ -1459,3 +1459,21 @@ as every prior occurrence (the scheduling/trigger/execution layer should look at
 working copy starts detached with a stale local `main` ref at all) — unaddressed.
 
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
+## 2026-11-25 — Forty-third recurrence: stale local `main` ref, same mechanism
+
+**What happened:** this run's detached `HEAD` was already correctly at `origin/main`'s tip
+(`9f3c1cb`, 2026-11-24 evening's Glimpse check-in), but local branch `main` was stale — 2 commits
+behind. Same stale-ref variant as the prior several occurrences; no work was at risk since
+`origin/main` already had everything.
+
+**Fix applied this run:** confirmed `main` was a strict ancestor of `origin/main` via
+`git merge-base --is-ancestor`, then `git checkout main` followed by `git merge --ff-only
+origin/main`; verified `git rev-parse HEAD` matched `origin/main` before touching any venture
+doc.
+
+**Still open:** forty-third total recurrence, 16+ weeks running. Same standing recommendation
+as every prior occurrence (the scheduling/trigger/execution layer should look at why each run's
+working copy starts detached with a stale local `main` ref at all) — unaddressed.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.
