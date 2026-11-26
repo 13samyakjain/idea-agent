@@ -1477,3 +1477,27 @@ as every prior occurrence (the scheduling/trigger/execution layer should look at
 working copy starts detached with a stale local `main` ref at all) — unaddressed.
 
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
+## 2026-11-26 — Forty-fourth recurrence: unpushed-commits variant, worst stranding since October
+
+**What happened:** this run started with `HEAD` detached 4 commits *ahead* of local
+`main`/`origin/main` (both at `f61975f`, 2026-11-23 evening's Glimpse check-in). The 2026-11-24
+daily and evening check-ins and the 2026-11-25 daily and evening check-ins (`6b1e2a9`, `9f3c1cb`,
+`1ec78d7`, `f89e539`) had all committed locally but **none of the four ever reached
+`origin/main`** — two full days' worth of runs stranded, the worst single-stranding since the
+2026-09-27 incident (3 runs). This is the original unpushed-commits mechanism (not the stale-ref
+variant that produced the last several recurrences, including 2026-11-24/25's own entries above)
+— confirms the underlying cause keeps producing both failure shapes, now including a two-day gap.
+
+**Fix applied this run:** confirmed `origin/main` was a strict ancestor of detached `HEAD` via
+`git merge-base --is-ancestor`, then `git checkout -B main f89e539` and `git push -u origin main`;
+verified `git rev-parse HEAD` matched `git rev-parse origin/main` before touching any venture
+doc. No work was lost — both stranded days' Glimpse check-ins are now on `origin/main`.
+
+**Still open:** forty-fourth total recurrence, ~17 weeks running, and notably this is a
+same-mechanism echo of 2026-09-27 (3-run stranding) rather than a new variant — the standing
+recommendation (the scheduling/trigger/execution layer should look at why each run's starting
+git state isn't reliably synced to the remote tip) remains unaddressed and this run's 2-day gap
+is evidence the problem is not self-limiting.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.
