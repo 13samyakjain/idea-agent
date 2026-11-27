@@ -1501,3 +1501,21 @@ git state isn't reliably synced to the remote tip) remains unaddressed and this 
 is evidence the problem is not self-limiting.
 
 **Dispatched:** none — this was a direct git recovery, not agent-doable work.
+
+## 2026-11-27 — Forty-fifth recurrence: unpushed-commits variant
+
+**What happened:** this run started with `HEAD` detached 2 commits *ahead* of local
+`main`/`origin/main` (both at `f61975f`, 2026-11-23 evening's Glimpse check-in — the
+2026-11-26 fix had only caught that day's morning entry, not the evening one). The 2026-11-26
+daily and evening check-ins (`ea1a253`, `01407af`) had committed locally but never reached
+`origin/main` — a ~1-day stranding.
+
+**Fix applied this run:** confirmed `origin/main` was a strict ancestor of detached `HEAD` via
+`git merge-base --is-ancestor`, then `git checkout main` and `git merge --ff-only 01407af`
+followed by `git push -u origin main`; verified `git rev-parse HEAD` matched
+`git rev-parse origin/main` before touching any venture doc. No work was lost.
+
+**Still open:** forty-fifth total recurrence. Same standing recommendation as every prior
+occurrence — unaddressed.
+
+**Dispatched:** none — this was a direct git recovery, not agent-doable work.
