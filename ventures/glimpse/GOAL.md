@@ -1420,6 +1420,23 @@ or clearly stalled, instead of re-deriving priority from scratch each run.
       target with no founder decision landed — carrying the morning's status forward
       unchanged. Not re-notifying the founder this pass — the next threshold (two calendar
       months past target) is 2026-11-28, tomorrow.
+      **Update 2026-11-28 — TWO CALENDAR MONTHS PAST TARGET:** re-confirmed directly — task
+      `14ykddrwyqf` still "to do", `date_updated` unchanged at `1789702466465` (2026-09-18
+      3rd/final escalation, now 71 days quiet on that thread). Visa case (`86d3pw08w`) also
+      re-read directly: status still "in progress", `date_updated` unchanged at
+      `1791470639424` (2026-10-08 3rd/final escalation, 51 days quiet), no reply from Babita
+      since 2026-09-25 (64 days). Goal is now **61 days past** its 2026-09-28 target with
+      success criteria still unmet; no founder decision landed on any of the three 2026-09-28
+      proposed resolutions. Not re-escalating (already exhausted 3/3 on both items) — pure
+      confirmation. Calendar searched directly ("Glimpse"): no event beyond the already-logged
+      set — most recent relevant signal remains the 2026-11-20 Babita "Discussion Call".
+      `TaskList` empty, no agent activity. **This run crosses the two-calendar-month-past-target
+      threshold** — notifying the founder now (per this file's own guardrail: this is not
+      routine status, it's the condition the check-in exists to surface). Next threshold:
+      2026-12-28 (three calendar months past target), 30 days away. Separately: this run started
+      with detached `HEAD` already at `origin/main`'s tip while local `main` was stale 8 commits
+      behind — the recurring stale-ref variant — recovered via fast-forward before any
+      venture-doc work; see root STATUS_LOG.md 2026-11-28.
 - [ ] First reply received (target 2026-09-28; day-14 non-response → mark stale per Stage 2).
 - [x] Side task: re-qualify ACS Consultancy Services against the ICP checklist — done
       2026-09-10, **DISQUALIFIED and dropped from batch-1** (procurement/RFP-driven growth
